@@ -95,3 +95,9 @@ URL de los templates: <a> href="https://github.com/FlameWing2/grupo_5_tbd/tree/m
     <img src="https://img.shields.io/badge/Framework%20Favorito-React-blue?style=for-the-badge&logo=react" alt="Framework Favorito">
   </p>
 </article>
+
+<h3>¡Hola! 👋 me llamo Milagros Cintia Nair Vega</h3>
+# Soy estudiante de la Universidad Nacional de La Rioja
+<article style="border: 1px solid dashed;">
+  <p style="color: #e74c3c;">Recién estoy comenzando y metiéndome en el mundo de la programación. Aunque no poseo tanto conocimiento en cuanto a código, soy buena en lo que es diseño de UX/UI. Me apasiona el diseño y la creación de experiencias de usuario intuitivas y atractivas. Estoy emocionada por aprender más y contribuir a este proyecto.</p>
+</article>
