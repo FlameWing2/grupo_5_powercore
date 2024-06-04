@@ -69,7 +69,7 @@ Nuestra investigación de mercado es lo que nos ha optado por que PowerCore tome
 
 - [Trello](https://trello.com/b/TCV41gpT/story)
 
-- WireFrames:
+WireFrames:
 Para su desarrollo, se trabajo con las siguientes herramientas:
  
 - [WireFrame](https://github.com/FlameWing2/grupo_5_powercore/tree/main/wireFrames)
