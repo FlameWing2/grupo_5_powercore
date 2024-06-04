@@ -129,4 +129,18 @@ Técnico en Soporte en Infraestructuras TI
     </p>
   </blockquote>
 </article>
+
+### Alive Oviedo, Luciano Sebastian
+¡Hola! 👋 me llamo Luciano Alive
+Estudiante de la Licenciatura en Sistemas de la Universidad Nacional de Chilecito
+
+<article style="border: 1px solid dashed;">
+  <blockquote>
+    <p style="color: #e74c3c;">
+    Estudiante de la Licenciatura en Sistemas de la UNDeC y además del Profesorado de Matemática , aficionado en el mundo de la programación, tratando de aprender de la mejor manera y mas eficiente, para poder dedicarme a la programación.
+  Tengo conocimientos en java, JavaScript, React, También trabaje con base de datos como PostgreSQL y MySQL. Me gusta trabajar en proyectos interesantes para poder crecer profesionalmente día a día.
+    </p>
+  </blockquote>
+</article>
+
 <p>**</p>
