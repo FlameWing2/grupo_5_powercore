@@ -1,93 +1,103 @@
-# Título del Proyecto : PowerCoreHard Online
-# URL: <img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"/> https://github.com/FlameWing2/grupo_5_tbd (cambiar Nombre)
+# PowerCoreHard Online 
 
-# Que ofrece PowerCore al Mercado Argentino
+## Tabla de Contenidos
 
-<h3>¿Qué productos o servicios brindará nuestro sitio?</h3>
-En PowerCore, ofrecemos una amplia gama de productos de hardware para computadoras, que incluyen:
-<ul>
-  <li>Placas de video de última generación.</li>
-  <li>Procesadores de alto rendimiento.</li>
-  <li>Tarjetas madre (motherboards).</li>
-  <li>Memorias RAM de diversas capacidades.</li>
-  <li>Discos duros y unidades SSD.</li>
-  <li>Fuentes de poder.</li>
-  <li>Gabinetes y sistemas de enfriamiento.</li>
-  <li>Periféricos como teclados, mouse y monitores.</li>
-  <li>Accesorios adicionales como cables, adaptadores y más.</li>
-</ul>
+- [Presentación](#Presentación)
+- [Alcance](#Alcance)
+- [Integrantes](#Integrantes)
+- [Referencias](#Referencias)
+- [Recursos](#recursos)
 
-<br>
-<h3>¿Quién será nuestra audiencia objetivo?</h3>
-Nuestra audiencia objetivo incluye:
-<ul>
-  <li>Gamers: Personas apasionadas por los videojuegos que buscan componentes de alta calidad para mejorar su experiencia de juego.</li>
-  <li>Entusiastas de la tecnología: Aquellos que disfrutan ensamblando y mejorando sus propios equipos.</li>
-  <li>Profesionales de IT y desarrolladores: Personas que necesitan equipos robustos y confiables para su trabajo diario.</li>
-  <li>Estudiantes y académicos: Especialmente aquellos en campos relacionados con la informática y la ingeniería que requieren hardware específico para sus estudios y proyectos.</li>
-</ul>
+## Presentación
 
-<br>
-<h3>¿Cómo ajustaremos nuestra oferta a ese público?</h3>
-Para satisfacer las necesidades de nuestra audiencia, implementaremos las siguientes estrategias:
-<ul>
-  <li>Selección de productos de alta calidad: Trabajaremos con proveedores reconocidos para asegurarnos de ofrecer productos de alta calidad y última tecnología.</li>
-  <li>Precios competitivos: Mantendremos precios competitivos y ofreceremos promociones y descuentos regulares.</li>
-  <li>Soporte y asesoramiento: Proporcionaremos un excelente servicio al cliente con soporte técnico y asesoramiento personalizado para ayudar a nuestros clientes a elegir los productos adecuados.</li>
-  <li>Contenido educativo: Publicaremos guías, tutoriales y reviews de productos para ayudar a nuestros clientes a tomar decisiones informadas.</li>
-  <li>Facilidad de uso del sitio web: Diseñaremos un sitio web intuitivo y fácil de navegar, con opciones de búsqueda avanzadas y filtros para que los clientes encuentren rápidamente lo que necesitan.</li>
-</ul>
+En PowerCore, somos una tienda lider en productos de tecnología. 
+
+Ofrecemos una amplia gama de productos de hardware para computadoras, que incluyen:
+
+- Placas de video de última generación.
+- Procesadores de alto rendimiento.
+- Tarjetas madre (motherboards).
+- Memorias RAM de diversas capacidades.
+- Discos duros y unidades SSD.
+- Fuentes de poder.
+- Gabinetes y sistemas de enfriamiento.
+- Periféricos como teclados, mouse y monitores.
+- Accesorios adicionales como cables, adaptadores y más.
 
 
-# Referencias en el Mercado
-PowerCore ha tomado como punto de partida, el análisis y estructuracion desde varios puntos de referencias, sobre todo paginas de venta de hardware variado, buscando sus posibles desventajas y adaptándolas a nuestro beneficio personal.
+## Alcance
 
-https://uranostream.com/<br>
-https://www.maximus.com.ar/<br>
-->Registro sencillo y facil de seguir la pagina<br>
-https://www.xt-pc.com.ar/
-->Me gusta personalmente más el de xt-pc, en el modo mobile sobretodo te coloca de forma cómoda el carrito. En Spacegamer me gusta como se muestra un producto destacado y luego 2 productos más pequeños<br>
-https://fullh4rd.com.ar/
-->Panel de buscar muy sencillo, usando bloques para moverse entre categorias<br>
-https://spacegamer.com.ar/
-->Slider para recorrer sus productos, son sencillos y no pasan tan rapidos como en otros, su vista en modalidad Celular es muy adaptativa<br>
-https://www.hardgamers.com.ar/<br>
+Este sitio web esta dirigido a todo aquel que quiera adquirir productos de tecnología informatica de alta calidad. 
+Su audiencia objetiva incluye pero no se limita a:
 
-# Recursos
-<ul>
-  <li><a href="https://trello.com/b/TCV41gpT/story">Trello</li>
-</ul>
-# wireFrames
+  - Gamers: Personas apasionadas por los videojuegos que buscan componentes de alta calidad para mejorar su experiencia de juego.
+  
+  - Entusiastas de la tecnología: Aquellos que disfrutan ensamblando y mejorando sus propios equipos.
+  
+  - Profesionales de IT y desarrolladores: Personas que necesitan equipos robustos y confiables para su trabajo diario.
+  
+  - Estudiantes y académicos: Especialmente aquellos en campos relacionados con la informática y la ingeniería que requieren hardware específico para sus estudios y proyectos.
+
+Es por ello que teniendo en mente en la demografica anteriormente mencionada, buscaremos que nuestro sitio web contenga no solo una aparencia esteticamente agradable para los usuarios que naveguen por él, sino también que su interfaz sea de facil manejo, manteniendo siempre todos los más altos estandares de accesibilidad para favorecer el uso por parte de aquellas personas con algún tipo de impedimento fisico.  
+
+Junto con lo anterior es que se han de implementar las siguientes estrategias:
+
+ - Productos de alta calidad: trabajaremos con proveedores reconocidos para asegurarnos de ofrecer productos de alta calidad y última tecnología.
+ - Precios competitivos: Mantendremos precios competitivos, ofreciendo promociones y descuentos regulares.
+ - Asesoramiento y Soporte: Proporcionaremos un excelente servicio al cliente con soporte técnico y asesoramiento personalizado para ayudar a nuestros clientes a elegir los productos adecuados.
+ - Contenido Educativo: Publicaremos guías, tutoriales y reviews de productos para ayudar a nuestros clientes a tomar decisiones informadas.
+ - Facil navegación del sitio web: Diseñaremos un sitio web intuitivo y fácil de navegar, con opciones de búsqueda avanzadas y filtros para que los clientes encuentren rápidamente lo que necesitan.
+
+
+## Referencias
+Nuestra investigación de mercado es lo que nos ha optado por que PowerCore tome como punto de partida su estructuracion utilizando varias referentes, con foco principal en aquellas orientadas a la de venta de hardware, analizando sus fortalezas, falencias e innovando para poder concretar una plataforma con una estetica moderna y elegante.
+
+- [Uranostream](https://uranostream.com/)
+
+- [Maximus](https://www.maximus.com.ar/) -> Registro sencillo y facil de seguir la pagina
+
+- [XT-PC](https://www.xt-pc.com.ar/) -> Su interfaz mobile ofrece una navegación amigable, facilitando el acceso al carrito de compras. En Spacegamer me gusta como se muestra un producto destacado y luego 2 productos más pequeños
+
+- [Fullh4rd](https://fullh4rd.com.ar/) -> Navegación muy sencilla, usa bloques para moverse entre categorias
+
+- [SpaceGamer](https://spacegamer.com.ar/) -> Excelente presentación de productos, resaltando elementos destacados junto con productos similares para mayor variedad de opciones al consumidor. Slider para recorrer productos bastante sencillo y su vista mobile se adapta muy bien a diferentes tipos de pantallas.
+
+- [Hardgamers](https://www.hardgamers.com.ar/) -> Concentrador de sitios web informaticos. Sumamente útil para buscar referencias, precios y revisión de competencia.
+
+
+## Recursos
+
+- [Trello](https://trello.com/b/TCV41gpT/story)
+
+- WireFrames:
 Para su desarrollo, se trabajo con las siguientes herramientas:
-URL de los templates: <a> href="https://github.com/FlameWing2/grupo_5_tbd/tree/main/wireFrames">WIREFRAMES</a>
-<ul>
-  <li><a href="https://app.diagrams.net/">Drawio.com</a></li>
-  <li><a href="https://wireframepro.mockflow.com/">MockFlow</a></li>
-</ul>
+ 
+[WireFrame](https://github.com/FlameWing2/grupo_5_powercore/tree/main/wireFrames)
 
-# Integrantes
-<ul>
-  <li>Alive, Luciano</li>
-  <li>Albornoz, Alfredo</li>
-  <li>Loyola, Leo Martin</li>
-  <li>Vega, Milagros Cintia Nair</li>
-  <li>Zareba, Daniel Agustin</li>
-</ul>
+[Draw.io](https://app.diagrams.net/)
 
+[MockFlow](https://wireframepro.mockflow.com/MockFlow)
 
+## Integrantes
 
+- Loyola, Leo Martin
+- Vega, Milagros Cintia Nair
+- Albornoz, Alfredo
+- Alive, Luciano
+- Zareba, Daniel Agustin
 
+## Información de los Integrantes
 
+### Leo Martin Loyola
 
+¡Hola! 👋 me llamo Leo Martin Loyola
+Docente en EPET N2 y Colegio N° 20
 
-
-# Información de los Integrantes
-
-<h3>¡Hola! 👋 me llamo Leo Martin Loyola</h3>
-# soy Docente en EPET N2 y Colegio N20
 <article style="border: 1px solid dashed;">
   <blockquote>
-    <p style="color: #e74c3c;">Mi especialidad radica en el desarrollo de aplicaciones web utilizando principalmente PHP con Laravel 8/9 y ahora mejorando mis conocimientos en JavaScript, React, Node.js. Manejo bases de datos como MariaDB, MySQL, SQLServer y PostgreSQL. Me encanta trabajar en proyectos desafiantes que me permiten crecer como profesional.</p>
+    <p style="color: #e74c3c;">
+    Mi especialidad radica en el desarrollo de aplicaciones web utilizando principalmente PHP con Laravel 8/9 y ahora mejorando mis conocimientos en JavaScript, React, Node.js. Manejo bases de datos como MariaDB, MySQL, SQLServer y PostgreSQL. Me encanta trabajar en proyectos desafiantes que me permiten crecer como profesional.
+    </p>
   </blockquote>
   <p align="center">
     <img src="https://img.shields.io/badge/Especialidad-Desarrollador%20Full%20Stack-blueviolet?style=for-the-badge&logo=appveyor" alt="Especialidad">
@@ -96,8 +106,26 @@ URL de los templates: <a> href="https://github.com/FlameWing2/grupo_5_tbd/tree/m
   </p>
 </article>
 
-<h3>¡Hola! 👋 me llamo Milagros Cintia Nair Vega</h3>
-# Soy estudiante de la Universidad Nacional de La Rioja
+### Milagros Cintia Nair Vega
+¡Hola! 👋 me llamo Milagros Cintia Nair Vega
+Estudiante de la Universidad Nacional de La Rioja
+
 <article style="border: 1px solid dashed;">
-  <p style="color: #e74c3c;">Recién estoy comenzando y metiéndome en el mundo de la programación. Aunque no poseo tanto conocimiento en cuanto a código, soy buena en lo que es diseño de UX/UI. Me apasiona el diseño y la creación de experiencias de usuario intuitivas y atractivas. Estoy emocionada por aprender más y contribuir a este proyecto.</p>
+  <blockquote>
+    <p style="color: #e74c3c;">
+    Recién estoy comenzando y metiéndome en el mundo de la programación. Aunque no poseo tanto conocimiento en cuanto a código, soy buena en lo que es diseño de UX/UI. Me apasiona el diseño y la creación de experiencias de usuario intuitivas y atractivas. Estoy emocionada por aprender más y contribuir a este proyecto.
+    </p>
+  </blockquote>
+</article>
+
+### Albornoz Alfredo
+¡Hola! 👋 me llamo Alfredo Albornoz
+Técnico en Soporte en Infraestructuras TI
+
+<article style="border: 1px solid dashed;">
+  <blockquote>
+    <p style="color: #e74c3c;">
+    Desde pequeño he tenido afición por la tecnología y la computación. He perseguido algunas carreras para poder desempeñarme en el ambito de la programación. Me gusta analizar procesos y resolver problemas para optimizar las cosas. Aún me queda un camino largo pero siempre motivado a aprender y contribuir más.
+    </p>
+  </blockquote>
 </article>
