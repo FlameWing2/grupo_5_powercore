@@ -4,8 +4,8 @@
 
 - [Presentación](#Presentación)
 - [Alcance](#Alcance)
-- [Integrantes](#Integrantes)
 - [Referencias](#Referencias)
+- [Integrantes](#Integrantes)
 - [Recursos](#recursos)
 
 ## Presentación
