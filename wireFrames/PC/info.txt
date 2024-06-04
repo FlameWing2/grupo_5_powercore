@@ -1,0 +1,13 @@
+Para el armado de las wireFrame se uso el software llamad DrawIO por ser sencillo de usar, y sobre todo porque es gratis.
+URL: https://app.diagrams.net/
+
+Los diseños entregados son relativos a:
+○ Home
+○ Detalle de producto
+○ Carrito de compras
+○ Formulario de registro
+○ Formulario de login
+
+Se encuentran en carpeta 
+–	Original
+–	PNG
