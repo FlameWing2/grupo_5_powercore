@@ -72,11 +72,11 @@ Nuestra investigación de mercado es lo que nos ha optado por que PowerCore tome
 - WireFrames:
 Para su desarrollo, se trabajo con las siguientes herramientas:
  
-[WireFrame](https://github.com/FlameWing2/grupo_5_powercore/tree/main/wireFrames)
+- [WireFrame](https://github.com/FlameWing2/grupo_5_powercore/tree/main/wireFrames)
 
-[Draw.io](https://app.diagrams.net/)
+- [Draw.io](https://app.diagrams.net/)
 
-[MockFlow](https://wireframepro.mockflow.com/MockFlow)
+- [MockFlow](https://wireframepro.mockflow.com/MockFlow)
 
 ## Integrantes
 
