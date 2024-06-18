@@ -27,3 +27,4 @@ app.listen(puerto, (error) => {
 app.get('/',(req, res)=>{
     res.sendFile(path.resolve(__dirname,'./src/views/index.html'));
 })
+

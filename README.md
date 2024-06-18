@@ -143,4 +143,41 @@ Estudiante de la Licenciatura en Sistemas de la Universidad Nacional de Chilecit
   </blockquote>
 </article>
 
-<p>**</p>
+# SPRING 2
+
+# ESTRUCTURA DE ARBOL DEL PROYECTO
+<CODE>
+/GRUPO_5_PowerCoreHard_Online
+-> node_modules/
+-> public/
+   -> css/
+      -> style.css
+   -> images/
+      -> ** a determinar **
+   -> js/
+      -> ** a determinar **
+-> src/
+   -> config/
+      -> ** a determinar **
+   -> controllers/
+      -> indexController.js
+      -> loginController.js
+      -> registerController.js
+      -> productCartController.js
+      -> productDetailController.js
+   -> models/
+      -> indexModel.js
+      -> loginModel.js
+      -> registerModel.js
+      -> productCartModel.js
+      -> productDetailModel.js
+-> routes/
+      -> ** a determinar **
+   -> views/
+      -> index.html
+      -> login.html
+      -> register.html
+      -> productCart.html
+      -> productDetail.html
+-> app.js
+</CODE>
