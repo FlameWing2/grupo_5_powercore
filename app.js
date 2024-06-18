@@ -8,6 +8,8 @@ const app = express();
 //inicializando una variable con el posible puerto
 const puerto = 3000;
 
+//aviso a express que use los static, assets
+app.use(express.static('public'));
 
 //activando escucha de puerto
 app.listen(puerto, (error) => {
