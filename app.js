@@ -21,10 +21,9 @@ app.listen(puerto, (error) => {
     }
 });
 
-//desde aqui el manejo de rutas
 
-//ruta simple con el valor en la primer parte
-app.get('/',(req, res)=>{
-    res.sendFile(path.resolve(__dirname,'./src/views/index.html'));
-})
-
+// Importar y usar las rutas
+const routes = require('./src/routes/routes');
+// sea cual sea la ruta que llegue, sera derivada a routes.js, ahi se analiza y se llama
+// al controlador que se lo necesite.
+app.use('/', routes);

@@ -146,7 +146,7 @@ Estudiante de la Licenciatura en Sistemas de la Universidad Nacional de Chilecit
 # SPRING 2
 
 # ESTRUCTURA DE ARBOL DEL PROYECTO
-<CODE>
+
 /GRUPO_5_PowerCoreHard_Online
 -> node_modules/
 -> public/
@@ -179,5 +179,16 @@ Estudiante de la Licenciatura en Sistemas de la Universidad Nacional de Chilecit
       -> register.html
       -> productCart.html
       -> productDetail.html
+-> wireFrames/
+      -> Movil/
+        ->design
+          -> ** imagenes **
+      -> Paleta de Colores/
+          -> ** imagenes **
+      -> PC/
+        ->design
+          ->original/
+          ->png/
+            -> ** imagenes **
 -> app.js
-</CODE>
+
