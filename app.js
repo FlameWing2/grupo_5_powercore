@@ -2,6 +2,8 @@
 //de rutas y gestion en server
 const os = require('os');
 const express = require('express');
+
+
 //paquete para el manejo de rutas absolutas o relativas
 const path = require('path');
 const app = express();
@@ -10,6 +12,11 @@ const puerto = 3000;
 
 //aviso a express que use los static, assets
 app.use(express.static(path.join(__dirname, 'public')));
+
+// cargando funciones de analisis de datos de formularios y JSON
+// estas dos funciones se ejecutaran de forma automatica
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 //activando escucha de puerto
 app.listen(puerto, (error) => {

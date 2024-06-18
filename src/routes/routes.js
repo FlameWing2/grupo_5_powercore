@@ -16,7 +16,11 @@ const productDetailController = require('../controller/productDetailController')
 router.get('/', indexController.getIndexPage);
 router.get('/login', loginController.getLoginPage);
 router.get('/register', registerController.getRegisterPage);
+/**en caso de necesitar post, asi lo manejamos */
+router.post('/register', registerController.postRegisterPage);
+
 router.get('/productCart', productCartController.getProductCartPage);
 router.get('/productDetail', productDetailController.getProductDetailPage);
+
 
 module.exports = router;
