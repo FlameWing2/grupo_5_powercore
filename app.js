@@ -9,7 +9,7 @@ const app = express();
 const puerto = 3000;
 
 //aviso a express que use los static, assets
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 //activando escucha de puerto
 app.listen(puerto, (error) => {
@@ -20,3 +20,10 @@ app.listen(puerto, (error) => {
         console.log(`Server iniciado en http://${hostname}:${puerto}`);
     }
 });
+
+//desde aqui el manejo de rutas
+
+//ruta simple con el valor en la primer parte
+app.get('/',(req, res)=>{
+    res.sendFile(path.resolve(__dirname,'./src/views/index.html'));
+})
