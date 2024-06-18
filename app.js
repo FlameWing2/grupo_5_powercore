@@ -1,0 +1,1 @@
+console.log("prueba de configuración del package.json");
