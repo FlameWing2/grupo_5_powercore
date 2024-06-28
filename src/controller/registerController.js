@@ -6,7 +6,7 @@ let registerController = {
     index: (req, res)=>{
         res.sendFile(path.resolve(__dirname, '../views/register.html'));
     },
-    validar: (req, res) => {
+    create: (req, res) => {
         const { nombre, apellido } = req.body;
         // Aquí vamos a manejar los datos, por ejemplo, guardarlos en una base de datos
         // o bien interactuar con ellos
