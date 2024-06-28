@@ -30,7 +30,16 @@ app.listen(puerto, (error) => {
 
 
 // Importar y usar las rutas
-const routes = require('./src/routes/routes');
+const indexRouter = require('./src/routes/indexRouter');
+const loginRouter = require('./src/routes/loginRouter');
+const registerRouter = require('./src/routes/registerRouter');
+const producCartRouter = require('./src/routes/producCartRouter');
+const productDetailsRouter = require('./src/routes/productDetailsRouter');
 // sea cual sea la ruta que llegue, sera derivada a routes.js, ahi se analiza y se llama
 // al controlador que se lo necesite.
-app.use('/', routes);
+
+app.use('/', indexRouter);
+app.use('/login', loginRouter);
+app.use('/register', registerRouter);
+app.use('/productCart', producCartRouter);
+app.use('/productDetail', productDetailsRouter);

@@ -2,10 +2,13 @@
 //agrego la ruta para poder usar path
 const path = require('path');
 
-// Controlador para la ruta '/'
-exports.getLoginPage = (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../views/login.html'));
-};
+let loginController = {
+    index: (req, res)=>{
+        res.sendFile(path.resolve(__dirname, '../views/login.html'));
+    },
+    validar: (req, res)=>{
+        res.sendFile(path.resolve(__dirname, '../views/login.html'));
+    },
+}
 
-// Desde aqui podemos ir colocando los metodos de post, put, delete,
-// querys de SQL etc.
+module.exports = loginController;

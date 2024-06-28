@@ -1,11 +1,15 @@
-// asi vamos a manejar las rutas src/controllers/????Controller.js
+// asi vamos a manejar las rutas src/controllers/indexController.js
 //agrego la ruta para poder usar path
 const path = require('path');
 
-// Controlador para la ruta '/'
-exports.getProductDetailPage = (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../views/productDetail.html'));
-};
+let productDetailController = {
+    index: (req, res)=>{
+        res.sendFile(path.resolve(__dirname, '../views/productDetail.html'));
+    },
+    detalleArticulo: (req, res)=>{
+        const idArticulo = req.params.idArticulo;
+        res.send("mostrando datos o pagina del articulo "+ idArticulo);
+    }
+}
 
-// Desde aqui podemos ir colocando los metodos de post, put, delete,
-// querys de SQL etc.
+module.exports = productDetailController;

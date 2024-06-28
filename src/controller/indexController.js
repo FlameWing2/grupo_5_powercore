@@ -2,10 +2,10 @@
 //agrego la ruta para poder usar path
 const path = require('path');
 
-// Controlador para la ruta '/'
-exports.getIndexPage = (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../views/index.html'));
-};
+let indexController = {
+    index: (req, res)=>{
+        res.sendFile(path.resolve(__dirname, '../views/index.html'));
+    }
+}
 
-// Desde aqui podemos ir colocando los metodos de post, put, delete,
-// querys de SQL etc.
+module.exports = indexController;
