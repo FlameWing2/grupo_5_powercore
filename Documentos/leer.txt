@@ -6,3 +6,18 @@ agregar
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+
+3 - para renderizar una vista
+res.render('vista',{datos});
+
+ejemplo
+router.get('/', function(req, res, next) {
+  let datos = {
+    mensaje: "hola que tal desde express",
+    title: "Express"
+  }
+  res.render('index', {datos});
+});
+
+4 - en la vista leer los datos asi
+<p><%= datos.mensaje %></p>
