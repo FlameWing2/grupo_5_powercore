@@ -12,7 +12,12 @@ let productDetailController = {
     },
     comentariosArticulo: (req, res)=>{
         const idArticulo = req.params.idArticulo;
-        res.send("Mostrando los comentarios del articulo "+ idArticulo);
+        if(req.params.idComentario == undefined){
+            res.send("Mostrando los comentarios del articulo "+ idArticulo);
+        }else{
+            res.send("Mostrando los comentarios del articulo "+ idArticulo + " y enfocados en el comentario numero: " + req.params.idComentario);
+        }
+       
     }
 }
 
