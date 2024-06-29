@@ -9,6 +9,10 @@ let productDetailController = {
     detalleArticulo: (req, res)=>{
         const idArticulo = req.params.idArticulo;
         res.send("mostrando datos o pagina del articulo "+ idArticulo);
+    },
+    comentariosArticulo: (req, res)=>{
+        const idArticulo = req.params.idArticulo;
+        res.send("Mostrando los comentarios del articulo "+ idArticulo);
     }
 }
 
