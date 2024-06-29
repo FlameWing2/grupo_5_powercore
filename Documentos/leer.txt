@@ -1,0 +1,8 @@
+desde clase 25 en adelante hay que usar ejs
+agregar
+1 - npm install ejs --save
+
+2 - agregar a app.js el motor ejs
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
