@@ -1,25 +1,152 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PowerCoreHard Online</title>
+<html lang="es-AR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="XT-PC">
+    <title>PowerCore</title>
+    <meta name="description" content="Compra los productos para tu pc gamer en el sitio número uno de Argentina">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
     <link rel="stylesheet" href="/css/style.css">
-</head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </head>
 <body>
-    <h1>PRUEBA RAPIDA DE MVC CORRECTO - PRODUCT CART</h1>
-    <ul>
-        <li><a href="/">Index</a></li>
-        <li><a href="/login">Login</a></li>
-        <li><a href="/register">Register</a></li>
-        <li><a href="/productCart">Product Cart</a></li>
-        <li><a href="/productDetail">Product Detail</a></li>
-        <li><a href="/productDetail/articulo/17">Product Detail con valor(ej: 17)</a></li>
+    <header>
+        <nav>
+          <div id="logo">
+            <img src="/img/logo.png" alt="XT-PC">
+          </div>
+          <div id="menu">
+            <ul>
+              <li><a href="/">Inicio</a></li>
+              <li><a href="#">Productos</a></li>
+              <li><a href="#">Contacto</a></li>
+            </ul>
+          </div>
+          <div id="search">
+            <input type="text" placeholder="Buscar...">
+            <button><i class="fas fa-search"></i></button>
+          </div>
+          <div id="user">
+            <i class="fas fa-user" onclick="toggleUserMenu()"></i>
+            <div id="user-menu">
+              <ul>
+                <li><a href="/register">Registrarse</a></li>
+                <li><a href="/login">Ingresar</a></li>
+                <li><a href="/productCart">Ver Pedidos</a></li>
+              </ul>
+            </div>
+          </div>
+          <div id="cart">
+            <a href="/productCart"><i class="fas fa-shopping-cart"></i></a>
+          </div>
+        </nav>
+      </header>
 
-    </ul>
-    <hr>
-    <a href="/"> <-----VOLVER</a>
-    <!-- aqui script -->
-    <script src="/js/function.js"></script>
+  <main>
+    <div class="cont air-v">
+      <div class="breadcrumb">
+        <a href="/">HOME</a> <span class="sep"> /</span>
+        <h1>CARRITO</h1>
+      </div>
+      <div role="alert" id="success" style="display:none"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Carrito actualizado</div>
+      <div role="alert" id="enviogratis" style="display:none"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Envio gratis aplicado.</div>
+      <div role="alert" id="danger" style="display:none"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> Hubo un error al eliminar el producto</div>
+      <div id="dangercupon" style="display:none"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> Cupon inválido</div>
+      <div class="cart air">
+        <div class="item end" style="padding:0;">
+          <div class="cta" style="width:100%;justify-content: flex-end;">
+            <button onclick="shareCart();" class="btn btn-outline btn-sm" name="share" id="share">Compartir carrito</button>
+            <input class="btn btn-outline" style="display:none;width:100%; " id="texto">
+            <button class="btn btn-accent" style="display:none" id="copiar">Copiar</button>
+          </div>
+        </div>
+        <div class="item">
+          <div class="image">
+            <a href="#"><img src="/img/productos/5/PCA003.jpg"  alt="pc-armada-amd-athlon-3000g-8gb-240gb-kit"></a>
+          </div>
+          <div class="meta">
+            <div class="title"><a href="#">
+                <h2>PC ARMADA AMD ATHLON 3000G + 8GB + 240GB + KIT</h2>
+              </a></div>
+            <div class="options">
+              <ul>
+                <li><a style="cursor:pointer" onclick="quickAddCart(11398,0)">Eliminar</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="qty">
+            <form action="javascript:void(0)" id="cartUpdate11398">
+              <input type="hidden" name="idprod" value="11398">
+              <button onclick="decrementValue('11398');cartUpdate(11398);"><i class="fas fa-minus"></i></button>
+              <input onchange="cartUpdate(11398);" class="form-input" type="number" step="1" min="0" max="20" name="quantity" id="prod-qty11398" value="1" title="Cantidad" inputmode="numeric">
+              <button onclick="incrementValue('11398');cartUpdate(11398);"><i class="fas fa-plus"></i></button>
+            </form>
+          </div>
+          <div class="price">$235.569,93</div>
+        </div>
+        <div class="item cart-opc">
+          <div class="qty-products">
+            <div class="color-accent">Productos</div>
+            <div>1</div>
+          </div>
+          <div class="subtotal">
+            <div class="color-accent">Subtotal</div>
+            <div>$<span id="subtotal">235.569,93</span></div>
+          </div>
+          <div id="cuponsection" class="subtotal" style="display:none">
+            <div class="color-accent">Cupón</div>
+            <div>- $<span id="cupontext">0</span></div>
+          </div>
+          <span hidden="" id="subtotal2">235569.93</span>
+          <span hidden="" id="origsubtotal">235569.93</span>
+          <span hidden="" id="pagomet">1</span>
+          <span hidden="" id="totallista">259126.923</span>
+          <span hidden="" id="origtotallista">259126.923</span>
+          <div class="total">
+            <div class="color-accent">Total</div>
+            <div>$<span id="total">235.569,93</span></div>
+          </div>
+        </div>
+        <div class="item end">
+          <div class="cta">
+            <button data-modal="#vaciar" class="btn btn-outline" name="modal">Vaciar carrito</button>
+            <button data-modal="#coupon" class="btn btn-outline" name="modal">Tengo un cupón</button>
+            <button data-modal="#paymethods" class="btn btn-accent" name="modal">Siguiente</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  
+
+  <footer>
+    <p>&copy; 2024 PowerCore. Trabajo grupal N&deg; 5.</p>
+  </footer>
+
+  <script>
+    function toggleUserMenu() {
+      document.getElementById('user-menu').classList.toggle('show');
+    }
+
+    window.onclick = function(event) {
+      if (!event.target.matches('.fa-user')) {
+        var dropdowns = document.getElementsByClassName("user-menu");
+        for (var i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+  </script>
 </body>
 </html>

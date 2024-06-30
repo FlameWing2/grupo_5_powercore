@@ -1,22 +1,114 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PowerCoreHard Online</title>
+<html lang="es-AR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="XT-PC">
+    <title>PowerCore</title>
+    <meta name="description" content="Compra los productos para tu pc gamer en el sitio número uno de Argentina">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
     <link rel="stylesheet" href="/css/style.css">
-</head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/js/scripts.js"></script>
+  </head>
 <body>
-    <h1>PRUEBA RAPIDA DE MVC CORRECTO - INDEX</h1>
-    <ul>
-        <li><a href="/">Index</a></li>
-        <li><a href="/login">Login</a></li>
-        <li><a href="/register">Register</a></li>
-        <li><a href="/productCart">Product Cart</a></li>
-        <li><a href="/productDetail">Product Detail</a></li>
-        <li><a href="/productDetail/articulo/17">Product Detail con valor(ej: 17)</a></li>
-    </ul>
-    <!-- aqui script -->
-    <script src="/js/function.js"></script>
+  <header>
+    <nav>
+      <div id="logo">
+        <img src="/img/logo.png" alt="XT-PC">
+      </div>
+      <div id="menu">
+        <ul>
+          <li><a href="/">Inicio</a></li>
+          <li><a href="#">Productos</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </div>
+      <div id="search">
+        <input type="text" placeholder="Buscar...">
+        <button><i class="fas fa-search"></i></button>
+      </div>
+      <div id="user">
+        <i class="fas fa-user" onclick="toggleUserMenu()"></i>
+        <div id="user-menu">
+          <ul>
+            <li><a href="/register">Registrarse</a></li>
+            <li><a href="/login">Ingresar</a></li>
+            <li><a href="/productCart">Ver Pedidos</a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="cart">
+        <a href="/productCart"><i class="fas fa-shopping-cart"></i></a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero">
+      <h1>PowerCore - La tienda Gamer #1 de Argentina</h1>
+      <p>Compra los productos para tu pc gamer en el sitio número uno de Argentina</p>
+    </section>
+    <section id="productos">
+      <h2>Productos Destacados</h2>
+      <div class="productos-grid">
+        <div class="producto">
+          <img src="/img/producto1.jpg" alt="Producto 1">
+          <h3>Producto 1</h3>
+          <p class="precio">$1000</p>
+          <a href="/productDetail">Ver mas Info</a>
+          <button class="btn">Comprar</button>
+        </div>
+        <div class="producto">
+          <img src="/img/producto2.jpg" alt="Producto 2">
+          <h3>Producto 2</h3>
+          <p class="precio">$2000</p>
+          <a href="/productDetail">Ver mas Info</a>
+          <button class="btn">Comprar</button>
+        </div>
+        <div class="producto">
+          <img src="/img/producto3.jpg" alt="Producto 3">
+          <h3>Producto 3</h3>
+          <p class="precio">$3000</p>
+          <a href="/productDetail">Ver mas Info</a>
+          <button class="btn">Comprar</button>
+        </div>
+        <div class="producto">
+          <img src="/img/producto4.jpg" alt="Producto 4">
+          <h3>Producto 4</h3>
+          <p class="precio">$4000</p>
+          <a href="/productDetail">Ver mas Info</a>
+          <button class="btn">Comprar</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 PowerCore. Trabajo grupal N&deg; 5.</p>
+  </footer>
+
+  <script>
+    function toggleUserMenu() {
+      document.getElementById('user-menu').classList.toggle('show');
+    }
+
+    window.onclick = function(event) {
+      if (!event.target.matches('.fa-user')) {
+        var dropdowns = document.getElementsByClassName("user-menu");
+        for (var i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+  </script>
 </body>
 </html>

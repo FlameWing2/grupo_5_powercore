@@ -1,27 +1,233 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PowerCoreHard Online</title>
-    <link rel="stylesheet" href="/css/style.css">
-</head>
+<html lang="es-AR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="XT-PC">
+        <title>PowerCore</title>
+        <meta name="description" content="Compra los productos para tu pc gamer en el sitio número uno de Argentina">
+        
+        <link rel="shortcut icon" href="/favicon.ico">
+        <link rel="stylesheet" href="/css/style.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="js/scripts.js"></script>
+      </head>
 <body>
-    <h1>PRUEBA RAPIDA DE MVC CORRECTO - PRODUCT DETAILS</h1>
-    <ul>
-        <li><a href="/">Index</a></li>
-        <li><a href="/login">Login</a></li>
-        <li><a href="/register">Register</a></li>
-        <li><a href="/productCart">Product Cart</a></li>
-        <li><a href="/productDetail">Product Detail</a></li>
-        <li><a href="/productDetail/articulo/17">Product Detail con valor(ej: 17)</a></li>
-        <li><a href="/productDetail/articulo/17/comentarios">Comentarios generales del Articulo 17 de ejemplo</a></li>
-        <li><a href="/productDetail/articulo/17/comentarios/12">Comentarios generales del Articulo 17, pero enfocado en la seccion 12 de ejemplo</a></li>
+    <header>
+        <nav>
+          <div id="logo">
+            <img src="/img/logo.png" alt="XT-PC">
+          </div>
+          <div id="menu">
+            <ul>
+              <li><a href="/">Inicio</a></li>
+              <li><a href="#">Productos</a></li>
+              <li><a href="#">Contacto</a></li>
+            </ul>
+          </div>
+          <div id="search">
+            <input type="text" placeholder="Buscar...">
+            <button><i class="fas fa-search"></i></button>
+          </div>
+          <div id="user">
+            <i class="fas fa-user" onclick="toggleUserMenu()"></i>
+            <div id="user-menu">
+              <ul>
+                <li><a href="/register">Registrarse</a></li>
+                <li><a href="/login">Ingresar</a></li>
+                <li><a href="/productCart">Ver Pedidos</a></li>
+              </ul>
+            </div>
+          </div>
+          <div id="cart">
+            <a href="/productCart"><i class="fas fa-shopping-cart"></i></a>
+          </div>
+        </nav>
+      </header>
 
-    </ul>
-    <hr>
-    <a href="/"> <-----VOLVER</a>
-    <!-- aqui script -->
-    <script src="/js/function.js"></script>
+  <main class="cont air-v">
+    <div class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+        <a href="/" itemprop="itemListElement" typeof="ListItem">
+            <span itemprop="item">
+                <span itemprop="name">HOME</span>
+                <meta itemprop="position" content="1">
+            </span>
+        </a>
+        <span class="sep"> /</span>
+        <a href="/cat/supra/5/equipos/1" itemprop="itemListElement" typeof="ListItem">
+            <span itemprop="item">
+                <span itemprop="name">EQUIPOS</span>
+                <meta itemprop="position" content="2">
+            </span>
+        </a>
+        <span class="sep"> /</span>
+        <a href="/cat/398/pc-armada-amd-athlon/1" itemprop="itemListElement" typeof="ListItem">
+            <span itemprop="item">
+                <span itemprop="name"> PC ARMADA AMD ATHLON </span>
+                <meta itemprop="position" content="3">
+            </span>
+        </a>
+        <span class="sep"> /</span>
+        <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <span itemprop="item">
+                <span itemprop="name">PC ARMADA AMD ATHLON 3000G + 8GB + 240GB + KIT</span>
+                <meta itemprop="position" content="4">
+            </span>
+        </span>
+    </div>
+
+    <div class="product">
+        <div class="img air">
+            <div class="featured">
+                <img id="mainpic" src="/img/productos/5/PCA003.jpg" alt="pc-armada-amd-athlon-3000g-8gb-240gb-kit">
+            </div>
+            <div class="more">
+                <div class="item">
+                    <img src="/img/productos/5/PCA003.jpg" alt="pc-armada-amd-athlon-3000g-8gb-240gb-kit">
+                </div>
+                <!-- Additional images gallery -->
+            </div>
+            <div class="info-img">
+                * LAS IMÁGENES SON AL EFECTO MERAMENTE ILUSTRATIVO Y NO SON CONTRACTUALES
+            </div>
+        </div>
+
+        <div class="meta">
+            <h1>PC ARMADA AMD ATHLON 3000G + 8GB + 240GB + KIT</h1>
+            <div class="shipping">
+                Código del producto: <strong>PCA003</strong>
+            </div>
+            <div class="price-main">
+                Precio efectivo o transferencia <br><span class="price-num">$235.569,93</span> <span style="display:none" class="price-old">$259.126,92</span>
+            </div>
+            <div class="price-mp">
+                Precio MercadoPago $259.126,92 <img src="/img/mercadopago.png" alt="">
+            </div>
+            <div class="price-main" style="font-size:22px">
+                ¡6 cuotas de  $49.077,07!
+            </div>
+            <div class="shipping">
+                <span>Solo para envío a domicilio, entrega en 72hs</span>
+            </div>
+            <div class="tags">
+                <span class="tag tag-stock">En stock</span>
+            </div>
+            <div class="qty">
+                <form action="javascript:void(0)" id="AddCart">
+                    <input type="hidden" name="idprod" value="11398">
+                    <button onclick="decrementValue('');"><i class="fas fa-minus"></i></button>
+                    <input class="form-input" type="number" step="1" min="0" max="5" name="quantity" id="prod-qty" value="1" title="Cantidad" inputmode="numeric">
+                    <button onclick="incrementValue('');"><i class="fas fa-plus"></i></button>
+                </form>
+            </div>
+            <div class="ctas">
+                <div class="item" style="width:100%; margin-bottom:10px;"><a data-modal="#modalwin" name="modal" class="btn-accent">Comprar ahora</a></div>
+                <div class="item"><a data-modal="#modalwin" name="modal" class="btn-outline"><i class="fas fa-shopping-cart"></i> Agregar</a></div>
+                <div class="item"><button data-modal="#modalenvio" name="modal" class="btn-outline btn-full">Calcular envío</button></div>
+            </div>
+            <div class="ctas ctasalt">
+                <div style="display:none" class="item"><button data-modal="#modalcuotas" name="modal" class="btn-outline btn-full">Calcular cuotas</button></div>
+            </div>
+        </div>
+
+        <div class="meta-tags">
+            <a href="/tag/pc">pc</a>
+            <a href="/tag/amd">amd</a>
+            <a href="/tag/athlon">athlon</a>
+            <a href="/tag/max5">max5</a>
+        </div>
+
+        <div class="info air">
+            <h1>ESTE EQUIPO ARMADO INCLUYE:</h1>
+            <h2>1 | GABINETE KIT<br>
+                1 | MOTHER A320M DDR4 AM4<br>
+                1 | MICRO AMD ATHLON 3000G C/VIDEO RADEON VEGA 3 INTEGRADO<br>
+                1 | MEMORIA 8GB 3200 DDR4<br>
+                1 | HD SSD 240GB</h2>
+            <p>*** NO INCLUYE SISTEMA OPERATIVO ***<br>
+                *** INCLUYE TECLADO / MOUSE ***</p>
+        </div>
+
+        <div class="also air">
+            <h2>Productos relacionados</h2>
+            <div class="also-products">
+                <div class="item product-xs">
+                    <a href="/prod/11063/pc-armada-amd-athlon-3000g-8gb-1tb-ssd-monitor-22">
+                        <div class="image-full">
+                            <img src="/img/productos/5/PCA006.jpg"alt="pc-armada-amd-athlon-3000g-8gb-1tb-ssd-monitor-22">
+                        </div>
+                        <div class="info">
+                            <h3 class="tituloalto" style="height: 55px;">PC ARMADA AMD ATHLON 3000G+8GB+1TB SSD+MONITOR 22"</h3>
+                            <div class="price">$404.489,92 <span class="price-promo">$444.938,88</span></div>
+                            <div class="cta">
+                                <div class="btn btn-outline" onclick="quickAddCart(11063,1)">
+                                    <i class="fas fa-shopping-cart"></i> Agregar
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Additional related products -->
+            </div>
+        </div>
+
+        <div class="prod-code">Código del producto: PCA003</div>
+    </div>
+
+    <!-- Variants of cards -->
+    <div class="card-variant">
+        <!-- Card variant 1 -->
+        <h2>Card Variant 1</h2>
+        <p>Description of variant 1.</p>
+    </div>
+    <div class="card-variant">
+        <!-- Card variant 2 -->
+        <h2>Card Variant 2</h2>
+        <p>Description of variant 2.</p>
+    </div>
+    <div class="card-variant">
+        <!-- Card variant 3 -->
+        <h2>Card Variant 3</h2>
+        <p>Description of variant 3.</p>
+    </div>
+    <div class="card-variant">
+        <!-- Card variant 4 -->
+        <h2>Card Variant 4</h2>
+        <p>Description of variant 4.</p>
+    </div>
+    <div class="card-variant">
+        <!-- Card variant 5 -->
+        <h2>Card Variant 5</h2>
+        <p>Description of variant 5.</p>
+    </div>
+</main>
+
+  
+
+  <footer>
+    <p>&copy; 2024 PowerCore. Trabajo grupal N&deg; 5.</p>
+  </footer>
+
+  <script>
+    function toggleUserMenu() {
+      document.getElementById('user-menu').classList.toggle('show');
+    }
+
+    window.onclick = function(event) {
+      if (!event.target.matches('.fa-user')) {
+        var dropdowns = document.getElementsByClassName("user-menu");
+        for (var i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+  </script>
 </body>
 </html>
