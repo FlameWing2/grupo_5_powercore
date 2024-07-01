@@ -56,7 +56,7 @@ Nuestra investigación de mercado es lo que nos ha optado por que PowerCore tome
 
 - [Maximus](https://www.maximus.com.ar/) -> Registro sencillo y facil de seguir la pagina
 
-- [XT-PC](https://www.xt-pc.com.ar/) -> Su interfaz mobile ofrece una navegación amigable, facilitando el acceso al carrito de compras. En Spacegamer me gusta como se muestra un producto destacado y luego 2 productos más pequeños
+- [XT-PC](https://www.xt-pc.com.ar/) -> Su interfaz mobile ofrece una navegación amigable, facilitando el acceso al carrito de compras. 
 
 - [Fullh4rd](https://fullh4rd.com.ar/) -> Navegación muy sencilla, usa bloques para moverse entre categorias
 
@@ -143,7 +143,7 @@ Estudiante de la Licenciatura en Sistemas de la Universidad Nacional de Chilecit
   </blockquote>
 </article>
 
-# SPRING 2
+# SPRINT 2
 
 # ESTRUCTURA DE ARBOL DEL PROYECTO
 
