@@ -158,8 +158,13 @@ textarea:not([rows]) {
   margin-top: 20px;
   margin-bottom: 20px;
 }
+.end{
+  padding-bottom: 30px;
+}
 main{
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 /* register */
@@ -175,7 +180,7 @@ main{
   text-align: left;
 }
 .form-input{
-  width: 90vw;
+  width: 80vw;
   margin-bottom: 3px;
   border: 1px solid lightblue;
   height: 30px;
