@@ -153,6 +153,10 @@ textarea:not([rows]) {
   padding-right: 0.25rem;
 }
 
+.item{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 
 /* register */
 .account {
