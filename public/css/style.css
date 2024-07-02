@@ -152,3 +152,17 @@ textarea:not([rows]) {
 .fa-info-circle {
   padding-right: 0.25rem;
 }
+
+
+/* register */
+.account {
+  width: 100%;
+  max-width: 400px; /* Ajustar según sea necesario */
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+.cuentas{
+  text-align: left;
+}
