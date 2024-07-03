@@ -152,6 +152,7 @@ body {
 .logo-header {
   width: calc(50% - 10px);
 }
+
 .nav-bar a:hover{
   color:#FFD700;
 }
@@ -294,6 +295,7 @@ main {
   padding-right: 15px;
 }
 
+
 /* register */
 .account {
   width: 100%;
@@ -368,7 +370,9 @@ main {
 .search__mobile i {
   position: left;
 }
-
+#logo2{
+  display: none;
+}
 @media (min-width: 361px) {
  
   header {
@@ -397,5 +401,15 @@ main {
   }
   .datos{
     width: 93vw;
+  }
+  #logo1{
+    display: none;
+  }
+  .img-header{
+    max-width: 500px;
+  }
+  #logo2{
+    display: block;
+   
   }
 }
