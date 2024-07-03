@@ -250,7 +250,10 @@ body {
   margin: 1rem;
   background-color: #FFF;
 }
-
+.product__card button{
+  margin: 0 auto;
+  width: 90%;
+}
 .product__name {
   font-size: 1.4rem;
 }
@@ -380,4 +383,11 @@ main {
     display: none;
   }
 
+  /*registro*/
+  .account{
+    min-width: 100%;
+  }
+  .datos{
+    width: 93vw;
+  }
 }
