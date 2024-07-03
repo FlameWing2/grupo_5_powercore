@@ -75,9 +75,8 @@
   </header>
   <main>
     <div class="cont air-v">
-      <div class="breadcrumb">
-        <a href="/">HOME</a> <span class="sep"> /</span>
-        <h1>CARRITO</h1>
+      <div class="breadcrumb" style="color: blueviolet;font-size: 12px;">
+        <a href="/">HOME</a> <span class="sep"> /CARRITO</span>
       </div>
       <div role="alert" id="success" style="display:none"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Carrito
         actualizado</div>
@@ -98,7 +97,7 @@
         </div>
         <div class="item">
           <div class="image">
-            <a href="#"><img src="/img/productos/5/PCA003.jpg" alt="pc-armada-amd-athlon-3000g-8gb-240gb-kit"></a>
+            <a href="#"><img src="images/productos/placeholder.png" alt="pc-armada-amd-athlon-3000g-8gb-240gb-kit"></a>
           </div>
           <div class="meta">
             <div class="title"><a href="#">
@@ -114,8 +113,7 @@
             <form action="javascript:void(0)" id="cartUpdate11398">
               <input type="hidden" name="idprod" value="11398">
               <button onclick="decrementValue('11398');cartUpdate(11398);"><i class="fas fa-minus"></i></button>
-              <input onchange="cartUpdate(11398);" class="form-input" type="number" step="1" min="0" max="20"
-                name="quantity" id="prod-qty11398" value="1" title="Cantidad" inputmode="numeric">
+              <input style="width: 60px;text-align: center;" onchange="cartUpdate(11398);" class="form-input" type="number" step="1" min="0" max="20" name="quantity" id="prod-qty11398" value="1" title="Cantidad" inputmode="numeric">
               <button onclick="incrementValue('11398');cartUpdate(11398);"><i class="fas fa-plus"></i></button>
             </form>
           </div>
@@ -148,7 +146,7 @@
           <div class="cta">
             <button data-modal="#vaciar" class="btn btn-outline" name="modal">Vaciar carrito</button>
             <button data-modal="#coupon" class="btn btn-outline" name="modal">Tengo un cupón</button>
-            <button data-modal="#paymethods" class="btn btn-accent" name="modal">Siguiente</button>
+            <button data-modal="#paymethods" class="btn btn-accent" name="modal">Comprar</button>
           </div>
         </div>
       </div>
