@@ -152,7 +152,9 @@ body {
 .logo-header {
   width: calc(50% - 10px);
 }
-
+.nav-bar a:hover{
+  color:#FFD700;
+}
 .search-bar {
   width: 45%;
   margin: 15px;
