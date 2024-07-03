@@ -160,6 +160,7 @@ body {
 
 .header-form {
   position: relative;
+  text-align: right;
 }
 
 .header-form input {
@@ -378,11 +379,16 @@ main {
   }
   .contenedor-header {
     display: flex;
+    justify-content: space-between
   }
   .mob__navbar {
     display: none;
   }
-
+  .header-nav{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
   /*registro*/
   .account{
     min-width: 100%;
