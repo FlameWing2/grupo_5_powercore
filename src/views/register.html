@@ -1,129 +1,117 @@
 <!DOCTYPE html>
 <html lang="es-AR">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="XT-PC">
-    <title>PowerCore</title>
-    <meta name="description" content="Compra los productos para tu pc gamer en el sitio número uno de Argentina">
-    
-    <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="stylesheet" href="/css/style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/scripts.js"></script>
-  </head>
-<body>
-    <header>
-        <nav>
-          <div id="logo">
-            <img src="/images/PowerCore.svg" alt="PowerCore">
-          </div>
-          <div id="menu">
-            <ul>
-              <li><a href="/">Inicio</a></li>
-              <li><a href="#">Productos</a></li>
-              <li><a href="#">Contacto</a></li>
-            </ul>
-          </div>
-          <div id="search">
-            <input type="text" placeholder="Buscar...">
-            <button><i class="fas fa-search"></i></button>
-          </div>
-          <div id="user">
-            <i class="fas fa-user" onclick="toggleUserMenu()"></i>
-            <div id="user-menu">
-              <ul>
-                <li><a href="/register">Registrarse</a></li>
-                <li><a href="/login">Ingresar</a></li>
-                <li><a href="/productCart">Ver Pedidos</a></li>
-              </ul>
-            </div>
-          </div>
-          <div id="cart">
-            <a href="/productCart"><i class="fas fa-shopping-cart"></i></a>
-          </div>
-        </nav>
-      </header>
 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="XT-PC">
+  <title>PowerCore</title>
+  <meta name="description" content="Compra los productos para tu pc gamer en el sitio número uno de Argentina">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="/js/scripts.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="contenedor-header">
+      <div id="logo" class="logo-header img-header">
+        <img id="logo1" src="/images/PowerCore.svg" alt="PowerCore">
+        <img id="logo2" src="/images/PowerCore_large.svg" alt="PowerCore">
+      </div>
+      <div id="search" class="form-search">
+        <form class="header-form" action="#" method="GET">
+          <input placeholder="Buscar productos, marcas y más" type="text">
+          <a href="#"><i class="fa fa-search"></i></a>
+        </form>
+      </div>
+    </div>
+    <div class="contenedor-nav">
+
+      <nav class="header-nav">
+        <ul class="nav-bar">
+          <li><a href="/">Inicio</a></li>
+          <li><a href="#">Productos</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+        <ul class="nav-bar">
+          <li><a href="/register">Registrarse <i class="fa-regular fa-id-card"></i></a></li>
+          <li><a href="/login">Ingresar <i class="fas fa-user" onclick="toggleUserMenu()"></i></a></li>
+          <li><a href="/productCart">Ver Pedidos <i class="fas fa-shopping-cart"></i></a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="mob__navbar">
+      <div class="nav-item home">
+        <a href="/">
+          <img class="img-nav" src="images/PowerCore.svg" alt="">
+        </a>
+      </div>
+      <div class="nav-item">
+        <button class="search__mobile">
+          <i class="fa-solid fa-magnifying-glass"></i>
+
+        </button>
+      </div>
+      <div class="nav-item">
+        <a href="productCart"><i class="fa-solid fa-cart-shopping"></i>
+          <br>
+          Carrito</a>
+      </div>
+      <div class="nav-item">
+        <i class="fa-solid fa-bars"></i>
+        Menu
+      </div>
+    </div>
+    </div>
+  </header>
   <main>
+
     <div class="account">
       <div class="item">
-        <!-- Codigo nuevo -->
-        <div class="item-login item-register connect-account visible">
-          <h3>Conectá tus cuentas</h3>
-          <hr>
-          <!-- Para ingresar con sólo un click. -->
-          <div class="alt-logins" style="display: grid; grid-template-columns: 1fr 1fr; grid-gap: 25px; margin-top: 25px">
-            <!-- GOOGLE LOGIN -->
-            <div class="form-group google">
-              <div id="google-signin2">
-                <div style="height: 40px; width: 350px;" class="abcRioButton abcRioButtonLightBlue">
-                  <div class="abcRioButtonContentWrapper">
-                    <div class="abcRioButtonIcon" style="padding: 10px">
-                      <div style="width: 18px; height: 18px;" class="abcRioButtonSvgImageWithFallback abcRioButtonIconImage abcRioButtonIconImage18">
-                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 48 48" class="abcRioButtonSvg">
-                          <g>
-                            <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"></path>
-                            <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"></path>
-                            <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"></path>
-                            <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"></path>
-                            <path fill="none" d="M0 0h48v48H0z"></path>
-                          </g>
-                        </svg>
-                      </div>
-                    </div>
-                    <span style="font-size: 14px; line-height: 38px;" class="abcRioButtonContents">
-                      <span id="not_signed_iny6q2bgatjhb5">Iniciar sesión con Google</span>
-                      <span id="connectedy6q2bgatjhb5" style="display: none">Has iniciado sesión con Google</span>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- FACEBOOK LOGIN -->
-            <div class="form-group face">
-              <div class="fb-login-button fb_iframe_widget" data-width="380" data-size="large" data-button-type="login_with" data-auto-logout-link="false" data-onlogin="onLoginFB()" data-use-continue-as="false" data-scope="email" login_text="" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=1337166216635779&amp;auto_logout_link=false&amp;button_type=login_with&amp;container_width=0&amp;locale=es_LA&amp;login_text=&amp;scope=email&amp;sdk=joey&amp;size=large&amp;use_continue_as=false&amp;width=380">
-                <span style="vertical-align: bottom; width: 380px; height: 40px;">
-                  <iframe name="f7282c4a95dc87aa6" width="380px" height="1000px" data-testid="fb:login_button Facebook Social Plugin" title="fb:login_button Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/v5.0/plugins/login_button.php?app_id=1337166216635779&amp;auto_logout_link=false&amp;button_type=login_with&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Dfc7c254c3cbc6b4d3%26domain%3Dwww.xt-pc.com.ar%26is_canvas%3Dfalse%26origin%3Dhttps%253A%252F%252Fwww.xt-pc.com.ar%252Ff0a5be82cb45371e3%26relation%3Dparent.parent&amp;container_width=0&amp;locale=es_LA&amp;login_text=&amp;scope=email&amp;sdk=joey&amp;size=large&amp;use_continue_as=false&amp;width=380" style="border: none; visibility: visible; width: 380px; height: 40px;" class=""></iframe>
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- FIN Codigo nuevo -->
-  
+
+
         <div class="item-login item-register">
           <h3>Registro de usuario</h3>
           <hr>
           <div class="content col-2">
             <form action="javascript:void(0)" id="Register">
               <div class="form-group">
-                <input class="form-input" type="email" id="email" name="email" required="" placeholder="Email">
+                <input class="form-input datos" type="email" id="email" name="email" required="" placeholder="Email">
               </div>
               <div class="form-group">
-                <input class="form-input" type="password" id="password" name="password" required="" placeholder="Contraseña">
+                <input class="form-input datos" type="password" id="password" name="password" required=""
+                  placeholder="Contraseña">
               </div>
-              <div class="form-group">
-                <input class="form-input" type="password" id="password2" name="password2" required="" placeholder="Confirmar contraseña">
+              <div class="form-group ">
+                <input class="form-input datos" type="password" id="password2" name="password2" required=""
+                  placeholder="Confirmar contraseña">
               </div>
               <div class="info">
                 <div class="item">Información personal</div>
               </div>
               <div class="form-group">
-                <input class="form-input" type="text" id="nombre" name="nombre" required="" placeholder="Nombre">
+                <input class="form-input datos" type="text" id="nombre" name="nombre" required="" placeholder="Nombre">
               </div>
               <div class="form-group">
-                <input class="form-input" type="text" id="apellido" name="apellido" required="" placeholder="Apellido">
+                <input class="form-input datos" type="text" id="apellido" name="apellido" required="" placeholder="Apellido">
               </div>
               <div class="form-group">
-                <input class="form-input" type="number" id="dni" name="dni" required="" placeholder="Número de DNI o CUIT">
+                <input class="form-input datos" type="number" id="dni" name="dni" required=""
+                  placeholder="Número de DNI o CUIT">
               </div>
               <div class="form-group">
-                <input class="form-input" type="number" id="tel" name="tel" required="" placeholder="Número de teléfono">
+                <input class="form-input datos" type="number" id="tel" name="tel" required=""
+                  placeholder="Número de teléfono">
               </div>
               <input type="hidden" id="express" name="express" value="0">
             </form>
@@ -135,21 +123,25 @@
             </div>
           </div>
         </div>
-  
+
       </div>
-  
+
       <div class="item">
         <div class="item-account">
           <h3>¿Por qué registrarse?</h3>
           <hr>
-          <p>Con tu registro podrás realizar compras online en nuestro sitio web. Los datos que dejes aquí los utilizaremos para contactarnos y enviarte los productos que hayas comprado. También los utilizaremos para la confección de los comprobantes fiscales que deben acompañar a dichos productos. No utilizaremos tus datos para ningún otro fin, ni para enviarte información que no hayas solicitado. Para más información mira nuestras <a href="#">políticas de privacidad</a>.</p>
+          <p>Con tu registro podrás realizar compras online en nuestro sitio web. Los datos que dejes aquí los
+            utilizaremos para contactarnos y enviarte los productos que hayas comprado. También los utilizaremos para la
+            confección de los comprobantes fiscales que deben acompañar a dichos productos. No utilizaremos tus datos
+            para ningún otro fin, ni para enviarte información que no hayas solicitado. Para más información mira
+            nuestras <a href="#">políticas de privacidad</a>.</p>
           <h4>Recordá:</h4>
-          <p>Es muy importante que coloques todos tus datos reales a la hora de registrar tu cuenta. Ante cualquier inconveniente vamos a estar comunicándonos con vos por teléfono o vía email.</p>
+          <p>Es muy importante que coloques todos tus datos reales a la hora de registrar tu cuenta. Ante cualquier
+            inconveniente vamos a estar comunicándonos con vos por teléfono o vía email.</p>
         </div>
       </div>
     </div>
   </main>
-  
 
   <footer>
     <p>&copy; 2024 PowerCore. Trabajo grupal N&deg; 5.</p>
@@ -160,7 +152,7 @@
       document.getElementById('user-menu').classList.toggle('show');
     }
 
-    window.onclick = function(event) {
+    window.onclick = function (event) {
       if (!event.target.matches('.fa-user')) {
         var dropdowns = document.getElementsByClassName("user-menu");
         for (var i = 0; i < dropdowns.length; i++) {
@@ -173,4 +165,5 @@
     }
   </script>
 </body>
+
 </html>

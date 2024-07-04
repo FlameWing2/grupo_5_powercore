@@ -23,61 +23,60 @@
 
 <body>
   <header>
-    <nav>
-      <div id="logo">
-        <img src="/images/PowerCore.svg" alt="PowerCore">
+    <div class="contenedor-header">
+      <div id="logo" class="logo-header img-header">
+        <img id="logo1" src="/images/PowerCore.svg" alt="PowerCore">
+        <img id="logo2" src="/images/PowerCore_large.svg" alt="PowerCore">
       </div>
-      <div id="menu">
-        <ul>
+      <div id="search" class="form-search">
+        <form class="header-form" action="#" method="GET">
+          <input placeholder="Buscar productos, marcas y más" type="text">
+          <a href="#"><i class="fa fa-search"></i></a>
+        </form>
+      </div>
+    </div>
+    <div class="contenedor-nav">
+
+      <nav class="header-nav">
+        <ul class="nav-bar">
           <li><a href="/">Inicio</a></li>
           <li><a href="#">Productos</a></li>
           <li><a href="#">Contacto</a></li>
         </ul>
+        <ul class="nav-bar">
+          <li><a href="/register">Registrarse <i class="fa-regular fa-id-card"></i></a></li>
+          <li><a href="/login">Ingresar <i class="fas fa-user" onclick="toggleUserMenu()"></i></a></li>
+          <li><a href="/productCart">Ver Pedidos <i class="fas fa-shopping-cart"></i></a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="mob__navbar">
+      <div class="nav-item home">
+        <a href="/">
+          <img class="img-nav" src="images/PowerCore.svg" alt="">
+        </a>
       </div>
-      <div id="search">
-        <input type="text" placeholder="Buscar...">
-        <button><i class="fas fa-search"></i></button>
+      <div class="nav-item">
+        <button class="search__mobile">
+          <i class="fa-solid fa-magnifying-glass"></i>
+
+        </button>
       </div>
-      <div id="user">
-        <i class="fas fa-user" onclick="toggleUserMenu()"></i>
-        <div id="user-menu">
-          <ul>
-            <li><a href="/register">Registrarse</a></li>
-            <li><a href="/login">Ingresar</a></li>
-            <li><a href="/productCart">Ver Pedidos</a></li>
-          </ul>
-        </div>
+      <div class="nav-item">
+        <a href="productCart"><i class="fa-solid fa-cart-shopping"></i>
+          <br>
+          Carrito</a>
       </div>
-      <div id="cart">
-        <a href="/productCart"><i class="fas fa-shopping-cart"></i></a>
+      <div class="nav-item">
+        <i class="fa-solid fa-bars"></i>
+        Menu
       </div>
-    </nav>
+    </div>
+    </div>
   </header>
 
-  <div class="mob__navbar">
-    <div class="nav-item home">
-      <a href="/">
-        <img src="images/PowerCore.svg" alt="">
-      </a>
-    </div>
-    <div class="nav-item">
-      <button class="search__mobile">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        Busqueda
-      </button>
-    </div>
-    <div class="nav-item">
-      <a href="productCart"><i class="fa-solid fa-cart-shopping"></i>
-        <br>
-        Carrito</a>
-    </div>
-    <div class="nav-item">
-      <i class="fa-solid fa-bars"></i>
-      Menu
-    </div>
-  </div>
   <main>
-    <h1>PowerCore - La tienda Gamer #1 de Argentina</h1>
+    <h1>PowerCore - Tienda Gamer Argentina</h1>
     <p>Compra los productos para tu pc gamer en el sitio número uno de Argentina</p>
     <section id="products__section">
       <h2>Productos Destacados</h2>
@@ -100,6 +99,102 @@
         </div>
         <div class="product__card">
           <a href="/productDetail"><img src="images/productos/placeholder.png" alt="Producto 2"></a>
+          <div class="product__description">
+            <p class="product__cathegory">categoría</p>
+            <a href="/productDetail">
+              <h3 class="product__name">Nombre y modelo del producto</h3>
+            </a>
+            <p class="product__price">$100000</p>
+            <a href="/productDetail"><i class="fas fa-info-circle"></i>Ver detalles</a>
+            <button class="btn btn-primary">Agregar al
+              <span>
+                <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+              </span>
+            </button>
+          </div>
+        </div>
+        <div class="product__card">
+          <a href="/productDetail"><img src="images/productos/placeholder.png" alt="Producto 1"></a>
+          <div class="product__description">
+            <p class="product__cathegory">categoría</p>
+            <a href="/productDetail">
+              <h3 class="product__name">Nombre y modelo del producto</h3>
+            </a>
+            <p class="product__price">$100000</p>
+            <a href="/productDetail"><i class="fas fa-info-circle"></i>Ver detalles</a>
+            <button class="btn btn-primary">Agregar al
+              <span>
+                <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+              </span>
+            </button>
+          </div>
+        </div>
+        <div class="product__card">
+          <a href="/productDetail"><img src="images/productos/placeholder.png" alt="Producto 1"></a>
+          <div class="product__description">
+            <p class="product__cathegory">categoría</p>
+            <a href="/productDetail">
+              <h3 class="product__name">Nombre y modelo del producto</h3>
+            </a>
+            <p class="product__price">$100000</p>
+            <a href="/productDetail"><i class="fas fa-info-circle"></i>Ver detalles</a>
+            <button class="btn btn-primary">Agregar al
+              <span>
+                <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+              </span>
+            </button>
+          </div>
+        </div>
+        <div class="product__card">
+          <a href="/productDetail"><img src="images/productos/placeholder.png" alt="Producto 1"></a>
+          <div class="product__description">
+            <p class="product__cathegory">categoría</p>
+            <a href="/productDetail">
+              <h3 class="product__name">Nombre y modelo del producto</h3>
+            </a>
+            <p class="product__price">$100000</p>
+            <a href="/productDetail"><i class="fas fa-info-circle"></i>Ver detalles</a>
+            <button class="btn btn-primary">Agregar al
+              <span>
+                <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+              </span>
+            </button>
+          </div>
+        </div>
+        <div class="product__card">
+          <a href="/productDetail"><img src="images/productos/placeholder.png" alt="Producto 1"></a>
+          <div class="product__description">
+            <p class="product__cathegory">categoría</p>
+            <a href="/productDetail">
+              <h3 class="product__name">Nombre y modelo del producto</h3>
+            </a>
+            <p class="product__price">$100000</p>
+            <a href="/productDetail"><i class="fas fa-info-circle"></i>Ver detalles</a>
+            <button class="btn btn-primary">Agregar al
+              <span>
+                <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+              </span>
+            </button>
+          </div>
+        </div>
+        <div class="product__card">
+          <a href="/productDetail"><img src="images/productos/placeholder.png" alt="Producto 1"></a>
+          <div class="product__description">
+            <p class="product__cathegory">categoría</p>
+            <a href="/productDetail">
+              <h3 class="product__name">Nombre y modelo del producto</h3>
+            </a>
+            <p class="product__price">$100000</p>
+            <a href="/productDetail"><i class="fas fa-info-circle"></i>Ver detalles</a>
+            <button class="btn btn-primary">Agregar al
+              <span>
+                <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+              </span>
+            </button>
+          </div>
+        </div>
+        <div class="product__card">
+          <a href="/productDetail"><img src="images/productos/placeholder.png" alt="Producto 1"></a>
           <div class="product__description">
             <p class="product__cathegory">categoría</p>
             <a href="/productDetail">
