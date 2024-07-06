@@ -1,4 +1,4 @@
-# Standup Diario/Semanal
+# Standup Semanal - Grupo 5 PowerCore
 
 ## Fecha: -->09/07/2024
 
