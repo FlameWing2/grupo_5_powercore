@@ -145,7 +145,7 @@ Estudiante de la Licenciatura en Sistemas de la Universidad Nacional de Chilecit
 
 # SPRINT 2
 
-- [Trello - Sprint 2](https://trello.com/b/lguwnOv5/sprint-2)
+- [Trello - Sprint 2](https://trello.com/b/lguwnOv5/sprint-2) - Jun 11 2024
 
 # ESTRUCTURA DE ARBOL DEL PROYECTO
 
