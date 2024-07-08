@@ -38,12 +38,12 @@ app.listen(puerto, (error) => {
 const indexRouter = require('./routes/indexRouter');
 const usersRouter = require('./routes/usersRouter');
 const productsRouter = require('./routes/productsRouter');
-//const adminRouter = require('./routes/adminRouters');
+const adminRouter = require('./routes/adminRouters');
 
 app.use('/', indexRouter);
 app.use('/users',usersRouter);
 app.use('/products', productsRouter);
-//app.use('./admin', adminRouter);
+app.use('/admin', adminRouter);
 
 
 /**activo bloqueo de 404 */
