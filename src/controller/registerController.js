@@ -15,6 +15,7 @@ let registerController = {
         
         // Luego redirigir o renderizar una vista con una respuesta adecuada
         res.send('Registro recibido: ' + nombre + " " + apellido);
+        res.redirect('/');
     }
 }
 

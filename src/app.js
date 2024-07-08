@@ -15,8 +15,10 @@ app.use(express.static(path.join(__dirname, '../public')));
 
 // cargando funciones de analisis de datos de formularios y JSON
 // estas dos funciones se ejecutaran de forma automatica
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+
+
 
 //activando escucha de puerto
 app.listen(puerto, (error) => {
@@ -43,3 +45,9 @@ app.use('/login', loginRouter);
 app.use('/register', registerRouter);
 app.use('/productCart', producCartRouter);
 app.use('/productDetail', productDetailsRouter);
+
+
+/**activo bloqueo de 404 */
+app.use((req, res, next)=>{
+    res.status(404).send("not-found");
+})
