@@ -2,7 +2,7 @@
 //de rutas y gestion en server
 const os = require('os');
 const express = require('express');
-
+const methodOverride = require('method-override');
 
 //paquete para el manejo de rutas absolutas o relativas
 const path = require('path');
@@ -12,6 +12,10 @@ const puerto = 3000;
 
 //aviso a express que use los static, assets
 app.use(express.static(path.join(__dirname, '../public')));
+
+//activo la sobreescritura de method
+//con esto puedo usar put, delete, patch, etc
+app.use(methodOverride('_method'));
 
 /**estas dos lineas son necesarias para trabajar con post, put, delete */
 // cargando funciones de analisis de datos de formularios y JSON
