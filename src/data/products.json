@@ -23,14 +23,14 @@
     {
       "productId": 4,
       "image": "/images/products/foto4.jpg",
-      "category": "Monitors",
+      "category": "Desktops",
       "name": "Combo PC+KeyBoard+Mouse",
       "price": 199.99
     },
     {
       "productId": 5,
       "image": "/images/products/foto5.jpg",
-      "category": "Desktops",
+      "category": "Laptops",
       "name": "Notebook Pavilion I7",
       "price": 499.99
     }
