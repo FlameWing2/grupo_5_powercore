@@ -253,6 +253,7 @@ body {
   overflow: hidden;
   margin: 1rem;
   background-color: #FFF;
+  padding-top: 20px;
 }
 .product__card button{
   margin: 0 auto;
