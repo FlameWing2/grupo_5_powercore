@@ -19,7 +19,9 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-
+//activando template ejs
+app.set('views',__dirname+"/src/views/");
+app.set('view engine','ejs');
 
 //activando escucha de puerto
 app.listen(puerto, (error) => {
