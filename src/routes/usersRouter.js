@@ -4,7 +4,6 @@ let loginController = require('../controller/loginController');
 let registerController = require('../controller/registerController');
 
 //manejo de rutas segun clase 25 - MVC
-
 //login
 router.get('/login',loginController.login);
 router.post('/validar',loginController.validar);

@@ -3,8 +3,10 @@
 const path = require('path');
 
 let productCartController = {
-    index: (req, res)=>{
-        res.sendFile(path.resolve(__dirname, '../views/productCart.html'));
+    show: (req, res)=>{
+       // res.sendFile(path.resolve(__dirname, '../views/productCart.html'));
+       res.render('products/productCart');
+      
     }
 }
 

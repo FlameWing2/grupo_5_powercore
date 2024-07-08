@@ -3,8 +3,9 @@
 const path = require('path');
 
 let productDetailController = {
-    index: (req, res)=>{
-        res.sendFile(path.resolve(__dirname, '../views/productDetail.html'));
+    show: (req, res)=>{
+        //res.sendFile(path.resolve(__dirname, '../views/productDetail.html'));
+        res.render('products/productDetail');
     },
     detalleArticulo: (req, res)=>{
         const idArticulo = req.params.idArticulo;
