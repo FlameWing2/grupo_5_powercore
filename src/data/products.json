@@ -1,0 +1,38 @@
+[
+    {
+      "productId": 1,
+      "image": "/images/products/foto5.jpg",
+      "category": "Laptops",
+      "name": "Laptop Dell Inspiron 15",
+      "price": 799.99
+    },
+    {
+      "productId": 2,
+      "image": "/images/products/foto1.jpg",
+      "category": "Accessories",
+      "name": "Logitech Wireless Mouse",
+      "price": 29.99
+    },
+    {
+      "productId": 3,
+      "image": "/images/products/foto3.jpg",
+      "category": "Accessories",
+      "name": "GFORCE 4070",
+      "price": 129.99
+    },
+    {
+      "productId": 4,
+      "image": "/images/products/foto4.jpg",
+      "category": "Monitors",
+      "name": "Combo PC+KeyBoard+Mouse",
+      "price": 199.99
+    },
+    {
+      "productId": 5,
+      "image": "/images/products/foto5.jpg",
+      "category": "Desktops",
+      "name": "Notebook Pavilion I7",
+      "price": 499.99
+    }
+  ]
+  
