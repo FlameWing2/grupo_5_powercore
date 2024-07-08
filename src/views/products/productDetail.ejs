@@ -85,11 +85,11 @@
     <div class="product">
         <div class="img air">
             <div class="featured">
-                <img id="mainpic" src="/images/productos/placeholder.png" alt="pc-armada-amd-athlon-3000g-8gb-240gb-kit">
+                <img id="mainpic" src="<%= product.image %>" alt="<%= product.name %>">
             </div>
             <div class="more">
                 <div class="item">
-                    <img src="/images/productos/placeholder.png" alt="pc-armada-amd-athlon-3000g-8gb-240gb-kit">
+                    <img src="/images/products/placeholder.png" alt="Aqui detalles de otros productos">
                 </div>
                 <!-- Additional images gallery -->
             </div>
@@ -99,15 +99,15 @@
         </div>
 <BR><BR>
         <div class="meta">
-            <h1>PC ARMADA AMD ATHLON 3000G + 8GB + 240GB + KIT</h1>
+            <h1><%= product.name %></h1>
             <div class="shipping">
-                Código del producto: <strong>PCA003</strong>
+                Código del producto: <strong><%= product.productCode %></strong>
             </div>
             <div class="price-main">
-                Precio efectivo o transferencia <br><span class="price-num">$235.569,93</span> <span style="display:none" class="price-old">$259.126,92</span>
+                Precio efectivo o transferencia <br><span class="price-num">$<%= product.cashPrice %></span> <span style="display:none" class="price-old">$259.126,92</span>
             </div>
             <div class="price-mp">
-                Precio MercadoPago $259.126,92 <img src="/img/mercadopago.png" alt="">
+                Precio MercadoPago $<%= product.mercadoPagoPrice %> <img src="/images/mercadopago.png" alt="imagen mercadopago" width="100px">
             </div>
             <div class="price-main" style="font-size:22px">
                 ¡6 cuotas de  $49.077,07!
