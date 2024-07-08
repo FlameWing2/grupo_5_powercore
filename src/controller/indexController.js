@@ -5,7 +5,11 @@ const path = require('path');
 let indexController = {
     index: (req, res)=>{
         //res.sendFile(path.resolve(__dirname, '../views/index.html'));
-        res.render('index');
+        const datos={
+            titulo: "PowerCore",
+            pie: "&copy; 2024 PowerCore. Trabajo grupal N&deg; 5."
+        }
+        res.render('index',{'datos':datos});
     }
 }
 

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es-AR">
-  <%- include('../partials/head') %>
+  <%- include('../partials/head',{'titulo':datos.titulo}) %>
 
 <body>
   <header>
@@ -124,7 +124,7 @@
     </div>
   </main>
 
-  <%- include('../partials/footer') %>
+  <%- include('../partials/footer',{'pie':datos.pie}) %>
 
   <script>
     function toggleUserMenu() {

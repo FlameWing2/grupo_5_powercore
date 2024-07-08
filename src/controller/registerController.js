@@ -5,7 +5,11 @@ const path = require('path');
 let registerController = {
     register: (req, res)=>{
         //res.sendFile(path.resolve(__dirname, '../views/users/register.html'));
-        res.render("users/register");
+        const datos={
+            titulo: "PowerCore",
+            pie: "&copy; 2024 PowerCore. Trabajo grupal N&deg; 5."
+        }
+        res.render("users/register",{'datos':datos});
     },
     create: (req, res) => {
         const { nombre, apellido } = req.body;
@@ -17,8 +21,11 @@ let registerController = {
         // Luego redirigir o renderizar una vista con una respuesta adecuada
         //res.send('Registro recibido: ' + nombre + " " + apellido);
         //res.redirect('/');
-
-        res.render("users/register");
+        const datos={
+            titulo: "PowerCore",
+            pie: "&copy; 2024 PowerCore. Trabajo grupal N&deg; 5."
+        }
+        res.render("users/register",{'datos':datos});
     }
 }
 

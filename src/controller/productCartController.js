@@ -5,7 +5,11 @@ const path = require('path');
 let productCartController = {
     show: (req, res)=>{
        // res.sendFile(path.resolve(__dirname, '../views/productCart.html'));
-       res.render('products/productCart');
+       const datos={
+        titulo: "PowerCore",
+        pie: "&copy; 2024 PowerCore. Trabajo grupal N&deg; 5."
+    }
+       res.render('products/productCart',{'datos':datos});
       
     }
 }

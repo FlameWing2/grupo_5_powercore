@@ -5,11 +5,19 @@ const path = require('path');
 let loginController = {
     login: (req, res)=>{
         //res.sendFile(path.resolve(__dirname, '../views/users/login.html'));
-        res.render("users/login");
+        const datos={
+            titulo: "PowerCore",
+            pie: "&copy; 2024 PowerCore. Trabajo grupal N&deg; 5."
+        }
+        res.render("users/login",{'datos':datos});
     },
     validar: (req, res)=>{
         //res.sendFile(path.resolve(__dirname, '../views/users/login.html'));
-        res.render('users/login');
+        const datos={
+            titulo: "PowerCore",
+            pie: "&copy; 2024 PowerCore. Trabajo grupal N&deg; 5."
+        }
+        res.render('users/login',{'datos':datos});
     },
 }
 
