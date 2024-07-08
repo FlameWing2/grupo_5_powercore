@@ -3,11 +3,11 @@
 const path = require('path');
 
 let loginController = {
-    index: (req, res)=>{
-        res.sendFile(path.resolve(__dirname, '../views/login.html'));
+    login: (req, res)=>{
+        res.sendFile(path.resolve(__dirname, '../views/users/login.html'));
     },
     validar: (req, res)=>{
-        res.sendFile(path.resolve(__dirname, '../views/login.html'));
+        res.sendFile(path.resolve(__dirname, '../views/users/login.html'));
     },
 }
 

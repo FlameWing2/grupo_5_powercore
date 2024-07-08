@@ -3,8 +3,8 @@
 const path = require('path');
 
 let registerController = {
-    index: (req, res)=>{
-        res.sendFile(path.resolve(__dirname, '../views/register.html'));
+    register: (req, res)=>{
+        res.sendFile(path.resolve(__dirname, '../views/users/register.html'));
     },
     create: (req, res) => {
         const { nombre, apellido } = req.body;

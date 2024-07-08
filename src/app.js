@@ -13,6 +13,7 @@ const puerto = 3000;
 //aviso a express que use los static, assets
 app.use(express.static(path.join(__dirname, '../public')));
 
+/**estas dos lineas son necesarias para trabajar con post, put, delete */
 // cargando funciones de analisis de datos de formularios y JSON
 // estas dos funciones se ejecutaran de forma automatica
 app.use(express.urlencoded({ extended: false }));
@@ -33,18 +34,18 @@ app.listen(puerto, (error) => {
 
 // Importar y usar las rutas
 const indexRouter = require('./routes/indexRouter');
-const loginRouter = require('./routes/loginRouter');
-const registerRouter = require('./routes/registerRouter');
-const producCartRouter = require('./routes/producCartRouter');
-const productDetailsRouter = require('./routes/productDetailsRouter');
-// sea cual sea la ruta que llegue, sera derivada a routes.js, ahi se analiza y se llama
-// al controlador que se lo necesite.
+const usersRouter = require('./routes/usersRouter');
+const productsRouter = require('./routes/productsRouter');
+const adminRouter = require('./routes/adminRouters');
 
 app.use('/', indexRouter);
-app.use('/login', loginRouter);
-app.use('/register', registerRouter);
-app.use('/productCart', producCartRouter);
-app.use('/productDetail', productDetailsRouter);
+//ahora usaremos usersRouter
+app.use('/users',usersRouter);
+// app.use('/login', loginRouter);
+// app.use('/register', registerRouter);
+//app.use('/productCart', producCartRouter);
+//app.use('/productDetail', productDetailsRouter);
+//app.use('./admin', adminRouter);
 
 
 /**activo bloqueo de 404 */
