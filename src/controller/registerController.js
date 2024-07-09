@@ -13,6 +13,17 @@ let registerController = {
         }
         res.render("users/register",{'datos':datos});
     },
+    createAvatar: (req, res)=>{
+        //res.sendFile(path.resolve(__dirname, '../views/users/register.html'));
+        const datos={
+            titulo: "PowerCore",
+            pie: "&copy; 2024 PowerCore. Trabajo grupal N&deg; 5."
+        }
+        /**si uso multer */
+        //console.log(req.file);
+        //if(req.file !== undefined) llego
+        res.render("users/register",{'datos':datos});
+    },
     create: (req, res) => {
         const { email, password,password2,nombre,apellido } = req.body;
         // Aquí vamos a manejar los datos, por ejemplo, guardarlos en una base de datos
@@ -23,16 +34,7 @@ let registerController = {
         // Luego redirigir o renderizar una vista con una respuesta adecuada
         //res.send('Registro recibido: ' + nombre + " " + apellido);
         //res.redirect('/');
-        /**si voy a usar multer con archivos */
-        const storage = multer.diskStorage({
-            destination: (req, file, cb)=>{
-                cb(null,'./public/images/avatars');
-            },
-            filename: (req, file, cb)=>{
-                cb(null,`${Date.now()}_img_${path.extname(file.originalname)}`);
-            }
-        })
-        /**----------fin multer */
+        
         const datos={
             titulo: "PowerCore",
             pie: "&copy; 2024 PowerCore. Trabajo grupal N&deg; 5."
