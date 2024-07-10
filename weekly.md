@@ -32,9 +32,9 @@
 
 
 ### Loyola Leo Martin
-**Qué hizo ayer**: Observe como se usa EJS
+**Qué hizo ayer**: Observe como se usa MVC
 **Impedimentos**: Ninguno 
-**Qué va a hacer hoy**: Aplicar los conocimiento de clase para moldear el sistema con EJS engine
+**Qué va a hacer hoy**: Aplicar los conocimiento de clase para moldear el sistema con MVC y los partials
 ## Soluciones Propuestas
 - Ver Playground y buscar mas info si hace falta.
 
