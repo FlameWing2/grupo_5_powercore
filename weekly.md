@@ -12,25 +12,34 @@
 ## Resumen de Tareas
 
 ### Albornoz Alfredo
-| **Qué hizo ayer**                               | **Impedimentos**                             | **Qué va a hacer hoy**                        |
-|-------------------------------------------------|---------------------------------------------|----------------------------------------------|
-| [Descripción de tareas completadas ayer]        | [Descripción de impedimentos]               | [Descripción de tareas planeadas para hoy]   |
+**Qué hizo ayer**: XXX
+**Impedimentos**: XXX
 
-### Alive Oviedo, Luciano Sebastian
-| **Qué hizo ayer**                               | **Impedimentos**                             | **Qué va a hacer hoy**                        |
-|-------------------------------------------------|---------------------------------------------|----------------------------------------------|
-| [Descripción de tareas completadas ayer]        | [Descripción de impedimentos]               | [Descripción de tareas planeadas para hoy]   |
-
-### Loyola Leo Martin
-| **Qué hizo ayer**                               | **Impedimentos**                             | **Qué va a hacer hoy**                        |
-|-------------------------------------------------|---------------------------------------------|----------------------------------------------|
-| [Descripción de tareas completadas ayer]        | [Descripción de impedimentos]               | [Descripción de tareas planeadas para hoy]   |
-
-
----
+**Qué va a hacer hoy**: XXX
 
 ## Soluciones Propuestas
-- aquí soluciones propuestas
+- XXX
+
+
+### Alive Oviedo, Luciano Sebastian
+**Qué hizo ayer**: XXX
+**Impedimentos**: XXX
+
+**Qué va a hacer hoy**: XXX
+
+## Soluciones Propuestas
+- XXX
+
+
+### Loyola Leo Martin
+**Qué hizo ayer**: Observe como se usa EJS
+
+**Impedimentos**: Ninguno 
+
+**Qué va a hacer hoy**: Aplicar los conocimiento de clase para moldear el sistema con EJS engine
+
+## Soluciones Propuestas
+- Ver Playground y buscar mas info si hace falta.
 
 
 
@@ -49,22 +58,30 @@
 ## Resumen de Tareas
 
 ### Albornoz Alfredo
-| **Qué hizo ayer**                               | **Impedimentos**                             | **Qué va a hacer hoy**                        |
-|-------------------------------------------------|---------------------------------------------|----------------------------------------------|
-| [Descripción de tareas completadas ayer]        | [Descripción de impedimentos]               | [Descripción de tareas planeadas para hoy]   |
+**Qué hizo ayer**: XXX
+**Impedimentos**: XXX
 
-### Alive Oviedo, Luciano Sebastian
-| **Qué hizo ayer**                               | **Impedimentos**                             | **Qué va a hacer hoy**                        |
-|-------------------------------------------------|---------------------------------------------|----------------------------------------------|
-| [Descripción de tareas completadas ayer]        | [Descripción de impedimentos]               | [Descripción de tareas planeadas para hoy]   |
-
-### Loyola Leo Martin
-| **Qué hizo ayer**                               | **Impedimentos**                             | **Qué va a hacer hoy**                        |
-|-------------------------------------------------|---------------------------------------------|----------------------------------------------|
-| [Descripción de tareas completadas ayer]        | [Descripción de impedimentos]               | [Descripción de tareas planeadas para hoy]   |
-
-
----
+**Qué va a hacer hoy**: XXX
 
 ## Soluciones Propuestas
-- aquí soluciones propuestas
+- XXX
+
+### Alive Oviedo, Luciano Sebastian
+**Qué hizo ayer**: XXX
+**Impedimentos**: XXX
+
+**Qué va a hacer hoy**: XXX
+
+## Soluciones Propuestas
+- XXX
+
+### Loyola Leo Martin
+**Qué hizo ayer**: XXX
+**Impedimentos**: XXX
+
+**Qué va a hacer hoy**: XXX
+
+## Soluciones Propuestas
+- XXX
+
+
