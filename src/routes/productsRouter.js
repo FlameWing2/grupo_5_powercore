@@ -1,10 +1,9 @@
 const express = require('express');
 let router = express.Router();
-let productCartController = require('../controller/productCartController');
-let productDetailController = require('../controller/productDetailController');
+let productsController = require('../controller/productsController');
 
 //manejo de rutas segun clase 25 - MVC
-router.get('/show',productCartController.show);
-router.get('/:idProduct/show',productDetailController.show);
+router.get('/show',productsController.showCart);
+router.get('/:idProduct/show',productsController.showDetails);
 
 module.exports = router;

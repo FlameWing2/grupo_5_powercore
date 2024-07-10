@@ -39,12 +39,12 @@ app.listen(puerto, (error) => {
 
 
 // Importar y usar las rutas
-const indexRouter = require('./routes/indexRouter');
+const mainRouter = require('./routes/mainRouter');
 const usersRouter = require('./routes/usersRouter');
 const productsRouter = require('./routes/productsRouter');
 const adminRouter = require('./routes/adminRouters');
 
-app.use('/', indexRouter);
+app.use('/', mainRouter);
 app.use('/users',usersRouter);
 app.use('/products', productsRouter);
 app.use('/admin', adminRouter);

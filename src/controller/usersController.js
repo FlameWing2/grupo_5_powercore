@@ -1,10 +1,26 @@
-// asi vamos a manejar las rutas src/controllers/????Controller.js
+// asi vamos a manejar las rutas src/controllers/indexController.js
 //agrego la ruta para poder usar path
 const path = require('path');
-//si necesito subir doc, agrego multer
-const multer = require('multer');
 
-let registerController = {
+let usersController = {
+    //procesos de login
+    login: (req, res)=>{
+        //res.sendFile(path.resolve(__dirname, '../views/users/login.html'));
+        const datos={
+            titulo: "PowerCore",
+            pie: "&copy; 2024 PowerCore. Trabajo grupal N&deg; 5."
+        }
+        res.render("users/login",{'datos':datos});
+    },
+    validar: (req, res)=>{
+        //res.sendFile(path.resolve(__dirname, '../views/users/login.html'));
+        const datos={
+            titulo: "PowerCore",
+            pie: "&copy; 2024 PowerCore. Trabajo grupal N&deg; 5."
+        }
+        res.render('users/login',{'datos':datos});
+    },
+    //procesos de register
     register: (req, res)=>{
         //res.sendFile(path.resolve(__dirname, '../views/users/register.html'));
         const datos={
@@ -43,4 +59,4 @@ let registerController = {
     }
 }
 
-module.exports = registerController;
+module.exports = usersController;

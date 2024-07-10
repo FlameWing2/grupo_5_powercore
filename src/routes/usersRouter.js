@@ -22,17 +22,16 @@ let fileUpload = multer({storage:storageMulter});
 
 
 
-let loginController = require('../controller/loginController');
-let registerController = require('../controller/registerController');
+let usersController = require('../controller/usersController');
 
 //manejo de rutas segun clase 25 - MVC
 //login
-router.get('/login',loginController.login);
-router.post('/validar',loginController.validar);
+router.get('/login',usersController.login);
+router.post('/validar',usersController.validar);
 
 //register
-router.get('/register',registerController.register);
-router.post('/create',registerController.create);
-router.post('/createAvatar', fileUpload.single('filenamehtml'),registerController.createAvatar);
+router.get('/register',usersController.register);
+router.post('/create',usersController.create);
+router.post('/createAvatar', fileUpload.single('filenamehtml'),usersController.createAvatar);
 
 module.exports = router;

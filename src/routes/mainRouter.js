@@ -1,6 +1,6 @@
 const express = require('express');
 let router = express.Router();
-let indexController = require('../controller/indexController');
+let indexController = require('../controller/mainController');
 
 //manejo de rutas segun clase 25 - MVC
 

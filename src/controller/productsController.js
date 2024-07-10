@@ -2,12 +2,22 @@
 //agrego la ruta para poder usar path
 const path = require('path');
 const archivo = require('node:fs');
-
 //cargo los productos por ahora con json
 const products = JSON.parse(archivo.readFileSync(path.resolve(__dirname, '../data/products.json'),"utf-8"));
 
-let productDetailController = {
-    show: (req, res)=>{
+let productCartController = {
+    //para productCart
+    showCart: (req, res)=>{
+       // res.sendFile(path.resolve(__dirname, '../views/productCart.html'));
+       const datos={
+        titulo: "PowerCore",
+        pie: "&copy; 2024 PowerCore. Trabajo grupal N&deg; 5."
+    }
+       res.render('products/productCart',{'datos':datos});
+      
+    },
+    //para productDetails
+    showDetails: (req, res)=>{
         //res.sendFile(path.resolve(__dirname, '../views/productDetail.html'));
         const datos={
             titulo: "PowerCore",
@@ -33,4 +43,4 @@ let productDetailController = {
     }
 }
 
-module.exports = productDetailController;
+module.exports = productCartController;
