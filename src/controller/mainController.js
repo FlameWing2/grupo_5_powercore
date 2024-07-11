@@ -4,6 +4,7 @@ const path = require('path');
 const archivo = require('node:fs');
 
 //cargo los productos por ahora con json
+//aplicar luego const {products} = require(.............url del json)
 const products = JSON.parse(archivo.readFileSync(path.resolve(__dirname, '../data/products.json'),"utf-8"));
 let indexController = {
     index: (req, res)=>{
