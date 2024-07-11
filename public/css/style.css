@@ -156,36 +156,40 @@ body {
 .nav-bar a:hover{
   color:#FFD700;
 }
-.search-bar {
-  width: 45%;
-  margin: 15px;
-}
+
 
 .header-form {
-  position: relative;
-  text-align: right;
-}
-
-.header-form input {
-  width: 80%;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
+  display: flex;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 12px;
   font-family: 'Roboto', sans-serif;
+  position: relative;
+}
 
+.search-bar {
+  width: 90%;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 12px;
+}
+
+.search-bar-icon {
+  position: absolute;
+  top: 0;
+  right: 0.5rem;
+  width: 10%;
+  height: 100%;
+  background: none;
+  border: none;
+}
+
+input:focus {
+  outline: none;
 
 }
 
-.header-form input:focus {
-  outline-color: #363062;
-
-}
-
-.header-form a {
-  text-decoration: none;
-  color: #666;
-}
-
+/*
 .header-form a i {
   margin: 3px;
   padding: 9px;
@@ -194,7 +198,7 @@ body {
   position: absolute;
   right: 20%;
 }
-
+*/
 .img-header {
   width: 30%;
   min-width: 100px;
