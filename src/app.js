@@ -52,5 +52,5 @@ app.use('/admin', adminRouter);
 
 /**activo bloqueo de 404 */
 app.use((req, res, next)=>{
-    res.status(404).send("not-found");
+    res.status(404).render("errors/404");
 })
