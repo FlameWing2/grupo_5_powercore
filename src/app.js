@@ -11,7 +11,8 @@ const app = express();
 const puerto = 3000;
 
 //aviso a express que use los static, assets
-app.use(express.static(path.join(__dirname, '../public')));
+//app.use(express.static(path.join(__dirname, '../public')));
+app.use(express.static(path.resolve(__dirname, '../public')));
 
 //activo la sobreescritura de method
 //con esto puedo usar put, delete, patch, etc
