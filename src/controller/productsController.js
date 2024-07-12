@@ -3,8 +3,8 @@
 const path = require('path');
 const archivo = require('node:fs');
 //cargo los productos por ahora con json
-const products = JSON.parse(archivo.readFileSync(path.resolve(__dirname, '../data/products.json'),"utf-8"));
-
+//const products = JSON.parse(archivo.readFileSync(path.resolve(__dirname, '../data/products.json'),"utf-8"));
+const products = require('../data/products.json');
 let productCartController = {
     //para productCart
     showCart: (req, res)=>{
