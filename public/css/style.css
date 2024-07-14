@@ -386,12 +386,15 @@ main {
 #logo2{
   display: none;
 }
+.item-account{
+  margin-top: 20px;
+}
 @media (min-width: 361px) {
  
   header {
   padding: 20px;
   background-color: #363062;
-}
+  }
  
   .contenedor-nav {
     display: flex;
@@ -425,4 +428,26 @@ main {
     display: block;
    
   }
+  .row_titulo{
+    margin-top: 20px;
+    width: 300px;
+
+  } 
+}
+
+@media (min-width: 768px) {
+  .datos{
+    width: 450px;
+  }
+  .item {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 500px;
+    margin: 0 auto;
+  }
+  .row_titulo{
+    margin-top: 20px;
+    width: 500px;
+
+  } 
 }
