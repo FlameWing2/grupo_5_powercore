@@ -23,7 +23,7 @@ let productCartController = {
             titulo: "PowerCore",
             pie: "&copy; 2024 PowerCore. Trabajo grupal N&deg; 5."
         }
-        const idProduct = parseInt(req.params.idProduct);
+        const idProduct = parseInt(req.params.idproduct);
         const product = products.find(product=>product.productId === idProduct);
         //console.log(product);
         res.render('products/productDetail',{'datos':datos,'product':product});

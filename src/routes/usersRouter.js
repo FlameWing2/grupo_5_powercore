@@ -32,6 +32,6 @@ router.post('/validar',usersController.validar);
 //register
 router.get('/register',usersController.register);
 router.post('/create',usersController.create);
-router.post('/createAvatar', fileUpload.single('filenamehtml'),usersController.createAvatar);
+router.post('/create-avatar', fileUpload.single('filenamehtml'),usersController.createAvatar);
 
 module.exports = router;

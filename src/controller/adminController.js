@@ -10,7 +10,7 @@ let adminController = {
         }
         res.render('admin/editProduct',{'datos':datos});
     },
-    show: (req, res)=>{
+    create: (req, res)=>{
         const datos={
             titulo: "PowerCore",
             pie: "&copy; 2024 PowerCore. Trabajo grupal N&deg; 5."
