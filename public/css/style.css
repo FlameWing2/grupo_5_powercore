@@ -433,6 +433,9 @@ main {
     width: 300px;
 
   } 
+  .form-search input{
+    width: 100%;
+  }
 }
 
 @media (min-width: 768px) {
@@ -450,4 +453,7 @@ main {
     width: 500px;
 
   } 
+  .form-search input{
+    width: 100%;
+  }
 }
