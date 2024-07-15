@@ -1,71 +1,71 @@
 <!DOCTYPE html>
 <html lang="es-AR">
-  <%- include('../partials/head',{'titulo':datos.titulo}) %>
+<%- include('../partials/head',{'titulo':datos.titulo}) %>
 
-<body>
-  <header>
-    <div class="contenedor-header">
-      <div id="logo" class="logo-header img-header">
-        <img id="logo1" src="/images/PowerCore.svg" alt="PowerCore">
-        <img id="logo2" src="/images/PowerCore_large.svg" alt="PowerCore">
+  <body>
+    <header>
+      <div class="contenedor-header">
+        <div id="logo" class="logo-header img-header">
+          <img id="logo1" src="/images/PowerCore.svg" alt="PowerCore">
+          <img id="logo2" src="/images/PowerCore_large.svg" alt="PowerCore">
+        </div>
+        <div id="search" class="form-search">
+          <form class="header-form" action="#" method="GET">
+            <input placeholder="Buscar productos, marcas y más" type="text">
+            <a href="#"><i class="fa fa-search"></i></a>
+          </form>
+        </div>
       </div>
-      <div id="search" class="form-search">
-        <form class="header-form" action="#" method="GET">
-          <input placeholder="Buscar productos, marcas y más" type="text">
-          <a href="#"><i class="fa fa-search"></i></a>
-        </form>
-      </div>
-    </div>
-    <div class="contenedor-nav">
+      <div class="contenedor-nav">
 
-      <nav class="header-nav">
-        <ul class="nav-bar">
-          <li><a href="/">Inicio</a></li>
-          <li><a href="#">Productos</a></li>
-          <li><a href="#">Contacto</a></li>
-        </ul>
-        <ul class="nav-bar">
-          <li><a href="/users/register">Registrarse <i class="fa-regular fa-id-card"></i></a></li>
-          <li><a href="/users/login">Ingresar <i class="fas fa-user" onclick="toggleUserMenu()"></i></a></li>
-          <li><a href="/products/cart">Ver Pedidos <i class="fas fa-shopping-cart"></i></a></li>
-        </ul>
-      </nav>
-    </div>
-    <div class="mob__navbar">
-      <div class="nav-item home">
-        <a href="/">
-          <img class="img-nav" src="/images/PowerCore.svg" alt="">
-        </a>
+        <nav class="header-nav">
+          <ul class="nav-bar">
+            <li><a href="/">Inicio</a></li>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+          <ul class="nav-bar">
+            <li><a href="/users/register">Registrarse <i class="fa-regular fa-id-card"></i></a></li>
+            <li><a href="/users/login">Ingresar <i class="fas fa-user" onclick="toggleUserMenu()"></i></a></li>
+            <li><a href="/products/cart">Ver Pedidos <i class="fas fa-shopping-cart"></i></a></li>
+          </ul>
+        </nav>
       </div>
-      <div class="nav-item">
-        <button class="search__mobile">
-          <i class="fa-solid fa-magnifying-glass"></i>
+      <div class="mob__navbar">
+        <div class="nav-item home">
+          <a href="/">
+            <img class="img-nav" src="/images/PowerCore.svg" alt="">
+          </a>
+        </div>
+        <div class="nav-item">
+          <button class="search__mobile">
+            <i class="fa-solid fa-magnifying-glass"></i>
 
-        </button>
+          </button>
+        </div>
+        <div class="nav-item">
+          <a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i>
+            <br>
+            Carrito</a>
+        </div>
+        <div class="nav-item">
+          <i class="fa-solid fa-bars"></i>
+          Menu
+        </div>
       </div>
-      <div class="nav-item">
-        <a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i>
-          <br>
-          Carrito</a>
       </div>
-      <div class="nav-item">
-        <i class="fa-solid fa-bars"></i>
-        Menu
-      </div>
-    </div>
-    </div>
-  </header>
-  <main>
+    </header>
+    <main>
 
-    <div class="account">
-      <div class="item">
+      <div class="account">
+        <div class="item">
 
 
-        <div class="item-login item-register">
-          <h3>Registro de usuario</h3>
-          <hr>
-          <div class="content col-2">
-            <form action="/users/create" id="Register" method="post">
+          <div class="item-login item-register">
+            <h3>Registro de usuario</h3>
+            <hr>
+            <div class="content col-2">
+              <form action="/users/create" id="Register" method="post" class="login">
                 <div class="form-group">
                   <input class="form-input datos" type="email" id="email" name="email" required="" placeholder="Email">
                 </div>
@@ -77,14 +77,19 @@
                   <input class="form-input datos" type="password" id="password2" name="password2" required=""
                     placeholder="Confirmar contraseña">
                 </div>
-                <div class="row_titulo">
-                  <div class="">Información personal</div>
+              </form>
+
+              <div class="row_titulo">
+                <h4 class="">Información personal</>
+              </div>
+              <form>
+                <div class="form-group">
+                  <input class="form-input datos" type="text" id="nombre" name="nombre" required=""
+                    placeholder="Nombre">
                 </div>
                 <div class="form-group">
-                  <input class="form-input datos" type="text" id="nombre" name="nombre" required="" placeholder="Nombre">
-                </div>
-                <div class="form-group">
-                  <input class="form-input datos" type="text" id="apellido" name="apellido" required="" placeholder="Apellido">
+                  <input class="form-input datos" type="text" id="apellido" name="apellido" required=""
+                    placeholder="Apellido">
                 </div>
                 <div class="form-group">
                   <input class="form-input datos" type="number" id="dni" name="dni" required=""
@@ -95,39 +100,41 @@
                     placeholder="Número de teléfono">
                 </div>
                 <input type="hidden" id="express" name="express" value="0">
-              
+
+            </div>
+            <div class="cta">
+              <div>
+                <div id="loader" class="loader" style="display:none"></div>
+                <input type="submit" id="myBtn" name="myBtn" class="btn btn-accent">
               </div>
-              <div class="cta">
-                <div>
-                  <div id="loader" class="loader" style="display:none"></div>
-                  <input type="submit" id="myBtn" name="myBtn"  class="btn btn-accent">
-                </div>
-              </div>
+            </div>
+
             </form>
+          </div>
+
         </div>
 
-      </div>
-
-      <div class="item">
-        <div class="item-account">
-          <h3>¿Por qué registrarse?</h3>
-          <hr>
-          <p>Con tu registro podrás realizar compras online en nuestro sitio web. Los datos que dejes aquí los
-            utilizaremos para contactarnos y enviarte los productos que hayas comprado. También los utilizaremos para la
-            confección de los comprobantes fiscales que deben acompañar a dichos productos. No utilizaremos tus datos
-            para ningún otro fin, ni para enviarte información que no hayas solicitado. Para más información mira
-            nuestras <a href="#">políticas de privacidad</a>.</p>
-          <h4>Recordá:</h4>
-          <p>Es muy importante que coloques todos tus datos reales a la hora de registrar tu cuenta. Ante cualquier
-            inconveniente vamos a estar comunicándonos con vos por teléfono o vía email.</p>
+        <div class="item">
+          <div class="item-account">
+            <h3>¿Por qué registrarse?</h3>
+            <hr>
+            <p>Con tu registro podrás realizar compras online en nuestro sitio web. Los datos que dejes aquí los
+              utilizaremos para contactarnos y enviarte los productos que hayas comprado. También los utilizaremos para
+              la
+              confección de los comprobantes fiscales que deben acompañar a dichos productos. No utilizaremos tus datos
+              para ningún otro fin, ni para enviarte información que no hayas solicitado. Para más información mira
+              nuestras <a href="#">políticas de privacidad</a>.</p>
+            <h4>Recordá:</h4>
+            <p>Es muy importante que coloques todos tus datos reales a la hora de registrar tu cuenta. Ante cualquier
+              inconveniente vamos a estar comunicándonos con vos por teléfono o vía email.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </main>
+    </main>
 
-  <%- include('../partials/footer',{'pie':datos.pie}) %>
+    <%- include('../partials/footer',{'pie':datos.pie}) %>
 
-  <%- include('../partials/script') %>
-</body>
+      <%- include('../partials/script') %>
+  </body>
 
 </html>

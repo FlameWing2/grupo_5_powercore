@@ -316,6 +316,8 @@ input:focus {
 .item {
   margin-top: 20px;
   margin-bottom: 20px;
+  width: calc(100% - 10px); 
+
 }
 
 .end {
@@ -326,6 +328,7 @@ main {
   margin-bottom: 30px;
   padding-left: 15px;
   padding-right: 15px;
+  
 }
 
 .breadcrumb {
@@ -343,10 +346,13 @@ main {
   width: 100%;
   max-width: 400px;
   background-color: #fff;
-  padding: 20px;
+  padding: 50px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  
 }
+
+
 
 
 .cuentas {
@@ -365,6 +371,7 @@ main {
   width: 500%;
   max-width: 500px;
   padding: 5%;
+  
 }
 
 .form-input {
@@ -476,6 +483,7 @@ main {
   .row_titulo {
     margin-top: 20px;
     width: 300px;
+    text-align: start;
 
   }
 
@@ -514,7 +522,6 @@ main {
   .item {
     margin-top: 20px;
     margin-bottom: 20px;
-    width: 500px;
     margin: 0 auto;
   }
 
