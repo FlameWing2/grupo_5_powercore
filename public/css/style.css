@@ -475,7 +475,7 @@ main {
 
 .container-carousel {
   position: relative;
-  width: 500px;
+  width: 100%;
   height: calc(width);
   background-color: #e0e0e0;
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.66);
@@ -509,11 +509,12 @@ main {
 }
 
 .slider-section img {
-  width: 50%;
-  height: 50%;
+  width: 1500px;
+  height: 300px;
   object-fit: cover;
   border-radius: 15px;
   scroll-snap-align: center;
+  
 }
 
 .btn-left,
@@ -546,6 +547,58 @@ main {
 .btn-right {
   right: 10px;
 }
+/*-------- footer ---------*/
+
+footer {
+  background-color: #ebebeb;
+  color: #666;
+  padding: 40px 10px;
+  text-align: center;
+  display: none;
+  flex-wrap: wrap;
+  bottom: 0px;
+  flex-direction: row;
+}
+
+footer section{
+  text-align: center;
+  width: calc(100% / 3);
+}
+
+.parrafo {
+  margin: 0;
+  padding: 3%;
+  border-radius: 5px;
+  box-sizing: border-box;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+
+.agrandar-icon {
+  font-size: 2em;
+  color: #6f63c7;
+  margin-bottom: 10px;
+
+}
+
+.agrandar-icon:hover{
+  color:  #363062;
+}
+
+.texto-negrita {
+  font-weight: bold;
+  margin: 0 auto;
+
+}
+
+.display-footer {
+  display: none;
+}
+
+/*------- media querys---------*/
 
 @media (min-width: 361px) {
 
@@ -626,5 +679,9 @@ main {
 
   .form-search input {
     width: 100%;
+  }
+
+  .display-footer{
+    display: flex;
   }
 }
