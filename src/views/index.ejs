@@ -63,10 +63,10 @@
         <div class="carrusel-body">
           <div class="container-carousel">
             <div class="carruseles" id="slider">
-              <% for(let product of products){ %>
+              <% for(let promo of promos){ %>
                 <section class="slider-section">
                   
-                    <a href="/products/<%= product.productId %>"><img src="<%= product.image %>" alt="Producto 1"></a>
+                    <a href="#"><img src="<%= promo.image %>" alt="<%= promo.productId %>"></a>
 
                 </section>
                 <% } %>

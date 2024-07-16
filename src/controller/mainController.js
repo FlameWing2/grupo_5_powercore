@@ -2,7 +2,8 @@
 //agrego la ruta para poder usar path
 const path = require('path');
 const archivo = require('node:fs');
-const products = require('../data/products.json')
+const products = require('../data/products.json');
+const promos = require('../data/banner.json')
 //cargo los productos por ahora con json
 //aplicar luego const {products} = require(.............url del json)
 //const products = JSON.parse(archivo.readFileSync(path.resolve(__dirname, '../data/products.json'),"utf-8"));
@@ -15,7 +16,7 @@ let indexController = {
         }
         
        // console.log(products);
-        res.render('index',{'datos':datos,'products':products});
+        res.render('index',{'datos':datos,'products':products,promos});
 
     }
 }
