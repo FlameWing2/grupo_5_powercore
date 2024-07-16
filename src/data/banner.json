@@ -1,0 +1,53 @@
+[
+    {
+      "productId": 1,
+      "image": "/images/promos/",
+      "category": "Laptops",
+      "name": "Laptop Dell Inspiron 15",
+      "price": 799.99,
+      "productCode": "A1B2C3",
+      "cashPrice": 650.93,
+      "mercadoPagoPrice": 680.92
+    },
+    {
+      "productId": 2,
+      "image": "/images/products/foto1.jpg",
+      "category": "Accessories",
+      "name": "Logitech Wireless Mouse",
+      "price": 29.99,
+      "productCode": "D4E5F6",
+      "cashPrice": 25.99,
+      "mercadoPagoPrice": 27.99
+    },
+    {
+      "productId": 3,
+      "image": "/images/products/foto3.jpg",
+      "category": "Accessories",
+      "name": "GFORCE 4070",
+      "price": 129.99,
+      "productCode": "G7H8I9",
+      "cashPrice": 125.00,
+      "mercadoPagoPrice": 127.00
+    },
+    {
+      "productId": 4,
+      "image": "/images/products/foto4.jpg",
+      "category": "Desktops",
+      "name": "Combo PC+KeyBoard+Mouse",
+      "price": 199.99,
+      "productCode": "J1K2L3",
+      "cashPrice": 150.00,
+      "mercadoPagoPrice": 170.00
+    },
+    {
+      "productId": 5,
+      "image": "/images/products/foto5.jpg",
+      "category": "Laptops",
+      "name": "Notebook Pavilion I7",
+      "price": 499.99,
+      "productCode": "M4N5O6",
+      "cashPrice": 430.93,
+      "mercadoPagoPrice": 450.92
+    }
+  ]
+  
