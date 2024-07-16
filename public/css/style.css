@@ -510,10 +510,13 @@ main {
 
 .slider-section img {
   width: 1500px;
-  height: 300px;
+  height: auto;
   object-fit: cover;
   border-radius: 15px;
   scroll-snap-align: center;
+  max-height: 200px;
+  min-height: 50px;
+  
   
 }
 
