@@ -73,10 +73,12 @@
 - XXX
 
 ### Loyola Leo Martin
-**Qué hizo ayer**: XXX
-**Impedimentos**: XXX
-
-**Qué va a hacer hoy**: XXX
+**Qué hizo ayer**: Lei sobre EJS y vi como aplicarlo
+**Impedimentos**: Ninguno 
+**Qué va a hacer hoy**: Aplicar los conocimiento de clase para moldear el sistema con ejs, ademas de ir modificando las html en views
+## Soluciones Propuestas
+- Ver Playground y buscar mas info si hace falta.
+**Qué va a hacer hoy**: comenzar a leer para el spring 4, sobre login, session, cookie
 
 ## Soluciones Propuestas
 - XXX
