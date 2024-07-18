@@ -53,28 +53,39 @@
           Menu
         </div>
       </div>
-      </div>
     </header>
 
     <main>
       <h1>PowerCore - Tienda Gamer Argentina</h1>
       <p>Compra los productos para tu pc gamer en el sitio número uno de Argentina</p>
       <section id="products__section">
-        <div class="carrusel-body">
-          <div class="container-carousel">
-            <div class="carruseles" id="slider">
-              <% for(let promo of promos){ %>
-                <section class="slider-section">
-                  
-                    <a href="#"><img class="img-tamaño" src="<%= promo.image %>" alt="<%= promo.productId %>"></a>
-
-                </section>
-                <% } %>
-            </div>
-            <div class="btn-left"><i class='bx bx-chevron-left'></i></div>
-            <div class="btn-right"><i class='bx bx-chevron-right'></i></div>
+        
+        <div id="hero-carousel" class="carousel slide banner-container" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
           </div>
-        </div>
+          <div class="carousel-inner">
+            <div class="carousel-item banner-height active">
+              <img src="images/promo/promo1.webp" class="img-resize d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item  banner-height">
+              <img src="images/promo/promo2.webp" class="img-resize d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item  banner-height">
+              <img src="images/promo/promo3.webp" class="img-resize d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item  banner-height">
+              <img src="images/promo/promo4.webp" class="img-resize d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item  banner-height">
+              <img src="images/promo/promo5.webp" class="img-resize d-block w-100" alt="...">
+            </div>
+          </div>
+          
         </div>
         
         <h2>Productos Destacados</h2>
@@ -102,10 +113,6 @@
               </div>
             </div>
             <% } %>
-
-
-
-
       </section>
     </main>
 

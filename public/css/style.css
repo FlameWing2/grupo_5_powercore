@@ -462,6 +462,8 @@ main {
   box-sizing: border-box;
 }
 */
+
+/*
 .carrusel-body {
 
   display: flex;
@@ -476,7 +478,6 @@ main {
 .container-carousel {
   position: relative;
   width: 100%;
-  height: calc(width);
   background-color: #e0e0e0;
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.66);
   border-radius: 15px;
@@ -496,8 +497,6 @@ main {
 }
 
 .carruseles {
-  width: 1000%;
-  height: 100%;
   display: flex;
 
 }
@@ -508,10 +507,10 @@ main {
   
 }
 
-.slider-section img {
-  width: 1500px;
-  height: auto;
+.slider-section {
+  width: 100%;
   object-fit: cover;
+  object-position: center;
   border-radius: 15px;
   scroll-snap-align: center;
   max-height: 200px;
@@ -550,7 +549,26 @@ main {
 .btn-right {
   right: 10px;
 }
-/*-------- footer ---------*/
+  */
+
+.banner-height {
+  height: 24rem;
+}
+
+.banner-container {
+ width: 100vw;
+}
+
+.img-resize {
+  height: 100%;
+  object-fit: cover;
+}
+
+.z-index {
+  z-index: 1;
+}
+
+  /*-------- footer ---------*/
 
 footer {
   background-color: #ebebeb;
