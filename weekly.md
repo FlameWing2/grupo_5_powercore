@@ -7,16 +7,13 @@
 - Alive Oviedo, Luciano Sebastian
 - Loyola Leo Martin
 
----
 
 ## Resumen de Tareas
 
 ### Albornoz Alfredo
 **Qué hizo ayer**: XXX
 **Impedimentos**: XXX
-
 **Qué va a hacer hoy**: XXX
-
 ## Soluciones Propuestas
 - XXX
 
@@ -24,9 +21,7 @@
 ### Alive Oviedo, Luciano Sebastian
 **Qué hizo ayer**: XXX
 **Impedimentos**: XXX
-
 **Qué va a hacer hoy**: XXX
-
 ## Soluciones Propuestas
 - XXX
 
@@ -40,7 +35,7 @@
 
 
 
-## ------------------------------------------------------------------------------------------------------------------------------------------------------
+## ---------------------------------------------------------------------------------------------
 # Standup Diario/Semanal
 
 ## Fecha: -->16/07/2024
@@ -50,25 +45,20 @@
 - Alive Oviedo, Luciano Sebastian
 - Loyola Leo Martin
 
----
 
 ## Resumen de Tareas
 
 ### Albornoz Alfredo
 **Qué hizo ayer**: XXX
 **Impedimentos**: XXX
-
 **Qué va a hacer hoy**: XXX
-
 ## Soluciones Propuestas
 - XXX
 
 ### Alive Oviedo, Luciano Sebastian
 **Qué hizo ayer**: XXX
 **Impedimentos**: XXX
-
 **Qué va a hacer hoy**: XXX
-
 ## Soluciones Propuestas
 - XXX
 
@@ -79,7 +69,82 @@
 ## Soluciones Propuestas
 - Ver Playground y buscar mas info si hace falta.
 **Qué va a hacer hoy**: comenzar a leer para el spring 4, sobre login, session, cookie
+## Soluciones Propuestas
+- XXX
 
+
+###----------------------SPRINT 4----------------------------------###
+# Standup Semanal - Grupo 5 PowerCore
+
+## Fecha: -->23/07/2024
+
+### Integrantes:
+- Albornoz Alfredo
+- Alive Oviedo, Luciano Sebastian
+- Loyola Leo Martin
+
+
+## Resumen de Tareas
+
+### Albornoz Alfredo
+**Qué hizo ayer**: XXX
+**Impedimentos**: XXX
+**Qué va a hacer hoy**: XXX
+## Soluciones Propuestas
+- XXX
+
+
+### Alive Oviedo, Luciano Sebastian
+**Qué hizo ayer**: XXX
+**Impedimentos**: XXX
+**Qué va a hacer hoy**: XXX
+## Soluciones Propuestas
+- XXX
+
+
+### Loyola Leo Martin
+**Qué hizo ayer**: XXX
+**Impedimentos**: XXX 
+**Qué va a hacer hoy**: XXX
+## Soluciones Propuestas
+-XXX
+
+
+
+## ---------------------------------------------------------------
+# Standup Diario/Semanal
+
+## Fecha: -->30/07/2024
+
+### Integrantes:
+- Albornoz Alfredo
+- Alive Oviedo, Luciano Sebastian
+- Loyola Leo Martin
+
+
+## Resumen de Tareas
+
+### Albornoz Alfredo
+**Qué hizo ayer**: XXX
+**Impedimentos**: XXX
+**Qué va a hacer hoy**: XXX
+## Soluciones Propuestas
+- XXX
+
+### Alive Oviedo, Luciano Sebastian
+**Qué hizo ayer**: XXX
+**Impedimentos**: XXX
+**Qué va a hacer hoy**: XXX
+## Soluciones Propuestas
+- XXX
+
+### Loyola Leo Martin
+**Qué hizo ayer**: ????
+**Impedimentos**: ????
+**Qué va a hacer hoy**: ???
+## Soluciones Propuestas
+- ???
+**Qué va a hacer hoy**: ???
 ## Soluciones Propuestas
 - XXX
 
