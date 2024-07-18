@@ -25,5 +25,14 @@
         "password": "123",
         "category": "Administrator",
         "imagen": "avatar-male.jpg"
+    },
+    {
+        "idUser":4,
+        "apellido": "perez",
+        "nombre": "Jaqueline",
+        "email": "perezjaqueline@gmail.com",
+        "password": "123",
+        "category": "Client",
+        "imagen": "avatar-female.jpg"
     }
 ]
