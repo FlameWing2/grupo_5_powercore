@@ -6,7 +6,7 @@
         "email": "alfredo@gmail.com",
         "password": "123",
         "category": "Administrator",
-        "imagen": "avatar.png"
+        "imagen": "avatar-male.jpg"
     },
     {
         "idUser":1,
@@ -15,7 +15,7 @@
         "email": "Luciano@gmail.com",
         "password": "123",
         "category": "Administrator",
-        "imagen": "avatar.png"
+        "imagen": "avatar-male.jpg"
     },
     {
         "idUser":3,
@@ -24,6 +24,6 @@
         "email": "masterdjmov@gmail.com",
         "password": "123",
         "category": "Administrator",
-        "imagen": "avatar.png"
+        "imagen": "avatar-male.jpg"
     }
 ]
