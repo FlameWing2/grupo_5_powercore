@@ -1,0 +1,29 @@
+[
+    {
+        "idUser":1,
+        "apellido": "Albornoz",
+        "nombre": "Alfredo",
+        "email": "alfredo@gmail.com",
+        "password": "123",
+        "category": "Administrator",
+        "imagen": "avatar.png"
+    },
+    {
+        "idUser":1,
+        "apellido": "Alive",
+        "nombre": "Luciano",
+        "email": "Luciano@gmail.com",
+        "password": "123",
+        "category": "Administrator",
+        "imagen": "avatar.png"
+    },
+    {
+        "idUser":3,
+        "apellido": "Loyola",
+        "nombre": "Leo Martin",
+        "email": "masterdjmov@gmail.com",
+        "password": "123",
+        "category": "Administrator",
+        "imagen": "avatar.png"
+    }
+]
