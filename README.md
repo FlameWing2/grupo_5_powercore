@@ -153,6 +153,11 @@ Estudiante de la Licenciatura en Sistemas de la Universidad Nacional de Chilecit
 
 - [Trello Sprint 3](https://trello.com/b/uM62OisP/sprint-3) - Jul 05 2024
 
+# SPRINT 4
+
+- [Trello Sprint 4](https://trello.com/b/rNbfgMbZ/sprint-4) - Jul 18 2024
+
+
 
 /GRUPO_5_PowerCoreHard_Online
 -> node_modules/
