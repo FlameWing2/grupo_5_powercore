@@ -6,4 +6,5 @@ let indexController = require('../controller/mainController');
 
 router.get('/',indexController.index);
 router.get('/contact',indexController.contact);
+router.post('/contact',indexController.consultaCrear);
 module.exports = router;

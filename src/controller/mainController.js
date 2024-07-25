@@ -20,10 +20,25 @@ let indexController = {
 
     },
     contact: (req, res)=>{
+        console.log("entro get contact")
         //res.sendFile(path.resolve(__dirname, '../views/index.html'));
         const datos={
             titulo: "PowerCore",
-            pie: "&copy; 2024 PowerCore. Trabajo grupal N&deg; 5."
+            pie: "&copy; 2024 PowerCore. Trabajo grupal N&deg; 5.",
+            msg: ""
+        }
+        
+       // console.log(products);
+        res.render('contact',{'datos':datos});
+
+    },
+    consultaCrear: (req, res)=>{
+        //tomo lo del body
+        console.log("entro post contact");
+        const datos={
+            titulo: "PowerCore",
+            pie: "&copy; 2024 PowerCore. Trabajo grupal N&deg; 5.",
+            msg: "Gracias por su consulta, pronto nuestros asesores se pondrán en contacto con usted"
         }
         
        // console.log(products);

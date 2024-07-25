@@ -68,6 +68,14 @@
                             <h3 class="card-title">Póngase en contacto con nuestro equipo</h3>
                         </div>
                         <!-- /.card-header -->
+                         <!-- activo mensaje si hace post -->
+                         <% if(datos.msg!=""){ %>
+                            <div class="alert alert-success alert-dismissible">
+                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                <h5><i class="icon fas fa-check"></i> Gracias por su consulta!</h5>
+                                <%= datos.msg %>
+                              </div>
+                        <% } %>
                         <!-- form start -->
                         <form action="/contact" method="post">
                             <div class="card-body">
