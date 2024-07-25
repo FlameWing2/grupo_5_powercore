@@ -18,6 +18,17 @@ let indexController = {
        // console.log(products);
         res.render('index',{'datos':datos,'products':products,promos});
 
+    },
+    contact: (req, res)=>{
+        //res.sendFile(path.resolve(__dirname, '../views/index.html'));
+        const datos={
+            titulo: "PowerCore",
+            pie: "&copy; 2024 PowerCore. Trabajo grupal N&deg; 5."
+        }
+        
+       // console.log(products);
+        res.render('contact',{'datos':datos});
+
     }
 }
 
