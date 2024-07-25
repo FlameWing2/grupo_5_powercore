@@ -65,57 +65,43 @@
                     <!-- general form elements -->
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">Crear Producto Nuevo</h3>
+                            <h3 class="card-title">Póngase en contacto con nuestro equipo</h3>
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form>
+                        <form action="/contact" method="post">
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label for="name">Nombre</label>
-                                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter name">
+                                    <label for="nombre">Nombre</label>
+                                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese Nombre" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="name">Descripción</label>
-                                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter name">
+                                    <label for="apellido">Apellido</label>
+                                    <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Ingrese Apellido" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="name">Precio</label>
-                                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter name">
+                                    <label for="email">Correo</label>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Ingrese correo electronico" required>
                                 </div>
+                                <hr>
                                 <div class="form-group">
-                                    <label for="name">Código del Producto</label>
-                                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter name">
-                                </div>
-                                <div class="form-group">
-                                    <label for="name">Imagen</label>
-                                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter name">
-                                </div>
-                                <div class="form-group">
-                                    <label for="name">Precio General</label>
-                                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter name">
-                                </div>
-                                <div class="form-group">
-                                    <label for="name">Precio  de Contado</label>
-                                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter name">
-                                </div>
-                                <div class="form-group">
-                                    <label for="name">Precio de MercadoPago</label>
-                                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter name">
-                                </div>
-                                <div class="form-group">
+                                    <label for="email">Departamento</label>
                                     <select class="form-control" name="cateogria">
-                                        <option>Laptops</option>
-                                        <option>Accessories</option>
-                                        <option>Desktops</option>
-                                        <option>Gamers</option>
-                                        <option>Extras</option>
+                                        <option>Venta</option>
+                                        <option>Reparación</option>
+                                        <option>Consulta 1 - a determinar</option>
+                                        <option>Consulta 2 - a determinar</option>
+                                        <option>Consulta 3 - a determinar</option>
                                     </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Ingrese su consulta</label>
+                                    <textarea class="form-control" cols="10" rows="5"></textarea>
                                 </div>
                             </div>
                             <!-- /.card-body -->
                             <div class="card-footer">
-                                <button type="submit" class="btn btn-primary">Crear Producto</button>
+                                <button type="submit" class="btn btn-primary">Enviar Consulta</button>
                             </div>
                         </form>
                     </div>
