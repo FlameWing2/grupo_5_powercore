@@ -22,7 +22,8 @@ let adminController = {
     register: (req, res)=>{
         const datos={
             titulo: "PowerCore",
-            pie: "&copy; 2024 PowerCore. Trabajo grupal N&deg; 5."
+            pie: "&copy; 2024 PowerCore. Trabajo grupal N&deg; 5.",
+            msg: "Este mensaje solo aparece cuando le hagan POST, ahora solo de prueba"
         }
         res.render('admin/registerProduct',{'datos':datos});
     }

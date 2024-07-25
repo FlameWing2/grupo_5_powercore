@@ -68,6 +68,14 @@
                             <h3 class="card-title">Crear Producto Nuevo</h3>
                         </div>
                         <!-- /.card-header -->
+                           <!-- activo mensaje si hace post -->
+                        <% if(datos.msg!=""){ %>
+                          <div class="alert alert-success alert-dismissible">
+                              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                              <h5><i class="icon fas fa-check"></i> Crear Producto Nuevo</h5>
+                              <%= datos.msg %>
+                            </div>
+                      <% } %>
                         <!-- form start -->
                         <form action="/admin">
                             <div class="card-body">
