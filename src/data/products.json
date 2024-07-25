@@ -43,11 +43,21 @@
       "productId": 5,
       "image": "/images/products/foto5.jpg",
       "category": "Laptops",
-      "name": "Notebook Pavilion I7",
-      "price": 499.99,
-      "productCode": "M4N5O6",
+      "name": "Notebook Pavilion I5",
+      "price": 439.99,
+      "productCode": "M4N3O2",
       "cashPrice": 430.93,
-      "mercadoPagoPrice": 450.92
+      "mercadoPagoPrice": 440.92
+    },
+    {
+      "productId": 6,
+      "image": "/images/products/foto5.jpg",
+      "category": "Laptops",
+      "name": "Notebook Pavilion I7",
+      "price": 549.99,
+      "productCode": "M4N5O6",
+      "cashPrice": 510.93,
+      "mercadoPagoPrice": 520.92
     }
   ]
   

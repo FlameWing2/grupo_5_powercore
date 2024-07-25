@@ -2,124 +2,114 @@
 <html lang="es-AR">
 <%- include('./partials/head',{'titulo':datos.titulo}) %>
 
-  <body>
-    <header>
-      <div class="contenedor-header">
-        <div id="logo" class="logo-header img-header">
-          <img id="logo1" src="/images/PowerCore.svg" alt="PowerCore">
-          <img id="logo2" src="/images/PowerCore_large.svg" alt="PowerCore">
-        </div>
-        <div id="search" class="form-search">
-          <form class="header-form" action="#" method="GET">
-            <input class="search-bar" placeholder="Buscar productos, marcas y más" type="search">
-            <button class="search-bar-icon" type="submit"><i class="fa fa-search"></i></button>
-          </form>
-        </div>
+<body>
+  <header>
+    <div class="contenedor-header">
+      <div id="logo" class="logo-header img-header">
+        <img id="logo1" src="/images/PowerCore.svg" alt="PowerCore">
+        <img id="logo2" src="/images/PowerCore_large.svg" alt="PowerCore">
       </div>
-      <div class="contenedor-nav">
-
-        <nav class="header-nav">
-          <ul class="nav-bar">
-            <li><a href="/">Inicio</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Contacto</a></li>
-          </ul>
-          <ul class="nav-bar">
-            <li><a href="/users/register">Registrarse <i class="fa-regular fa-id-card"></i></a></li>
-            <li><a href="/users/login">Ingresar <i class="fas fa-user" onclick="toggleUserMenu()"></i></a></li>
-            <li><a href="/products/cart">Ver Pedidos <i class="fas fa-shopping-cart"></i></a></li>
-          </ul>
-        </nav>
+      <div id="search" class="form-search">
+        <form class="header-form" action="#" method="GET">
+          <input class="search-bar" placeholder="Buscar productos, marcas y más" type="search">
+          <button class="search-bar-icon" type="submit"><i class="fa fa-search"></i></button>
+        </form>
       </div>
-      <div class="mob__navbar">
-        <div class="nav-item home">
-          <a href="/">
-            <img class="img-nav" src="/images/PowerCore.svg" alt="">
-          </a>
-        </div>
-        <div class="nav-item">
-          <button class="search__mobile">
-            <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+    <div class="contenedor-nav">
 
-          </button>
-        </div>
-        <div class="nav-item">
-          <a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i>
-            <br>
-            Carrito</a>
-        </div>
-        <div class="nav-item">
-          <i class="fa-solid fa-bars"></i>
-          Menu
-        </div>
+      <nav class="header-nav">
+        <ul class="nav-bar">
+          <li><a href="/">Inicio</a></li>
+          <li><a href="#">Productos</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+        <ul class="nav-bar">
+          <li><a href="/users/register">Registrarse <i class="fa-regular fa-id-card"></i></a></li>
+          <li><a href="/users/login">Ingresar <i class="fas fa-user" onclick="toggleUserMenu()"></i></a></li>
+          <li><a href="/products/cart">Ver Pedidos <i class="fas fa-shopping-cart"></i></a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="mob__navbar">
+      <div class="nav-item home">
+        <a href="/">
+          <img class="img-nav" src="/images/PowerCore.svg" alt="">
+        </a>
       </div>
-    </header>
+      <div class="nav-item">
+        <button class="search__mobile">
+          <i class="fa-solid fa-magnifying-glass"></i>
 
-    <main>
-      <h1>PowerCore - Tienda Gamer Argentina</h1>
-      <p>Compra los productos para tu pc gamer en el sitio número uno de Argentina</p>
-      <section id="products__section">
-        
-        <div id="hero-carousel" class="carousel slide banner-container" data-bs-ride="carousel">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        </button>
+      </div>
+      <div class="nav-item">
+        <a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i>
+          <br>
+          Carrito</a>
+      </div>
+      <div class="nav-item">
+        <i class="fa-solid fa-bars"></i>
+        Menu
+      </div>
+    </div>
+  </header>
+  <main>
+    <section id="products__section">
+
+      <div id="hero-carousel banner-height" class="carousel slide " data-bs-ride="carousel">
+        <div class="carousel-inner banner-height">
+          <div class="carousel-item banner-height active">
+            <img src="images/promo/promo4.webp" class="img-resize w-100" alt="...">
           </div>
-          <div class="carousel-inner">
-            <div class="carousel-item banner-height active">
-              <img src="images/promo/promo1.webp" class="img-resize d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item  banner-height">
-              <img src="images/promo/promo2.webp" class="img-resize d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item  banner-height">
-              <img src="images/promo/promo3.webp" class="img-resize d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item  banner-height">
-              <img src="images/promo/promo4.webp" class="img-resize d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item  banner-height">
-              <img src="images/promo/promo5.webp" class="img-resize d-block w-100" alt="...">
-            </div>
+          <div class="carousel-item  banner-height">
+            <img src="images/promo/promo2.webp" class="img-resize w-100" alt="...">
           </div>
-          
+          <div class="carousel-item  banner-height">
+            <img src="images/promo/promo3.webp" class="img-resize w-100" alt="...">
+          </div>
+          <div class="carousel-item banner-height">
+            <img src="images/promo/promo4.webp" class="img-resize w-100" alt="...">
+          </div>
+          <div class="carousel-item banner-height">
+            <img src="images/promo/promo5.webp" class="img-resize w-100" alt="...">
+          </div>
         </div>
-        
-        <h2>Productos Destacados</h2>
-        <div class="card__wrapper">
-          <% for(let product of products){ %>
-            <div class="product__card">
-              <a href="/products/<%= product.productId %>"><img src="<%= product.image %>" alt="Producto 1"></a>
-              <div class="product__description">
-                <p class="product__cathegory">
-                  <%= product.category %>
-                </p>
-                <a href="/products/<%= product.productId %>">
-                  <h3 class="product__name">
-                    <%= product.name %>
-                  </h3>
-                </a>
-                <p class="product__price">$<%= product.price %>
-                </p>
-                <a href="/products/<%= product.productId %>"><i class="fas fa-info-circle"></i>Ver detalles</a>
-                <button class="btn btn-primary">Agregar al
-                  <span>
-                    <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
-                  </span>
-                </button>
-              </div>
-            </div>
-            <% } %>
-      </section>
-    </main>
-
-    <%- include('./partials/footer',{'pie':datos.pie}) %>
-      <%- include('./partials/script') %>
+      </div>
 
 
-  </body>
+      <h2>Productos Destacados</h2>
+      <div class="card__wrapper">
+        <% for(let product of products){ %>
+        <div class="product__card">
+          <a href="/products/<%= product.productId %>"><img src="<%= product.image %>" alt="Producto 1"></a>
+          <div class="product__description">
+            <p class="product__cathegory">
+              <%= product.category %>
+            </p>
+            <a href="/products/<%= product.productId %>">
+              <h3 class="product__name">
+                <%= product.name %>
+              </h3>
+            </a>
+            <p class="product__price">$<%= product.price %>
+            </p>
+            <a href="/products/<%= product.productId %>"><i class="fas fa-info-circle"></i>Ver detalles</a>
+            <button class="btn btn-primary">Agregar al
+              <span>
+                <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+              </span>
+            </button>
+          </div>
+        </div>
+        <% } %>
+    </section>
+  </main>
+
+  <%- include('./partials/footer',{'pie':datos.pie}) %>
+  <%- include('./partials/script') %>
+
+
+</body>
 
 </html>
