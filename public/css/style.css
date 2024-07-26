@@ -249,6 +249,7 @@ input:focus {
 .img-nav {
   width: 9.375rem;
   min-width: 6.25rem;
+  display: none;
 }
 
 /* Fin navbar mobile */
@@ -418,6 +419,7 @@ main {
 /* barra buscador */
 .search__mobile {
   width: 80px;
+  min-width: 40px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -606,6 +608,10 @@ footer section{
   /*registro*/
   .account {
     min-width: 100%;
+  }
+
+  .img-nav{
+    display: block;
   }
 
   .datos {
