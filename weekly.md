@@ -103,11 +103,14 @@
 
 
 ### Loyola Leo Martin
-**Qué hizo ayer**: XXX
-**Impedimentos**: XXX 
-**Qué va a hacer hoy**: XXX
+**Qué hizo ayer**: Lei sobre multer
+**Impedimentos**: Ninguno 
+**Qué va a hacer hoy**: Aplicar los conocimiento de clase para moldear el sistema para la subida de archivos, como avatar y productos
 ## Soluciones Propuestas
--XXX
+- Ver Playground y buscar mas info si hace falta.
+**Qué va a hacer hoy**: aproveche de hacer cosas en clase, para la aplicación practica, queda bastante todavía.
+## Soluciones Propuestas
+- XXX
 
 
 

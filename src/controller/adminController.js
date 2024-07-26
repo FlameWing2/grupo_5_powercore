@@ -6,21 +6,32 @@ let adminController = {
     edit: (req, res)=>{
         const datos={
             titulo: "PowerCore",
-            pie: "&copy; 2024 PowerCore. Trabajo grupal N&deg; 5."
+            pie: "&copy; 2024 PowerCore. Trabajo grupal N&deg; 5.",
+            msg: "Producto XXXX editado de forma exitosa"
         }
         res.render('admin/editProduct',{'datos':datos});
     },
     create: (req, res)=>{
         const datos={
             titulo: "PowerCore",
-            pie: "&copy; 2024 PowerCore. Trabajo grupal N&deg; 5."
+            pie: "&copy; 2024 PowerCore. Trabajo grupal N&deg; 5.",
+            msg: ""
         }
         res.render('admin/listProduct',{'datos':datos});
     },
     register: (req, res)=>{
         const datos={
             titulo: "PowerCore",
-            pie: "&copy; 2024 PowerCore. Trabajo grupal N&deg; 5."
+            pie: "&copy; 2024 PowerCore. Trabajo grupal N&deg; 5.",
+            msg: ""
+        }
+        res.render('admin/registerProduct',{'datos':datos});
+    },
+    registerProduct: (req, res)=>{
+        const datos={
+            titulo: "PowerCore",
+            pie: "&copy; 2024 PowerCore. Trabajo grupal N&deg; 5.",
+            msg: "Este mensaje solo aparece cuando le hagan POST, ahora solo de prueba"
         }
         res.render('admin/registerProduct',{'datos':datos});
     }
