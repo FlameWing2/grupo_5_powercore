@@ -1,27 +1,29 @@
 // asi vamos a manejar las rutas src/controllers/indexController.js
 //agrego la ruta para poder usar path
 const path = require('path');
-const archivo = require('node:fs');
-const products = require('../data/products.json');
-const promos = require('../data/banner.js')
-//cargo los productos por ahora con json
-//aplicar luego const {products} = require(.............url del json)
-//const products = JSON.parse(archivo.readFileSync(path.resolve(__dirname, '../data/products.json'),"utf-8"));
+
+//llamo a los data que luego serán cambiados por las conexiones a BD
+const promos = require('../data/banner.js');
+const datasource = require('../services/datasource.js');
+
+// Configurar el filePath
+datasource.agregarURL(path.resolve(__dirname, "../data/products.json"));
+
 let indexController = {
-    index: (req, res)=>{
-        //res.sendFile(path.resolve(__dirname, '../views/index.html'));
+    index: async (req, res)=>{
         const datos={
             titulo: "PowerCore",
             pie: "&copy; 2024 PowerCore. Trabajo grupal N&deg; 5."
         }
-        
        // console.log(products);
-        res.render('index',{'datos':datos,'products':products,promos});
+        res.render('index',{
+            'datos':datos,
+            'products':JSON.parse(await datasource.load()),
+            promos});
 
     },
     contact: (req, res)=>{
         console.log("entro get contact")
-        //res.sendFile(path.resolve(__dirname, '../views/index.html'));
         const datos={
             titulo: "PowerCore",
             pie: "&copy; 2024 PowerCore. Trabajo grupal N&deg; 5.",

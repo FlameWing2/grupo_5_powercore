@@ -58,24 +58,18 @@
   </header>
   <main>
     <section id="products__section">
-
       <div id="hero-carousel banner-height" class="carousel slide " data-bs-ride="carousel">
         <div class="carousel-inner banner-height">
-          <div class="carousel-item banner-height active">
-            <img src="images/promo/promo4.webp" class="img-resize w-100" alt="...">
-          </div>
-          <div class="carousel-item  banner-height">
-            <img src="images/promo/promo2.webp" class="img-resize w-100" alt="...">
-          </div>
-          <div class="carousel-item  banner-height">
-            <img src="images/promo/promo3.webp" class="img-resize w-100" alt="...">
-          </div>
-          <div class="carousel-item banner-height">
-            <img src="images/promo/promo4.webp" class="img-resize w-100" alt="...">
-          </div>
-          <div class="carousel-item banner-height">
-            <img src="images/promo/promo5.webp" class="img-resize w-100" alt="...">
-          </div>
+          <% promos.forEach((promo,index) => { %>
+            <% if(index==0){ %>
+              <div class="carousel-item banner-height active">
+                <img src="<%= promo.image %>" class="img-resize w-100" alt="...">
+              </div>
+            <% }else{ %>
+              <div class="carousel-item banner-height">
+                <img src="<%= promo.image %>" class="img-resize w-100" alt="...">
+              </div>
+          <% }}) %>
         </div>
       </div>
 

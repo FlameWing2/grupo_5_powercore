@@ -1,6 +1,7 @@
 // asi vamos a manejar las rutas src/controllers/indexController.js
 //agrego la ruta para poder usar path
 const path = require('path');
+const crypto = require("node:crypto");
 
 let usersController = {
     //procesos de login
@@ -42,6 +43,7 @@ let usersController = {
     },
     createUser: (req, res) => {
         const { email, password,password2,nombre,apellido } = req.body;
+        const id = crypto.randomUUID();
         // Aquí vamos a manejar los datos, por ejemplo, guardarlos en una base de datos
         // o bien interactuar con ellos
         //verificamos si llegan
