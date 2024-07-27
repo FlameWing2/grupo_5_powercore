@@ -3,6 +3,7 @@
 const os = require('os');
 const express = require('express');
 const methodOverride = require('method-override');
+const session = require('express-session');
 
 //paquete para el manejo de rutas absolutas o relativas
 const path = require('path');
@@ -17,7 +18,14 @@ app.use(express.static(path.resolve(__dirname, '../public')));
 //activo la sobreescritura de method
 //con esto puedo usar put, delete, patch, etc
 app.use(methodOverride('_method'));
-
+/**
+ * Resultado
+Texto original  POWERCORE-GRUPO5
+MD5             307d9deec28d612339b707cc4c6c6969
+Base64          UE9XRVJDT1JFLUdSVVBPNQ==
+Sha1            ecca91561ee97db021552e024d335f546959a9c2
+ */
+app.use(session({secret: "307d9deec28d612339b707cc4c6c6969"}))
 /**estas dos lineas son necesarias para trabajar con post, put, delete */
 // cargando funciones de analisis de datos de formularios y JSON
 // estas dos funciones se ejecutaran de forma automatica
