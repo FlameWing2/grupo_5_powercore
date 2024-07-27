@@ -4,7 +4,7 @@ const path = require('path');
 
 let usersController = {
     //procesos de login
-    login: (req, res)=>{
+    formLogin: (req, res)=>{
         //res.sendFile(path.resolve(__dirname, '../views/users/login.html'));
         const datos={
             titulo: "PowerCore",
@@ -21,7 +21,7 @@ let usersController = {
         res.render('users/login',{'datos':datos});
     },
     //procesos de register
-    register: (req, res)=>{
+    formRegister: (req, res)=>{
         //res.sendFile(path.resolve(__dirname, '../views/users/register.html'));
         const datos={
             titulo: "PowerCore",
@@ -40,7 +40,7 @@ let usersController = {
         //if(req.file !== undefined) llego
         res.render("users/register",{'datos':datos});
     },
-    create: (req, res) => {
+    createUser: (req, res) => {
         const { email, password,password2,nombre,apellido } = req.body;
         // Aquí vamos a manejar los datos, por ejemplo, guardarlos en una base de datos
         // o bien interactuar con ellos

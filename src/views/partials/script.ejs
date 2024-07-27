@@ -65,4 +65,55 @@
 
 
   }   */
+
+
+
+/**sweet alert ***/
+
+// Delegar el evento en el documento
+document.addEventListener('submit', function(event) {
+  // Verificar si el formulario tiene la clase 'form-editar'
+    event.preventDefault(); // Evitar el envío del formulario
+
+    Swal.fire({
+        title: '¿Estás seguro?',
+        text: "Esta por registrarse en nuestra empresa POWERCORE!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Sí, enviar!'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Enviar el formulario si el usuario confirma
+            event.target.submit();
+        }
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </script>
