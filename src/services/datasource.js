@@ -4,16 +4,16 @@
 const fs = require('node:fs/promises');
 const path = require('node:path');
 
-const datasource = {
-    filePath: "",
-    agregarURL: function(ruta) {
-        this.filePath = ruta;
-    },
-   load: async function(){
+class Datasource {
+    constructor(filePath){
+        this.filePath = filePath;
+    }
+    async load(){
         const infoArchivo = await fs.readFile(this.filePath,"utf-8")
         return infoArchivo;
     }
-};
+   
+}
 
 
-module.exports = datasource;
+module.exports = Datasource;

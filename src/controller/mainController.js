@@ -4,47 +4,33 @@ const path = require('path');
 
 //llamo a los data que luego serán cambiados por las conexiones a BD
 const promos = require('../data/banner.js');
-const datasource = require('../services/datasource.js');
+const parametrosGenerales = require('../config/parametros.js');
+const Datasource = require('../services/datasource.js');
+
 
 // Configurar el filePath
-datasource.agregarURL(path.resolve(__dirname, "../data/products.json"));
-
+const dataProducts = new Datasource(path.resolve(__dirname, "../data/products.json"));
 let indexController = {
     index: async (req, res)=>{
-        const datos={
-            titulo: "PowerCore",
-            pie: "&copy; 2024 PowerCore. Trabajo grupal N&deg; 5."
-        }
-       // console.log(products);
         res.render('index',{
-            'datos':datos,
-            'products':JSON.parse(await datasource.load()),
+            'datos':parametrosGenerales,
+            'products':JSON.parse(await dataProducts.load()),
             promos});
 
     },
     contact: (req, res)=>{
-        console.log("entro get contact")
-        const datos={
-            titulo: "PowerCore",
-            pie: "&copy; 2024 PowerCore. Trabajo grupal N&deg; 5.",
-            msg: ""
-        }
-        
        // console.log(products);
-        res.render('contact',{'datos':datos});
+       
+        res.render('contact',{'datos':parametrosGenerales});
 
     },
     consultaCrear: (req, res)=>{
         //tomo lo del body
         console.log("entro post contact");
-        const datos={
-            titulo: "PowerCore",
-            pie: "&copy; 2024 PowerCore. Trabajo grupal N&deg; 5.",
-            msg: "Gracias por su consulta, pronto nuestros asesores se pondrán en contacto con usted"
-        }
+        parametrosGenerales.msg= "Gracias por su consulta, pronto nuestros asesores se pondrán en contacto con usted";
         
        // console.log(products);
-        res.render('contact',{'datos':datos});
+        res.render('contact',{'datos':parametrosGenerales});
 
     }
 }

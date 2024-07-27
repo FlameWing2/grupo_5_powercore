@@ -3,43 +3,35 @@
 const path = require('path');
 const crypto = require("node:crypto");
 
+//llamo a los data que luego serán cambiados por las conexiones a BD
+const parametrosGenerales = require('../config/parametros.js');
+
+const Datasource = require('../services/datasource.js');
+
+// Configurar el filePath
+const dataUsers = new Datasource(path.resolve(__dirname, "../data/users.json"));
+
 let usersController = {
     //procesos de login
     formLogin: (req, res)=>{
-        //res.sendFile(path.resolve(__dirname, '../views/users/login.html'));
-        const datos={
-            titulo: "PowerCore",
-            pie: "&copy; 2024 PowerCore. Trabajo grupal N&deg; 5."
-        }
-        res.render("users/login",{'datos':datos});
+        
+        
+        res.render("users/login",{'datos':parametrosGenerales});
     },
     validar: (req, res)=>{
-        //res.sendFile(path.resolve(__dirname, '../views/users/login.html'));
-        const datos={
-            titulo: "PowerCore",
-            pie: "&copy; 2024 PowerCore. Trabajo grupal N&deg; 5."
-        }
-        res.render('users/login',{'datos':datos});
+       
+        res.render('users/login',{'datos':parametrosGenerales});
     },
     //procesos de register
     formRegister: (req, res)=>{
-        //res.sendFile(path.resolve(__dirname, '../views/users/register.html'));
-        const datos={
-            titulo: "PowerCore",
-            pie: "&copy; 2024 PowerCore. Trabajo grupal N&deg; 5."
-        }
-        res.render("users/register",{'datos':datos});
+        res.render("users/register",{'datos':parametrosGenerales});
     },
     createAvatar: (req, res)=>{
-        //res.sendFile(path.resolve(__dirname, '../views/users/register.html'));
-        const datos={
-            titulo: "PowerCore",
-            pie: "&copy; 2024 PowerCore. Trabajo grupal N&deg; 5."
-        }
+       
         /**si uso multer */
         //console.log(req.file);
         //if(req.file !== undefined) llego
-        res.render("users/register",{'datos':datos});
+        res.render("users/register",{'datos':parametrosGenerales});
     },
     createUser: (req, res) => {
         const { email, password,password2,nombre,apellido } = req.body;
@@ -53,11 +45,8 @@ let usersController = {
         //res.send('Registro recibido: ' + nombre + " " + apellido);
         //res.redirect('/');
         
-        const datos={
-            titulo: "PowerCore",
-            pie: "&copy; 2024 PowerCore. Trabajo grupal N&deg; 5."
-        }
-        res.render("users/register",{'datos':datos});
+        
+        res.render("users/register",{'datos':parametrosGenerales});
     }
 }
 

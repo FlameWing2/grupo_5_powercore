@@ -2,38 +2,27 @@
 //agrego la ruta para poder usar path
 const path = require('path');
 
+//llamo a los data que luego serán cambiados por las conexiones a BD
+const parametrosGenerales = require('../config/parametros.js');
+
 let adminController = {
     edit: (req, res)=>{
-        const datos={
-            titulo: "PowerCore",
-            pie: "&copy; 2024 PowerCore. Trabajo grupal N&deg; 5.",
-            msg: "Producto XXXX editado de forma exitosa"
-        }
-        res.render('admin/editProduct',{'datos':datos});
+        parametrosGenerales.msg ="Producto XXXX editado de forma exitosa";
+        
+        res.render('admin/editProduct',{'datos':parametrosGenerales});
     },
     create: (req, res)=>{
-        const datos={
-            titulo: "PowerCore",
-            pie: "&copy; 2024 PowerCore. Trabajo grupal N&deg; 5.",
-            msg: ""
-        }
-        res.render('admin/listProduct',{'datos':datos});
+        
+        res.render('admin/listProduct',{'datos':parametrosGenerales});
     },
     register: (req, res)=>{
-        const datos={
-            titulo: "PowerCore",
-            pie: "&copy; 2024 PowerCore. Trabajo grupal N&deg; 5.",
-            msg: ""
-        }
-        res.render('admin/registerProduct',{'datos':datos});
+        
+        res.render('admin/registerProduct',{'datos':parametrosGenerales});
     },
     registerProduct: (req, res)=>{
-        const datos={
-            titulo: "PowerCore",
-            pie: "&copy; 2024 PowerCore. Trabajo grupal N&deg; 5.",
-            msg: "Este mensaje solo aparece cuando le hagan POST, ahora solo de prueba"
-        }
-        res.render('admin/registerProduct',{'datos':datos});
+        parametrosGenerales.msg ="Este mensaje solo aparece cuando le hagan POST, ahora solo de prueba";
+       
+        res.render('admin/registerProduct',{'datos':parametrosGenerales});
     }
 
 }
