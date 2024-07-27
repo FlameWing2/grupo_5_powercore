@@ -13,8 +13,10 @@ class Datasource {
         return JSON.parse(infoArchivo);
     }
     async save(data){
+        console.log(data);
         let jsonData = JSON.stringify(data, null, 2);
-        await fs.writeFile(this.filePath,jsonData,"utf-8");
+        //await fs.writeFile(this.filePath,jsonData,"utf-8");
+        console.log("desde json:"+ jsonData);
         return 1;
     }
    

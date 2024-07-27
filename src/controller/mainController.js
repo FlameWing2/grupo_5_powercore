@@ -11,7 +11,7 @@ const Datasource = require('../services/datasource.js');
 
 // Configurar el filePath
 const dataProducts = new Datasource(path.resolve(__dirname, "../data/products.json"));
-const dataContacts = new Datasource(path.resolve(__dirname, "../data/contacts.json"));
+let dataContacts = new Datasource(path.resolve(__dirname, "../data/contacts.json"));
 
 let indexController = {
     index: async (req, res)=>{
@@ -30,8 +30,8 @@ let indexController = {
     },
     consultaCrear: async (req, res)=>{
         //armo paquete por ahora sin validar mucho
-       const { nombre, apellido, email, departamento, observacion } = req.body;
-        const nuevaConsulta={
+       let { nombre, apellido, email, departamento, observacion } = req.body;
+        let nuevaConsulta={
             id:crypto.randomUUID(),
             nombre,
             apellido,
@@ -41,8 +41,8 @@ let indexController = {
         }
         let contacts = await dataContacts.load();
         contacts.push(nuevaConsulta);
-        //const result=await dataContacts.save(contacts);
-        console.log(contacts);
+        const result=await dataContacts.save(contacts);
+        //console.log(contacts);
         req.session.msg = "Gracias por su consulta, pronto nuestros asesores se pondrán en contacto con usted";
     
         res.redirect('/contact');
