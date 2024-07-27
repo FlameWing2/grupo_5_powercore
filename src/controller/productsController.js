@@ -34,6 +34,7 @@ let productCartController = {
     },
     comentariosArticulo: (req, res)=>{
         const idArticulo = req.params.idArticulo;
+        
         if(req.params.idComentario == undefined){
             res.send("Mostrando los comentarios del articulo "+ idArticulo);
         }else{
