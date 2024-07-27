@@ -10,7 +10,12 @@ class Datasource {
     }
     async load(){
         const infoArchivo = await fs.readFile(this.filePath,"utf-8")
-        return infoArchivo;
+        return JSON.parse(infoArchivo);
+    }
+    async save(data){
+        const jsonData = JSON.stringify(data, null, 2);
+        await fs.writeFile(this.filePath,jsonData,"utf-8");
+        return 1;
     }
    
 }

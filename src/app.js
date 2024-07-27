@@ -25,7 +25,11 @@ MD5             307d9deec28d612339b707cc4c6c6969
 Base64          UE9XRVJDT1JFLUdSVVBPNQ==
 Sha1            ecca91561ee97db021552e024d335f546959a9c2
  */
-app.use(session({secret: "307d9deec28d612339b707cc4c6c6969"}))
+app.use(session({
+    secret: "307d9deec28d612339b707cc4c6c6969",
+    resave: false,
+    saveUninitialized: true
+}))
 /**estas dos lineas son necesarias para trabajar con post, put, delete */
 // cargando funciones de analisis de datos de formularios y JSON
 // estas dos funciones se ejecutaran de forma automatica
@@ -33,7 +37,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 //activando template ejs
-app.set('views',__dirname+"/views/");
+//app.set('views',__dirname+"/views/");
+app.set('views', path.resolve(__dirname, 'views'));
 app.set('view engine','ejs');
 
 //activando escucha de puerto
@@ -58,6 +63,10 @@ app.use('/users',usersRouter);
 app.use('/products', productsRouter);
 app.use('/admin', adminRouter);
 
+app.use((req, res, next) => {
+    console.log(`URL solicitada: ${req.originalUrl}`);
+    next();
+});
 
 /**activo bloqueo de 404 */
 app.use((req, res, next)=>{
