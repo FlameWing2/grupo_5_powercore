@@ -1,7 +1,7 @@
 /**
  * datasource me sirve como servicio, me brinda metodos para el manejo de archivos
  */
-const fs = require('node:fs/promises');
+let fs = require('node:fs/promises');
 const path = require('node:path');
 
 class Datasource {
@@ -9,11 +9,11 @@ class Datasource {
         this.filePath = filePath;
     }
     async load(){
-        const infoArchivo = await fs.readFile(this.filePath,"utf-8")
+        let infoArchivo = await fs.readFile(this.filePath,"utf-8")
         return JSON.parse(infoArchivo);
     }
     async save(data){
-        const jsonData = JSON.stringify(data, null, 2);
+        let jsonData = JSON.stringify(data, null, 2);
         await fs.writeFile(this.filePath,jsonData,"utf-8");
         return 1;
     }

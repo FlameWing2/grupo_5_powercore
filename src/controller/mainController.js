@@ -39,7 +39,7 @@ let indexController = {
             departamento,
             observacion
         }
-        const contacts = await dataContacts.load();
+        let contacts = await dataContacts.load();
         contacts.push(nuevaConsulta);
         //const result=await dataContacts.save(contacts);
         console.log(contacts);
