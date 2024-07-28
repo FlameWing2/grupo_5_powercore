@@ -20,15 +20,21 @@
             <li><a href="/contact">Contacto</a></li>
           </ul>
           <ul class="nav-bar">
+            <li><a href="/products/cart">Ver Pedidos <i class="fas fa-shopping-cart"></i></a></li>
             <li><a href="/users/register">Registrarse <i class="fa-regular fa-id-card"></i></a></li>
             <% if (infoUsuario!="No hay Datos") { %>
               <li><a href="/users/salir"><%= infoUsuario.nombre + " "+ infoUsuario.apellido  %> <i class="fas fa-user" onclick="toggleUserMenu()"></i></a></li>
             <% }else{ %>
               <li><a href="/users/login">Ingresar <i class="fas fa-user" onclick="toggleUserMenu()"></i></a></li>
             <% } %>
-            <li><a href="/products/cart">Ver Pedidos <i class="fas fa-shopping-cart"></i></a></li>
-            <!-- <li><a href="/admin/edit">Editar productos(ADMIN) <i class="fas fa-edit"></i></a></li>
-            <li><a href="/admin/register">Crear productos(ADMIN) <i class="fas fa-plus-circle"></i></a></li> -->
+            
+            <% if (infoUsuario!="No hay Datos") { %>
+              <% if (infoUsuario.category == "Administrator") { %>
+                <li><a href="/admin/register">Crear productos(ADMIN) <i class="fas fa-plus-circle"></i></a></li>
+              <% } %>
+            <% } %>
+              
+            
             
           </ul>
         </nav>

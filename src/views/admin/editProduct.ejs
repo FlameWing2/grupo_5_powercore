@@ -20,49 +20,47 @@
                         <!-- /.card-header -->
                           <!-- activo mensaje si hace post -->
                         <% if(datos.msg!=""){ %>
-                          <div class="alert alert-success alert-dismissible">
-                              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                              <h5><i class="icon fas fa-check"></i> Editar Producto Existente!</h5>
-                              <%= datos.msg %>
-                            </div>
+                            <div class="alert alert-success" role="alert">
+                                <h5><i class="icon fas fa-check"></i> Editar producto Existente!</h5>
+                                    <%= datos.msg %>
+                              </div>
                       <% } %>
                         <!-- form start -->
-                        <form action="/admin/edit" method="post" id="form-editar">
+                        <form action="/admin/edit/<%= infoProducto.productId %>?_method=PUT" method="post" id="form-editar" enctype="multipart/form-data">
                             <div class="card-body">
                                 <div class="form-group">
                                     <label for="name">Nombre</label>
-                                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter name" value="Laptop Dell Inspiron 15">
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter name" value="<%= infoProducto.name %>">
                                 </div>
                                 <div class="form-group">
-                                    <label for="name">Descripción</label>
-                                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter name" value="Notebook de ultima generación, 16gb de RAM">
+                                    <label for="description">Descripción</label>
+                                    <input type="text" class="form-control" id="description" name="description" placeholder="Enter description" value="<%= infoProducto.description %>">
                                 </div>
                                 <div class="form-group">
-                                    <label for="name">Precio</label>
-                                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter name" value="799.99">
+                                    <label for="productCode">Código del Producto</label>
+                                    <input type="text" class="form-control" id="productCode" name="productCode" placeholder="Enter productCode" value="<%= infoProducto.productCode %>">
                                 </div>
                                 <div class="form-group">
-                                    <label for="name">Código del Producto</label>
-                                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter name" value="A1B2C3">
+                                    <label for="image">Imagen</label>
+                                    <img src="<%= infoProducto.image %>" width="150px">
+                                    <input type="file" class="form-control" id="image" name="image" placeholder="Enter image" value="">
+                                    
+
                                 </div>
                                 <div class="form-group">
-                                    <label for="name">Imagen</label>
-                                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter name" value="/images/products/foto5.jpg">
+                                    <label for="price">Precio General</label>
+                                    <input type="text" class="form-control" id="price" name="price" placeholder="Enter price" value="<%= infoProducto.price %>">
                                 </div>
                                 <div class="form-group">
-                                    <label for="name">Precio General</label>
-                                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter name" v650.93>
+                                    <label for="cashPrice">Precio  de Contado</label>
+                                    <input type="text" class="form-control" id="cashPrice" name="cashPrice" placeholder="Enter cashPrice" value="<%= infoProducto.cashPrice %>">
                                 </div>
                                 <div class="form-group">
-                                    <label for="name">Precio  de Contado</label>
-                                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter name" value="650.93">
+                                    <label for="mercadoPagoPrice">Precio de MercadoPago</label>
+                                    <input type="text" class="form-control" id="mercadoPagoPrice" name="mercadoPagoPrice" placeholder="Enter mercadoPagoPrice" value="<%= infoProducto.mercadoPagoPrice %>">
                                 </div>
                                 <div class="form-group">
-                                    <label for="name">Precio de MercadoPago</label>
-                                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter name" value="680.92">
-                                </div>
-                                <div class="form-group">
-                                    <select class="form-control" name="cateogria">
+                                    <select class="form-control" name="category">
                                         <option selected="selected">Laptops</option>
                                         <option>Accessories</option>
                                         <option>Desktops</option>
