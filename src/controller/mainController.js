@@ -56,9 +56,9 @@ let indexController = {
 
         const info = await datasource2.load();
         info.push(nuevaConsulta);
-        //await datasource2.save(info);
+        await datasource2.save(info);
         console.log(info);
-        req.session.msg = "Gracias por su consulta, pronto nuestros asesores se pondrán en contacto con usted";
+        req.session.msg = `Gracias por su consulta, pronto nuestros asesores se pondrán en contacto con usted ${nombre} ${apellido}`;
         //parametrosGenerales.msg = "Gracias por su consulta, pronto nuestros asesores se pondrán en contacto con usted";
         res.redirect('/contact');
         //res.render('contact',{'datos':parametrosGenerales});
