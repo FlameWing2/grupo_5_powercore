@@ -1,34 +1,20 @@
 [
   {
-    "id": "9c5597ae-54ac-490f-b120-8cc88d5ef585",
-    "nombre": "Leo Martin",
-    "apellido": "Loyola",
-    "email": "masterdjmov@gmail.com",
-    "departamento": "Venta",
-    "observacion": "2"
-  },
-  {
-    "id": "9d683881-9c5e-4992-b4ec-228440daced8",
-    "nombre": "Leo Martin",
-    "apellido": "Loyola",
-    "email": "masterdjmov@gmail.com",
-    "departamento": "Venta",
-    "observacion": "1"
-  },
-  {
-    "id": "804d0c28-b2fa-458a-a8d8-d20d13e9d2c5",
+    "id": "e8991e4e-c8bb-4d9f-b536-139712335868",
     "nombre": "Agostina Maytte",
     "apellido": "Loyola Bustos",
     "email": "masterdjmov@gmail.com",
     "departamento": "Venta",
-    "observacion": "2"
+    "observacion": ""
   },
   {
-    "id": "71f41d36-0590-4bea-bf49-31a3b8b1aa82",
-    "nombre": "Leo Martin",
-    "apellido": "Loyola",
-    "email": "masterdjmov@gmail.com",
-    "departamento": "Venta",
-    "observacion": "2"
+    "id": "540584a5-1c29-47be-ab32-df52de760d55",
+    "nombre": "prueba",
+    "apellido": "prueba ape"
+  },
+  {
+    "id": "30232a49-17db-4a8a-823c-928d9b46cd83",
+    "nombre": "prueba",
+    "apellido": "prueba ape"
   }
 ]

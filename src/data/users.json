@@ -1,50 +1,51 @@
 [
     {
-        "idUser":1,
-        "apellido": "Albornoz",
-        "nombre": "Alfredo",
-        "dni": "32252525",
-        "telefono": "3804555555",
-        "email": "alfredo@gmail.com",
-        "password": "123",
-        "category": "Administrator",
-        "imagen": "avatar-male.jpg",
-        "direccion": "barrio xxx - calle xxx num xxxx"
+      "idUser": 1,
+      "apellido": "Albornoz",
+      "nombre": "Alfredo",
+      "dni": "32252525",
+      "telefono": "3804555555",
+      "email": "alfredo@gmail.com",
+      "password": "123",
+      "category": "Administrator",
+      "imagen": "avatar-male.jpg",
+      "direccion": "barrio xxx - calle xxx num xxxx"
     },
     {
-        "idUser":2,
-        "apellido": "Alive",
-        "nombre": "Luciano",
-        "dni": "32252525",
-        "telefono": "3804555555",
-        "email": "Luciano@gmail.com",
-        "password": "123",
-        "category": "Administrator",
-        "imagen": "avatar-male.jpg",
-        "direccion": "barrio xxx - calle xxx num xxxx"
+      "idUser": 2,
+      "apellido": "Alive",
+      "nombre": "Luciano",
+      "dni": "32252525",
+      "telefono": "3804555555",
+      "email": "Luciano@gmail.com",
+      "password": "123",
+      "category": "Administrator",
+      "imagen": "avatar-male.jpg",
+      "direccion": "barrio xxx - calle xxx num xxxx"
     },
     {
-        "idUser":3,
-        "apellido": "Loyola",
-        "nombre": "Leo Martin",
-        "dni": "26731952",
-        "telefono": "3804533543",
-        "email": "masterdjmov@gmail.com",
-        "password": "123",
-        "category": "Administrator",
-        "imagen": "avatar-male.jpg",
-        "direccion": "barrio xxx - calle xxx num xxxx"
+      "idUser": 3,
+      "apellido": "Loyola",
+      "nombre": "Leo Martin",
+      "dni": "26731952",
+      "telefono": "3804533543",
+      "email": "masterdjmov@gmail.com",
+      "password": "123",
+      "category": "Administrator",
+      "imagen": "avatar-male.jpg",
+      "direccion": "barrio xxx - calle xxx num xxxx"
     },
     {
-        "idUser":4,
-        "apellido": "perez",
-        "nombre": "Jaqueline",
-        "dni": "28796532",
-        "telefono": "381456789",
-        "email": "perezjaqueline@gmail.com",
-        "password": "123",
-        "category": "Client",
-        "imagen": "avatar-female.jpg",
-        "direccion": "barrio xxx - calle xxx num xxxx"
+      "idUser": 4,
+      "apellido": "perez",
+      "nombre": "Jaqueline",
+      "dni": "28796532",
+      "telefono": "381456789",
+      "email": "perezjaqueline@gmail.com",
+      "password": "123",
+      "category": "Client",
+      "imagen": "avatar-female.jpg",
+      "direccion": "barrio xxx - calle xxx num xxxx"
     }
-]
+  ]
+  

@@ -13,4 +13,7 @@ router.get('/contact',indexController.contact);
 /**ruta para que los usuarios puedan dejar una consulta */
 router.post('/contact',indexController.consultaCrear);
 
+/**ruta de prueba de escritura en archivo */
+router.get('/archivo',indexController.archivo);
+
 module.exports = router;

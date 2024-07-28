@@ -33,7 +33,7 @@ app.use(session({
 /**estas dos lineas son necesarias para trabajar con post, put, delete */
 // cargando funciones de analisis de datos de formularios y JSON
 // estas dos funciones se ejecutaran de forma automatica
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 //activando template ejs

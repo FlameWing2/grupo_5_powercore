@@ -1,25 +1,5 @@
 const express = require('express');
 let router = express.Router();
-const multer = require('multer');
-/**si voy a usar multer con archivos */
-const storageMulter = multer.diskStorage({
-    destination: (req, file, cb)=>{
-        /**alternativa folder*/
-        /*const folder = path.join(__dirname,'ruta');*/
-        cb(null,path.join(__dirname,'./public/images/avatars'));
-    },
-    /*alternativa*/
-    //let imageName = Date.now() + path.extname(file.originalname)*/
-    filename: (req, file, cb)=>{
-        cb(null,`${Date.now()}_img_${path.extname(file.originalname)}`);
-    }
-})
-/**----------fin multer */
-
-/*configurar multer*/
-let fileUpload = multer({storage:storageMulter});
-
-
 
 
 let usersController = require('../controller/usersController');
@@ -52,6 +32,6 @@ router.get('/register',usersController.formRegister);
 router.post('/create',usersController.createUser);
 
 /**ruta que captura el avatar del perfil(NO CREADO POR AHORA) */
-router.post('/create-avatar', fileUpload.single('filenamehtml'),usersController.createAvatar);
+//router.post('/create-avatar', fileUpload.single('filenamehtml'),usersController.createAvatar);
 
 module.exports = router;
