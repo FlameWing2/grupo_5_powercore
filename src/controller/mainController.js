@@ -5,7 +5,9 @@ const crypto = require("node:crypto");
 
 //llamo a los data que luego serán cambiados por las conexiones a BD
 const promos = require('../data/banner.js');
-const parametrosGenerales = require('../config/parametros.js');
+const ParametrosGenerales = require('../config/parametros.js');
+const parametrosGenerales = new ParametrosGenerales();
+
 const datasource2 = require('../services/datasource2.js');
 const dataProduct = require('../services/datasource.js');   //clase
 const dataProducts = new dataProduct(path.resolve(__dirname,'../data/products.json'));
@@ -35,9 +37,11 @@ let indexController = {
     },
     contact:async (req, res)=>{
         console.log(req.session.msg);
-        if(req.session.msg != null){
+        if(req.session.msg != null ){
             parametrosGenerales.msg = req.session.msg;
             req.session.msg = null;
+        }else{
+            parametrosGenerales.msg="";
         }
         res.render('contact',{'datos':parametrosGenerales});
     },
