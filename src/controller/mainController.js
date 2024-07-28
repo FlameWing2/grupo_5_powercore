@@ -16,10 +16,15 @@ let indexController = {
     contacts:null,
     index: async (req, res)=>{
         
+        if(req.session.ususario!=null){
+            console.log("usuario:"+req.session.usuario.nombre);
+        }
         res.render('index',{
             'datos':parametrosGenerales,
             'products': await dataProducts.load(),
-            promos});
+            promos,
+            infoUsuario:(req.session.usuario)?req.session.usuario:'No hay Datos'
+        });
     },
     archivo:async (req, res)=>{
         
@@ -43,7 +48,10 @@ let indexController = {
         }else{
             parametrosGenerales.msg="";
         }
-        res.render('contact',{'datos':parametrosGenerales});
+        res.render('contact',{
+            'datos':parametrosGenerales,
+            infoUsuario:(req.session.usuario)?req.session.usuario:'No hay Datos'
+        });
     },
     consultaCrear: async (req, res)=>{
         //armo paquete por ahora sin validar mucho

@@ -13,7 +13,10 @@ let productCartController = {
         titulo: "PowerCore",
         pie: "&copy; 2024 PowerCore. Trabajo grupal N&deg; 5."
     }
-       res.render('products/productCart',{'datos':datos});
+       res.render('products/productCart',{
+        'datos':datos,
+        infoUsuario:(req.session.usuario)?req.session.usuario:'No hay Datos'
+    });
       
     },
     //para productDetails
@@ -26,7 +29,11 @@ let productCartController = {
         const idProduct = parseInt(req.params.idproduct);
         const product = products.find(product=>product.productId === idProduct);
         //console.log(product);
-        res.render('products/productDetail',{'datos':datos,'product':product});
+        res.render('products/productDetail',{
+            'datos':datos,
+            'product':product,
+            infoUsuario:(req.session.usuario)?req.session.usuario:'No hay Datos'
+        });
     },
     detalleArticulo: (req, res)=>{
         const idArticulo = req.params.idArticulo;

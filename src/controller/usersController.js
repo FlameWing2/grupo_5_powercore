@@ -17,7 +17,10 @@ let usersController = {
     formLogin: (req, res)=>{
         
         
-        res.render("users/login",{'datos':parametrosGenerales});
+        res.render("users/login",{
+            'datos':parametrosGenerales,
+            infoUsuario:(req.session.usuario)?req.session.usuario:'No hay Datos'
+        });
     },
     validar: async (req, res)=>{
         let { email, password } = req.body;
@@ -34,7 +37,10 @@ let usersController = {
             res.redirect('/');  //lo envio al index
         }else{
             parametrosGenerales.error = `Error, no se encontro las credenciales para el correo: <b>${email}</b>`;
-            res.render('users/login',{'datos':parametrosGenerales});
+            res.render('users/login',{
+                'datos':parametrosGenerales,
+               infoUsuario:(req.session.usuario)?req.session.usuario:'No hay Datos'
+        });
         }
     },
     //procesos de register
@@ -47,14 +53,20 @@ let usersController = {
             parametrosGenerales.msg="";
         }
         console.log("en get: " + parametrosGenerales.msg);
-        res.render("users/register",{'datos':parametrosGenerales});
+        res.render("users/register",{
+            'datos':parametrosGenerales,
+           infoUsuario:(req.session.usuario)?req.session.usuario:'No hay Datos'
+        });
     },
     createAvatar: (req, res)=>{
       
         /**si uso multer */
         //console.log(req.file);
         //if(req.file !== undefined) llego
-        res.render("users/register",{'datos':parametrosGenerales});
+        res.render("users/register",{
+            'datos':parametrosGenerales,
+            infoUsuario:(req.session.usuario)?req.session.usuario:'No hay Datos'
+        });
     },
     createUser: async (req, res) => {
         const { email, password,password2,nombre,apellido,dni, telefono } = req.body;
