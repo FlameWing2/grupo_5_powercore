@@ -12,9 +12,13 @@ const datasource = {
   },
   async save(data) {
     const jsonData = JSON.stringify(data, null, 2);
-    await fs.writeFile(this.filePath, jsonData, "utf-8",(error)=>{
-      console.log("error");
-    });
+    try {
+      await fs.writeFile(this.filePath, jsonData, "utf-8");
+      console.log("Archivo guardado correctamente");
+    } catch (error) {
+      console.error("Error al escribir el archivo:", error);
+      // Manejo adicional del error si es necesario
+    }
   }
 }
 

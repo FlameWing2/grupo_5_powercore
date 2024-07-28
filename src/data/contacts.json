@@ -1,3 +1,18 @@
 [
-
+  {
+    "id": "dc7bb943-5542-4935-bbb2-7603fde18855",
+    "nombre": "Leo Martin",
+    "apellido": "Loyola",
+    "email": "masterdjmov@gmail.com",
+    "departamento": "Venta",
+    "observacion": "2"
+  },
+  {
+    "id": "2a47e418-dcf8-4f48-8622-cddd892f6b18",
+    "nombre": "Leo Martin",
+    "apellido": "Loyola",
+    "email": "masterdjmov@gmail.com",
+    "departamento": "Venta",
+    "observacion": "2"
+  }
 ]

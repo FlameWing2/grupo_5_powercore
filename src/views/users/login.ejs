@@ -4,58 +4,7 @@
 <%- include('../partials/head',{'titulo':datos.titulo}) %>
 
 <body>
-  <header>
-    <div class="contenedor-header">
-      <div id="logo" class="logo-header img-header">
-        <img id="logo1" src="/images/PowerCore.svg" alt="PowerCore">
-        <img id="logo2" src="/images/PowerCore_large.svg" alt="PowerCore">
-      </div>
-      <div id="search" class="form-search">
-        <form class="header-form" action="#" method="GET">
-          <input placeholder="Buscar productos, marcas y más" type="text">
-          <a href="#"><i class="fa fa-search"></i></a>
-        </form>
-      </div>
-    </div>
-    <div class="contenedor-nav">
-
-      <nav class="header-nav">
-        <ul class="nav-bar">
-          <li><a href="/">Inicio</a></li>
-          <!-- <li><a href="#">Productos</a></li> -->
-          <li><a href="/contact">Contacto</a></li>
-        </ul>
-        <ul class="nav-bar">
-          <li><a href="/users/register">Registrarse <i class="fa-regular fa-id-card"></i></a></li>
-          <li><a href="/users/login">Ingresar <i class="fas fa-user" onclick="toggleUserMenu()"></i></a></li>
-          <li><a href="/products/cart">Ver Pedidos <i class="fas fa-shopping-cart"></i></a></li>
-        </ul>
-      </nav>
-    </div>
-    <div class="mob__navbar">
-      <div class="nav-item home">
-        <a href="/">
-          <img class="img-nav" src="/images/PowerCore.svg" alt="">
-        </a>
-      </div>
-      <div class="nav-item">
-        <button class="search__mobile">
-          <i class="fa-solid fa-magnifying-glass"></i>
-
-        </button>
-      </div>
-      <div class="nav-item">
-        <a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i>
-          <br>
-          Carrito</a>
-      </div>
-      <div class="nav-item">
-        <i class="fa-solid fa-bars"></i>
-        Menu
-      </div>
-    </div>
-    </div>
-  </header>
+  <%- include('../partials/headers',{'titulo':datos.titulo}) %>
   <main>
     <div class="account">
 
@@ -119,31 +68,37 @@
           </div>
         </div>
         <div class="item-login" style="margin:25px auto 0">
+           <!-- activo mensaje si hace post -->
+           <% if(datos.error){ %>
+            <div class="alert alert-warning" role="alert">
+              <h5><i class="icon fas fa-check"></i> Alerta!</h5>
+                <%- datos.error %>
+            </div>
+          <% } %>
           <h3>Iniciar sesión</h3>
           <hr>
           <div class="content col-2">
-            <form action="javascript:void(0)" id="Login" data-gtm-form-interact-id="2">
+            <form action="/users/login" id="Login" class="login" method="post">
               <div class="form-group">
-                <input class="form-input datos" type="email" name="email" id="email" required="" placeholder="Email"
-                  data-gtm-form-interact-field-id="2">
+                <input class="form-input datos" type="email" name="email" id="email" required="" placeholder="Email">
               </div>
               <div class="form-group">
-                <input class="form-input datos" type="password" name="password" id="password" required=""
-                  placeholder="Contraseña" data-gtm-form-interact-field-id="3">
+                <input class="form-input datos" type="password" name="password" id="password" required="" placeholder="Contraseña">
               </div>
-            </form>
-            <div class="form-group" style="display: flex; align-items: center;width: 200px;">
-              <input style="margin-right: 5px;" type="checkbox" name="recordar" id="recordar" value="recordar">
-              <span style="font-size: 12px;">Mantenerme logeado</span>
-            </div>
+            
+              <div class="form-group" style="display: flex; align-items: center;width: 200px;">
+                <input style="margin-right: 5px;" type="checkbox" name="recordar" id="recordar" value="recordar">
+                <span style="font-size: 12px;">Mantenerme logeado</span>
+              </div>
             
 
-          </div>
-          <div class="cta">
-            <div>
-              <a onclick="login()" class="btn btn-accent">Entrar</a>
             </div>
-          </div>
+            <div class="cta">
+              <div>
+                <input type="submit" name="btn" class="btn btn-primary" value="Acceso">
+              </div>
+            </div>
+          </form>
         </div>
         <div class="item-login">
           <h3>Recuperar contraseña</h3>
@@ -158,27 +113,11 @@
           </div>
           <div class="cta">
             <div>
-              <a onclick="passRec()" class="btn btn-accent">Enviar</a>
+              <a onclick="passRec()" class="btn btn-primary">Enviar</a>
             </div>
           </div>
         </div>
-        <div class="item-login">
-          <h3>Reenviar email de activación</h3>
-          <hr>
-          <div class="content col-2">
-            <form action="javascript:void(0)" id="Activation" data-gtm-form-interact-id="1">
-              <div class="form-group">
-                <input class="form-input datos" type="email" name="email" id="email" required="" placeholder="Email"
-                  data-gtm-form-interact-field-id="1">
-              </div>
-            </form>
-          </div>
-          <div class="cta">
-            <div>
-              <a onclick="Activation()" class="btn btn-accent">Enviar</a>
-            </div>
-          </div>
-        </div>
+       
       </div>
     </div>
   </main>

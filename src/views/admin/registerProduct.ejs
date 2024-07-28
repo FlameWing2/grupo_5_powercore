@@ -6,57 +6,7 @@
 
 </head>
 <body>
-    <header>
-        <div class="contenedor-header">
-          <div id="logo" class="logo-header img-header">
-            <img id="logo1" src="/images/PowerCore.svg" alt="PowerCore">
-            <img id="logo2" src="/images/PowerCore_large.svg" alt="PowerCore">
-          </div>
-          <div id="search" class="form-search">
-            <form class="header-form" action="#" method="GET">
-              <input class="search-bar" placeholder="Buscar productos, marcas y más" type="search">
-              <button class="search-bar-icon" type="submit"><i class="fa fa-search"></i></button>
-            </form>
-          </div>
-        </div>
-        <div class="contenedor-nav">
-  
-          <nav class="header-nav">
-            <ul class="nav-bar">
-              <li><a href="/">Inicio</a></li>
-             <!-- <li><a href="#">Productos</a></li> -->
-              <li><a href="/contact">Contacto</a></li>
-            </ul>
-            <ul class="nav-bar">
-              <li><a href="/users/register">Registrarse <i class="fa-regular fa-id-card"></i></a></li>
-              <li><a href="/users/login">Ingresar <i class="fas fa-user" onclick="toggleUserMenu()"></i></a></li>
-              <li><a href="/products/cart">Ver Pedidos <i class="fas fa-shopping-cart"></i></a></li>
-            </ul>
-          </nav>
-        </div>
-        <div class="mob__navbar">
-          <div class="nav-item home">
-            <a href="/">
-              <img class="img-nav" src="/images/PowerCore.svg" alt="">
-            </a>
-          </div>
-          <div class="nav-item">
-            <button class="search__mobile">
-              <i class="fa-solid fa-magnifying-glass"></i>
-  
-            </button>
-          </div>
-          <div class="nav-item">
-            <a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i>
-              <br>
-              Carrito</a>
-          </div>
-          <div class="nav-item">
-            <i class="fa-solid fa-bars"></i>
-            Menu
-          </div>
-        </div>
-      </header>
+  <%- include('../partials/headers',{'titulo':datos.titulo}) %>
     <section class="content">
         <div class="container-fluid">
             <div class="row" style="display: flex; justify-content: center;">

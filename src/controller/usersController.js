@@ -19,9 +19,23 @@ let usersController = {
         
         res.render("users/login",{'datos':parametrosGenerales});
     },
-    validar: (req, res)=>{
-       
-        res.render('users/login',{'datos':parametrosGenerales});
+    validar: async (req, res)=>{
+        let { email, password } = req.body;
+
+        //consulto si existe este usuario
+        const usuarios = await dataUsers.load();
+        const existe = usuarios.find(user => {
+            if(user.email == req.body.email && user.password ==req.body.password){
+                return user;
+            }
+        })
+        if(existe){
+            req.session.usuario = existe;
+            res.redirect('/');  //lo envio al index
+        }else{
+            parametrosGenerales.error = `Error, no se encontro las credenciales para el correo: <b>${email}</b>`;
+            res.render('users/login',{'datos':parametrosGenerales});
+        }
     },
     //procesos de register
     formRegister: (req, res)=>{

@@ -13,11 +13,14 @@ class Datasource {
         return JSON.parse(infoArchivo);
     }
     async save(data){
-        console.log(data);
         let jsonData = JSON.stringify(data, null, 2);
-        await fs.writeFile(this.filePath,jsonData,"utf-8");
-        console.log("desde json:"+ jsonData);
-        return 1;
+        try {
+            await fs.writeFile(this.filePath, jsonData, "utf-8");
+            console.log("Archivo guardado correctamente");
+          } catch (error) {
+            console.error("Error al escribir el archivo:", error);
+            // Manejo adicional del error si es necesario
+          }
     }
    
 }

@@ -13,7 +13,7 @@ let usersController = require('../controller/usersController');
 router.get('/login',usersController.formLogin);
 
 /**ruta que se encarga de validar el usuario, falta middleware */
-router.post('/validar',usersController.validar);
+router.post('/login',usersController.validar);
 
 
 /**------------------------------------------------------------------------------------------------------- */
