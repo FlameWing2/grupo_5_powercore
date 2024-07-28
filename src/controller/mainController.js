@@ -34,8 +34,11 @@ let indexController = {
         res.redirect('/');
     },
     contact:async (req, res)=>{
-        
-
+        console.log(req.session.msg);
+        if(req.session.msg != null){
+            parametrosGenerales.msg = req.session.msg;
+            req.session.msg = null;
+        }
         res.render('contact',{'datos':parametrosGenerales});
     },
     consultaCrear: async (req, res)=>{
@@ -50,19 +53,15 @@ let indexController = {
             departamento,
             observacion
         }
-        const dato = {
-            mensaje: "hay post",
-            nombre: req.body.nombre,
-            apellido: req.body.apellido
-        }
+
         const info = await datasource2.load();
-        info.push(dato);
-        //await datasource2.save(info);
+        info.push(nuevaConsulta);
+        await datasource2.save(info);
         console.log(info);
-        //req.session.msg = "Gracias por su consulta, pronto nuestros asesores se pondrán en contacto con usted";
-        parametrosGenerales.msg = "Gracias por su consulta, pronto nuestros asesores se pondrán en contacto con usted";
-        //res.redirect('/');
-        res.render('contact',{'datos':parametrosGenerales});
+        req.session.msg = "Gracias por su consulta, pronto nuestros asesores se pondrán en contacto con usted";
+        //parametrosGenerales.msg = "Gracias por su consulta, pronto nuestros asesores se pondrán en contacto con usted";
+        res.redirect('/contact');
+        //res.render('contact',{'datos':parametrosGenerales});
     }
 }
 
