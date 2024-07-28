@@ -22,6 +22,12 @@ let usersController = {
             infoUsuario:(req.session.usuario)?req.session.usuario:'No hay Datos'
         });
     },
+    salir: (req, res)=>{
+        if(req.session.usuario != null ){
+            req.session.usuario = null;
+            res.redirect('/users/login');
+        }
+    },
     validar: async (req, res)=>{
         let { email, password } = req.body;
 

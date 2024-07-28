@@ -15,7 +15,8 @@ router.get('/login',usersController.formLogin);
 /**ruta que se encarga de validar el usuario, falta middleware */
 router.post('/login',usersController.validar);
 
-
+/**ruta que que se encarga de borrar la session*/
+router.get('/salir',usersController.salir);
 /**------------------------------------------------------------------------------------------------------- */
 
 
