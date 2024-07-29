@@ -57,7 +57,7 @@
     </div>
   </header>
   <main>
-    <section id="products__section">
+    <section class="products__section" id="products__section">
 
       <div id="hero-carousel banner-height" class="carousel slide " data-bs-ride="carousel">
         <div class="carousel-inner banner-height">
@@ -80,7 +80,7 @@
       </div>
 
 
-      <h2>Productos Destacados</h2>
+      <h2 class="products__section--title">Productos Destacados</h2>
       <div class="card__wrapper">
         <% for(let product of products){ %>
         <div class="product__card">
@@ -90,7 +90,7 @@
               <%= product.category %>
             </p>
             <a class="product__link" href="/products/<%= product.productId %>">
-              <h3 class="product__name">
+              <h3 class="product__name text-truncate">
                 <%= product.name %>
               </h3>
             </a>
