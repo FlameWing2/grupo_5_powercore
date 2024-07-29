@@ -1,27 +1,27 @@
 const bannerProductos = [
     {
       productId: 1,
-      image: "/images/promo/promo1.webp"
+      image: "/images/promo/1.png"
     },
     {
       productId: 2,
-      image: "/images/promo/promo2.webp"
+      image: "/images/promo/2.png"
     },
     {
       productId: 3,
-      image: "/images/promo/promo3.webp"
+      image: "/images/promo/3.png"
     },
     {
       productId: 4,
-      image: "/images/promo/promo4.webp"
+      image: "/images/promo/4.png"
     },
     {
       productId: 5,
-      image: "/images/promo/promo5.webp"
+      image: "/images/promo/5.png"
     },
     {
         productId: 6,
-        image: "/images/promo/promo6.webp"
+        image: "/images/promo/6.png"
     }
   ]
   
