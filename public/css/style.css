@@ -223,17 +223,15 @@ input:focus {
 
 .mob__navbar {
   display: flex;
-  align-items: baseline;
   background-color: #363062;
   bottom: 0;
-  justify-content: space-around;
+  justify-content: space-evenly;
   left: 0;
   position: fixed;
   width: 100%;
   height: 10%;
   z-index: 100;
   align-items: center;
-
 }
 
 .nav-item {
@@ -260,22 +258,27 @@ input:focus {
   flex-direction: column;
 }
 
+.products__section--title {
+  font-size: 1.8rem;
+  color: #363062;
+  padding: 0.5rem 1rem;
+  border-top: 1px solid rgba(102, 102, 102, 0.2);
+}
+
 .card__wrapper {
   margin: auto;
-  max-width: 60%;
   display: grid;
-  grid-template-rows: repeat(auto-fit, 1fr);
   grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-  justify-items: center;
+  gap: 2rem;
+  justify-items: stretch;
   align-items: center;
   grid-auto-flow: row dense;
 }
 
 .product__card {
+  min-width: 15rem;
   max-width: 18rem;
-  border-radius: 0.5rem;
-  overflow: hidden;
+  border-radius: 0.2rem;
   margin: 1rem;
   background-color: #FFF;
   padding-top: 1.25rem;
@@ -380,11 +383,6 @@ main {
 
 
 }
-
-/*.datos{
-    width: 90vh;
-    max-width: 95vh;
-  }*/
 
 .info {
   width: 90vw;
@@ -518,7 +516,26 @@ footer section{
 
 /*------- media querys---------*/
 
-@media (min-width: 361px) {
+
+@media (max-width: 425px) {
+
+/* Product section */
+
+  .products__section {
+    width: 100%;
+    margin-bottom: 5rem;
+  }
+
+  .card__wrapper {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    justify-items: center;
+  }
+
+  .product__card {
+    width: max-content;
+  
+  }
 
   /*registro*/
   .account {
@@ -560,7 +577,13 @@ footer section{
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 426px) {
+
+  .card__wrapper {
+    grid-template-rows: repeat(auto-fit, 1fr);
+    grid-template-columns: repeat(2, 240px);
+  }
+
 
   header {
     padding: 20px;
