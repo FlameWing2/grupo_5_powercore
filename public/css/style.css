@@ -631,6 +631,15 @@ footer section{
   }
 }
 
+@media (min-width: 1023px) {
+  .card__wrapper {
+    grid-template-rows: repeat(auto-fit, 1fr);
+    grid-template-columns: repeat(3, 240px);
+  }
+}
+
+
+
 /** para control de errores*/
 .feedback{
   color: red;
