@@ -3,87 +3,40 @@
 <%- include('./partials/head',{'titulo':datos.titulo}) %>
 
 <body>
-  <header>
-    <div class="contenedor-header">
-      <div id="logo" class="logo-header img-header">
-        <img id="logo1" src="/images/PowerCore.svg" alt="PowerCore">
-        <img id="logo2" src="/images/PowerCore_large.svg" alt="PowerCore">
-      </div>
-      <div id="search" class="form-search">
-        <form class="header-form" action="#" method="GET">
-          <input class="search-bar" placeholder="Buscar productos, marcas y más" type="search">
-          <button class="search-bar-icon" type="submit"><i class="fa fa-search"></i></button>
-        </form>
-      </div>
-    </div>
-    <div class="contenedor-nav">
-
-        <nav class="header-nav">
-          <ul class="nav-bar">
-            <li><a href="/">Inicio</a></li>
-            <!-- <li><a href="#">Productos</a></li> -->
-            <li><a href="/contact">Contacto</a></li>
-          </ul>
-          <ul class="nav-bar">
-            <li><a href="/users/register">Registrarse <i class="fa-regular fa-id-card"></i></a></li>
-            <li><a href="/users/login">Ingresar <i class="fas fa-user" onclick="toggleUserMenu()"></i></a></li>
-            <li><a href="/products/cart">Ver Pedidos <i class="fas fa-shopping-cart"></i></a></li>
-            <li><a href="/admin/edit">Editar productos(ADMIN) <i class="fas fa-edit"></i></a></li>
-            <li><a href="/admin/register">Crear productos(ADMIN) <i class="fas fa-plus-circle"></i></a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="mob__navbar">
-        <div class="nav-item home">
-          <a href="/">
-            <img class="img-nav" src="/images/PowerCore.svg" alt="">
-          </a>
-        </div>
-        <div class="nav-item">
-          <button class="search__mobile">
-            <i class="fa-solid fa-magnifying-glass"></i>
-
-        </button>
-      </div>
-      <div class="nav-item">
-        <a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i>
-          <br>
-          Carrito</a>
-      </div>
-      <div class="nav-item">
-        <i class="fa-solid fa-bars"></i>
-        Menu
-      </div>
-    </div>
-  </header>
+  <%- include('./partials/headers',{ infoUsuario: infoUsuario }) %>
   <main>
     <section class="products__section" id="products__section">
-
       <div id="hero-carousel banner-height" class="carousel slide " data-bs-ride="carousel">
         <div class="carousel-inner banner-height">
-          <div class="carousel-item banner-height active">
-            <img src="images/promo/promo4.webp" class="img-resize w-100" alt="...">
-          </div>
-          <div class="carousel-item  banner-height">
-            <img src="images/promo/promo2.webp" class="img-resize w-100" alt="...">
-          </div>
-          <div class="carousel-item  banner-height">
-            <img src="images/promo/promo3.webp" class="img-resize w-100" alt="...">
-          </div>
-          <div class="carousel-item banner-height">
-            <img src="images/promo/promo4.webp" class="img-resize w-100" alt="...">
-          </div>
-          <div class="carousel-item banner-height">
-            <img src="images/promo/promo5.webp" class="img-resize w-100" alt="...">
-          </div>
+          <% promos.forEach((promo,index) => { %>
+            <% if(index==0){ %>
+              <div class="carousel-item banner-height active">
+                <img src="<%= promo.image %>" class="img-resize w-100" alt="...">
+              </div>
+            <% }else{ %>
+              <div class="carousel-item banner-height">
+                <img src="<%= promo.image %>" class="img-resize w-100" alt="...">
+              </div>
+          <% }}) %>
         </div>
       </div>
 
+      <% if(producDelete){ %>
+        <div class="alert alert-success" role="alert">
+          <h5><i class="icon fas fa-check"></i> Se borro un producto!</h5>
+              <%= producDelete %>
+        </div>
+      <% } %>
 
       <h2 class="products__section--title">Productos Destacados</h2>
       <div class="card__wrapper">
         <% for(let product of products){ %>
         <div class="product__card">
+          <!-- aqui para editar, podemos cambiarlo de lugar-->
+          <% if (infoUsuario!="No hay Datos") { %>
+            <a href="/admin/edit/<%= product.productId %>"><i class="fas fa-edit"></i></a>  
+            <a href="/admin/delete/<%= product.productId %>"><i class="fas fa-eraser"></i></a>
+          <% } %>
           <a href="/products/<%= product.productId %>"><img src="<%= product.image %>" alt="Producto 1"></a>
           <div class="product__description">
             <p class="product__cathegory">

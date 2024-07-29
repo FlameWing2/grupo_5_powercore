@@ -3,109 +3,85 @@
 <%- include('../partials/head',{'titulo':datos.titulo}) %>
 
   <body>
-    <header>
-      <div class="contenedor-header">
-        <div id="logo" class="logo-header img-header">
-          <img id="logo1" src="/images/PowerCore.svg" alt="PowerCore">
-          <img id="logo2" src="/images/PowerCore_large.svg" alt="PowerCore">
-        </div>
-        <div id="search" class="form-search">
-          <form class="header-form" action="#" method="GET">
-            <input placeholder="Buscar productos, marcas y más" type="text">
-            <a href="#"><i class="fa fa-search"></i></a>
-          </form>
-        </div>
-      </div>
-      <div class="contenedor-nav">
-
-        <nav class="header-nav">
-          <ul class="nav-bar">
-            <li><a href="/">Inicio</a></li>
-            <!-- <li><a href="#">Productos</a></li> -->
-            <li><a href="/contact">Contacto</a></li>
-          </ul>
-          <ul class="nav-bar">
-            <li><a href="/users/register">Registrarse <i class="fa-regular fa-id-card"></i></a></li>
-            <li><a href="/users/login">Ingresar <i class="fas fa-user" onclick="toggleUserMenu()"></i></a></li>
-            <li><a href="/products/cart">Ver Pedidos <i class="fas fa-shopping-cart"></i></a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="mob__navbar">
-        <div class="nav-item home">
-          <a href="/">
-            <img class="img-nav" src="/images/PowerCore.svg" alt="">
-          </a>
-        </div>
-        <div class="nav-item">
-          <button class="search__mobile">
-            <i class="fa-solid fa-magnifying-glass"></i>
-
-          </button>
-        </div>
-        <div class="nav-item">
-          <a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i>
-            <br>
-            Carrito</a>
-        </div>
-        <div class="nav-item">
-          <i class="fa-solid fa-bars"></i>
-          Menu
-        </div>
-      </div>
-      </div>
-    </header>
+    <%- include('../partials/headers',{ infoUsuario: infoUsuario }) %>
     <main>
 
       <div class="account">
         <div class="item">
-
+          <!-- activo mensaje si hace post -->
+          <% if(datos.msg){ %>
+            <div class="alert alert-success" role="alert">
+              <h5><i class="icon fas fa-check"></i> Gracias por su Registro!</h5>
+                  <%= datos.msg %>
+            </div>
+          <% } %>
 
           <div class="item-login item-register">
             <h3>Registro de usuario</h3>
             <hr>
             <div class="content col-2">
-              <form action="/users/create" id="Register" method="post" class="login">
+              
+              <div class="row_titulo">
+                <h4>Datos de Acceso</h4>
+              </div>
+              
+              <form action="/users/register" id="formRegister" method="post" class="formRegister">
                 <div class="form-group">
-                  <input class="form-input datos" type="email" id="email" name="email" required="" placeholder="Email">
+                  <input class="form-input datos" type="email" id="email" name="email" required placeholder="Email" value="<%= locals.old && old.email %>">
+                  <% if(locals.errors && errors.email){ %>
+                    <p class="feedback"><%= errors.email %></p>
+                  <% } %>
                 </div>
+               
                 <div class="form-group">
-                  <input class="form-input datos" type="password" id="password" name="password" required=""
-                    placeholder="Contraseña">
+                  <input class="form-input datos" type="password" id="password" name="password" required placeholder="Contraseña" value="<%= locals.old && old.password %>">
+                  <% if(locals.errors && errors.email){ %>
+                    <p class="feedback"><%= errors.password %></p>
+                  <% } %>
                 </div>
+                
                 <div class="form-group ">
-                  <input class="form-input datos" type="password" id="password2" name="password2" required=""
-                    placeholder="Confirmar contraseña">
+                  <input class="form-input datos" type="password" id="password2" name="password2" required placeholder="Confirmar contraseña" value="<%= locals.old && old.password2 %>">
+                  <% if(locals.errors && errors.email){ %>
+                    <p class="feedback"><%= errors.password2 %></p>
+                  <% } %>
                 </div>
-              </form>
+                
 
               <div class="row_titulo">
-                <h4 class="">Información personal</>
+                <h4>Información personal</h4>
               </div>
-              <form>
+             
                 <div class="form-group">
-                  <input class="form-input datos" type="text" id="nombre" name="nombre" required=""
-                    placeholder="Nombre">
+                  <input class="form-input datos" type="text" id="nombre" name="nombre" required placeholder="Nombre" value="<%= locals.old && old.nombre %>">
+                  <% if(locals.errors && errors.email){ %>
+                    <p class="feedback"><%= errors.nombre %></p>
+                  <% } %>
                 </div>
                 <div class="form-group">
-                  <input class="form-input datos" type="text" id="apellido" name="apellido" required=""
-                    placeholder="Apellido">
+                  <input class="form-input datos" type="text" id="apellido" name="apellido" required placeholder="Apellido" <%= locals.old && old.apellido %>>
+                  <% if(locals.errors && errors.email){ %>
+                    <p class="feedback"><%= errors.apellido %></p>
+                  <% } %>
                 </div>
                 <div class="form-group">
-                  <input class="form-input datos" type="number" id="dni" name="dni" required=""
-                    placeholder="Número de DNI o CUIT">
+                  <input class="form-input datos" type="text" id="dni" name="dni" required placeholder="Número de DNI" value="<%= locals.old && old.dni %>">
+                  <% if(locals.errors && errors.email){ %>
+                    <p class="feedback"><%= errors.dni %></p>
+                  <% } %>
                 </div>
                 <div class="form-group">
-                  <input class="form-input datos" type="number" id="tel" name="tel" required=""
-                    placeholder="Número de teléfono">
+                  <input class="form-input datos" type="text" id="telefono" name="telefono" required placeholder="Número de teléfono" <%= locals.old && old.tel %>>
+                  <% if(locals.errors && errors.email){ %>
+                    <p class="feedback"><%= errors.telefono %></p>
+                  <% } %>
                 </div>
                 <input type="hidden" id="express" name="express" value="0">
 
             </div>
             <div class="cta">
               <div>
-                <div id="loader" class="loader" style="display:none"></div>
-                <input type="submit" id="myBtn" name="myBtn" class="btn btn-accent">
+                  <input type="submit" id="myBtn" name="myBtn" class="btn btn-primary" value="Registrarme">
               </div>
             </div>
 
@@ -134,7 +110,7 @@
 
     <%- include('../partials/footer',{'pie':datos.pie}) %>
 
-      <%- include('../partials/script') %>
+    <%- include('../partials/script') %>
   </body>
 
 </html>

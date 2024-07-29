@@ -630,3 +630,8 @@ footer section{
     display: flex;
   }
 }
+
+/** para control de errores*/
+.feedback{
+  color: red;
+}

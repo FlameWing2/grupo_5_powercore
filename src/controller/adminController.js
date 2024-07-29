@@ -2,38 +2,69 @@
 //agrego la ruta para poder usar path
 const path = require('path');
 
+//llamo a los data que luego serán cambiados por las conexiones a BD
+const parametrosGenerales = require('../config/parametros.js');
+//traigo los productos
+const dataProducts = require('../services/datasource.js');   //clase
+const dataProduct = new dataProducts(path.resolve(__dirname,'../data/products.json'));
+
 let adminController = {
-    edit: (req, res)=>{
-        const datos={
-            titulo: "PowerCore",
-            pie: "&copy; 2024 PowerCore. Trabajo grupal N&deg; 5.",
-            msg: "Producto XXXX editado de forma exitosa"
-        }
-        res.render('admin/editProduct',{'datos':datos});
+    edit: async (req, res)=>{
+        parametrosGenerales.msg ="";
+        //busco el producto
+        const idProducto = parseInt(req.params.id);
+        const Productos = await dataProduct.load()
+        const infoProducto = Productos.find(producto => producto.productId == idProducto);
+        console.log(infoProducto);
+        res.render('admin/editProduct',{
+            'datos':parametrosGenerales,
+            infoUsuario:(req.session.usuario)?req.session.usuario:'No hay Datos',
+            infoProducto
+        });
+    },
+    editProduct: async (req, res)=>{
+        parametrosGenerales.msg =`Producto ${req.body.name} editado correctamente`;
+        //busco el producto, pero no lo edito por ahora
+        const idProducto = parseInt(req.params.id);
+        const Productos = await dataProduct.load()
+        const infoProducto = Productos.find(producto => producto.productId == idProducto);
+        console.log(infoProducto);
+        res.render('admin/editProduct',{
+            'datos':parametrosGenerales,
+            infoUsuario:(req.session.usuario)?req.session.usuario:'No hay Datos',
+            infoProducto
+        });
     },
     create: (req, res)=>{
-        const datos={
-            titulo: "PowerCore",
-            pie: "&copy; 2024 PowerCore. Trabajo grupal N&deg; 5.",
-            msg: ""
-        }
-        res.render('admin/listProduct',{'datos':datos});
+        parametrosGenerales.msg =``;
+        res.render('admin/listProduct',{
+            'datos':parametrosGenerales,
+            infoUsuario:(req.session.usuario)?req.session.usuario:'No hay Datos'
+        });
     },
     register: (req, res)=>{
-        const datos={
-            titulo: "PowerCore",
-            pie: "&copy; 2024 PowerCore. Trabajo grupal N&deg; 5.",
-            msg: ""
-        }
-        res.render('admin/registerProduct',{'datos':datos});
+        parametrosGenerales.msg =``;
+        res.render('admin/registerProduct',{
+            'datos':parametrosGenerales,
+            infoUsuario:(req.session.usuario)?req.session.usuario:'No hay Datos'
+        });
     },
     registerProduct: (req, res)=>{
-        const datos={
-            titulo: "PowerCore",
-            pie: "&copy; 2024 PowerCore. Trabajo grupal N&deg; 5.",
-            msg: "Este mensaje solo aparece cuando le hagan POST, ahora solo de prueba"
-        }
-        res.render('admin/registerProduct',{'datos':datos});
+        parametrosGenerales.msg  =`Producto ${req.body.name} creado correctamente`;
+       
+        res.render('admin/registerProduct',{
+            'datos':parametrosGenerales,
+            infoUsuario:(req.session.usuario)?req.session.usuario:'No hay Datos'
+        });
+    },
+    delete: (req, res)=>{
+        parametrosGenerales.msg  =`Producto ${req.params.id} borrado correctamente`;
+        req.session.eliminado =`Producto ${req.params.id} borrado correctamente`;
+        /*res.render('admin/registerProduct',{
+            'datos':parametrosGenerales,
+            infoUsuario:(req.session.usuario)?req.session.usuario:'No hay Datos'
+        });*/
+        res.redirect('/');
     }
 
 }
