@@ -11,4 +11,6 @@ router.put('/edit/:id',adminController.editProduct);
 /**rutas para crear un producto nuevo */
 router.get('/register',adminController.register);
 router.post('/register',adminController.registerProduct);
+
+router.get('/delete/:id',adminController.delete);
 module.exports = router;

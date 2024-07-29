@@ -19,11 +19,13 @@ let indexController = {
         if(req.session.ususario!=null){
             console.log("usuario:"+req.session.usuario.nombre);
         }
+        
         res.render('index',{
             'datos':parametrosGenerales,
             'products': await dataProducts.load(),
             promos,
-            infoUsuario:(req.session.usuario)?req.session.usuario:'No hay Datos'
+            infoUsuario:(req.session.usuario)?req.session.usuario:'No hay Datos',
+            producDelete:(req.session.eliminado)?req.session.eliminado:null,
         });
     },
     archivo:async (req, res)=>{

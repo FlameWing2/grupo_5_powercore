@@ -21,6 +21,12 @@
         </div>
       </div>
 
+      <% if(producDelete){ %>
+        <div class="alert alert-success" role="alert">
+          <h5><i class="icon fas fa-check"></i> Se borro un producto!</h5>
+              <%= producDelete %>
+        </div>
+      <% } %>
 
       <h2>Productos Destacados</h2>
       <div class="card__wrapper">
@@ -28,7 +34,8 @@
         <div class="product__card">
           <!-- aqui para editar, podemos cambiarlo de lugar-->
           <% if (infoUsuario!="No hay Datos") { %>
-            <a href="/admin/edit/<%= product.productId %>"><i class="fas fa-edit"></i></a>
+            <a href="/admin/edit/<%= product.productId %>"><i class="fas fa-edit"></i></a>  
+            <a href="/admin/delete/<%= product.productId %>"><i class="fas fa-eraser"></i></a>
           <% } %>
           <a href="/products/<%= product.productId %>"><img src="<%= product.image %>" alt="Producto 1"></a>
           <div class="product__description">

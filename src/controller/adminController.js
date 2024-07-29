@@ -56,6 +56,15 @@ let adminController = {
             'datos':parametrosGenerales,
             infoUsuario:(req.session.usuario)?req.session.usuario:'No hay Datos'
         });
+    },
+    delete: (req, res)=>{
+        parametrosGenerales.msg  =`Producto ${req.params.id} borrado correctamente`;
+        req.session.eliminado =`Producto ${req.params.id} borrado correctamente`;
+        /*res.render('admin/registerProduct',{
+            'datos':parametrosGenerales,
+            infoUsuario:(req.session.usuario)?req.session.usuario:'No hay Datos'
+        });*/
+        res.redirect('/');
     }
 
 }
