@@ -185,10 +185,12 @@
           <img class="gallery__next" src="/public/images/icon-next.svg" alt="next">
         </div>
         <div class="gallery__thumnails">
-          <img id="1" class="gallery__thumnail" src="<%= product.image %>" alt="thumnail" href="/products/<%= product.productId %>">
-          <img id="2" class="gallery__thumnail" src="<%= product.image %>" alt="thumnail" href="/products/<%= product.productId %>" >
-          <img id="3" class="gallery__thumnail" src="<%= product.image %>" alt="thumnail" href="/products/<%= product.productId %>" >
-          <img id="4" class="gallery__thumnail" src="<%= product.image %>" alt="thumnail" href="/products/<%= product.productId %>" >
+          <% if (product.images) { %>
+            <% Object.values(product.images).forEach((imagen,index) => { %>
+              <img id="<%= index %>" class="gallery__thumnail" src="<%= product.image %>" alt="thumnail" href="/products/<%= product.productId %>">
+            <% }) %>
+          <% } %>
+         
         </div>
       </article>
 
