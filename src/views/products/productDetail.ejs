@@ -187,7 +187,7 @@
         <div class="gallery__thumnails">
           <% if (product.images) { %>
             <% Object.values(product.images).forEach((imagen,index) => { %>
-              <img id="<%= index %>" class="gallery__thumnail" src="<%= product.image %>" alt="thumnail" href="/products/<%= product.productId %>">
+              <img id="<%= index %>" class="gallery__thumnail" src="<%= imagen %>" alt="thumnail" href="/products/<%= product.productId %>">
             <% }) %>
           <% } %>
          
@@ -217,12 +217,12 @@
       <p class="cart-modal__title">Cart</p>
       <div class="cart-modal__chekout-container">
         <div class="cart-modal__details-container">
-          <img class="cart-modal__image" src="/public/images/<%= product.productId %>" alt="">
+          <img class="cart-modal__image" src="/images/<%= product.productId %>" alt="">
           <div>
             <p class="cart-modal__product">Autumn Limited Edition...</p>
             <p class="cart-modal__price">$125 x3 <span>$375.00</span> </p>
           </div>
-          <img class="cart-modal__delete" src="/public/images/icon-delete.svg" alt="delete">
+          <img class="cart-modal__delete" src="/images/icon-delete.svg" alt="delete">
         </div>
         <button class="cart-modal__chekount" >Checkout</button>
       </div>
@@ -235,17 +235,20 @@
   <div class="modal-gallery__background">
     <article class="modal-gallery">
       <div class="modal-gallery__close-container">
-        <img class="modal-gallery__close" src="/public/images/icon-close.svg" alt="icon close">
+        <img class="modal-gallery__close" src="/images/icon-close.svg" alt="icon close">
       </div>
       <div class="modal-gallery__image-container">
-        <img class="modal-gallery__previus" src="/public/images/icon-previous.svg" alt="previus">
-        <img class="modal-gallery__next" src="/public/images/icon-next.svg" alt="next">
+        <img class="modal-gallery__previus" src="/images/icon-previous.svg" alt="previus">
+        <img class="modal-gallery__next" src="/images/icon-next.svg" alt="next">
       </div>
       <div class="modal-gallery__thumnails">
-        <img id="m1" class="modal-gallery__thumnail" src="<%= product.image %>" alt="thumnail" href="/products/<%= product.productId %>">
-        <img id="m2" class="modal-gallery__thumnail" src="<%= product.image %>" alt="thumnail" href="/products/<%= product.productId %>">
-        <img id="m3" class="modal-gallery__thumnail" src="<%= product.image %>" alt="thumnail" href="/products/<%= product.productId %>">
-        <img id="m4" class="modal-gallery__thumnail" src="<%= product.image %>" alt="thumnail" href="/products/<%= product.productId %>">
+        <% if (product.images) { %>
+          <% Object.values(product.images).forEach((imagen,index) => { %>
+            <img id="m<%= index %>" class="modal-gallery__thumnail" src="<%= imagen %>" alt="thumnail" href="/products/<%= product.productId %>">
+            
+          <% }) %>
+        <% } %>
+      
       </div>
     </article>
   </div>
