@@ -668,7 +668,7 @@ footer section{
 .gallery__image-container {
   height: 300px;
   width: 100%;
-  background-image: url("../images/products/placeholder.png");
+  /*background-image: url("../images/products/placeholder.png");*/
   background-position-y: -35px;
   background-size: cover;
 }
