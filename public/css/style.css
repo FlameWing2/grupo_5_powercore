@@ -655,7 +655,7 @@ footer section{
 .gallery__image-container {
   height: 300px;
   width: 100%;
-  background-image: url("../images/products/1.jpg");
+  background-image: url("../images/products/placeholder.png");
   background-position-y: -35px;
   background-size: cover;
 }
@@ -997,7 +997,7 @@ footer section{
 }
 
 @media (min-width: 1115px) {
-  .content {
+  .content-product-detail {
     display: flex;
     padding: 90px 50px;
     gap: 124px;
