@@ -142,12 +142,12 @@
 - XXX
 
 ### Loyola Leo Martin
-**Qué hizo ayer**: ????
-**Impedimentos**: ????
-**Qué va a hacer hoy**: ???
+**Qué hizo ayer**: Lei sobre session validator
+**Impedimentos**: Ninguno 
+**Qué va a hacer hoy**: Se busco aplicar el validador sobre los campos de nuestras paginas
 ## Soluciones Propuestas
-- ???
-**Qué va a hacer hoy**: ???
+- Ver Playground y buscar mas info si hace falta.
+**Qué va a hacer hoy**: aproveche de hacer cosas en clase, para la aplicación practica, queda bastante todavía.
 ## Soluciones Propuestas
 - XXX
 
