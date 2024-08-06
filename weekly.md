@@ -19,11 +19,11 @@
 
 
 ### Alive Oviedo, Luciano Sebastian
-**Qué hizo ayer**: XXX
-**Impedimentos**: XXX
-**Qué va a hacer hoy**: XXX
+**Qué hizo ayer**: Mirar como se implementa MVC0
+**Impedimentos**: Ninguno
+**Qué va a hacer hoy**: Mejorar Estilos de la pagina
 ## Soluciones Propuestas
-- XXX
+- Ver Playground y buscar mas info si hace falta.
 
 
 ### Loyola Leo Martin
@@ -56,11 +56,11 @@
 - XXX
 
 ### Alive Oviedo, Luciano Sebastian
-**Qué hizo ayer**: XXX
-**Impedimentos**: XXX
-**Qué va a hacer hoy**: XXX
+**Qué hizo ayer**: Vi como implimentar EJS
+**Impedimentos**: ninguno
+**Qué va a hacer hoy**: aplicar conocimeitnos aprendidos
 ## Soluciones Propuestas
-- XXX
+- Ver Playground y buscar mas info si hace falta.- XXX
 
 ### Loyola Leo Martin
 **Qué hizo ayer**: Lei sobre EJS y vi como aplicarlo
@@ -95,11 +95,11 @@
 
 
 ### Alive Oviedo, Luciano Sebastian
-**Qué hizo ayer**: XXX
-**Impedimentos**: XXX
-**Qué va a hacer hoy**: XXX
+**Qué hizo ayer**: leer lo requerido para el sprint 4
+**Impedimentos**: ninguno
+**Qué va a hacer hoy**: Organizar y tratar de realizar tareas sobre el sprint 4
 ## Soluciones Propuestas
-- XXX
+- Ver Playground y buscar mas info si hace falta.
 
 
 ### Loyola Leo Martin
@@ -135,11 +135,11 @@
 - XXX
 
 ### Alive Oviedo, Luciano Sebastian
-**Qué hizo ayer**: XXX
-**Impedimentos**: XXX
-**Qué va a hacer hoy**: XXX
+**Qué hizo ayer**: Correcciones de estilos en pagina producto
+**Impedimentos**: ninguno
+**Qué va a hacer hoy**: Continuar Mejorando los estilos del proyecto
 ## Soluciones Propuestas
-- XXX
+- Ver Playground y buscar mas info si hace falta.
 
 ### Loyola Leo Martin
 **Qué hizo ayer**: Lei sobre session validator
