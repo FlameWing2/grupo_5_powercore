@@ -55,6 +55,13 @@
                 <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
               </span>
             </button>
+            <form action="/admin/deletepost/<%= product.productId %>?_method=DELETE" method="post">
+              <button class="details__button">Eliminar Producto
+                <span>
+                  <i class="fa-solid fa-trash" style="color: #c90b0b;"></i>
+                </span>
+              </button>
+            </form>
           </div>
         </div>
         <% } %>
