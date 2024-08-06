@@ -12,7 +12,7 @@ router.put('/edit/:id',adminController.editProduct);
 router.get('/register',adminController.register);
 router.post('/register',adminController.registerProduct);
 
-//ruta para borrar, falto 
+//ruta para borrar, modalidad enlace
 router.get('/delete/:id',adminController.delete);
 
 //ruta no implementada pero ya esta cargada para cuando este el formulario

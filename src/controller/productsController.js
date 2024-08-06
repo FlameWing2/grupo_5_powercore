@@ -48,7 +48,19 @@ let productCartController = {
             res.send("Mostrando los comentarios del articulo "+ idArticulo + " y enfocados en el comentario numero: " + req.params.idComentario);
         }
        
-    }
+    },
+    createProduct: (req, res)=>{
+        //tomamos todo lo del body con req.body.XXX
+        //validamos para ver si los campos estan completos
+        //aplicamos middleware
+        res.redirect('/');
+    },
+    updateProduct: (req, res)=>{
+        //tomamos todo lo del body con req.body.XXX
+        //validamos para ver si los campos estan completos
+        //aplicamos middleware
+        res.redirect('/');
+    },
 }
 
 module.exports = productCartController;
