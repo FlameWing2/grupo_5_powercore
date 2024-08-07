@@ -58,5 +58,29 @@
     "category": "Client",
     "imagen": "avatar-female.jpg",
     "direccion": "barrio xxx - calle xxx num xxxx"
+  },
+  {
+    "idUser": "e9f3029c-adbe-44fd-99cd-517459715c49",
+    "apellido": "castro",
+    "nombre": "pepe",
+    "dni": "123456",
+    "telefono": "1234568",
+    "email": "pepe@gamil.com",
+    "password": "123",
+    "category": "Client",
+    "imagen": "avatar-female.jpg",
+    "direccion": "barrio xxx - calle xxx num xxxx"
+  },
+  {
+    "idUser": "053d36f4-a60c-400d-80b8-266810d3ead1",
+    "apellido": "papiro",
+    "nombre": "ramona",
+    "dni": "26262425",
+    "telefono": "45124551",
+    "email": "papiro@gmail.com",
+    "password": "123",
+    "category": "Client",
+    "imagen": "avatar-female.jpg",
+    "direccion": "barrio xxx - calle xxx num xxxx"
   }
 ]

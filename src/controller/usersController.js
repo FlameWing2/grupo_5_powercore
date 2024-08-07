@@ -92,7 +92,7 @@ let usersController = {
         const archivo = await dataUsers.load();
         archivo.push(nuevaUsuario);
         console.log(archivo);
-        //await dataUsers.save(archivo);
+        await dataUsers.save(archivo);
         // Aquí vamos a manejar los datos, por ejemplo, guardarlos en una base de datos
         // o bien interactuar con ellos
         //verificamos si llegan

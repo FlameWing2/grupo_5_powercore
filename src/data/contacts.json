@@ -1,26 +1,36 @@
 [
   {
-    "id": "dc7bb943-5542-4935-bbb2-7603fde18855",
-    "nombre": "Leo Martin",
-    "apellido": "Loyola",
-    "email": "masterdjmov@gmail.com",
-    "departamento": "Venta",
-    "observacion": "2"
+    "id": "842fea4c-2144-4689-9372-2cd7ccdbbc7f",
+    "nombre": "prueba",
+    "apellido": "prueba ape"
   },
   {
-    "id": "2a47e418-dcf8-4f48-8622-cddd892f6b18",
-    "nombre": "Leo Martin",
-    "apellido": "Loyola",
-    "email": "masterdjmov@gmail.com",
-    "departamento": "Venta",
-    "observacion": "2"
+    "id": "01377c43-655a-4d49-b4fa-2cdcb49d2b0b",
+    "nombre": "prueba",
+    "apellido": "prueba ape"
   },
   {
-    "id": "354393f6-cce6-4841-ad40-447ec97c7244",
-    "nombre": "Leo Martin",
-    "apellido": "Loyola",
+    "id": "42bab8f4-5ef4-42ff-96b0-4a7c5070fcf9",
+    "nombre": "Agostina Maytte",
+    "apellido": "Loyola Bustos",
     "email": "masterdjmov@gmail.com",
     "departamento": "Venta",
-    "observacion": "1221221212"
+    "observacion": "222"
+  },
+  {
+    "id": "03405449-1536-46bd-aec6-3dfe3a4af48a",
+    "nombre": "otra",
+    "apellido": "23",
+    "email": "masterdjmov@gmail.com",
+    "departamento": "Venta",
+    "observacion": "2323"
+  },
+  {
+    "id": "58475455-3052-4af6-94b2-6ed15530d3f6",
+    "nombre": "vale",
+    "apellido": "roca",
+    "email": "masterdjmov@gmail.com",
+    "departamento": "Venta",
+    "observacion": "info sobre placa de video rtx"
   }
 ]
