@@ -1,36 +1,3 @@
 [
-  {
-    "id": "842fea4c-2144-4689-9372-2cd7ccdbbc7f",
-    "nombre": "prueba",
-    "apellido": "prueba ape"
-  },
-  {
-    "id": "01377c43-655a-4d49-b4fa-2cdcb49d2b0b",
-    "nombre": "prueba",
-    "apellido": "prueba ape"
-  },
-  {
-    "id": "42bab8f4-5ef4-42ff-96b0-4a7c5070fcf9",
-    "nombre": "Agostina Maytte",
-    "apellido": "Loyola Bustos",
-    "email": "masterdjmov@gmail.com",
-    "departamento": "Venta",
-    "observacion": "222"
-  },
-  {
-    "id": "03405449-1536-46bd-aec6-3dfe3a4af48a",
-    "nombre": "otra",
-    "apellido": "23",
-    "email": "masterdjmov@gmail.com",
-    "departamento": "Venta",
-    "observacion": "2323"
-  },
-  {
-    "id": "58475455-3052-4af6-94b2-6ed15530d3f6",
-    "nombre": "vale",
-    "apellido": "roca",
-    "email": "masterdjmov@gmail.com",
-    "departamento": "Venta",
-    "observacion": "info sobre placa de video rtx"
-  }
+
 ]
