@@ -3,6 +3,7 @@ const express = require('express');
 let router = express.Router();
 let indexController = require('../controller/mainController');
 
+
 //manejo de rutas segun clase 25 - MVC
 /**ruta encargada de mostrar la pagina de inicio con sus productos */
 router.get('/',indexController.index);

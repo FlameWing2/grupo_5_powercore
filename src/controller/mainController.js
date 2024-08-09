@@ -15,11 +15,6 @@ const dataProducts = new dataProduct(path.resolve(__dirname,'../data/products.js
 let indexController = {
     contacts:null,
     index: async (req, res)=>{
-        
-        if(req.session.ususario!=null){
-            console.log("usuario:"+req.session.usuario.nombre);
-        }
-        
         res.render('index',{
             'datos':parametrosGenerales,
             'products': await dataProducts.load(),

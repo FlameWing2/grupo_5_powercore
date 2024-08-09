@@ -14,9 +14,7 @@ const dataUsers = new Datasource(path.resolve(__dirname, "../data/users.json"));
 
 let usersController = {
     //procesos de login
-    formLogin: (req, res)=>{
-        
-        
+    formLogin: (req, res)=>{ 
         res.render("users/login",{
             'datos':parametrosGenerales,
             infoUsuario:(req.session.usuario)?req.session.usuario:'No hay Datos'
@@ -29,8 +27,9 @@ let usersController = {
         }
     },
     validar: async (req, res)=>{
-        let { email, password } = req.body;
-
+        let { email, password,recordar } = req.body;
+        
+        
         //consulto si existe este usuario
         const usuarios = await dataUsers.load();
         const existe = usuarios.find(user => {
@@ -40,6 +39,11 @@ let usersController = {
         })
         if(existe){
             req.session.usuario = existe;
+            //guardo el usario en cookie
+            if(recordar==='on'){
+                res.cookie('usuarioCokkie',existe.idUser, { maxAge: 60000, httpOnly: true });
+                console.log("se guardo cookie con "+ existe.idUser);
+            }
             res.redirect('/');  //lo envio al index
         }else{
             parametrosGenerales.error = `Error, no se encontro las credenciales para el correo: <b>${email}</b>`;

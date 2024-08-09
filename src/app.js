@@ -3,7 +3,10 @@
 const os = require('os');
 const express = require('express');
 const methodOverride = require('method-override');
+var cookieParser = require('cookie-parser');
+var logger = require('morgan');
 const session = require('express-session');
+
 
 //paquete para el manejo de rutas absolutas o relativas
 const path = require('path');
@@ -18,6 +21,7 @@ app.use(express.static(path.resolve(__dirname, '../public')));
 //activo la sobreescritura de method
 //con esto puedo usar put, delete, patch, etc
 app.use(methodOverride('_method'));
+app.use(cookieParser());
 /**
  * Resultado
 Texto original  POWERCORE-GRUPO5
@@ -57,11 +61,13 @@ const mainRouter = require('./routes/mainRouter');
 const usersRouter = require('./routes/usersRouter');
 const productsRouter = require('./routes/productsRouter');
 const adminRouter = require('./routes/adminRouters');
+const autologin = require('./middleware/autologin');
+app.use(autologin);
 
-app.use('/', mainRouter);
+app.use('/',mainRouter);
 app.use('/users',usersRouter);
-app.use('/products', productsRouter);
-app.use('/admin', adminRouter);
+app.use('/products',productsRouter);
+app.use('/admin',adminRouter);
 
 app.use((req, res, next) => {
     console.log(`URL solicitada: ${req.originalUrl}`);
