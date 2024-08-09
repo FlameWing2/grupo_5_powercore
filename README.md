@@ -81,10 +81,10 @@ Para su desarrollo, se trabajo con las siguientes herramientas:
 ## Integrantes
 
 - Loyola, Leo Martin
-- Vega, Milagros Cintia Nair
+- Vega, Milagros Cintia Nair  -- Abandono
 - Albornoz, Alfredo
 - Alive, Luciano
-- Zareba, Daniel Agustin
+- Zareba, Daniel Agustin  -- Abandono
 
 ## Información de los Integrantes
 
@@ -145,17 +145,19 @@ Estudiante de la Licenciatura en Sistemas de la Universidad Nacional de Chilecit
 
 # SPRINT 2
 
-- [Trello - Sprint 2](https://trello.com/b/lguwnOv5/sprint-2) - Jun 11 2024
-
-# ESTRUCTURA DE ARBOL DEL PROYECTO
+- [Trello - Sprint 2](https://trello.com/b/lguwnOv5/sprint-2) - Junio 11 2024
 
 # SPRINT 3
 
-- [Trello Sprint 3](https://trello.com/b/uM62OisP/sprint-3) - Jul 05 2024
+- [Trello Sprint 3](https://trello.com/b/uM62OisP/sprint-3) - Jululio 05 2024
 
 # SPRINT 4
 
-- [Trello Sprint 4](https://trello.com/b/rNbfgMbZ/sprint-4) - Jul 18 2024
+- [Trello Sprint 4](https://trello.com/b/rNbfgMbZ/sprint-4) - Julio 18 2024
+
+# SPRINT 4
+
+- [Trello Sprint 4](https://trello.com/b/nX2GLyyO/sprint-5) - Agosto 8 2024
 
 
 

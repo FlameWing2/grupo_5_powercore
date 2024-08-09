@@ -152,3 +152,80 @@
 - XXX
 
 
+###----------------------SPRINT 5----------------------------------###
+# Standup Semanal - Grupo 5 PowerCore
+
+## Fecha: -->12/08/2024
+
+### Integrantes:
+- Albornoz Alfredo
+- Alive Oviedo, Luciano Sebastian
+- Loyola Leo Martin
+
+
+## Resumen de Tareas
+
+### Albornoz Alfredo
+**Qué hizo ayer**: XXX
+**Impedimentos**: XXX
+**Qué va a hacer hoy**: XXX
+## Soluciones Propuestas
+- XXX
+
+
+### Alive Oviedo, Luciano Sebastian
+**Qué hizo ayer**: xxx
+**Impedimentos**: xxx
+**Qué va a hacer hoy**: xxx
+## Soluciones Propuestas
+- xxx
+
+
+### Loyola Leo Martin
+**Qué hizo ayer**: xxx
+**Impedimentos**: xxx
+**Qué va a hacer hoy**: xxx
+## Soluciones Propuestas
+- xxxx
+**Qué va a hacer hoy**: xxx
+## Soluciones Propuestas
+- XXX
+
+
+
+## ---------------------------------------------------------------
+# Standup Diario/Semanal
+
+## Fecha: -->19/08/2024
+
+### Integrantes:
+- Albornoz Alfredo
+- Alive Oviedo, Luciano Sebastian
+- Loyola Leo Martin
+
+
+## Resumen de Tareas
+
+### Albornoz Alfredo
+**Qué hizo ayer**: XXX
+**Impedimentos**: XXX
+**Qué va a hacer hoy**: XXX
+## Soluciones Propuestas
+- XXX
+
+### Alive Oviedo, Luciano Sebastian
+**Qué hizo ayer**: xxx
+**Impedimentos**: ninguno
+**Qué va a hacer hoy**: xxx
+## Soluciones Propuestas
+- xxx.
+
+### Loyola Leo Martin
+**Qué hizo ayer**: xxx
+**Impedimentos**: xxx 
+**Qué va a hacer hoy**: xxx
+## Soluciones Propuestas
+- xxx
+**Qué va a hacer hoy**: xxx
+## Soluciones Propuestas
+- XXX
