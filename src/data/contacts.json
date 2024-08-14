@@ -1,3 +1,10 @@
 [
-
+  {
+    "id": "fc8e5bb1-955c-4166-83bc-81cab775bd04",
+    "nombre": "rocio",
+    "apellido": "peralta",
+    "email": "rocioperalta@gmail.com",
+    "departamento": "Venta",
+    "observacion": "tienen placas GFX viejas como la GFX 760?"
+  }
 ]
