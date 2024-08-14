@@ -10,7 +10,7 @@
 
 ## Presentación
 
-En PowerCore, somos una tienda lider en productos de tecnología. 
+En PowerCore, somos una tienda líder en productos de tecnología. 
 
 Ofrecemos una amplia gama de productos de hardware para computadoras, que incluyen:
 
@@ -27,7 +27,7 @@ Ofrecemos una amplia gama de productos de hardware para computadoras, que incluy
 
 ## Alcance
 
-Este sitio web esta dirigido a todo aquel que quiera adquirir productos de tecnología informatica de alta calidad. 
+Este sitio web esta dirigido a todo aquel que quiera adquirir productos de tecnología informática de alta calidad. 
 Su audiencia objetiva incluye pero no se limita a:
 
   - Gamers: Personas apasionadas por los videojuegos que buscan componentes de alta calidad para mejorar su experiencia de juego.
@@ -38,7 +38,7 @@ Su audiencia objetiva incluye pero no se limita a:
   
   - Estudiantes y académicos: Especialmente aquellos en campos relacionados con la informática y la ingeniería que requieren hardware específico para sus estudios y proyectos.
 
-Es por ello que teniendo en mente en la demografica anteriormente mencionada, buscaremos que nuestro sitio web contenga no solo una aparencia esteticamente agradable para los usuarios que naveguen por él, sino también que su interfaz sea de facil manejo, manteniendo siempre todos los más altos estandares de accesibilidad para favorecer el uso por parte de aquellas personas con algún tipo de impedimento fisico.  
+Es por ello que teniendo en mente en la demográfica anteriormente mencionada, buscaremos que nuestro sitio web contenga no solo una apariencia estéticamente agradable para los usuarios que naveguen por él, sino también que su interfaz sea de fácil manejo, manteniendo siempre todos los más altos estandares de accesibilidad para favorecer el uso por parte de aquellas personas con algún tipo de impedimento físico.  
 
 Junto con lo anterior es que se han de implementar las siguientes estrategias:
 
@@ -46,30 +46,31 @@ Junto con lo anterior es que se han de implementar las siguientes estrategias:
  - Precios competitivos: Mantendremos precios competitivos, ofreciendo promociones y descuentos regulares.
  - Asesoramiento y Soporte: Proporcionaremos un excelente servicio al cliente con soporte técnico y asesoramiento personalizado para ayudar a nuestros clientes a elegir los productos adecuados.
  - Contenido Educativo: Publicaremos guías, tutoriales y reviews de productos para ayudar a nuestros clientes a tomar decisiones informadas.
- - Facil navegación del sitio web: Diseñaremos un sitio web intuitivo y fácil de navegar, con opciones de búsqueda avanzadas y filtros para que los clientes encuentren rápidamente lo que necesitan.
+ - Fácil navegación del sitio web: Diseñaremos un sitio web intuitivo y fácil de navegar, con opciones de búsqueda avanzadas y filtros para que los clientes encuentren rápidamente lo que necesitan.
 
 
 ## Referencias
-Nuestra investigación de mercado es lo que nos ha optado por que PowerCore tome como punto de partida su estructuracion utilizando varias referentes, con foco principal en aquellas orientadas a la de venta de hardware, analizando sus fortalezas, falencias e innovando para poder concretar una plataforma con una estetica moderna y elegante.
+Nuestra investigación de mercado es lo que nos ha optado por que PowerCore tome como punto de partida su estructuración utilizando varias referentes, con foco principal en aquellas orientadas a la de venta de hardware, analizando sus fortalezas, falencias e innovando para poder concretar una plataforma con una estética moderna y elegante.
 
 - [Uranostream](https://uranostream.com/)
 
-- [Maximus](https://www.maximus.com.ar/) -> Registro sencillo y facil de seguir la pagina
+- [Maximus](https://www.maximus.com.ar/) -> Registro sencillo y fácil de seguir la pagina
 
 - [XT-PC](https://www.xt-pc.com.ar/) -> Su interfaz mobile ofrece una navegación amigable, facilitando el acceso al carrito de compras. 
 
-- [Fullh4rd](https://fullh4rd.com.ar/) -> Navegación muy sencilla, usa bloques para moverse entre categorias
+- [Fullh4rd](https://fullh4rd.com.ar/) -> Navegación muy sencilla, usa bloques para moverse entre categorías
 
 - [SpaceGamer](https://spacegamer.com.ar/) -> Excelente presentación de productos, resaltando elementos destacados junto con productos similares para mayor variedad de opciones al consumidor. Slider para recorrer productos bastante sencillo y su vista mobile se adapta muy bien a diferentes tipos de pantallas.
 
-- [Hardgamers](https://www.hardgamers.com.ar/) -> Concentrador de sitios web informaticos. Sumamente útil para buscar referencias, precios y revisión de competencia.
+- [Hardgamers](https://www.hardgamers.com.ar/) -> Concentrador de sitios web informáticos. Sumamente útil para buscar referencias, precios y revisión de competencia.
 
 
 ## Recursos
+- [Github](https://github.com/MasterDjmov/grupo_5_powercore)
 
 - [Trello](https://trello.com/b/TCV41gpT/story)
 
-WireFrames:
+## WireFrames:
 Para su desarrollo, se trabajo con las siguientes herramientas:
  
 - [WireFrame](https://github.com/FlameWing2/grupo_5_powercore/tree/main/wireFrames)
@@ -81,10 +82,12 @@ Para su desarrollo, se trabajo con las siguientes herramientas:
 ## Integrantes
 
 - Loyola, Leo Martin
-- Vega, Milagros Cintia Nair  -- Abandono
-- Albornoz, Alfredo
 - Alive, Luciano
+- Lezcano, Gabriel
+- Montilla, Marcos
 - Zareba, Daniel Agustin  -- Abandono
+- Vega, Milagros Cintia Nair  -- Abandono
+- Albornoz, Alfredo --Abandono
 
 ## Información de los Integrantes
 
@@ -143,6 +146,31 @@ Estudiante de la Licenciatura en Sistemas de la Universidad Nacional de Chilecit
   </blockquote>
 </article>
 
+### Lezano Gabriel
+¡Hola! 👋 me llamo XXXX
+XXXXXX
+
+<article style="border: 1px solid dashed;">
+  <blockquote>
+    <p style="color: #e74c3c;">
+    XXXXXXX
+    </p>
+  </blockquote>
+</article>
+
+### Montilla Marcos
+¡Hola! 👋 me llamo XXXX
+XXXXX
+
+<article style="border: 1px solid dashed;">
+  <blockquote>
+    <p style="color: #e74c3c;">
+    XXXXXXX
+    </p>
+  </blockquote>
+</article>
+
+
 # SPRINT 2
 
 - [Trello - Sprint 2](https://trello.com/b/lguwnOv5/sprint-2) - Junio 11 2024
@@ -155,7 +183,7 @@ Estudiante de la Licenciatura en Sistemas de la Universidad Nacional de Chilecit
 
 - [Trello Sprint 4](https://trello.com/b/rNbfgMbZ/sprint-4) - Julio 18 2024
 
-# SPRINT 4
+# SPRINT 5
 
 - [Trello Sprint 4](https://trello.com/b/nX2GLyyO/sprint-5) - Agosto 8 2024
 
