@@ -73,20 +73,9 @@
 --> evitar trabajar últimos días las tareas
 
 ### Retro Ultima presentación
-1 - Comenzar a hacer
-Dejar el playground lo más completo en cuanto a clases y tareas realizadas, para no atrasarnos y entender los procesos de los Sprint.
-
-2 - Hacer más
-Mejorar los tiempos de entrega entre back y front, para poder avanzar.
-Controlar, Revisar e Implementar soluciones varias posibles.
-
-3 - Continuar haciendo
-Continuar instruyendonos en lenguajes y tecnologías, para poder comprender los procesos.
-Indagar en posibles cambios o mejoras, manteniéndonos en los límites de los Sprint.
-
-4 - Hacer menos
-Sobrecarga de trabajo, organizar mejor los tiempos para cumplir con las tareas.
-
-5 - Dejar de hacer
-Códigos repetidos y evitarlos de ser posible, tanto en back como en front.
+1 - Comenzar a hacer Dejar el playground lo más completo en cuanto a clases y tareas realizadas, para no atrasarnos y entender los procesos de los Sprint.
+2 - Hacer más Mejorar los tiempos de entrega entre back y front, para poder avanzar. Controlar, Revisar e Implementar soluciones varias posibles.
+3 - Continuar haciendo Continuar instruyendonos en lenguajes y tecnologías, para poder comprender los procesos. Indagar en posibles cambios o mejoras, manteniéndonos en los límites de los Sprint.
+4 - Hacer menos Sobrecarga de trabajo, organizar mejor los tiempos para cumplir con las tareas.
+5 - Dejar de hacer Códigos repetidos y evitarlos de ser posible, tanto en back como en front.
 
