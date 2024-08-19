@@ -41,7 +41,7 @@ let usersController = {
             req.session.usuario = existe;
             //guardo el usario en cookie
             if(recordar==='on'){
-                res.cookie('usuarioCokkie',existe.idUser, { maxAge: 60000, httpOnly: true });
+                res.cookie('usuarioCokkie',existe.idUser, { maxAge: 10000, httpOnly: true });
                 console.log("se guardo cookie con "+ existe.idUser);
             }
             res.redirect('/');  //lo envio al index
