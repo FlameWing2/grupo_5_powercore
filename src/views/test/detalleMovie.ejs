@@ -8,9 +8,14 @@
 <body>
     Test de Peliculas - Detalle
     <ul>
-        <li>
-            ID: <%= movie.id %> - Nombre: <%= movie.title %> - Premios: <%= movie.awards %>
-        </li>
+        <% if(movie!=null) { %>
+            <li>
+                ID: <%= movie.id %> - Nombre: <%= movie.title %> - Premios: <%= movie.awards %>
+            </li>
+        <% }else{ %>
+            No se encontro detalle de esta pelicula
+        <% } %>
+        
         
     </ul>
     <a href="/test/movies">Volver a Test Movie</a>

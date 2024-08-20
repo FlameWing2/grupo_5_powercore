@@ -14,8 +14,8 @@ let pruebasController = {
             order: [
                 ['id', 'ASC']
             ],
-            limit:5,    //limito a 5
-            offset:10    //que comience en 10+
+            //limit:5,    //limito a 5
+            //offset:10    //que comience en 10+
         })
             .then(function(movies) {
                 res.render('test/movies', {
@@ -35,7 +35,7 @@ let pruebasController = {
             .then(function(movie) {
                 res.render('test/detalleMovie', {
                     'datos': parametrosGenerales,
-                    movie
+                    movie:(movie)?movie:null
                 });
             })
             .catch(error => {
