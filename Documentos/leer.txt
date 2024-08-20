@@ -1,23 +1,2 @@
-desde clase 25 en adelante hay que usar ejs
-agregar
-1 - npm install ejs --save
-
-2 - agregar a app.js el motor ejs
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
-
-3 - para renderizar una vista
-res.render('vista',{datos});
-
-ejemplo
-router.get('/', function(req, res, next) {
-  let datos = {
-    mensaje: "hola que tal desde express",
-    title: "Express"
-  }
-  res.render('index', {datos});
-});
-
-4 - en la vista leer los datos asi
-<p><%= datos.mensaje %></p>
+para usar api de sequelize
+https://sequelize.org/api/v6/identifiers
