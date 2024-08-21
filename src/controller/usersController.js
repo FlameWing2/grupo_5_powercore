@@ -14,77 +14,73 @@ const Datasource = require("../services/datasource.js");
 const dataUsers = new Datasource(path.resolve(__dirname, "../data/users.json"));
 
 let usersController = {
-  //procesos de login
-  formLogin: (req, res) => {
-    res.render("users/login", {
-      datos: parametrosGenerales,
-      infoUsuario: req.session.usuario ? req.session.usuario : "No hay Datos",
-    });
-  },
-  salir: (req, res) => {
-    if (req.session.usuario != null) {
-      req.session.usuario = null;
-      res.redirect("/users/login");
-    }
-  },
-  validar: async (req, res) => {
-    let { email, password, recordar } = req.body;
-
-    //consulto si existe este usuario
-    const usuarios = await dataUsers.load();
-    const existe = usuarios.find((user) => {
-      if (user.email == req.body.email && user.password == req.body.password) {
-        return user;
-      }
-    });
-    if (existe) {
-      req.session.usuario = existe;
-      //guardo el usario en cookie
-      if (recordar === "on") {
-        res.cookie("usuarioCokkie", existe.idUser, {
-          maxAge: 60000,
-          httpOnly: true,
+    //procesos de login
+    formLogin: (req, res)=>{ 
+        res.render("users/login",{
+            'datos':parametrosGenerales,
+            infoUsuario:(req.session.usuario)?req.session.usuario:'No hay Datos'
         });
-        console.log("se guardo cookie con " + existe.idUser);
-      }
-      res.redirect("/"); //lo envio al index
-    } else {
-      parametrosGenerales.error = `Error, no se encontro las credenciales para el correo: <b>${email}</b>`;
-      res.render("users/login", {
-        datos: parametrosGenerales,
-        infoUsuario: req.session.usuario ? req.session.usuario : "No hay Datos",
-      });
-    }
-  },
-  //procesos de register
-  formRegister: (req, res) => {
-    console.log("en get: " + parametrosGenerales.msg);
-    if (req.session.msg != null) {
-      parametrosGenerales.msg = req.session.msg;
-      req.session.msg = null;
-    } else {
-      parametrosGenerales.msg = "";
-    }
-    console.log("en get: " + parametrosGenerales.msg);
-    res.render("users/register", {
-      datos: parametrosGenerales,
-      infoUsuario: req.session.usuario ? req.session.usuario : "No hay Datos",
-    });
-  },
-  createAvatar: (req, res) => {
-    /**si uso multer */
-    console.log(req.file);
-    //if(req.file !== undefined) llego
-    // res.render("users/register", {
-    //   datos: parametrosGenerales,
-    //   infoUsuario: req.session.usuario ? req.session.usuario : "No hay Datos",
-    // });
-  },
-  createUser: async (req, res) => {
-    const { email, password, password2, nombre, apellido, dni, telefono } =
-      req.body;
-
-    const hashedPassword = await bcrypt.hash(password, 8);
+    },
+    salir: (req, res)=>{
+        if(req.session.usuario != null ){
+            req.session.usuario = null;
+            res.redirect('/users/login');
+        }
+    },
+    validar: async (req, res)=>{
+        let { email, password,recordar } = req.body;
+        
+        
+        //consulto si existe este usuario
+        const usuarios = await dataUsers.load();
+        const existe = usuarios.find(user => {
+            if(user.email == req.body.email && user.password ==req.body.password){
+                return user;
+            }
+        })
+        if(existe){
+            req.session.usuario = existe;
+            //guardo el usario en cookie
+            if(recordar==='on'){
+                res.cookie('usuarioCokkie',existe.idUser, { maxAge: 60000, httpOnly: true });
+                console.log("se guardo cookie con "+ existe.idUser);
+            }
+            res.redirect('/');  //lo envio al index
+        }else{
+            parametrosGenerales.error = `Error, no se encontro las credenciales para el correo: <b>${email}</b>`;
+            res.render('users/login',{
+                'datos':parametrosGenerales,
+               infoUsuario:(req.session.usuario)?req.session.usuario:'No hay Datos'
+        });
+        }
+    },
+    //procesos de register
+    formRegister: (req, res)=>{
+        console.log("en get: " + parametrosGenerales.msg);
+        if(req.session.msg != null ){
+            parametrosGenerales.msg = req.session.msg;
+            req.session.msg = null;
+        }else{
+            parametrosGenerales.msg="";
+        }
+        console.log("en get: " + parametrosGenerales.msg);
+        res.render("users/register",{
+            'datos':parametrosGenerales,
+           infoUsuario:(req.session.usuario)?req.session.usuario:'No hay Datos'
+        });
+    },
+    createAvatar: (req, res)=>{
+      
+        /**si uso multer */
+        //console.log(req.file);
+        //if(req.file !== undefined) llego
+        res.render("users/register",{
+            'datos':parametrosGenerales,
+            infoUsuario:(req.session.usuario)?req.session.usuario:'No hay Datos'
+        });
+    },
+    createUser: async (req, res) => {
+        const { email, password,password2,nombre,apellido,dni, telefono } = req.body;
 
     let nuevaUsuario = {
       idUser: crypto.randomUUID(),

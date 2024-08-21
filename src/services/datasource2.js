@@ -6,9 +6,23 @@ const datasource = {
     filePath: path.resolve(__dirname, "../data/contacts.json"),
 
   async load() {
-    const jsonMovies = await fs.readFile(this.filePath, "");
+    //metodo viejo
+    /*const jsonMovies = await fs.readFile(this.filePath, "");
+    console.log(jsonMovies);
     const movies = JSON.parse(jsonMovies);
-    return movies;
+    return movies;*/
+
+    //metodo usando promesas
+    return fs.readFile(this.filePath,"utf-8")
+    .then(function(datos){
+      console.log("consecuencia"+datos);
+      const conjuntoDatosParseado = JSON.parse(datos);
+      return conjuntoDatosParseado;
+    })
+    .catch(function(error){
+      console.log("Error de acceso al archivo");
+      return null;
+    })
   },
   async save(data) {
     const jsonData = JSON.stringify(data, null, 2);

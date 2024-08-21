@@ -64,10 +64,17 @@ let indexController = {
         }
 
         const info = await datasource2.load();
-        info.push(nuevaConsulta);
-        await datasource2.save(info);
         console.log(info);
-        req.session.msg = `Gracias por su consulta, pronto nuestros asesores se pondrán en contacto con usted ${nombre} ${apellido}`;
+        if(info!=null){
+            info.push(nuevaConsulta);
+            await datasource2.save(info);
+            req.session.msg = `Gracias por su consulta, pronto nuestros asesores se pondrán en contacto con usted ${nombre} ${apellido}`;
+        }else{
+            req.session.msg = `Sr/a: ${nombre} ${apellido}, hubo un error y no se pudo tomar su pedido`;
+        }
+        
+        
+        
         //parametrosGenerales.msg = "Gracias por su consulta, pronto nuestros asesores se pondrán en contacto con usted";
         res.redirect('/contact');
         //res.render('contact',{'datos':parametrosGenerales});

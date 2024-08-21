@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies Test Detalle</title>
+</head>
+<body>
+    Test de Peliculas - Detalle
+    <ul>
+        <% if(movie!=null) { %>
+            <li>
+                ID: <%= movie.id %> - Nombre: <%= movie.title %> - Premios: <%= movie.awards %>
+            </li>
+        <% }else{ %>
+            No se encontro detalle de esta pelicula
+        <% } %>
+        
+        
+    </ul>
+    <a href="/test/movies">Volver a Test Movie</a>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies Test</title>
+</head>
+<body>
+
+    Test de Peliculas
+    <ul>
+        <% movies.forEach(movie => { %>
+            <li>
+                <a href="/test/movies/<%= movie.id %>">
+                    ID: <%= movie.id %> - Nombre: <%= movie.title %> - Premios: <%= movie.awards %>
+                </a> 
+            </li>
+        <% }) %>
+    </ul>
+    <hr>
+    <fieldset>
+        <legend>Buscador FindOne</legend>
+        <form action="/test/movies" method="post">
+            <input type="text" name="title" placeholder="ingrese titulo exacto">
+            <input type="submit" name="btnEnviar" value="FindOne">
+        </form>
+    </fieldset>
+    <hr>
+    <fieldset>
+        <legend>Buscador FindAll con String</legend>
+        <form action="/test/findByString" method="post">
+            <input type="text" name="title" placeholder="Ingres titulo o parte del titulo">
+            <input type="submit" name="btnEnviar" value="FindAll String">
+        </form>
+    </fieldset>
+</body>
+</html>

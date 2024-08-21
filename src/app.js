@@ -62,12 +62,16 @@ const usersRouter = require('./routes/usersRouter');
 const productsRouter = require('./routes/productsRouter');
 const adminRouter = require('./routes/adminRouters');
 const autologin = require('./middleware/autologin');
+
+//para testing de mysql
+const pruebasRouter = require('./routes/pruebasRouter');
 app.use(autologin);
 
 app.use('/',mainRouter);
 app.use('/users',usersRouter);
 app.use('/products',productsRouter);
 app.use('/admin',adminRouter);
+app.use('/test',pruebasRouter); //<<--------Solo para testing, vista simple ejs, agregar /test/movies
 
 app.use((req, res, next) => {
     console.log(`URL solicitada: ${req.originalUrl}`);
