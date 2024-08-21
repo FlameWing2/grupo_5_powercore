@@ -58,5 +58,41 @@
     "category": "Client",
     "imagen": "avatar-female.jpg",
     "direccion": "barrio xxx - calle xxx num xxxx"
+  },
+  {
+    "idUser": "54857b2a-5fe3-4736-a17f-d8f1aafc85b1",
+    "category": "Client",
+    "imagen": "avatar-female.jpg",
+    "direccion": "barrio xxx - calle xxx num xxxx"
+  },
+  {
+    "idUser": "0af53618-8062-468b-97da-de5777b2b71f",
+    "category": "Client",
+    "imagen": "avatar-female.jpg",
+    "direccion": "barrio xxx - calle xxx num xxxx"
+  },
+  {
+    "idUser": "de25fb64-5ee1-426a-a559-2de7b0d63d06",
+    "category": "Client",
+    "imagen": "avatar-female.jpg",
+    "direccion": "barrio xxx - calle xxx num xxxx"
+  },
+  {
+    "idUser": "dfa8611d-6bcb-46ef-8b36-5ee5306edbed",
+    "category": "Client",
+    "imagen": "avatar-female.jpg",
+    "direccion": "barrio xxx - calle xxx num xxxx"
+  },
+  {
+    "idUser": "704400f3-c813-4b9b-8734-528c9ff75b4f",
+    "apellido": "Perez",
+    "nombre": "Jose",
+    "dni": "12456784",
+    "telefono": "123123123123",
+    "email": "joseperez@mail.com",
+    "hashedPassword": "$2b$08$Av3dY57pyZIoNs6QLT/vTuoIIeVJtBTiDHX7Fv3FvYRJ68ElpKaf2",
+    "category": "Client",
+    "imagen": "avatar-female.jpg",
+    "direccion": "barrio xxx - calle xxx num xxxx"
   }
 ]
