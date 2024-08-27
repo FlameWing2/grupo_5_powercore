@@ -182,12 +182,12 @@
 
 
 ### Loyola Leo Martin
-**Qué hizo ayer**: xxx
-**Impedimentos**: xxx
-**Qué va a hacer hoy**: xxx
+**Qué hizo ayer**: Lei sobre bases de datos
+**Impedimentos**: Ninguno 
+**Qué va a hacer hoy**: Se busco aplicar, se creo un modelo aproximado usando lo visto en playground
 ## Soluciones Propuestas
-- xxxx
-**Qué va a hacer hoy**: xxx
+- Ver Playground y buscar mas info si hace falta.
+**Qué va a hacer hoy**: aproveche de hacer cosas en clase, para la aplicación practica, queda bastante todavía.
 ## Soluciones Propuestas
 - XXX
 
@@ -221,11 +221,11 @@
 - xxx.
 
 ### Loyola Leo Martin
-**Qué hizo ayer**: xxx
-**Impedimentos**: xxx 
-**Qué va a hacer hoy**: xxx
+**Qué hizo ayer**: nada nuevo
+**Impedimentos**: Ninguno 
+**Qué va a hacer hoy**: nada nuevo, solo controlar y esperar a que progresen los compañeros
 ## Soluciones Propuestas
-- xxx
-**Qué va a hacer hoy**: xxx
+- nada nuevo
+**Qué va a hacer hoy**: nada nuevo
 ## Soluciones Propuestas
 - XXX
