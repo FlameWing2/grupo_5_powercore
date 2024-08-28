@@ -12,7 +12,7 @@ let storage = multer.diskStorage({
     }
 });
 
-const fileUpload = storage({storage: storage});
+const fileUpload = multer({storage: storage});
 
 module.exports = fileUpload;
 

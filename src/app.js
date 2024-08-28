@@ -1,5 +1,5 @@
 //paquetes necesarios, os para el host y express para el manejo
-//de rutas y gestion en server
+//de rutas y gestión en server
 const os = require('os');
 const express = require('express');
 const methodOverride = require('method-override');
@@ -64,14 +64,12 @@ const adminRouter = require('./routes/adminRouters');
 const autologin = require('./middleware/autologin');
 
 //para testing de mysql
-const pruebasRouter = require('./routes/pruebasRouter');
 app.use(autologin);
 
 app.use('/',mainRouter);
 app.use('/users',usersRouter);
 app.use('/products',productsRouter);
 app.use('/admin',adminRouter);
-app.use('/test',pruebasRouter); //<<--------Solo para testing, vista simple ejs, agregar /test/movies
 
 app.use((req, res, next) => {
     console.log(`URL solicitada: ${req.originalUrl}`);
