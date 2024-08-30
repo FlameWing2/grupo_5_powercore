@@ -84,7 +84,7 @@ let usersController = {
     const { email, password, password2, nombre, apellido, dni, telefono } =
       req.body;
 
-    const hashedPassword = await bcrypt.hash(password, 8);
+    //const hashedPassword = await bcrypt.hash(password, 8);
 
     let nuevaUsuario = {
       idUser: crypto.randomUUID(),
@@ -95,7 +95,7 @@ let usersController = {
       email,
       hashedPassword,
       category: "Client",
-      imagen: "avatar-female.jpg",
+      imagen: "avatar-male.jpg",
       direccion: "barrio xxx - calle xxx num xxxx",
     };
     const archivo = await dataUsers.load();
@@ -115,6 +115,43 @@ let usersController = {
 
     //res.render("users/register",{'datos':parametrosGenerales});
   },
+  formPerfil: async (req, res) => {
+    console.log("en get: " + parametrosGenerales.msg);
+    if (req.session.msg != null) {
+      parametrosGenerales.msg = req.session.msg;
+      req.session.msg = null;
+    } else {
+      parametrosGenerales.msg = "";
+    }
+    console.log("en get: " + parametrosGenerales.msg);
+    res.render("users/perfil", {
+      datos: parametrosGenerales,
+      infoUsuario: req.session.usuario ? req.session.usuario : "No hay Datos",
+    });
+  },
+  updatePerfil: (req, res) => {
+    
+    const { email, password, password2, nombre, apellido, dni, telefono } =req.body;
+    console.log(req.file); // Información del archivo subido
+
+    if (req.file) {
+        console.log(req.file.filename); // Nombre del archivo que viene desde fileUploadAvatar
+    } else {
+        console.log('no llego el archivo');
+    }
+
+
+    if (req.session.msg != null) {
+      parametrosGenerales.msg = req.session.msg;
+      req.session.msg = null;
+    } else {
+      parametrosGenerales.msg = "";
+    }
+    res.render("users/perfil", {
+      datos: parametrosGenerales,
+      infoUsuario: req.session.usuario ? req.session.usuario : "No hay Datos",
+    });
+  }
 };
 
 module.exports = usersController;

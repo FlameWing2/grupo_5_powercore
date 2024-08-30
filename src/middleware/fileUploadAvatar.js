@@ -5,10 +5,13 @@ const path = require('node:path');
 /**multer */
 let storage = multer.diskStorage({
     destination: function(req,file,cb){
-        cb(null,'/public/img/uploads');
+        cb(null,path.join(__dirname, '../../public/images/users'));
     },
     filename: function(req, file,cb){
-        cb(null,file.filename + '-' + Date.now() + path.extname(file.originalname));
+        const uniqueSuffix = Date.now() + path.extname(file.originalname);
+        const filename = file.fieldname + '-' + uniqueSuffix;
+        cb(null, filename);
+        req.imagen = filename;
     }
 });
 

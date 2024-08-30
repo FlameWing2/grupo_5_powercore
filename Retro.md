@@ -79,3 +79,10 @@
 4 - Hacer menos Sobrecarga de trabajo, organizar mejor los tiempos para cumplir con las tareas.
 5 - Dejar de hacer Códigos repetidos y evitarlos de ser posible, tanto en back como en front.
 
+
+### Retro Ultima presentación 29/08/2024
+1 - Ahora que estoy solo, comenzar a desglozar y verificar que se termino y que no, segun eso adaptarlo
+2 - Hacer más Mejorar los tiempos de entrega entre back y front, para poder avanzar. Controlar, Revisar e Implementar soluciones varias posibles.
+3 - Continuar haciendo Continuar instruyendonos en lenguajes y tecnologías, para poder comprender los procesos. Indagar en posibles cambios o mejoras, manteniéndonos en los límites de los Sprint.
+4 - Hacer menos Sobrecarga de trabajo, organizar mejor los tiempos para cumplir con las tareas.
+5 - Dejar de hacer Códigos repetidos y evitarlos de ser posible, tanto en back como en front.

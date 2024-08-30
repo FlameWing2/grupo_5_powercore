@@ -7,7 +7,6 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const session = require('express-session');
 
-
 //paquete para el manejo de rutas absolutas o relativas
 const path = require('path');
 const app = express();

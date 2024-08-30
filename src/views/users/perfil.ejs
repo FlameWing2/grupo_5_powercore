@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<%- include('../partials/head',{'titulo':datos.titulo}) %>
+
+  <body>
+    <%- include('../partials/headers',{ infoUsuario: infoUsuario }) %>
+    <main class="main-box col-8">
+
+      <div class="account">
+        <div class="item" >
+          <!-- activo mensaje si hace post -->
+          <% if(datos.msg){ %>
+            <div class="alert alert-success" role="alert">
+              <h5><i class="icon fas fa-check"></i> Gracias por su Registro!</h5>
+                  <%= datos.msg %>
+            </div>
+          <% } %>
+
+          <div class="item-login item-register" style="display: flex;">
+            <div class="col-4">
+                <img class="logouser" src="/images/users/<%= infoUsuario.imagen%>" width="75%">
+            </div>
+            <div class="col-8">
+                <h3>Perfil de usuario</h3>
+            <hr>
+            <div class="content col-2">
+              
+              <div class="row_titulo">
+                <h4>Datos de Acceso</h4>
+              </div>
+              <form action="/users/perfil" method="post">
+                <input type="email" name="email">
+                <input type="submit" name="btn" value="Enviar">
+              </form>
+              <hr>
+              <form action="/users/perfil" method="post" id="formRegister" class="formRegister" enctype="multipart/form-data">
+                <div class="form-group">
+                  <input class="form-input datos" type="email" id="email" name="email" required placeholder="Email" value="<%= infoUsuario.email%>">
+                  
+                </div>
+               
+                <div class="form-group">
+                  <input class="form-input datos" type="password" id="password" name="password" required placeholder="Contraseña" value="<%= infoUsuario.password%>">
+                 
+                </div>
+                
+                <div class="form-group ">
+                  <input class="form-input datos" type="password" id="password2" name="password2" required placeholder="Confirmar contraseña" value="<%= infoUsuario.password%>">
+                  
+                </div>
+                
+
+              <div class="row_titulo">
+                <h4>Información personal</h4>
+              </div>
+             
+                <div class="form-group">
+                  <input class="form-input datos" type="text" id="nombre" name="nombre" required placeholder="Nombre" value="<%= infoUsuario.nombre%>">
+                 
+                </div>
+                <div class="form-group">
+                  <input class="form-input datos" type="text" id="apellido" name="apellido" required placeholder="Apellido" value="<%= infoUsuario.apellido%>">
+                  
+                </div>
+                <div class="form-group">
+                  <input class="form-input datos" type="text" id="dni" name="dni" required placeholder="Número de DNI" value="<%= infoUsuario.dni%>">
+                  
+                </div>
+                <div class="form-group">
+                  <input class="form-input datos" type="text" id="telefono" name="telefono" required placeholder="Número de teléfono" value="<%= infoUsuario.telefono%>">
+                 
+                </div>
+                <input type="hidden" id="express" name="express" value="0">
+
+                <div class="row_titulo">
+                  <h4>Imágen de perfil</h4>
+                </div>
+                <div class="form-group ">
+                  <input type="file" name="avatar" id="avatar" accept="image/png, image/jpeg">
+                </div>
+
+            </div>
+            <div class="cta">
+              <div>
+                  <input type="submit" id="myBtn" name="myBtn" class="btn btn-primary" value="Actualizar Perfil">
+              </div>
+            </div>
+
+            </form>
+          </div>
+            </div>
+
+        </div>
+
+      
+      </div>
+    </main>
+
+    <%- include('../partials/footer',{'pie':datos.pie}) %>
+
+    <%- include('../partials/script') %>
+  </body>
+
+</html>

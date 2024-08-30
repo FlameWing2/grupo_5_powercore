@@ -23,7 +23,12 @@
             <li><a href="/products/cart">Ver Pedidos <i class="fas fa-shopping-cart"></i></a></li>
             <li><a href="/users/register">Registrarse <i class="fa-regular fa-id-card"></i></a></li>
             <% if (infoUsuario!="No hay Datos") { %>
-              <li><a href="/users/salir"><%= infoUsuario.nombre + " "+ infoUsuario.apellido  %> <i class="fas fa-user" onclick="toggleUserMenu()"></i></a></li>
+              <li>
+                <a href="/users/salir" title="SALIR"><%= infoUsuario.nombre + " "+ infoUsuario.apellido %>
+                  <i class="fas fa-user"></i>
+                </a>
+              </li>
+              <li><a href="/users/perfil/<%= infoUsuario.idUser%>" title="PERFIL"><img class="logouser" src="/images/users/<%= infoUsuario.imagen%>"></a></li>
             <% }else{ %>
               <li><a href="/users/login">Ingresar <i class="fas fa-user" onclick="toggleUserMenu()"></i></a></li>
             <% } %>

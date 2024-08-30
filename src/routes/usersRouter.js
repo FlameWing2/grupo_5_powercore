@@ -5,20 +5,7 @@ const path = require("path");
 
 let usersController = require("../controller/usersController");
 
-const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    const folder = path.join(__dirname, "../../public/images/userImages");
-    cb(null, folder);
-  },
-  filename: (req, file, cb) => {
-    console.log("FILE:", file);
-
-    const imageName = "user-" + Date.now() + path.extname(file.originalname);
-    cb(null, imageName);
-  },
-});
-
-const upload = multer({ storage: storage });
+const fileUploadAvatar = require('../middleware/fileUploadAvatar');
 
 //manejo de rutas segun clase 25 - MVC
 /**
@@ -32,6 +19,10 @@ router.get("/login", usersController.formLogin);
 router.post("/login", usersController.validar);
 
 /**ruta que que se encarga de borrar la session*/
+router.get("/perfil/:id", usersController.formPerfil);
+router.post("/perfil",fileUploadAvatar.single('avatar'), usersController.updatePerfil);
+
+/**ruta que que se encarga de borrar la session*/
 router.get("/salir", usersController.salir);
 /**------------------------------------------------------------------------------------------------------- */
 
@@ -43,7 +34,7 @@ router.get("/salir", usersController.salir);
 router.get("/register", usersController.formRegister);
 
 /**ruta que captura lo que la persona envia en el registro */
-router.post("/register", upload.single("avatar"), usersController.createUser);
+router.post("/register", usersController.createUser);
 
 /**ruta que captura el avatar del perfil(NO CREADO POR AHORA) */
 //router.post('/create-avatar', fileUpload.single('filenamehtml'),usersController.createAvatar);

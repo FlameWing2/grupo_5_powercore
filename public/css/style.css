@@ -353,16 +353,18 @@ main {
 /* register */
 
 .main-box{
-  display: flex; justify-content: center; align-items: center;
+  display: flex; justify-content: center; align-items: center; margin: 0 auto;
 }
 
 .account {
-  width: 100%;
-  max-width: 600px;
+  /*width: 100%;*/
+  width: 800px;
+  max-width: 900px;
   background-color: #fff;
   padding: 50px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  margin: 0 auto;
    
 }
 
@@ -492,6 +494,7 @@ footer {
   flex-wrap: wrap;
   bottom: 0px;
   flex-direction: row;
+  height: 150px;
 }
 
 footer section{
@@ -1167,4 +1170,10 @@ footer section{
 /** para control de errores*/
 .feedback{
   color: red;
+}
+
+.logouser{
+  border-radius: 50%;
+  margin-top: -5px;
+  border: 1px solid wheat;
 }

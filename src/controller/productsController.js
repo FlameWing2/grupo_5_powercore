@@ -15,7 +15,8 @@ let productCartController = {
     }
        res.render('products/productCart',{
         'datos':datos,
-        infoUsuario:(req.session.usuario)?req.session.usuario:'No hay Datos'
+        infoUsuario:(req.session.usuario)?req.session.usuario:'No hay Datos',
+        infoCarrito: (req.session.carrito)?req.session.carrito: null
     });
       
     },
