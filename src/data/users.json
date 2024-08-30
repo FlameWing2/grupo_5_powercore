@@ -94,5 +94,17 @@
     "category": "Client",
     "imagen": "avatar-female.jpg",
     "direccion": "barrio xxx - calle xxx num xxxx"
+  },
+  {
+    "idUser": "f906c10e-0173-47e2-95e4-d2520d518583",
+    "apellido": "Loyola",
+    "nombre": "Leo Martin",
+    "dni": "11",
+    "telefono": "03804533543",
+    "email": "masterdjmov@gmail.com",
+    "hashedPassword": "$2b$10$1A8tQP1Z44.WwPQFL6l77u/VEtg2FUSjGI0moobwTnvk3LCKOek1q",
+    "category": "Client",
+    "imagen": "avatar-male.jpg",
+    "direccion": "barrio xxx - calle xxx num xxxx"
   }
 ]

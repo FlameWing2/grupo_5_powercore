@@ -81,11 +81,11 @@ let usersController = {
     // });
   },
   createUser: async (req, res) => {
-    const { email, password, password2, nombre, apellido, dni, telefono } =
-      req.body;
+    const { email, password, password2, nombre, apellido, dni, telefono } =req.body;
 
-    //const hashedPassword = await bcrypt.hash(password, 8);
-
+    const rondas = 10; 
+    const hashedPassword = await bcrypt.hash(password, rondas);
+    //aqui mandar validacion entre password y password2
     let nuevaUsuario = {
       idUser: crypto.randomUUID(),
       apellido,
@@ -93,7 +93,7 @@ let usersController = {
       dni,
       telefono,
       email,
-      hashedPassword,
+      password,
       category: "Client",
       imagen: "avatar-male.jpg",
       direccion: "barrio xxx - calle xxx num xxxx",
