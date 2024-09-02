@@ -1,28 +1,20 @@
 module.exports = (Sequelize, DataTypes) => {
-    const Contactos = Sequelize.define('Contactos', {
-        idcontacto: {
+    const ModalidadPagos = Sequelize.define('ModalidadPagos', {
+        id_modalidad_pago: {
             type: DataTypes.INTEGER,
             autoIncrement: true,
             primaryKey: true
         },
-        apellido: {
+        descripcion: {
             type: DataTypes.STRING(65),
             allowNull: true
         },
-        nombre: {
-            type: DataTypes.STRING(65),
-            allowNull: true
-        },
-        email: {
-            type: DataTypes.STRING(100),
-            allowNull: true
-        },
-        id_area: {
+        porcentaje: {
             type: DataTypes.INTEGER,
             allowNull: true
         },
-        consulta: {
-            type: DataTypes.TEXT('long'),
+        estado: {
+            type: DataTypes.INTEGER,
             allowNull: true
         },
         created_at: {
@@ -32,28 +24,23 @@ module.exports = (Sequelize, DataTypes) => {
         updated_at: {
             type: DataTypes.DATE,
             allowNull: true
-        },
-        estado: {
-            type: DataTypes.INTEGER,
-            allowNull: true
         }
     }, {
-        tableName: 'contactos',
+        tableName: 'modalidad_pagos',
         timestamps: true,
         createdAt: 'created_at', 
         updatedAt: 'updated_at'
     });
 
-    Contactos.associate = models => {
-        Contactos.belongsTo(models.Areas, {
-            as: 'area',
-            foreignKey: 'id_area'
+    ModalidadPagos.associate = models => {
+        ModalidadPagos.hasMany(models.Carritos, {
+            as: 'carritos',
+            foreignKey: 'id_modalidad_pago'
         });
-        Contactos.belongsTo(models.Estados, {
+        ModalidadPagos.belongsTo(models.Estados, {
             as: 'estado',
             foreignKey: 'id_estado'
         });
     };
-
-    return Contactos;
+    return ModalidadPagos;
 };

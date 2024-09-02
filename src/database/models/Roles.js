@@ -1,12 +1,12 @@
 module.exports = (Sequelize, DataTypes) => {
-    const Estados = Sequelize.define('Estados', {
-        id_estado: {
+    const Roles = Sequelize.define('Roles', {
+        idrole: {
             type: DataTypes.INTEGER,
             autoIncrement: true,
             primaryKey: true
         },
-        nombre_estado: {
-            type: DataTypes.STRING(45),
+        descripcion: {
+            type: DataTypes.STRING(65),
             allowNull: true
         },
         created_at: {
@@ -18,21 +18,18 @@ module.exports = (Sequelize, DataTypes) => {
             allowNull: true
         }
     }, {
-        tableName: 'estados',
+        tableName: 'roles',
         timestamps: true,
         createdAt: 'created_at', 
-        updatedAt: 'updated_at'
+        updatedAt: 'updated_at's
     });
 
-    Estados.associate = models => {
-        Estados.hasMany(models.Usuarios, {
+    Roles.associate = models => {
+        Roles.hasMany(models.Usuarios, {
             as: 'usuarios',
-            foreignKey: 'id_estado'
-        });
-        Estados.hasMany(models.Contactos, {
-            as: 'contactos',
-            foreignKey: 'id_estado'
+            foreignKey: 'id_rol'
         });
     };
-    return Estados;
+
+    return Roles;
 };

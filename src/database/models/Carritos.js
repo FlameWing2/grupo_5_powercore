@@ -1,11 +1,15 @@
 module.exports = (Sequelize, DataTypes) => {
-    const Estados = Sequelize.define('Estados', {
-        id_estado: {
+    const Carritos = Sequelize.define('Carritos', {
+        id_carrito: {
             type: DataTypes.INTEGER,
             autoIncrement: true,
             primaryKey: true
         },
-        nombre_estado: {
+        id_usuario: {
+            type: DataTypes.INTEGER,
+            allowNull: true
+        },
+        estado: {
             type: DataTypes.STRING(45),
             allowNull: true
         },
@@ -18,21 +22,26 @@ module.exports = (Sequelize, DataTypes) => {
             allowNull: true
         }
     }, {
-        tableName: 'estados',
+        tableName: 'carritos',
         timestamps: true,
         createdAt: 'created_at', 
         updatedAt: 'updated_at'
     });
 
-    Estados.associate = models => {
-        Estados.hasMany(models.Usuarios, {
-            as: 'usuarios',
+    Carritos.associate = models => {
+        Carritos.belongsTo(models.Usuarios, {
+            as: 'usuario',
+            foreignKey: 'id_usuario'
+        });
+        Carritos.belongsTo(models.Estados, {
+            as: 'estado',
             foreignKey: 'id_estado'
         });
-        Estados.hasMany(models.Contactos, {
-            as: 'contactos',
-            foreignKey: 'id_estado'
+        Carritos.hasMany(models.CarritoProductos, {
+            as: 'carritos',
+            foreignKey: 'id_carrito'
         });
     };
-    return Estados;
+
+    return Carritos;
 };
