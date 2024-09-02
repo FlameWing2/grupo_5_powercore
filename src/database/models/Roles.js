@@ -21,7 +21,7 @@ module.exports = (Sequelize, DataTypes) => {
         tableName: 'roles',
         timestamps: true,
         createdAt: 'created_at', 
-        updatedAt: 'updated_at's
+        updatedAt: 'updated_at'
     });
 
     Roles.associate = models => {
