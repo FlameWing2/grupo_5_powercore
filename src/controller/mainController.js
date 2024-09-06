@@ -12,16 +12,25 @@ const datasource2 = require('../services/datasource2.js');
 const dataProduct = require('../services/datasource.js');   //clase
 const dataProducts = new dataProduct(path.resolve(__dirname,'../data/products.json'));
 
+//agregamos la parte de sequelize
+const db = require('../database/models/index.js');
+const { Association, where } = require('sequelize');
 let indexController = {
     contacts:null,
     index: async (req, res)=>{
-        res.render('index',{
-            'datos':parametrosGenerales,
-            'products': await dataProducts.load(),
-            promos,
-            infoUsuario:(req.session.usuario)?req.session.usuario:'No hay Datos',
-            producDelete:(req.session.eliminado)?req.session.eliminado:null,
-        });
+        db.Productos.findAll()
+        .then(function(productos){
+                console.log(productos);
+                res.render('index',{
+                    'datos':parametrosGenerales,
+                    'productos': productos,
+                    promos,
+                    infoUsuario:(req.session.usuario)?req.session.usuario:'No hay Datos',
+                    producDelete:(req.session.eliminado)?req.session.eliminado:null,
+                });
+        })
+
+       
     },
     archivo:async (req, res)=>{
         

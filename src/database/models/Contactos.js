@@ -50,7 +50,7 @@ module.exports = (Sequelize, DataTypes) => {
             foreignKey: 'id_area'
         });
         Contactos.belongsTo(models.Estados, {
-            as: 'estado',
+            as: 'estadoContacto',
             foreignKey: 'id_estado'
         });
     };

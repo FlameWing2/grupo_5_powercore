@@ -30,26 +30,28 @@
 
       <h2 class="products__section--title">Productos Destacados</h2>
       <div class="card__wrapper">
-        <% for(let product of products){ %>
+        <% productos.forEach(product => { %>
+         
+       
         <div class="product__card">
           <!-- aqui para editar, podemos cambiarlo de lugar-->
           <% if (infoUsuario!="No hay Datos") { %>
-            <a href="/admin/edit/<%= product.productId %>"><i class="fas fa-edit"></i></a>  
-            <a href="/admin/delete/<%= product.productId %>"><i class="fas fa-eraser"></i></a>
+            <a href="/admin/edit/<%= product.id_producto %>"><i class="fas fa-edit"></i></a>  
+            <a href="/admin/delete/<%= product.id_producto %>"><i class="fas fa-eraser"></i></a>
           <% } %>
-          <a href="/products/<%= product.productId %>"><img src="<%= product.image %>" alt="Producto 1"></a>
+          <a href="/products/<%= product.id_producto %>"><img src="/images/products/<%= product.imagen_principal %>" alt="Producto 1"></a>
           <div class="product__description">
             <p class="product__cathegory">
-              <%= product.category %>
+              <%= product.codigo %>
             </p>
-            <a class="product__link" href="/products/<%= product.productId %>">
+            <a class="product__link" href="/products/<%= product.id_producto %>">
               <h3 class="product__name text-truncate">
-                <%= product.name %>
+                <%= product.codigo %>
               </h3>
             </a>
-            <p class="product__price">$<%= product.price %>
+            <p class="product__price">$<%= product.precio %>
             </p>
-            <a href="/products/<%= product.productId %>"><i class="fas fa-info-circle"></i>Ver detalles</a>
+            <a href="/products/<%= product.id_producto %>"><i class="fas fa-info-circle"></i>Ver detalles</a>
             <button class="details__button">Agregar al
               <span>
                 <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
@@ -69,7 +71,7 @@
             
           </div>
         </div>
-        <% } %>
+        <% }) %>
     </section>
   </main>
 

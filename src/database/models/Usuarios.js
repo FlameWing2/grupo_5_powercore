@@ -82,7 +82,7 @@ module.exports = (Sequelize, DataTypes) => {
             foreignKey: 'id_estado'
         });
         Usuarios.hasMany(models.Logs, {
-            as: 'logs',
+            as: 'logsUsuario',
             foreignKey: 'id_usuario'
         });
         Usuarios.hasMany(models.Ordenes, {
