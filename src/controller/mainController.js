@@ -18,7 +18,9 @@ const { Association, where } = require('sequelize');
 let indexController = {
     contacts:null,
     index: async (req, res)=>{
-        db.Productos.findAll()
+        db.Productos.findAll({
+            include:[{association:"categoria"}]
+        })
         .then(function(productos){
                 console.log(productos);
                 res.render('index',{

@@ -42,7 +42,10 @@
           <a href="/products/<%= product.id_producto %>"><img src="/images/products/<%= product.imagen_principal %>" alt="Producto 1"></a>
           <div class="product__description">
             <p class="product__cathegory">
-              <%= product.codigo %>
+              <%= product.descripcion %>
+            </p>
+            <p class="product__cathegory">
+              <%= product.categoria.descripcion %>
             </p>
             <a class="product__link" href="/products/<%= product.id_producto %>">
               <h3 class="product__name text-truncate">
@@ -59,7 +62,7 @@
             </button>
             <% if (infoUsuario!="No hay Datos") { %>
               <% if (infoUsuario.category == "Administrator") { %>
-                <form action="/admin/deletepost/<%= product.productId %>?_method=DELETE" method="post">
+                <form action="/admin/deletepost/<%= product.id_producto %>?_method=DELETE" method="post">
                   <button class="details__button">Eliminar Producto
                     <span>
                       <i class="fa-solid fa-trash" style="color: #c90b0b;"></i>
