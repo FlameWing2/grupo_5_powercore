@@ -42,9 +42,9 @@ app.listen(Puerto, (error) => {
 
 // Importar manejadores de rutas
 const mainRouter = require('./routes/mainRouter');
-const usuarioRouter = require('./routes/usuarioRouter');
-//const productsRouter = require('./routes/productsRouter');
-//const adminRouter = require('./routes/adminRouters');
+const usuariosRouter = require('./routes/usuariosRouter');
+const productosRouter = require('./routes/productosRouter');
+const adminRouter = require('./routes/adminRouter');
 //const autologin = require('./middleware/autologin');
 
 //para testing de mysql
@@ -52,9 +52,9 @@ const usuarioRouter = require('./routes/usuarioRouter');
 
 //captura de rutas y envio a enrutadores
 app.use('/',mainRouter);
-app.use('/usuarios',usuarioRouter);
-//app.use('/products',productsRouter);
-//app.use('/admin',adminRouter);
+app.use('/usuarios',usuariosRouter);
+app.use('/productos',productosRouter);
+app.use('/admin',adminRouter);
 
 //configuracion de un middleware para controlar que rutas son consultadas
 app.use((req, res, next) => {

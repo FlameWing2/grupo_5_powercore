@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include('../partials/head') %>
+<body>
+    <section class="container"></section>
+    <section class="page">
+        <%- include('../partials/acciones_admin') %>
+        <%- include('../partials/headers') %>
+        
+        <div class="separador"></div>
+        <main class="main-perfil">
+            
+            <div class="contenedor-perfil">
+                <!-- Columna 1: Imagen del avatar y botón cambiar -->
+                <div class="columna-perfil columna-perfil-izquierda">
+                    <div class="avatar-perfil">
+                        <img src="/images/autores/leo.png" alt="Avatar" class="avatar-imagen-perfil">
+                        <button class="btn-cambiar-avatar-perfil">Cambiar Avatar</button>
+                    </div>
+                </div>
+        
+                <!-- Columna 2: Formulario de datos personales y usuario -->
+                <div class="columna-perfil columna-perfil-derecha">
+                    <form class="formulario-perfil">
+                        <h2>Datos Personales</h2>
+                        <div class="campo-formulario-perfil">
+                            <label for="apellido">Apellido:</label>
+                            <input type="text" id="apellido" name="apellido" required>
+                        </div>
+                        <div class="campo-formulario-perfil">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+                        <div class="campo-formulario-perfil">
+                            <label for="direccion">Dirección:</label>
+                            <input type="text" id="direccion" name="direccion" required>
+                        </div>
+                        <div class="campo-formulario-perfil">
+                            <label for="telefono">Teléfono:</label>
+                            <input type="text" id="telefono" name="telefono" required>
+                        </div>
+                        <div class="campo-formulario-perfil">
+                            <label for="correo">Correo:</label>
+                            <input type="email" id="correo" name="correo" required>
+                        </div>
+                        
+                        <hr class="separador-perfil">
+        
+                        <h2>Datos de Usuario</h2>
+                        <div class="campo-formulario-perfil">
+                            <label for="usuario">Usuario:</label>
+                            <input type="text" id="usuario" name="usuario" required>
+                        </div>
+                        <div class="campo-formulario-perfil">
+                            <label for="clave">Clave:</label>
+                            <input type="password" id="clave" name="clave" required>
+                        </div>
+        
+                        <button type="submit" class="btn-guardar-perfil" id="btn-guardar-perfil">Guardar Cambios</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <%- include('../partials/footers') %>
+    </section>
+
+    <!-- script -->
+    <%- include('../partials/scripts') %>
+
+</body>
+</html>

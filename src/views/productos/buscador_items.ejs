@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include('../partials/head') %>
+<body>
+    <section class="container"></section>
+    <section class="page">
+        <%- include('../partials/acciones_admin') %>
+        <%- include('../partials/headers') %>
+        
+        <main class="main">
+            <div class="separador"></div>
+           <section class="botones-buscar">
+                <button>Armas</button>
+                <button>Armaduras</button>
+                <button>Poderes</button>
+                <button>Recetas</button>
+                <button>NPC/Moustros</button>
+                <button>Cristales</button>
+           </section>
+           <section class="panel-buscador">
+                <article class="buscador-controles">
+                    <div class="form-control">
+                        <label>Buscar en Base de Datos:</label>
+                        <input type="text" id="buscar" placeholder="Ingrese el texto a buscar">
+                    </div>
+                    <button class="submit">Buscar</button>
+                </article>
+                <article class="resultados">
+                    <table class="table-resultado">
+                        <thead>
+                          <tr>
+                            <th rowspan="2">Nombre</th>
+                            <th rowspan="2">Grado</th>
+                            <th rowspan="2">P.Atk.</th>
+                            <th rowspan="2">M.Atk.</th>
+                            <th rowspan="2">Sh.Def.</th>
+                            <th rowspan="2">SS/SpS</th>
+                            <th rowspan="2">Atk.Spd.</th>
+                            <th rowspan="2">Cristales</th>
+                            <th rowspan="2">Peso</th>
+                            <th rowspan="2">Acción</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td colspan="10"><strong>Resultados</strong></td>
+                          </tr>
+                          <tr>
+                            <td><img src="/images/productos/etc_recipe_violet_i00.png" alt="no photo"> Baguette's Bread Sword</td>
+                            <td class="td-centro">None</td>
+                            <td class="td-centro">0</td>
+                            <td class="td-centro">0</td>
+                            <td class="td-centro">0</td>
+                            <td class="td-centro">1 / 1</td>
+                            <td class="td-centro">-</td>
+                            <td class="td-centro">-</td>
+                            <td class="td-centro">1350</td>
+                            <td class="td-centro">
+                                <a href="producto_detalle.html">
+                                    <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                                </a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td><img src="/images/productos/weapon_dual_sword_i00.png" alt="no photo"> Baguette's Magic Sword</td>
+                            <td class="td-centro">None</td>
+                            <td class="td-centro">0</td>
+                            <td class="td-centro">0</td>
+                            <td class="td-centro">0</td>
+                            <td class="td-centro">1 / 1</td>
+                            <td class="td-centro">-</td>
+                            <td class="td-centro">-</td>
+                            <td class="td-centro">1350</td>
+                            <td class="td-centro">
+                                <a href="producto_detalle.html">
+                                    <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                                </a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td><img src="/images/productos/weapon_dual_sword_i00.png" alt="Court Magician's Magic Staff"> Court Magician's Magic Staff</td>
+                            <td class="td-centro">None</td>
+                            <td class="td-centro">0</td>
+                            <td class="td-centro">0</td>
+                            <td class="td-centro">0</td>
+                            <td class="td-centro">1 / 1</td>
+                            <td class="td-centro">-</td>
+                            <td class="td-centro">-</td>
+                            <td class="td-centro">1350</td>
+                            <td class="td-centro">
+                                <a href="producto_detalle.html">
+                                    <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                                </a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td><img src="/images/productos/weapon_life_stick_i00.png" alt="Flag Of Aden"> Flag Of Aden</td>
+                            <td class="td-centro">None</td>
+                            <td class="td-centro">0</td>
+                            <td class="td-centro">0</td>
+                            <td class="td-centro">0</td>
+                            <td class="td-centro">1 / 1</td>
+                            <td class="td-centro">-</td>
+                            <td class="td-centro">-</td>
+                            <td class="td-centro">1350</td>
+                            <td class="td-centro">
+                                <a href="producto_detalle.html">
+                                    <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                                </a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      
+                </article>
+           </section>
+        </main>
+        
+        <%- include('../partials/footers') %>
+    </section>
+
+    <!-- script -->
+    <%- include('../partials/scripts') %>
+</body>
+</html>
