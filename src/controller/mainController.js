@@ -1,7 +1,7 @@
 
 const mainController = {
     index:(req,res)=>{
-        res.send("vista main");
+        res.render('index');
     },
     formContacto:(req,res)=>{},
     crearContacto:(req,res)=>{},

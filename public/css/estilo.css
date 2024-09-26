@@ -319,7 +319,7 @@ video{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('../img/productos/mammons-lineage.jpg');
+    background-image: url('../images/productos/mammons-lineage.jpg');
     background-size: cover;
     position: relative;
 }
@@ -419,7 +419,7 @@ video{
     border: 1px solid rgb(238, 236, 236);
     border-radius: 15px;
     width: 30rem;
-    background-image: url('img/productos/mammons-lineage.jpg');
+    background-image: url('images/productos/mammons-lineage.jpg');
     background-size: cover;
     display: flex;
     align-items: center;
@@ -989,7 +989,7 @@ button:hover {
     justify-content: center;
     align-items: center;
     height: 400px;
-    background-image: url('img/carrito-vacio.png');
+    background-image: url('images/fondos/carrito-vacio.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
