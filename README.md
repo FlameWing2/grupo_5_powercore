@@ -188,6 +188,8 @@ XXXXX
 - [Trello Sprint 4](https://trello.com/b/nX2GLyyO/sprint-5) - Agosto 8 2024
 
 
+# SPRINT 7
+- [Trello Sprint 7](https://trello.com/b/ueYJnFHD/sprint-7) - 26 Septiembre 2024
 
 /GRUPO_5_PowerCoreHard_Online
 -> node_modules/

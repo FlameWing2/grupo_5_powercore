@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="El Almacen L2: Store de Prueba para el l2j de Interlude"/>
+    <link rel="icon" href="img/logo_l2.png" type="image/png" />
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="https://kit.fontawesome.com/d46088808a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Index</title>
+</head>
+<body>
+    <section class="container"></section>
+    <section class="page">
+        <div class="admin-flotante">
+            <ul>
+                <li>
+                    <a href="crear_produto.html">
+                        <img src="img/plus.png">
+                        <span>Agregar Producto</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <header class="header">
+            <div class="header-top">
+                <div class="header-top-left">
+                    <a href="index.html"><img src="img/mamon.png"></a>
+                    <h3>Merchant of Mammon</h3>
+                </div>
+                <div class="server-online">
+                    <div class="online-dot"></div>
+                    <div class="info-server">
+                        <span class="online-text">Online:</span>
+                        <span class="online-count">1874</span>
+                    </div>
+                </div>
+                <div class="header-top-right">
+                    <a href="perfil.html">
+                        <div class="header-info-avatar">
+                            
+                            <span class="header-info-avatar-usuario">MasterDjmov</span>
+                            <img class="header-avatar" src="/img/avatar-male.jpg">
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="header-bottom">
+                <ul class="header-menu-nav">
+                    <li class="header-menu-home oculto">
+                        <a href="#"  class="header-menu-link">
+                            <i class="fa-solid fa-home"> Inicio</i>
+                        </a>
+                    </li>
+                    <li class="header-menu-search oculto">
+                        <input type="search" name="buscar" placeholder="Buscar...">
+                        <button class="btnsearch"><i class="fa-solid fa-search"></i></button>
+                    </li>
+                    <li>
+                        <a href="index.html#venta-compra"  class="header-menu-link">
+                            <i class="fa-solid fa-exchange-alt"></i> Venta/Compra
+                        </a>
+                    </li>
+                    <li>
+                        <a href="buscador_items.html"  class="header-menu-link">
+                            <i class="fa-solid fa-star"></i> Buscador de Items
+                        </a>
+                    </li>
+                    <li>
+                        <a href="quienes_somos.html"  class="header-menu-link">
+                            <i class="fa-solid fa-users"></i> Quiénes somos
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="contacto.html"  class="header-menu-link">
+                            <i class="fa-solid fa-envelope"></i> Contactarnos
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="login.html"  class="header-menu-link">
+                            <i class="fa-solid fa-user"></i> Login/Registrarse
+                        </a>
+                    </li>
+                    
+                </ul>
+                <div class="tiene-carrito">
+                    <a href="carrito.html"  class="tiene-carrito-link">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </div>
+               
+            </div>
+            
+        </header>
+        
+        <main class="main">
+            <!-- Separador y Detalles del Producto -->
+            <div class="separador"></div>
+            <section class="producto-detalle">
+                <!-- Detalles de producto -->
+            </section>
+            
+            <!-- Control del Carrito -->
+            <section class="mostrar-aviso-carrito">
+                <div class="carrito-vacio ocultarlo">
+                    <h2>Tu carrito está vacío</h2>
+                    <p>Agrega productos para comenzar</p>
+                    <img src="img/carrito_vacio_nuevo.webp">
+                </div>
+            </section>
+            <section class="control-carrito">
+                <h2>Carrito de Compras</h2>
+                <article class="carrito-detalle">
+                    
+                    <ul class="lista-carrito">
+                        <!-- Producto 1 -->
+                        <li class="carrito-item">
+                            <div class="carrito-imagen">
+                                <img src="img/productos/shield_composite_shield_i00.png" alt="Archangel Sword">
+                            </div>
+                            <div class="carrito-info">
+                                <div class="grupo-info">
+                                    <h4 class="producto-nombre">Archangel Sword</h4>
+                                    <span class="producto-precio">$2.20 Pesos/Dolar</span>
+                                </div>
+                                <div class="control-cantidad">
+                                    <label>Cantidad: </label>
+                                    <div class="grupo-botones">
+                                        <button class="btn-restar">-</button>
+                                        <input type="text" class="cantidad-comprada" value="1" min="1" />
+                                        <button class="btn-sumar">+</button>
+                                    </div>
+                                </div>
+                                <div class="carrito-eliminar">
+                                    <button class="btn-eliminar"><i class="fas fa-trash"></i></button>
+                                </div>
+                            </div>
+                            
+                        </li>
+                        <!-- Producto 2 -->
+                        <li class="carrito-item">
+                            <div class="carrito-imagen">
+                                <img src="img/productos/weapon_dual_sword_i00.png" alt="Dragon Claw">
+                            </div>
+                            <div class="carrito-info">
+                                <div class="grupo-info">
+                                    <h4 class="producto-nombre">Archangel Sword</h4>
+                                    <span class="producto-precio">$2.20 Pesos/Dolar</span>
+                                </div>
+                                <div class="control-cantidad">
+                                    <label>Cantidad: </label>
+                                    <div class="grupo-botones">
+                                        <button class="btn-restar">-</button>
+                                        <input type="text" class="cantidad-comprada" value="1" min="1" />
+                                        <button class="btn-sumar">+</button>
+                                    </div>
+                                </div>
+                                <div class="carrito-eliminar">
+                                    <button class="btn-eliminar"><i class="fas fa-trash"></i></button>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Producto 3 -->
+                        <li class="carrito-item">
+                            <div class="carrito-imagen">
+                                <img src="img/productos/weapon_sword_of_valhalla_i01.png" alt="Phoenix Bow">
+                            </div>
+                            <div class="carrito-info">
+                                <div class="grupo-info">
+                                    <h4 class="producto-nombre">Archangel Sword</h4>
+                                    <span class="producto-precio">$2.20 Pesos/Dolar</span>
+                                </div>
+                                <div class="control-cantidad">
+                                    <label>Cantidad: </label>
+                                    <div class="grupo-botones">
+                                        <button class="btn-restar">-</button>
+                                        <input type="text" class="cantidad-comprada" value="1" min="1" />
+                                        <button class="btn-sumar">+</button>
+                                    </div>
+                                </div>
+                                <div class="carrito-eliminar">
+                                    <button class="btn-eliminar"><i class="fas fa-trash"></i></button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </article>
+                <!-- Resumen del Carrito -->
+                <div class="resumen-carrito">
+                    <h3>Total a Pagar: <span class="total-precio" data-total="10.45">$10.45</span></h3>
+                    <button class="btn-comprar" id="btn-proceder-compra">Proceder con la Compra</button>
+                </div>
+                <!-- Modal -->
+                <div id="modal-compra" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2>Selecciona el Método de Pago</h2>
+
+                        <form id="form-compra">
+                            <div class="metodos-pago">
+                                <label for="metodo-pago">Método de Pago:</label>
+                                <select id="metodo-pago" name="metodo-pago" required>
+                                    <option value="" disabled selected>Selecciona una opción</option>
+                                    <option value="visa">Visa</option>
+                                    <option value="payu">PayU</option>
+                                    <option value="paypal">PayPal</option>
+                                    <option value="maestro">Maestro</option>
+                                    <option value="mastercard">Mastercard</option>
+                                    <option value="mercadopago">MercadoPago</option>
+                                    <option value="naranjaX">NaranjaX</option>
+                                    <option value="rapipago">RapiPago</option>
+                                    <option value="pagofacil">Pago Fácil</option>
+                                    <option value="transferencia">Transferencia Bancaria</option>
+                                </select>
+                            </div>
+
+                            <div class="datos-tarjeta">
+                                <label for="titular">Titular de la tarjeta:</label>
+                                <input type="text" id="titular" name="titular" required>
+
+                                <label for="numero">Número de la tarjeta:</label>
+                                <input type="text" id="numero" name="numero" required>
+
+                                <label for="codigo">Código de seguridad:</label>
+                                <input type="text" id="codigo" name="codigo" required>
+
+                                <label for="vencimiento">Fecha de vencimiento:</label>
+                                <input type="month" id="vencimiento" name="vencimiento" required>
+
+                                <button type="submit" class="btn-comprar">Confirmar Compra</button>
+                            </div>
+                        </form>
+
+                        <h3>Total a Pagar: <span class="total-precio-modal">$10.45</span></h3>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        
+        
+        <footer class="footer">
+            <section class="informacion-footer">
+                <div class="titulo-block">
+                    <h3>Nuestros Medios de Cobro</h3>
+                </div>
+                <div class="informacion-cobro">
+                    <img class="cobro-icono" src="img/medios_de_cobro/visa.svg">
+                    <img class="cobro-icono"  src="img/medios_de_cobro/payu.svg">
+                    <img class="cobro-icono"  src="img/medios_de_cobro/paypal.svg">
+                    <img class="cobro-icono"  src="img/medios_de_cobro/maestro.png">
+                    <img class="cobro-icono"  src="img/medios_de_cobro/mastercard.svg">
+                    <img class="cobro-icono"  src="img/medios_de_cobro/mercadopago.png">
+                    <img class="cobro-icono"  src="img/medios_de_cobro/deposito.png">
+                    <img class="cobro-icono"  src="img/medios_de_cobro/naranja.png">
+                    <img class="cobro-icono"  src="img/medios_de_cobro/rapipago.svg">
+                    <img class="cobro-icono"  src="img/medios_de_cobro/pagofacil.png">
+                </div>
+
+            </section>
+        </footer>
+    </section>
+    <!-- script -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="js/funcionalidad.js"></script>
+    <script src="js/carrito.js"></script>
+</body>
+</html>

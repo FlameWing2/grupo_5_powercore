@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="El Almacen L2: Store de Prueba para el l2j de Interlude"/>
+    <link rel="icon" href="img/logo_l2.png" type="image/png" />
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="https://kit.fontawesome.com/d46088808a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Index</title>
+</head>
+<body>
+    <section class="container"></section>
+    <section class="page">
+        <div class="admin-flotante">
+            <ul>
+                <li>
+                    <a href="crear_produto.html">
+                        <img src="img/plus.png">
+                        <span>Agregar Producto</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <header class="header">
+            <div class="header-top">
+                <div class="header-top-left">
+                    <a href="index.html"><img src="img/mamon.png"></a>
+                    <h3>Merchant of Mammon</h3>
+                </div>
+                <div class="server-online">
+                    <div class="online-dot"></div>
+                    <div class="info-server">
+                        <span class="online-text">Online:</span>
+                        <span class="online-count">1874</span>
+                    </div>
+                </div>
+                <div class="header-top-right">
+                    <a href="perfil.html">
+                        <div class="header-info-avatar">
+                            
+                            <span class="header-info-avatar-usuario">MasterDjmov</span>
+                            <img class="header-avatar" src="/img/avatar-male.jpg">
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="header-bottom">
+                <ul class="header-menu-nav">
+                    <li class="header-menu-home oculto">
+                        <a href="#"  class="header-menu-link">
+                            <i class="fa-solid fa-home"> Inicio</i>
+                        </a>
+                    </li>
+                    <li class="header-menu-search oculto">
+                        <input type="search" name="buscar" placeholder="Buscar...">
+                        <button class="btnsearch"><i class="fa-solid fa-search"></i></button>
+                    </li>
+                    <li>
+                        <a href="index.html#venta-compra"  class="header-menu-link">
+                            <i class="fa-solid fa-exchange-alt"></i> Venta/Compra
+                        </a>
+                    </li>
+                    <li>
+                        <a href="buscador_items.html"  class="header-menu-link">
+                            <i class="fa-solid fa-star"></i> Buscador de Items
+                        </a>
+                    </li>
+                    <li>
+                        <a href="quienes_somos.html"  class="header-menu-link">
+                            <i class="fa-solid fa-users"></i> Quiénes somos
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="contacto.html"  class="header-menu-link">
+                            <i class="fa-solid fa-envelope"></i> Contactarnos
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="login.html"  class="header-menu-link">
+                            <i class="fa-solid fa-user"></i> Login/Registrarse
+                        </a>
+                    </li>
+                    
+                </ul>
+                <div class="tiene-carrito">
+                    <a href="carrito.html"  class="tiene-carrito-link">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </div>
+               
+            </div>
+            
+        </header>
+        
+        <main class="main">
+            <div class="separador"></div>
+           <section class="botones-buscar">
+                <button>Armas</button>
+                <button>Armaduras</button>
+                <button>Poderes</button>
+                <button>Recetas</button>
+                <button>NPC/Moustros</button>
+                <button>Cristales</button>
+           </section>
+           <section class="panel-buscador">
+                <article class="buscador-controles">
+                    <div class="form-control">
+                        <label>Buscar en Base de Datos:</label>
+                        <input type="text" id="buscar" placeholder="Ingrese el texto a buscar">
+                    </div>
+                    <button class="submit">Buscar</button>
+                </article>
+                <article class="resultados">
+                    <table class="table-resultado">
+                        <thead>
+                          <tr>
+                            <th rowspan="2">Nombre</th>
+                            <th rowspan="2">Grado</th>
+                            <th rowspan="2">P.Atk.</th>
+                            <th rowspan="2">M.Atk.</th>
+                            <th rowspan="2">Sh.Def.</th>
+                            <th rowspan="2">SS/SpS</th>
+                            <th rowspan="2">Atk.Spd.</th>
+                            <th rowspan="2">Cristales</th>
+                            <th rowspan="2">Peso</th>
+                            <th rowspan="2">Acción</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td colspan="10"><strong>Resultados</strong></td>
+                          </tr>
+                          <tr>
+                            <td><img src="img/productos/etc_recipe_violet_i00.png" alt="no photo"> Baguette's Bread Sword</td>
+                            <td class="td-centro">None</td>
+                            <td class="td-centro">0</td>
+                            <td class="td-centro">0</td>
+                            <td class="td-centro">0</td>
+                            <td class="td-centro">1 / 1</td>
+                            <td class="td-centro">-</td>
+                            <td class="td-centro">-</td>
+                            <td class="td-centro">1350</td>
+                            <td class="td-centro">
+                                <a href="producto_detalle.html">
+                                    <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                                </a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td><img src="img/productos/weapon_dual_sword_i00.png" alt="no photo"> Baguette's Magic Sword</td>
+                            <td class="td-centro">None</td>
+                            <td class="td-centro">0</td>
+                            <td class="td-centro">0</td>
+                            <td class="td-centro">0</td>
+                            <td class="td-centro">1 / 1</td>
+                            <td class="td-centro">-</td>
+                            <td class="td-centro">-</td>
+                            <td class="td-centro">1350</td>
+                            <td class="td-centro">
+                                <a href="producto_detalle.html">
+                                    <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                                </a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td><img src="img/productos/weapon_dual_sword_i00.png" alt="Court Magician's Magic Staff"> Court Magician's Magic Staff</td>
+                            <td class="td-centro">None</td>
+                            <td class="td-centro">0</td>
+                            <td class="td-centro">0</td>
+                            <td class="td-centro">0</td>
+                            <td class="td-centro">1 / 1</td>
+                            <td class="td-centro">-</td>
+                            <td class="td-centro">-</td>
+                            <td class="td-centro">1350</td>
+                            <td class="td-centro">
+                                <a href="producto_detalle.html">
+                                    <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                                </a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td><img src="img/productos/weapon_life_stick_i00.png" alt="Flag Of Aden"> Flag Of Aden</td>
+                            <td class="td-centro">None</td>
+                            <td class="td-centro">0</td>
+                            <td class="td-centro">0</td>
+                            <td class="td-centro">0</td>
+                            <td class="td-centro">1 / 1</td>
+                            <td class="td-centro">-</td>
+                            <td class="td-centro">-</td>
+                            <td class="td-centro">1350</td>
+                            <td class="td-centro">
+                                <a href="producto_detalle.html">
+                                    <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                                </a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      
+                </article>
+           </section>
+        </main>
+        
+        <footer class="footer">
+            <section class="informacion-footer">
+                <div class="titulo-block">
+                    <h3>Nuestros Medios de Cobro</h3>
+                </div>
+                <div class="informacion-cobro">
+                    <img class="cobro-icono" src="img/medios_de_cobro/visa.svg">
+                    <img class="cobro-icono"  src="img/medios_de_cobro/payu.svg">
+                    <img class="cobro-icono"  src="img/medios_de_cobro/paypal.svg">
+                    <img class="cobro-icono"  src="img/medios_de_cobro/maestro.png">
+                    <img class="cobro-icono"  src="img/medios_de_cobro/mastercard.svg">
+                    <img class="cobro-icono"  src="img/medios_de_cobro/mercadopago.png">
+                    <img class="cobro-icono"  src="img/medios_de_cobro/deposito.png">
+                    <img class="cobro-icono"  src="img/medios_de_cobro/naranja.png">
+                    <img class="cobro-icono"  src="img/medios_de_cobro/rapipago.svg">
+                    <img class="cobro-icono"  src="img/medios_de_cobro/pagofacil.png">
+                </div>
+
+            </section>
+        </footer>
+    </section>
+    <!-- script -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="js/funcionalidad.js"></script>
+</body>
+</html>

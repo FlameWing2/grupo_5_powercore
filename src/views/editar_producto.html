@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="El Almacen L2: Store de Prueba para el l2j de Interlude"/>
+    <link rel="icon" href="img/logo_l2.png" type="image/png" />
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="https://kit.fontawesome.com/d46088808a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Index</title>
+</head>
+<body>
+    <section class="container"></section>
+    <section class="page">
+        <div class="admin-flotante">
+            <ul>
+                <li>
+                    <a href="crear_produto.html">
+                        <img src="img/plus.png">
+                        <span>Agregar Producto</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <header class="header">
+            <div class="header-top">
+                <div class="header-top-left">
+                    <a href="index.html"><img src="img/mamon.png"></a>
+                    <h3>Merchant of Mammon</h3>
+                </div>
+                <div class="server-online">
+                    <div class="online-dot"></div>
+                    <div class="info-server">
+                        <span class="online-text">Online:</span>
+                        <span class="online-count">1874</span>
+                    </div>
+                </div>
+                <div class="header-top-right">
+                    <a href="perfil.html">
+                        <div class="header-info-avatar">
+                            
+                            <span class="header-info-avatar-usuario">MasterDjmov</span>
+                            <img class="header-avatar" src="/img/avatar-male.jpg">
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="header-bottom">
+                <ul class="header-menu-nav">
+                    <li class="header-menu-home oculto">
+                        <a href="#"  class="header-menu-link">
+                            <i class="fa-solid fa-home"> Inicio</i>
+                        </a>
+                    </li>
+                    <li class="header-menu-search oculto">
+                        <input type="search" name="buscar" placeholder="Buscar...">
+                        <button class="btnsearch"><i class="fa-solid fa-search"></i></button>
+                    </li>
+                    <li>
+                        <a href="index.html#venta-compra"  class="header-menu-link">
+                            <i class="fa-solid fa-exchange-alt"></i> Venta/Compra
+                        </a>
+                    </li>
+                    <li>
+                        <a href="buscador_items.html"  class="header-menu-link">
+                            <i class="fa-solid fa-star"></i> Buscador de Items
+                        </a>
+                    </li>
+                    <li>
+                        <a href="quienes_somos.html"  class="header-menu-link">
+                            <i class="fa-solid fa-users"></i> Quiénes somos
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="contacto.html"  class="header-menu-link">
+                            <i class="fa-solid fa-envelope"></i> Contactarnos
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="login.html"  class="header-menu-link">
+                            <i class="fa-solid fa-user"></i> Login/Registrarse
+                        </a>
+                    </li>
+                    
+                </ul>
+                <div class="tiene-carrito">
+                    <a href="carrito.html"  class="tiene-carrito-link">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </div>
+               
+            </div>
+            
+        </header>
+        <div class="separador"></div>
+        <main class="main-editar-producto">
+            <div class="separador"></div>
+            
+            <section class="producto-editar">
+                <article class="producto-editar-info">
+                    <div class="control-admin">
+                        <h4>Panel Admin</h4>
+                        <h3>Modalidad Editar Producto</h3>
+                    </div>
+        
+                    <!-- Columna Izquierda: Imagen del Producto -->
+                    <div class="producto-editar-imagen">
+                        <img src="img/productos/weapon_samurai_longsword_i00.png" alt="Imagen del Producto">
+                        <button class="btn-cambiar-imagen">Cambiar Imagen</button>
+                    </div>
+        
+                    <!-- Columna Derecha: Formulario de edición -->
+                    <div class="producto-editar-formulario">
+                        <form action="#" method="POST">
+                            <div class="campo-formulario">
+                                <label for="nombre">Nombre del Producto:</label>
+                                <input type="text" id="nombre" name="nombre" value="Archangel Sword">
+                            </div>
+                            
+                            <div class="campo-formulario">
+                                <label for="tipo-arma">Tipo de Arma:</label>
+                                <input type="text" id="tipo-arma" name="tipo-arma" value="One Handed">
+                            </div>
+                            
+                            <div class="campo-formulario">
+                                <label for="p-atk">P. Atk:</label>
+                                <input type="number" id="p-atk" name="p-atk" value="194">
+                            </div>
+                            
+                            <div class="campo-formulario">
+                                <label for="m-atk">M. Atk:</label>
+                                <input type="number" id="m-atk" name="m-atk" value="99">
+                            </div>
+                            
+                            <div class="campo-formulario">
+                                <label for="atk-spd">Atk Spd:</label>
+                                <input type="number" id="atk-spd" name="atk-spd" value="379">
+                            </div>
+                            
+                            <div class="campo-formulario">
+                                <label for="soulshots">SoulShots:</label>
+                                <input type="number" id="soulshots" name="soulshots" value="1">
+                            </div>
+                            
+                            <div class="campo-formulario">
+                                <label for="spiritshots">SpiritShots:</label>
+                                <input type="number" id="spiritshots" name="spiritshots" value="1">
+                            </div>
+                            
+                            <div class="campo-formulario">
+                                <label for="peso">Peso:</label>
+                                <input type="number" id="peso" name="peso" value="1350">
+                            </div>
+        
+                            <div class="campo-formulario">
+                                <label for="funciones">Funciones:</label>
+                                <textarea id="funciones" name="funciones">Focus, Critical Damage or Haste</textarea>
+                            </div>
+                            
+                            <!-- Precios -->
+                            <div class="campo-formulario">
+                                <label for="precio-adena">Precio Adenas:</label>
+                                <input type="number" id="precio-adena" name="precio-adena" value="5000">
+                            </div>
+        
+                            <div class="campo-formulario">
+                                <label for="precio-dolar">Precio Pesos/Dólar:</label>
+                                <input type="text" id="precio-dolar" name="precio-dolar" value="$2.20">
+                            </div>
+        
+                            <div class="botones-formulario">
+                                <button type="submit" class="btn-guardar">Guardar Cambios</button>
+                                <button type="reset" class="btn-cancelar">Cancelar</button>
+                            </div>
+                        </form>
+                    </div>
+                </article>
+            </section>
+        </main>
+        
+        
+        
+        
+        
+        
+        <footer class="footer">
+            <section class="informacion-footer">
+                <div class="titulo-block">
+                    <h3>Nuestros Medios de Cobro</h3>
+                </div>
+                <div class="informacion-cobro">
+                    <img class="cobro-icono" src="img/medios_de_cobro/visa.svg">
+                    <img class="cobro-icono"  src="img/medios_de_cobro/payu.svg">
+                    <img class="cobro-icono"  src="img/medios_de_cobro/paypal.svg">
+                    <img class="cobro-icono"  src="img/medios_de_cobro/maestro.png">
+                    <img class="cobro-icono"  src="img/medios_de_cobro/mastercard.svg">
+                    <img class="cobro-icono"  src="img/medios_de_cobro/mercadopago.png">
+                    <img class="cobro-icono"  src="img/medios_de_cobro/deposito.png">
+                    <img class="cobro-icono"  src="img/medios_de_cobro/naranja.png">
+                    <img class="cobro-icono"  src="img/medios_de_cobro/rapipago.svg">
+                    <img class="cobro-icono"  src="img/medios_de_cobro/pagofacil.png">
+                </div>
+
+            </section>
+        </footer>
+    </section>
+    <!-- script -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="js/funcionalidad.js"></script>
+    <script src="js/carrito.js"></script>
+</body>
+</html>

@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="El Almacen L2: Store de Prueba para el l2j de Interlude"/>
+    <link rel="icon" href="img/logo_l2.png" type="image/png" />
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="https://kit.fontawesome.com/d46088808a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Index</title>
+</head>
+<body>
+    <section class="container">
+    </section>
+    <section class="page">
+        
+        <div class="admin-flotante">
+            <ul>
+                <li>
+                    <a href="crear_produto.html">
+                        <img src="img/plus.png">
+                        <span>Agregar Producto</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <header class="header">
+            <div class="header-top">
+                <div class="header-top-left">
+                    <a href="index.html"><img src="img/mamon.png"></a>
+                    <h3>Merchant of Mammon</h3>
+                </div>
+                <div class="server-online">
+                    <div class="online-dot"></div>
+                    <div class="info-server">
+                        <span class="online-text">Online:</span>
+                        <span class="online-count">1874</span>
+                    </div>
+                </div>
+                <div class="header-top-right">
+                    <a href="perfil.html">
+                        <div class="header-info-avatar">
+                            
+                            <span class="header-info-avatar-usuario">MasterDjmov</span>
+                            <img class="header-avatar" src="/img/avatar-male.jpg">
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="header-bottom">
+                <ul class="header-menu-nav">
+                    <li class="header-menu-home oculto">
+                        <a href="#"  class="header-menu-link">
+                            <i class="fa-solid fa-home"> Inicio</i>
+                        </a>
+                    </li>
+                    <li class="header-menu-search oculto">
+                        <input type="search" name="buscar" placeholder="Buscar...">
+                        <button class="btnsearch"><i class="fa-solid fa-search"></i></button>
+                    </li>
+                    <li>
+                        <a href="index.html#venta-compra"  class="header-menu-link">
+                            <i class="fa-solid fa-exchange-alt"></i> Venta/Compra
+                        </a>
+                    </li>
+                    <li>
+                        <a href="buscador_items.html"  class="header-menu-link">
+                            <i class="fa-solid fa-star"></i> Buscador de Items
+                        </a>
+                    </li>
+                    <li>
+                        <a href="quienes_somos.html"  class="header-menu-link">
+                            <i class="fa-solid fa-users"></i> Quiénes somos
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="contacto.html"  class="header-menu-link">
+                            <i class="fa-solid fa-envelope"></i> Contactarnos
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="login.html"  class="header-menu-link">
+                            <i class="fa-solid fa-user"></i> Login/Registrarse
+                        </a>
+                    </li>
+                    
+                </ul>
+                <div class="tiene-carrito">
+                    <a href="carrito.html"  class="tiene-carrito-link">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </div>
+            </div>
+            
+        </header>
+        
+        <main class="main">
+            <div class="contenedor-video">
+                <video id="intro-video" autoplay loop muted>
+                    <source src="video/intro-l2.mp4">
+                </video>
+                <button id="mute-btn">
+                    <i id="mute-icon" class="fa-solid fa-volume-xmark"></i>
+                </button>
+            </div>
+            
+            <section class="venta-compra" id="venta-compra">
+                <div class="titulo titulo-block">
+                    <i class="fa-solid fa-tags"></i> Las ofertas Del dia
+                </div>
+                <section class="lista-de-productos">
+                    <article class="tarjeta-producto">
+                        <a href="producto_detalle.html">
+                            <div class="tarjeta-producto-imagen">
+                                <img src="img/productos/etc_recipe_yellow_i00.png">
+                            </div>
+                            <div class="tarjeta-producto-info">
+                                <h3 class="producto-info-nombre">Machete</h3>
+                                <div class="producto-info-precio">
+                                    <div class="tipo-pago">
+                                        <span class="producto-precio-oro">5000 Adenas</span>
+                                        <img src="img/productos/adena.png" alt="adena">
+                                    </div>
+                                    <div class="tipo-pago">
+                                        <span class="producto-precio-dinero">$2.20 Pesos/Dolar </span>
+                                        <img src="img/productos/moneda.svg" alt="adena" width="25px">
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="tarjeta-producto">
+                        <div class="tarjeta-producto-imagen">
+                            <img src="img/productos/etc_sword_body_i00.png">
+                        </div>
+                        <div class="tarjeta-producto-info">
+                                <h3 class="producto-info-nombre">Machete</h3>
+                                <div class="producto-info-precio">
+                                    <div class="tipo-pago">
+                                        <span class="producto-precio-oro">5000 Adenas</span>
+                                        <img src="img/productos/adena.png" alt="adena">
+                                    </div>
+                                    <div class="tipo-pago">
+                                        <span class="producto-precio-dinero">$2.20 Pesos/Dolar </span>
+                                        <img src="img/productos/moneda.svg" alt="adena" width="25px">
+                                    </div>
+                                </div>
+                            </div>
+                    </article>
+                    <article class="tarjeta-producto">
+                        <div class="tarjeta-producto-imagen">
+                            <img src="img/productos/weapon_dual_sword_i00.png">
+                        </div>
+                        <div class="tarjeta-producto-info">
+                                <h3 class="producto-info-nombre">Machete</h3>
+                                <div class="producto-info-precio">
+                                    <div class="tipo-pago">
+                                        <span class="producto-precio-oro">5000 Adenas</span>
+                                        <img src="img/productos/adena.png" alt="adena">
+                                    </div>
+                                    <div class="tipo-pago">
+                                        <span class="producto-precio-dinero">$2.20 Pesos/Dolar </span>
+                                        <img src="img/productos/moneda.svg" alt="adena" width="25px">
+                                    </div>
+                                </div>
+                            </div>
+                    </article>
+                    <article class="tarjeta-producto">
+                        <div class="tarjeta-producto-imagen">
+                            <img src="img/productos/weapon_homunkuluss_sword_i00.png">
+                        </div>
+                        <div class="tarjeta-producto-info">
+                                <h3 class="producto-info-nombre">Machete</h3>
+                                <div class="producto-info-precio">
+                                    <div class="tipo-pago">
+                                        <span class="producto-precio-oro">5000 Adenas</span>
+                                        <img src="img/productos/adena.png" alt="adena">
+                                    </div>
+                                    <div class="tipo-pago">
+                                        <span class="producto-precio-dinero">$2.20 Pesos/Dolar </span>
+                                        <img src="img/productos/moneda.svg" alt="adena" width="25px">
+                                    </div>
+                                </div>
+                            </div>
+                    </article>
+                    <article class="tarjeta-producto">
+                        <div class="tarjeta-producto-imagen">
+                            <img src="img/productos/weapon_homunkuluss_sword_i01.png">
+                        </div>
+                        <div class="tarjeta-producto-info">
+                                <h3 class="producto-info-nombre">Machete</h3>
+                                <div class="producto-info-precio">
+                                    <div class="tipo-pago">
+                                        <span class="producto-precio-oro">5000 Adenas</span>
+                                        <img src="img/productos/adena.png" alt="adena">
+                                    </div>
+                                    <div class="tipo-pago">
+                                        <span class="producto-precio-dinero">$2.20 Pesos/Dolar </span>
+                                        <img src="img/productos/moneda.svg" alt="adena" width="25px">
+                                    </div>
+                                </div>
+                            </div>
+                    </article>
+                    <article class="tarjeta-producto">
+                        <div class="tarjeta-producto-imagen">
+                            <img src="img/productos/weapon_orcish_poleaxe_i00.png">
+                        </div>
+                        <div class="tarjeta-producto-info">
+                                <h3 class="producto-info-nombre">Machete</h3>
+                                <div class="producto-info-precio">
+                                    <div class="tipo-pago">
+                                        <span class="producto-precio-oro">5000 Adenas</span>
+                                        <img src="img/productos/adena.png" alt="adena">
+                                    </div>
+                                    <div class="tipo-pago">
+                                        <span class="producto-precio-dinero">$2.20 Pesos/Dolar </span>
+                                        <img src="img/productos/moneda.svg" alt="adena" width="25px">
+                                    </div>
+                                </div>
+                            </div>
+                    </article>
+                    <article class="tarjeta-producto">
+                        <div class="tarjeta-producto-imagen">
+                            <img src="img/productos/weapon_orcish_poleaxe_i01.png">
+                        </div>
+                        <div class="tarjeta-producto-info">
+                                <h3 class="producto-info-nombre">Machete</h3>
+                                <div class="producto-info-precio">
+                                    <div class="tipo-pago">
+                                        <span class="producto-precio-oro">5000 Adenas</span>
+                                        <img src="img/productos/adena.png" alt="adena">
+                                    </div>
+                                    <div class="tipo-pago">
+                                        <span class="producto-precio-dinero">$2.20 Pesos/Dolar </span>
+                                        <img src="img/productos/moneda.svg" alt="adena" width="25px">
+                                    </div>
+                                </div>
+                            </div>
+                    </article>
+                    <article class="tarjeta-producto">
+                        <div class="tarjeta-producto-imagen">
+                            <img src="img/productos/weapon_poleaxe_i00.png">
+                        </div>
+                        <div class="tarjeta-producto-info">
+                                <h3 class="producto-info-nombre">Machete</h3>
+                                <div class="producto-info-precio">
+                                    <div class="tipo-pago">
+                                        <span class="producto-precio-oro">5000 Adenas</span>
+                                        <img src="img/productos/adena.png" alt="adena">
+                                    </div>
+                                    <div class="tipo-pago">
+                                        <span class="producto-precio-dinero">$2.20 Pesos/Dolar </span>
+                                        <img src="img/productos/moneda.svg" alt="adena" width="25px">
+                                    </div>
+                                </div>
+                            </div>
+                    </article>
+                    <article class="tarjeta-producto">
+                        <div class="tarjeta-producto-imagen">
+                            <img src="img/productos/weapon_poleaxe_i01.png">
+                        </div>
+                        <div class="tarjeta-producto-info"></div>
+                            <h3 class="producto-info-nombre">Machete</h3>
+                            <div class="producto-info-precio">
+                                <span class="producto-precio-oro">5000 Adenas <img src="img/productos/adena.png" alt="adena"></span>
+                                <span class="producto-precio-dinero">$2.20 Pesos/Dolar <img src="img/productos/moneda.svg" alt="adena"></span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="tarjeta-producto">
+                        <div class="tarjeta-producto-imagen">
+                            <img src="img/productos/weapon_samurai_longsword_i00.png">
+                        </div>
+                        <div class="tarjeta-producto-info">
+                                <h3 class="producto-info-nombre">Machete</h3>
+                                <div class="producto-info-precio">
+                                    <div class="tipo-pago">
+                                        <span class="producto-precio-oro">5000 Adenas</span>
+                                        <img src="img/productos/adena.png" alt="adena">
+                                    </div>
+                                    <div class="tipo-pago">
+                                        <span class="producto-precio-dinero">$2.20 Pesos/Dolar </span>
+                                        <img src="img/productos/moneda.svg" alt="adena" width="25px">
+                                    </div>
+                                </div>
+                            </div>
+                    </article>
+                </section>
+                
+            </section>
+            <section class="oferta-destacados" id="venta-compra">
+                <div class="titulo titulo-block">
+                    <i class="fa-solid fa-tags"></i> Productos mas Destacados
+                </div>
+                <section class="lista-de-productos">
+                    <article class="tarjeta-producto">
+                        <div class="tarjeta-producto-imagen">
+                            <img src="img/productos/weapon_samurai_longsword_i01.png">
+                        </div>
+                        <div class="tarjeta-producto-info">
+                        <h3 class="producto-info-nombre">Machete</h3>
+                        <div class="producto-info-precio">
+                            <div class="tipo-pago">
+                                <span class="producto-precio-oro">5000 Adenas</span>
+                                <img src="img/productos/adena.png" alt="adena">
+                            </div>
+                            <div class="tipo-pago">
+                                <span class="producto-precio-dinero">$2.20 Pesos/Dolar </span>
+                                <img src="img/productos/moneda.svg" alt="adena" width="25px">
+                            </div>
+                        </div>
+                    </div>
+                    </article>
+                    <article class="tarjeta-producto">
+                        <div class="tarjeta-producto-imagen">
+                            <img src="img/productos/weapon_scroll_of_wisdom_i00.png">
+                        </div>
+                        <div class="tarjeta-producto-info"></div>
+                            <h3 class="producto-info-nombre">Machete</h3>
+                            <div class="producto-info-precio">
+                                <div class="producto-par-precio-oro-adena">
+                                    <span class="producto-precio-oro">5000 Adenas </span><img class="icono-adena" src="img/productos/adena.png" alt="adena">
+                                </div>
+                                <span class="producto-precio-dinero">$2.20 Pesos/Dolar <img src="img/productos/moneda.svg" alt="adena"></span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="tarjeta-producto">
+                        <div class="tarjeta-producto-imagen">
+                            <img src="img/productos/weapon_spirits_sword_i00.png">
+                        </div>
+                        <div class="tarjeta-producto-info"></div>
+                            <h3 class="producto-info-nombre">Machete</h3>
+                            <div class="producto-info-precio">
+                                <span class="producto-precio-oro">5000 Adenas <img src="img/productos/adena.png" alt="adena"></span>
+                                <span class="producto-precio-dinero">$2.20 Pesos/Dolar <img src="img/productos/moneda.svg" alt="adena"></span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="tarjeta-producto">
+                        <div class="tarjeta-producto-imagen">
+                            <img src="img/productos/shield_tower_shield_i00.png">
+                        </div>
+                        <div class="tarjeta-producto-info"></div>
+                            <h3 class="producto-info-nombre">Machete</h3>
+                            <div class="producto-info-precio">
+                                <span class="producto-precio-oro">5000 Adenas </span>
+                                <span class="producto-precio-dinero">$2.20 Pesos/Dolar <img src="img/productos/moneda.svg" alt="adena"></span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="tarjeta-producto">
+                        <div class="tarjeta-producto-imagen">
+                            <img src="img/productos/shield_composite_shield_i00.png">
+                        </div>
+                        <div class="tarjeta-producto-info"></div>
+                            <h3 class="producto-info-nombre">Machete</h3>
+                            <div class="producto-info-precio">
+                                <span class="producto-precio-oro">5000 Adenas <img src="img/productos/adena.png" alt="adena"></span>
+                                <span class="producto-precio-dinero">$2.20 Pesos/Dolar <img src="img/productos/moneda.svg" alt="adena"></span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="tarjeta-producto">
+                        <div class="tarjeta-producto-imagen">
+                            <img src="img/productos/weapon_sword_of_valhalla_i01.png">
+                        </div>
+                        <div class="tarjeta-producto-info"></div>
+                            <h3 class="producto-info-nombre">Machete</h3>
+                            <div class="producto-info-precio">
+                                <span class="producto-precio-oro">5000 Adenas <img src="img/productos/adena.png" alt="adena"></span>
+                                <span class="producto-precio-dinero">$2.20 Pesos/Dolar <img src="img/productos/moneda.svg" alt="adena"></span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="tarjeta-producto">
+                        <div class="tarjeta-producto-imagen">
+                            <img src="img/productos/weapon_life_stick_i00.png">
+                        </div>
+                        <div class="tarjeta-producto-info"></div>
+                            <h3 class="producto-info-nombre">Machete</h3>
+                            <div class="producto-info-precio">
+                                <span class="producto-precio-oro">5000 Adenas <img src="img/productos/adena.png" alt="adena"></span>
+                                <span class="producto-precio-dinero">$2.20 Pesos/Dolar <img src="img/productos/moneda.svg" alt="adena"></span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="tarjeta-producto">
+                        <div class="tarjeta-producto-imagen">
+                            <img src="img/productos/weapon_soul_bow_i00.png">
+                        </div>
+                        <div class="tarjeta-producto-info"></div>
+                            <h3 class="producto-info-nombre">Machete</h3>
+                            <div class="producto-info-precio">
+                                <span class="producto-precio-oro">5000 Adenas <img src="img/productos/adena.png" alt="adena"></span>
+                                <span class="producto-precio-dinero">$2.20 Pesos/Dolar <img src="img/productos/moneda.svg" alt="adena"></span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="tarjeta-producto">
+                        <div class="tarjeta-producto-imagen">
+                            <img src="img/productos/etc_recipe_violet_i00.png">
+                        </div>
+                        <div class="tarjeta-producto-info"></div>
+                            <h3 class="producto-info-nombre">Machete</h3>
+                            <div class="producto-info-precio">
+                                <span class="producto-precio-oro">5000 Adenas <img src="img/productos/adena.png" alt="adena"></span>
+                                <span class="producto-precio-dinero">$2.20 Pesos/Dolar <img src="img/productos/moneda.svg" alt="adena"></span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="tarjeta-producto">
+                        <div class="tarjeta-producto-imagen">
+                            <img src="img/productos/weapon_eminence_bow_i00.png">
+                        </div>
+                        <div class="tarjeta-producto-info"></div>
+                            <h3 class="producto-info-nombre">Machete</h3>
+                            <div class="producto-info-precio">
+                                <span class="producto-precio-oro">5000 Adenas <img src="img/productos/adena.png" alt="adena"></span>
+                                <span class="producto-precio-dinero">$2.20 Pesos/Dolar <img src="img/productos/moneda.svg" alt="adena"></span>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+                
+            </section>
+        </main>
+        <footer class="footer">
+            <section class="informacion-footer">
+                <div class="titulo-block">
+                    <h3>Nuestros Medios de Cobro</h3>
+                </div>
+                <div class="informacion-cobro">
+                    <img class="cobro-icono" src="img/medios_de_cobro/visa.svg">
+                    <img class="cobro-icono"  src="img/medios_de_cobro/payu.svg">
+                    <img class="cobro-icono"  src="img/medios_de_cobro/paypal.svg">
+                    <img class="cobro-icono"  src="img/medios_de_cobro/maestro.png">
+                    <img class="cobro-icono"  src="img/medios_de_cobro/mastercard.svg">
+                    <img class="cobro-icono"  src="img/medios_de_cobro/mercadopago.png">
+                    <img class="cobro-icono"  src="img/medios_de_cobro/deposito.png">
+                    <img class="cobro-icono"  src="img/medios_de_cobro/naranja.png">
+                    <img class="cobro-icono"  src="img/medios_de_cobro/rapipago.svg">
+                    <img class="cobro-icono"  src="img/medios_de_cobro/pagofacil.png">
+                </div>
+
+            </section>
+        </footer>
+    </section>
+    <!-- script -->
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="js/funcionalidad.js"></script>
+</body>
+</html>
