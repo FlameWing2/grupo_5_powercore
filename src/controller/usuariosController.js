@@ -1,6 +1,6 @@
 
 const usuariosController = {
-    index:(req,res)=>{
+    formLoginRegistro:(req,res)=>{
         res.render('usuarios/login');
     },
     formContacto:(req,res)=>{
@@ -8,6 +8,11 @@ const usuariosController = {
     },
     formPerfil:(req,res)=>{
         res.render('usuarios/perfil');
+    },
+
+    validarUsuario:(req,res)=>{
+        console.log(req.body);
+        res.render('usuarios/login');
     },
 
 }
