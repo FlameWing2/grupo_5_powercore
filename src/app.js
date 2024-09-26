@@ -1,81 +1,68 @@
-//paquetes necesarios, os para el host y express para el manejo
-//de rutas y gestión en server
+//paquetes necesarios para un proyecto con express
 const os = require('os');
+const path = require('path');
 const express = require('express');
+const app = express();
+
+//paquetes necesarios para recibir datos de un form, manejar sessiones y cookies
 const methodOverride = require('method-override');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const cookieParser = require('cookie-parser');
 const session = require('express-session');
 
-//paquete para el manejo de rutas absolutas o relativas
-const path = require('path');
-const app = express();
-//inicializando una variable con el posible puerto
-const puerto = 3000;
 
-//aviso a express que use los static, assets
-//app.use(express.static(path.join(__dirname, '../public')));
+//configuraciones necesarias
 app.use(express.static(path.resolve(__dirname, '../public')));
-
-//activo la sobreescritura de method
-//con esto puedo usar put, delete, patch, etc
 app.use(methodOverride('_method'));
 app.use(cookieParser());
-/**
- * Resultado
-Texto original  POWERCORE-GRUPO5
-MD5             307d9deec28d612339b707cc4c6c6969
-Base64          UE9XRVJDT1JFLUdSVVBPNQ==
-Sha1            ecca91561ee97db021552e024d335f546959a9c2
- */
 app.use(session({
     secret: "307d9deec28d612339b707cc4c6c6969",
     resave: false,
     saveUninitialized: true
 }))
-/**estas dos lineas son necesarias para trabajar con post, put, delete */
-// cargando funciones de analisis de datos de formularios y JSON
-// estas dos funciones se ejecutaran de forma automatica
+
+//configuracion para recibir datos de POST y JSON
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-//activando template ejs
-//app.set('views',__dirname+"/views/");
+//configuracion para el manejo de vistas tipo EJS
 app.set('views', path.resolve(__dirname, 'views'));
 app.set('view engine','ejs');
 
 //activando escucha de puerto
-app.listen(puerto, (error) => {
+const Puerto = 3000;
+app.listen(Puerto, (error) => {
     if (error) {
         console.log("Error: " + error);
     } else {
         const hostname = os.hostname();
-        console.log(`Server iniciado en http://${hostname}:${puerto}`);
+        console.log(`Server iniciado en http://${hostname}:${Puerto}`);
     }
 });
 
 
-// Importar y usar las rutas
-const mainRouter = require('./routes/mainRouter');
-const usersRouter = require('./routes/usersRouter');
-const productsRouter = require('./routes/productsRouter');
-const adminRouter = require('./routes/adminRouters');
-const autologin = require('./middleware/autologin');
+// Importar manejadores de rutas
+//const mainRouter = require('./routes/mainRouter');
+//const usersRouter = require('./routes/usersRouter');
+//const productsRouter = require('./routes/productsRouter');
+//const adminRouter = require('./routes/adminRouters');
+//const autologin = require('./middleware/autologin');
 
 //para testing de mysql
-app.use(autologin);
+//app.use(autologin);
 
-app.use('/',mainRouter);
-app.use('/users',usersRouter);
-app.use('/products',productsRouter);
-app.use('/admin',adminRouter);
+//captura de rutas y envio a enrutadores
+//app.use('/',mainRouter);
+//app.use('/users',usersRouter);
+//app.use('/products',productsRouter);
+//app.use('/admin',adminRouter);
 
+//configuracion de un middleware para controlar que rutas son consultadas
 app.use((req, res, next) => {
     console.log(`URL solicitada: ${req.originalUrl}`);
     next();
 });
 
-/**activo bloqueo de 404 */
+/**activo bloqueo de 404 o de otra pagina solicitad no encontrada, aqui agregarlas */
 app.use((req, res, next)=>{
     res.status(404).render("errors/404");
 })
