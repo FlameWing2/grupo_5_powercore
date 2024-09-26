@@ -7,12 +7,23 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color: #ffffff;
+            background-image: url('/images/404.png');
+            background-repeat: no-repeat; /* Evita que la imagen se repita */
+            background-position: center;  /* Centra la imagen en el contenedor */
+            background-size: 100% 100%;   /* Hace que la imagen ocupe el 100% del ancho y alto */
             color: #333;
             text-align: center;
             padding: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 680px;
+            max-width: 100%;
+            max-height: 100%;
         }
         .error-container {
+           
             max-width: 600px;
             margin: 0 auto;
             background-color: #fff;
@@ -30,8 +41,10 @@
             margin-bottom: 20px;
         }
         a {
+            margin-top: 40rem;
             color: #007bff;
             text-decoration: none;
+            font-size: 35px;
         }
         a:hover {
             text-decoration: underline;
@@ -39,10 +52,8 @@
     </style>
 </head>
 <body>
-    <div class="error-container">
-        <h1>Error 404 - Página no encontrada</h1>
-        <p>Lo sentimos, la página que estás buscando no pudo ser encontrada.</p>
-        <p>Puedes volver a la <a href="/">página de inicio</a> o intentar buscar otra información.</p>
-    </div>
+    <a href="/">
+        Volver a Inicio
+    </a>
 </body>
 </html>
