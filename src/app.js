@@ -42,7 +42,7 @@ app.listen(Puerto, (error) => {
 
 // Importar manejadores de rutas
 const mainRouter = require('./routes/mainRouter');
-//const usersRouter = require('./routes/usersRouter');
+const usuarioRouter = require('./routes/usuarioRouter');
 //const productsRouter = require('./routes/productsRouter');
 //const adminRouter = require('./routes/adminRouters');
 //const autologin = require('./middleware/autologin');
@@ -52,7 +52,7 @@ const mainRouter = require('./routes/mainRouter');
 
 //captura de rutas y envio a enrutadores
 app.use('/',mainRouter);
-//app.use('/users',usersRouter);
+app.use('/usuarios',usuarioRouter);
 //app.use('/products',productsRouter);
 //app.use('/admin',adminRouter);
 

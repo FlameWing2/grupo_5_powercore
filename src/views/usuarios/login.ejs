@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include('../partials/head') %>
+<body>
+    <section class="container"></section>
+    <section class="page">
+        <%- include('../partials/acciones_admin') %>
+        <%- include('../partials/headers') %>
+        
+        <main class="main">
+            <div class="separador"></div>
+            <section id="auth" class="auth">
+                <div class="form-container">
+                    <!-- Formulario de Login -->
+                    <div class="login-form">
+                        <h2>Iniciar Sesión</h2>
+                        <form id="form-login" action="login.html" method="post">
+                            <div class="form-group">
+                                <label for="login-nombre-personaje">Nombre del Personaje</label>
+                                <input type="text" id="login-nombre-personaje" name="nombre-personaje" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="login-clave">Clave</label>
+                                <input type="password" id="login-clave" name="clave" required>
+                            </div>
+                            <button type="button" class="btn-login" id="login-btn">Iniciar Sesión</button>
+                        </form>
+                    </div>
+        
+                    <!-- Formulario de Registro -->
+                    <div class="register-form">
+                        <h2>Registrar Cuenta</h2>
+                        <form id="form-registro" action="#" method="post">
+                            <div class="form-group">
+                                <label for="registro-nombre-personaje">Nombre del Personaje</label>
+                                <input type="text" id="registro-nombre-personaje" name="nombre-personaje" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="registro-clave">Clave</label>
+                                <input type="password" id="registro-clave" name="clave" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="registro-repetir-clave">Repetir Clave</label>
+                                <input type="password" id="registro-repetir-clave" name="repetir-clave" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="registro-correo">Correo Electrónico</label>
+                                <input type="email" id="registro-correo" name="correo" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="registro-nombre-original">Nombre Original</label>
+                                <input type="text" id="registro-nombre-original" name="nombre-original" required>
+                            </div>
+                            <button type="button" class="btn-registro" id="registro-btn">Registrar</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <%- include('../partials/footers') %>
+    </section>
+
+    <!-- script -->
+    <%- include('../partials/scripts') %>
+</body>
+</html>

@@ -3,8 +3,10 @@ const mainController = {
     index:(req,res)=>{
         res.render('index');
     },
-    formContacto:(req,res)=>{},
-    crearContacto:(req,res)=>{},
+    nosotros:(req,res)=>{
+        res.render('quienes_somos');
+    },
+   
 
 }
 

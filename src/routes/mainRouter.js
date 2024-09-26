@@ -6,5 +6,6 @@ const mainController = require('../controller/mainController');
 
 //generamos las distintas rutas
 Router.get('/',mainController.index);
+Router.get('/nosotros',mainController.nosotros);
 
 module.exports = Router;
