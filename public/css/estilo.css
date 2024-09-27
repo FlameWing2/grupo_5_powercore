@@ -759,6 +759,35 @@ p {
 }
 
 /*pantalla de login y registro*/
+
+.login-activo{
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+    width: 35%;
+    margin:0 auto;
+}
+.no-login{
+    display: none;
+}
+
+.boton-redondeado {
+    width: 350px; 
+    height: 70px; 
+    background-color: #28a745; 
+    color: white;
+    border: none; 
+    border-radius: 25px; 
+    font-size: 1.2rem; 
+    text-align: center; 
+    padding: 10px 20px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+}
+
+.boton-redondeado:hover {
+    background-color: #218838; 
+}
 .auth {
     display: flex;
     justify-content: center;

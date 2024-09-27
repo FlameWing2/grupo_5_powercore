@@ -9,6 +9,10 @@
        
         <main class="main">
             <div class="separador"></div>
+            <div class="login-activo no-login">
+                <img src="">
+                <a  class="boton-redondeado" href="/usuarios/salir">Terminar Session con Merchan of Mammon</a>
+            </div>
             <section id="auth" class="auth">
                 <div class="form-container">
                     <!-- Formulario de Login -->
@@ -68,11 +72,13 @@
         const aviso = <%- JSON.stringify(aviso) %>; // Renderizar la variable en el script
     
         if (aviso === 'OK') {
+            document.querySelector(".no-login").style.display="block";
             Swal.fire({
                         title: 'Respuesta del Servidor!',
                         text: 'Login Correcto, puede comenzar a disfrutar de Merchan Of Mammon',
                         icon: 'success'
                     })
+            
         } else if (aviso === 'Error') {
             Swal.fire({
                         title: 'Respuesta del Servidor!',

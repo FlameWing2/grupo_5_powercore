@@ -5,7 +5,6 @@ const crypto = require('crypto');
 
 const usuariosController = {
     formLoginRegistro:(req,res)=>{
-        console.log(req.session.usuario.apellido)
         res.render('usuarios/login',
             {
                 aviso:"",
@@ -100,6 +99,12 @@ const usuariosController = {
     },    
     formPerfil:(req,res)=>{
         res.render('usuarios/perfil');
+    },
+    salir:(req,res)=>{
+        if (req.session.usuario != null) {
+            req.session.usuario = null;
+            res.redirect("/usuarios/login");
+          }
     },
 
 

@@ -11,5 +11,5 @@ Router.post('/contacto',usuariosController.crearContacto);
 Router.get('/perfil',usuariosController.formPerfil);
 
 Router.post('/autenticar',usuariosController.validarUsuario);
-
+Router.get("/salir", usuariosController.salir);
 module.exports = Router;
