@@ -14,9 +14,14 @@
         <div class="header-top-right">
             <a href="/usuarios/perfil">
                 <div class="header-info-avatar">
+                    <% if(infoUsuario!=null){ %>
+                        <span class="header-info-avatar-usuario"><%=infoUsuario.apellido %> <%=infoUsuario.nombre %></span>
+                        <img class="header-avatar" src="/images/autores/<%=infoUsuario.avatar  %>">
+                    <% }else{ %>
+                        <span class="header-info-avatar-usuario">Invitado</span>
+                        <img class="header-avatar" src="/images/autores/avatar-male.jpg">
+                    <% } %>
                     
-                    <span class="header-info-avatar-usuario">MasterDjmov</span>
-                    <img class="header-avatar" src="/images/iconos/avatar-male.jpg">
                 </div>
             </a>
         </div>

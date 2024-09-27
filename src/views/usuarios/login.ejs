@@ -5,8 +5,8 @@
     <section class="container"></section>
     <section class="page">
         <%- include('../partials/acciones_admin') %>
-        <%- include('../partials/headers') %>
-        
+        <%- include('../partials/headers',{ infoUsuario: infoUsuario }) %>
+       
         <main class="main">
             <div class="separador"></div>
             <section id="auth" class="auth">
@@ -17,7 +17,7 @@
                         <form id="form-login" action="/usuarios/autenticar" method="post">
                             <div class="form-group">
                                 <label for="login-nombre-personaje">Nombre del Personaje</label>
-                                <input type="text" id="login-nombre-personaje" name="nombre-personaje" required>
+                                <input type="text" id="login-nombre_personaje" name="nombre_personaje" required>
                             </div>
                             <div class="form-group">
                                 <label for="login-clave">Clave</label>
@@ -63,5 +63,23 @@
 
     <!-- script -->
     <%- include('../partials/scripts') %>
+    <script>
+        // Verifica si hay un aviso pasado desde el servidor y muestra la alerta
+        const aviso = <%- JSON.stringify(aviso) %>; // Renderizar la variable en el script
+    
+        if (aviso === 'OK') {
+            Swal.fire({
+                        title: 'Respuesta del Servidor!',
+                        text: 'Login Correcto, puede comenzar a disfrutar de Merchan Of Mammon',
+                        icon: 'success'
+                    })
+        } else if (aviso === 'Error') {
+            Swal.fire({
+                        title: 'Respuesta del Servidor!',
+                        text: 'Su cuenta no existe o sus datos son incorrectos',
+                        icon: 'error'
+                    })
+        }
+    </script>
 </body>
 </html>

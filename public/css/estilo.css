@@ -146,7 +146,7 @@ header{
     background-color: var(--color-Anzac);
     color:var(--color-CapeCod);
     gap: 0.5rem;
-    width: 15rem;
+    width: 20rem;
     height: 2rem;
     padding-left: 1rem;
     border-top-left-radius: 15px;
@@ -156,6 +156,7 @@ header{
 }
 
 .header-info-avatar img{
+    width: 60px;
     border-radius: 50%;
     border: 3px solid var(--color-CapeCod);
 }

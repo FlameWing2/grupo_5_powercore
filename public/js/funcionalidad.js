@@ -94,7 +94,8 @@ document.addEventListener('DOMContentLoaded', function () {
     //pantalla login y registro
     const loginButton = document.getElementById('login-btn');
     if(loginButton!=null){
-        loginButton.addEventListener('click', function() {
+        loginButton.addEventListener('click', function(e) {
+            e.preventDefault();
             Swal.fire({
                 title: 'Iniciar Sesión',
                 text: '¿Estás seguro que quieres iniciar sesión?',
@@ -106,13 +107,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 cancelButtonText: 'Cancelar'
             }).then((result) => {
                 if (result.isConfirmed) {
-                    Swal.fire({
-                        title: 'Inicio de sesión exitoso',
-                        text: 'Has iniciado sesión correctamente.',
-                        icon: 'success'
-                    }).then(() => {
-                        document.getElementById('form-login').submit();
-                    });
+                    document.getElementById('form-login').submit();
                 }
             });
         });
