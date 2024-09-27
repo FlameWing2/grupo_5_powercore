@@ -11,7 +11,7 @@
  Target Server Version : 110502
  File Encoding         : 65001
 
- Date: 27/09/2024 00:37:42
+ Date: 27/09/2024 00:52:44
 */
 
 SET NAMES utf8mb4;
@@ -77,6 +77,13 @@ CREATE TABLE `accounts`  (
   `access_level` int NULL DEFAULT NULL,
   `lastIP` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `lastServer` int NULL DEFAULT 1,
+  `avatar` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `apellido` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `nombre` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `direccion` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `telefono` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `created_at` datetime NULL DEFAULT NULL,
+  `updated_at` datetime NULL DEFAULT NULL,
   PRIMARY KEY (`login`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
@@ -2101,11 +2108,11 @@ CREATE TABLE `rebirth_manager`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Table structure for rel_accounts_carritos
+-- Table structure for rel_items_carritos
 -- ----------------------------
-DROP TABLE IF EXISTS `rel_accounts_carritos`;
-CREATE TABLE `rel_accounts_carritos`  (
-  `id_account_carrito` int NOT NULL AUTO_INCREMENT,
+DROP TABLE IF EXISTS `rel_items_carritos`;
+CREATE TABLE `rel_items_carritos`  (
+  `id_item_carrito` int NOT NULL AUTO_INCREMENT,
   `id_carrito` int NULL DEFAULT NULL,
   `item_id` int NULL DEFAULT NULL,
   `cantidad` int NULL DEFAULT NULL,
@@ -2113,7 +2120,7 @@ CREATE TABLE `rel_accounts_carritos`  (
   `total_dinero` decimal(10, 2) NULL DEFAULT NULL,
   `created_at` datetime NULL DEFAULT NULL,
   `updated_at` datetime NULL DEFAULT NULL,
-  PRIMARY KEY (`id_account_carrito`) USING BTREE
+  PRIMARY KEY (`id_item_carrito`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
