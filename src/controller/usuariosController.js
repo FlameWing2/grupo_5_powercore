@@ -103,7 +103,61 @@ const usuariosController = {
     },    
     formPerfil:(req,res)=>{
         res.render('usuarios/perfil',{
+            aviso: "",
             infoUsuario: req.session.usuario ? req.session.usuario : null,
+        });
+    },
+    actualizarPerfil:(req,res)=>{
+        console.log(req.body);
+        const {apellido,nombre,direccion,telefono,email,clave,clave_original,user} = req.body;
+        let encryptedPassword = "";
+        if (clave !== clave_original) {
+            encryptedPassword = l2jEncrypt(clave);
+        } else {
+            encryptedPassword = clave_original;
+        }
+
+        const datosActualizados = {
+            password: encryptedPassword,
+            email,
+            nombre,
+            apellido,
+            direccion,
+            telefono
+        };
+
+        db.Accounts.update(datosActualizados, {
+            where: {
+                login: user 
+            }
+        })
+        .then(resultado => {
+            if (resultado[0] > 0) {
+                db.Accounts.findOne({
+                    where:{
+                        login:user
+                    }
+                }).then(usuario=>{
+                    req.session.usuario = usuario
+                    res.render('usuarios/perfil', {
+                        aviso: "OK",
+                        infoUsuario: usuario
+                    });
+                })
+                
+            } else {
+                res.render('usuarios/perfil', {
+                    aviso: "Error: No se encontró el usuario o no se hicieron cambios.",
+                    infoUsuario: null
+                });
+            }
+        })
+        .catch(error => {
+            console.error(error);
+            res.render('usuarios/perfil', {
+                aviso: "Error: No se pudo actualizar el usuario.",
+                infoUsuario: null
+            });
         });
     },
     salir:(req,res)=>{
