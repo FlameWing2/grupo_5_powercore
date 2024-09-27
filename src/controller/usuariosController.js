@@ -54,7 +54,8 @@ const usuariosController = {
             res.render('usuarios/contacto',
                 {
                     Areas: areas,
-                    aviso: ""
+                    aviso: "",
+                    infoUsuario: req.session.usuario ? req.session.usuario : null,
                 }
             );
         })
@@ -81,7 +82,8 @@ const usuariosController = {
     
             res.render('usuarios/contacto', {
                 Areas: formateoAreas,
-                aviso: "OK"
+                aviso: "OK",
+                infoUsuario: req.session.usuario ? req.session.usuario : null,
             });
         } catch (err) {
             console.error('Error al crear el contacto:', err);
@@ -94,12 +96,15 @@ const usuariosController = {
     
             res.render('usuarios/contacto', {
                 Areas: formateoAreas,
-                aviso: "Error"
+                aviso: "Error",
+                infoUsuario: req.session.usuario ? req.session.usuario : null,
             });
         }
     },    
     formPerfil:(req,res)=>{
-        res.render('usuarios/perfil');
+        res.render('usuarios/perfil',{
+            infoUsuario: req.session.usuario ? req.session.usuario : null,
+        });
     },
     salir:(req,res)=>{
         if (req.session.usuario != null) {

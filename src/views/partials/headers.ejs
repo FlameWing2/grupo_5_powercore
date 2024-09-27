@@ -64,6 +64,13 @@
                     <i class="fa-solid fa-user"></i> Login/Registrarse
                 </a>
             </li>
+            <% if(infoUsuario!=null){ %>
+                <li>
+                    <a href="/usuarios/salir"  class="header-menu-link">
+                        <i class="fa-solid fa-user"></i> Salir
+                    </a>
+                </li>
+            <% } %>
             
         </ul>
         <div class="tiene-carrito">

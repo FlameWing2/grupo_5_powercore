@@ -1,10 +1,14 @@
 
 const mainController = {
     index:(req,res)=>{
-        res.render('index');
+        res.render('index',{
+            infoUsuario: req.session.usuario ? req.session.usuario : null,
+        });
     },
     nosotros:(req,res)=>{
-        res.render('quienes_somos');
+        res.render('quienes_somos',{
+            infoUsuario: req.session.usuario ? req.session.usuario : null,
+        });
     },
    
 
