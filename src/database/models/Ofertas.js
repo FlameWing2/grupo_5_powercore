@@ -59,16 +59,13 @@ module.exports = (Sequelize, DataTypes) => {
     });
 
     // Definición de asociaciones, si aplica
-    // Ofertas.associate = models => {
-    //     Ofertas.belongsTo(models.Accounts, {
-    //         as: 'account',
-    //         foreignKey: 'login',
-    //     });
-    //     Ofertas.belongsTo(models.Etcitems, {
-    //         as: 'item',
-    //         foreignKey: 'item_id',
-    //     });
-    // };
+    Ofertas.associate = models => {
+        Ofertas.belongsTo(models.Weapons, {
+            as: 'weapon',
+            foreignKey: 'item_id',
+        });
+     };
+     
 
     return Ofertas;
 };

@@ -1,6 +1,12 @@
+//cargamos lo necesario para usar las funciones de sequelize
+const db = require('../database/models/index.js');
+const bcrypt = require('bcrypt');
+const crypto = require('crypto');
+const os = require('os');
 
 const mainController = {
     index:(req,res)=>{
+        db.Ofertas
         res.render('index',{
             infoUsuario: req.session.usuario ? req.session.usuario : null,
         });

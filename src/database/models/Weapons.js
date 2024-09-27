@@ -1,5 +1,5 @@
 module.exports = (Sequelize, DataTypes) => {
-    const Weapon = Sequelize.define('Weapon', {
+    const Weapons = Sequelize.define('Weapons', {
         item_id: {
             type: DataTypes.DECIMAL(11, 0),
             allowNull: false,
@@ -202,6 +202,12 @@ module.exports = (Sequelize, DataTypes) => {
         charset: 'latin1',
         collate: 'latin1_swedish_ci'
     });
+    Weapons.associate = models => {
+        Weapons.hasMany(models.Ofertas, {
+             as: 'ofertas',
+            foreignKey: 'item_id',
+        });
+     };
 
-    return Weapon;
+    return Weapons;
 };
