@@ -14,36 +14,38 @@
                     <div class="control-admin">
                         <h4>Panel Admin</h4>
                         <ul class="menu-admin">
-                            <li><a href="/admin/editar_producto" class="edit"><i class="fas fa-edit"></i> Editar</a></li>
+                            <li><a href="/admin/editar_producto/<%=Oferta.item_id%>" class="edit"><i class="fas fa-edit"></i> Editar</a></li>
                             <li><a href="#" class="delete"><i class="fas fa-trash"></i> Eliminar</a></li>
                         </ul>
                     </div>
                     <div class="producto-detalle-imagen">
-                        <img src="/images/productos/weapon_samurai_longsword_i00.png">
+                        <img src="/images/productos/<%=Oferta.weapon.image%>">
                     </div>
                     <div class="producto-detalle-descripcion">
                         <div class="top">
-                            <h3 class="titulo-detalle">Archangel Sword</h3>
+                            <h3 class="titulo-detalle">Oferta: <%=Oferta.weapon.name%></h3>
                             <div class="producto-detalle-tipo-pago">
                                 <div class="tipo-pago tamanio">
                                     <button class="btn-tipo-pago">
-                                        <span class="producto-precio-oro">5000 Adenas</span>
+                                        <span class="producto-precio-oro"><%=Oferta.cantidad_adena%> Adenas</span>
                                         <img src="/images/productos/adena.png" alt="adena">
                                     </button>
                                 </div>
                                 <div class="tipo-pago tamanio">
                                     <button class="btn-tipo-pago">
-                                        <span class="producto-precio-oro">$2.20 Pesos/Dolar</span>
+                                        <span class="producto-precio-oro">$<%=Oferta.cantidad_dinero%> Pesos</span>
                                         <img src="/images/productos/dolar.png" alt="adena">
                                     </button>
                                 </div>
                             </div>
                             <div class="control-cantidad">
+                                <span style="color:red">Productos Únicos - la compra es unitaria</span>
+                                <span style="color:red">Se han deshabilitado los Botones de Cantidad</span>
                                 <label>Cantidad a Comprar: </label>
                                 <div>
-                                    <button class="btn-restar">-</button>
-                                    <input type="text" class="cantidad-comprada" value="1" min="1" />
-                                    <button class="btn-sumar">+</button>
+                                    <button class="btn-restar" disabled>-</button>
+                                    <input type="text" class="cantidad-comprada" value="1" min="1" disabled/>
+                                    <button class="btn-sumar" disabled>+</button>
                                 </div>
                             </div>
                         </div>
@@ -60,15 +62,24 @@
                 </div>
                 <article class="detalle-producto">
                     <ul class="product-stats">
-                        <li><strong>Name: </strong><span class="value">Archangel Sword</span></li>
-                        <li><strong>Sword: </strong><span class="value">One Handed</span></li>
-                        <li>P Atk: <span class="value">194</span></li>
-                        <li>M Atk: <span class="value">99</span></li>
-                        <li>Atk Spd: <span class="value">379</span></li>
-                        <li>SoulShots: <span class="value">1</span></li>
-                        <li>SpiritShots: <span class="value">1</span></li>
-                        <li>Weight: <span class="value">1350</span></li>
-                        <li>Bestows one of the following functions: Focus, Critical Damage or Haste.</li>
+                        <li><strong>Nombre del Arma: </strong><span class="value"><%=Oferta.weapon.name%></span></li>
+                        <li><strong>Tipo del Arma: </strong><span class="value"><%=Oferta.weapon.weaponType%></span></li>
+                        <li><strong>Consumo de Mana: </strong><span class="value"><%=Oferta.weapon.mp_consume%></span></li>
+                        <li><strong>Brazo en e que se Usa, Left/Right: </strong><span class="value"><%=Oferta.weapon.bodypart%></span></li>
+                        <li><strong>Cristal otorgado al romperse: </strong><span class="value"><%=Oferta.weapon.crystal_type%></span></li>
+                        <li><strong>Cantidad de Cristales otorgado al romperse: </strong><span class="value"><%=Oferta.weapon.crystal_count%></span></li>
+                        <li><strong>Peso: </strong><span class="value"><%=Oferta.weapon.weight%></span></li>
+                        <li><strong>Uso de Soulshots: </strong><span class="value"><%=Oferta.weapon.soulshots%></span></li>
+                        <li><strong>Uso de Spiritshots: </strong><span class="value"><%=Oferta.weapon.spiritshots%></span></li>
+                        <li><strong>Poder de daño: </strong><span class="value"><%=Oferta.weapon.p_dam%></span></li>
+                        <li><strong>Poder de daño aleatorio: </strong><span class="value"><%=Oferta.weapon.rnd_dam%></span></li>
+                        <li><strong>Poder de daño critico: </strong><span class="value"><%=Oferta.weapon.critical%></span></li>
+                        <li><strong>Puntería: </strong><span class="value"><%=Oferta.weapon.hit_modify%></span></li>
+                        <li><strong>Esquive: </strong><span class="value"><%=Oferta.weapon.avoid_modify%></span></li>
+                        <li><strong>Defensa: </strong><span class="value"><%=Oferta.weapon.shield_def%></span></li>
+                        <li><strong>Tasa de Defensa: </strong><span class="value"><%=Oferta.weapon.shield_def_rate%></span></li>
+                        <li><strong>Velocidad de Ataque: </strong><span class="value"><%=Oferta.weapon.atk_speed%></span></li>
+                        <li><strong>Precio en Tiendas del Juego: </strong><span class="value">Adena: <%=Oferta.weapon.price%></span></li>
                     </ul>
                     
                 </article>

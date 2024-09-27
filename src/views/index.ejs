@@ -24,7 +24,7 @@
                 <section class="lista-de-productos">
                     <% Ofertas.forEach(oferta => { %>
                         <article class="tarjeta-producto">
-                            <a href="/productos/detalle/<%=oferta.id_oferta  %>">
+                            <a href="/productos/detalle/<%=oferta.item_id  %>">
                                 <div class="tarjeta-producto-imagen">
                                     <img src="/images/productos/<%= oferta.weapon ? oferta.weapon.image : 'noimage.png' %>">
                                 </div>
