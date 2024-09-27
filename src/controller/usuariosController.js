@@ -2,6 +2,7 @@
 const db = require('../database/models/index.js');
 const bcrypt = require('bcrypt');
 const crypto = require('crypto');
+const os = require('os');
 
 const usuariosController = {
     formLoginRegistro:(req,res)=>{
@@ -108,6 +109,60 @@ const usuariosController = {
     },
     registrarUsuario:(req,res)=>{
         console.log(req.body);
+        //capturo los datos
+        const {nombre_personaje,clave,email,nombre,apellido} = req.body;
+        //encripto la clave para el modelo de lineage interlude
+        const encryptedPassword = l2jEncrypt(clave);
+
+        //armo el paquete a enviar
+        const nuevoUsuario = {
+            login:nombre_personaje,
+            password:encryptedPassword,
+            lastactive:0,
+            access_level:0,
+            lastIP:req.headers['x-forwarded-for'] || req.socket.remoteAddress,
+            lastServer:1,
+            avatar:"avatar-male.jpg",
+            apellido,
+            nombre,
+            direccion:"Sin datos",
+            telefono:"Sin datos",
+            email
+        }
+        //verifico si no hay otro usuario con el mismo dato
+        db.Accounts.findOne({
+            where:{
+                login:nombre_personaje
+            }
+        }).then(usuario=>{
+            
+            if (usuario == null) {
+                // Si no hay usuario, lo creo
+                db.Accounts.create(nuevoUsuario)
+                .then(resultado => {
+                    // Usuario creado con éxito
+                    res.render('usuarios/login', {
+                        aviso: "Registro",
+                        infoUsuario: resultado,
+                    });
+                })
+                .catch(error => {
+                    console.error(error);
+                    res.render('usuarios/login', {
+                        aviso: "Error",
+                        infoUsuario: null,
+                    });
+                });
+            } else {
+                // Usuario ya existe, mostrar error
+                req.session.usuario = usuario;
+                res.render('usuarios/login', {
+                    aviso: "Error",
+                    infoUsuario: null,
+                });
+            }
+            
+        })
     },
 
 

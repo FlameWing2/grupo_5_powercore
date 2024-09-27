@@ -49,15 +49,15 @@
                             </div>
                             <div class="form-group">
                                 <label for="registro-correo">Correo Electrónico</label>
-                                <input type="email" id="registro-correo" name="correo" required>
+                                <input type="email" id="registro-correo" name="email" required>
                             </div>
                             <div class="form-group">
                                 <label for="registro-nombre-original">Nombre</label>
-                                <input type="text" id="registro-nombre-original" name="nombre_original" required>
+                                <input type="text" id="registro-nombre-original" name="nombre" required>
                             </div>
-                            <div class="form-group"></div>
+                            <div class="form-group">
                                 <label for="registro-apellido-original">Apellido</label>
-                                <input type="text" id="registro-apellido-original" name="apellido_original" required>
+                                <input type="text" id="registro-apellido-original" name="apellido" required>
                             </div>
                             <button type="submit" class="btn-registro" id="registro-btn">Registrar</button>
                         </form>
@@ -87,6 +87,12 @@
                         title: 'Respuesta del Servidor!',
                         text: 'Su cuenta no existe o sus datos son incorrectos',
                         icon: 'error'
+                    })
+        } else if (aviso === 'Registro') {
+            Swal.fire({
+                        title: 'Respuesta del Servidor!',
+                        text: 'Su cuenta se creo de forma correcta',
+                        icon: 'success'
                     })
         }
     </script>

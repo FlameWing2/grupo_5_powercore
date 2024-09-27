@@ -115,7 +115,8 @@ document.addEventListener('DOMContentLoaded', function () {
     // Evento para el botón de Registro
     const registroButton = document.getElementById('registro-btn');
     if(registroButton!=null){
-        registroButton.addEventListener('click', function() {
+        registroButton.addEventListener('click', function(e) {
+            e.preventDefault();
             const clave = document.getElementById('registro-clave').value;
             const repetirClave = document.getElementById('registro-repetir-clave').value;
         
@@ -138,13 +139,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     cancelButtonText: 'Cancelar'
                 }).then((result) => {
                     if (result.isConfirmed) {
-                        Swal.fire({
-                            title: 'Registro exitoso',
-                            text: 'Tu cuenta ha sido registrada correctamente.',
-                            icon: 'success'
-                        }).then(() => {
-                            document.getElementById('form-registro').submit();
-                        });
+                        document.getElementById('form-registro').submit();
                     }
                 });
             }
