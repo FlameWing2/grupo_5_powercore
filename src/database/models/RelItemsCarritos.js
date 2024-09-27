@@ -1,6 +1,6 @@
 module.exports = (Sequelize, DataTypes) => {
-    const RelAccountsCarritos = Sequelize.define('RelAccountsCarritos', {
-        id_account_carrito: {
+    const RelItemsCarritos = Sequelize.define('RelItemsCarritos', {
+        id_items_carrito: {
             type: DataTypes.INTEGER,
             allowNull: false,
             autoIncrement: true,
@@ -42,25 +42,25 @@ module.exports = (Sequelize, DataTypes) => {
             defaultValue: null
         }
     }, {
-        tableName: 'rel_accounts_carritos',
-        timestamps: true, // Sequelize gestionará createdAt y updatedAt
+        tableName: 'rel_items_carritos',
+        timestamps: true, 
         createdAt: 'created_at',
         updatedAt: 'updated_at'
     });
 
     // Definición de asociaciones
-    RelAccountsCarritos.associate = models => {
-        RelAccountsCarritos.belongsTo(models.Etcitem, {
+    RelItemsCarritos.associate = models => {
+        RelItemsCarritos.belongsTo(models.Etcitem, {
             as: 'item',
             foreignKey: 'item_id',
             targetKey: 'item_id'
         });
-        RelAccountsCarritos.belongsTo(models.Carritos, {
+        RelItemsCarritos.belongsTo(models.Carritos, {
             as: 'carrito',
             foreignKey: 'id_carrito',
             targetKey: 'id_carrito'
         });
     };
 
-    return RelAccountsCarritos;
+    return RelItemsCarritos;
 };
