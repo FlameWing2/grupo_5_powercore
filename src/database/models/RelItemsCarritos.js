@@ -49,18 +49,18 @@ module.exports = (Sequelize, DataTypes) => {
     });
 
     // Definición de asociaciones
-    RelItemsCarritos.associate = models => {
-        RelItemsCarritos.belongsTo(models.Etcitem, {
-            as: 'item',
-            foreignKey: 'item_id',
-            targetKey: 'item_id'
-        });
-        RelItemsCarritos.belongsTo(models.Carritos, {
-            as: 'carrito',
-            foreignKey: 'id_carrito',
-            targetKey: 'id_carrito'
-        });
-    };
+    // RelItemsCarritos.associate = models => {
+    //     RelItemsCarritos.belongsTo(models.Etcitem, {
+    //         as: 'item',
+    //         foreignKey: 'item_id',
+    //         targetKey: 'item_id'
+    //     });
+    //     RelItemsCarritos.belongsTo(models.Carritos, {
+    //         as: 'carrito',
+    //         foreignKey: 'id_carrito',
+    //         targetKey: 'id_carrito'
+    //     });
+    // };
 
     return RelItemsCarritos;
 };

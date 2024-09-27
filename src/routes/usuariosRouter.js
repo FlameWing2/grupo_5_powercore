@@ -7,6 +7,7 @@ const usuariosController = require('../controller/usuariosController');
 //generamos las distintas rutas
 Router.get('/login',usuariosController.formLoginRegistro);
 Router.get('/contacto',usuariosController.formContacto);
+Router.post('/contacto',usuariosController.crearContacto);
 Router.get('/perfil',usuariosController.formPerfil);
 
 Router.post('/autenticar',usuariosController.validarUsuario);

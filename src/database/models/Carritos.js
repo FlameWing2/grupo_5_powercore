@@ -40,14 +40,13 @@ module.exports = (Sequelize, DataTypes) => {
 
     // Definición de asociaciones
     Carritos.associate = models => {
-        Carritos.hasMany(models.RelAccountsCarritos, {
+        Carritos.hasMany(models.RelItemsCarritos, {
             as: 'relacionesCarrito',
             foreignKey: 'id_carrito'
         });
         Carritos.belongsTo(models.Accounts, {
             as: 'account',
             foreignKey: 'login',
-            targetKey: 'login'
         });
     };
 

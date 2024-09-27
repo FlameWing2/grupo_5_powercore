@@ -1,5 +1,5 @@
 module.exports = (Sequelize, DataTypes) => {
-    const EtcItem = Sequelize.define('EtcItem', {
+    const EtcItems = Sequelize.define('EtcItems', {
         item_id: {
             type: DataTypes.DECIMAL(11, 0),
             allowNull: false,
@@ -105,5 +105,5 @@ module.exports = (Sequelize, DataTypes) => {
         collate: 'latin1_swedish_ci'
     });
 
-    return EtcItem;
+    return EtcItems;
 };
