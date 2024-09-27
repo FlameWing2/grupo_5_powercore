@@ -1,5 +1,5 @@
 module.exports = (Sequelize, DataTypes) => {
-    const Etcitem = Sequelize.define('Etcitem', {
+    const EtcItem = Sequelize.define('EtcItem', {
         item_id: {
             type: DataTypes.DECIMAL(11, 0),
             allowNull: false,
@@ -9,17 +9,20 @@ module.exports = (Sequelize, DataTypes) => {
         name: {
             type: DataTypes.STRING(100),
             allowNull: true,
-            defaultValue: null
+            defaultValue: null,
+            collate: 'latin1_swedish_ci'
         },
         crystallizable: {
             type: DataTypes.STRING(5),
             allowNull: true,
-            defaultValue: null
+            defaultValue: null,
+            collate: 'latin1_swedish_ci'
         },
         item_type: {
             type: DataTypes.STRING(12),
             allowNull: true,
-            defaultValue: null
+            defaultValue: null,
+            collate: 'latin1_swedish_ci'
         },
         weight: {
             type: DataTypes.DECIMAL(4, 0),
@@ -29,12 +32,14 @@ module.exports = (Sequelize, DataTypes) => {
         consume_type: {
             type: DataTypes.STRING(9),
             allowNull: true,
-            defaultValue: null
+            defaultValue: null,
+            collate: 'latin1_swedish_ci'
         },
         crystal_type: {
             type: DataTypes.ENUM('none', 'd', 'c', 'b', 'a', 's'),
             allowNull: false,
-            defaultValue: 'none'
+            defaultValue: 'none',
+            collate: 'latin1_swedish_ci'
         },
         duration: {
             type: DataTypes.DECIMAL(3, 0),
@@ -54,37 +59,51 @@ module.exports = (Sequelize, DataTypes) => {
         sellable: {
             type: DataTypes.STRING(5),
             allowNull: true,
-            defaultValue: null
+            defaultValue: null,
+            collate: 'latin1_swedish_ci'
         },
         dropable: {
             type: DataTypes.STRING(5),
             allowNull: true,
-            defaultValue: null
+            defaultValue: null,
+            collate: 'latin1_swedish_ci'
         },
         destroyable: {
             type: DataTypes.STRING(5),
             allowNull: true,
-            defaultValue: null
+            defaultValue: null,
+            collate: 'latin1_swedish_ci'
         },
         tradeable: {
             type: DataTypes.STRING(5),
             allowNull: true,
-            defaultValue: null
+            defaultValue: null,
+            collate: 'latin1_swedish_ci'
         },
         oldname: {
             type: DataTypes.STRING(100),
             allowNull: false,
-            defaultValue: ''
+            defaultValue: '',
+            collate: 'latin1_swedish_ci'
         },
         oldtype: {
             type: DataTypes.STRING(100),
             allowNull: false,
-            defaultValue: ''
+            defaultValue: '',
+            collate: 'latin1_swedish_ci'
+        },
+        image: {
+            type: DataTypes.STRING(255),
+            allowNull: true,
+            defaultValue: null,
+            collate: 'latin1_swedish_ci'
         }
     }, {
         tableName: 'etcitem',
-        timestamps: false,
+        timestamps: false, 
+        charset: 'latin1',
+        collate: 'latin1_swedish_ci'
     });
 
-    return Etcitem;
+    return EtcItem;
 };
