@@ -106,6 +106,9 @@ const usuariosController = {
             res.redirect("/usuarios/login");
           }
     },
+    registrarUsuario:(req,res)=>{
+        console.log(req.body);
+    },
 
 
 

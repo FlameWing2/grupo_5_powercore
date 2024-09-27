@@ -65,7 +65,12 @@ module.exports = (Sequelize, DataTypes) => {
             type: DataTypes.DATE,
             allowNull: true,
             defaultValue: null
-        }
+        },
+        email: {
+            type: DataTypes.STRING(255),
+            allowNull: true,
+            defaultValue: null
+        },
     }, {
         tableName: 'accounts',
         timestamps: true, 

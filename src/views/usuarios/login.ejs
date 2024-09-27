@@ -34,10 +34,10 @@
                     <!-- Formulario de Registro -->
                     <div class="register-form">
                         <h2>Registrar Cuenta</h2>
-                        <form id="form-registro" action="#" method="post">
+                        <form id="form-registro" action="/usuarios/registrar" method="post">
                             <div class="form-group">
                                 <label for="registro-nombre-personaje">Nombre del Personaje</label>
-                                <input type="text" id="registro-nombre-personaje" name="nombre-personaje" required>
+                                <input type="text" id="registro-nombre-personaje" name="nombre_personaje" required>
                             </div>
                             <div class="form-group">
                                 <label for="registro-clave">Clave</label>
@@ -45,17 +45,21 @@
                             </div>
                             <div class="form-group">
                                 <label for="registro-repetir-clave">Repetir Clave</label>
-                                <input type="password" id="registro-repetir-clave" name="repetir-clave" required>
+                                <input type="password" id="registro-repetir-clave" name="repetir_clave" required>
                             </div>
                             <div class="form-group">
                                 <label for="registro-correo">Correo Electrónico</label>
                                 <input type="email" id="registro-correo" name="correo" required>
                             </div>
                             <div class="form-group">
-                                <label for="registro-nombre-original">Nombre Original</label>
-                                <input type="text" id="registro-nombre-original" name="nombre-original" required>
+                                <label for="registro-nombre-original">Nombre</label>
+                                <input type="text" id="registro-nombre-original" name="nombre_original" required>
                             </div>
-                            <button type="button" class="btn-registro" id="registro-btn">Registrar</button>
+                            <div class="form-group"></div>
+                                <label for="registro-apellido-original">Apellido</label>
+                                <input type="text" id="registro-apellido-original" name="apellido_original" required>
+                            </div>
+                            <button type="submit" class="btn-registro" id="registro-btn">Registrar</button>
                         </form>
                     </div>
                 </div>
@@ -69,8 +73,7 @@
     <%- include('../partials/scripts') %>
     <script>
         // Verifica si hay un aviso pasado desde el servidor y muestra la alerta
-        const aviso = <%- JSON.stringify(aviso) %>; // Renderizar la variable en el script
-    
+        const aviso = <%- JSON.stringify(aviso) %>;
         if (aviso === 'OK') {
             document.querySelector(".no-login").style.display="block";
             Swal.fire({

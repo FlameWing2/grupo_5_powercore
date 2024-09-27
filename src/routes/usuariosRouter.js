@@ -12,4 +12,6 @@ Router.get('/perfil',usuariosController.formPerfil);
 
 Router.post('/autenticar',usuariosController.validarUsuario);
 Router.get("/salir", usuariosController.salir);
+
+Router.post('/registrar',usuariosController.registrarUsuario);
 module.exports = Router;
