@@ -14,7 +14,7 @@
                 <!-- Columna 1: Imagen del avatar y botón cambiar -->
                 <div class="columna-perfil columna-perfil-izquierda">
                     <div class="avatar-perfil">
-                        <img src="/images/autores/leo.png" alt="Avatar" class="avatar-imagen-perfil">
+                        <img src="/images/autores/<%=infoUsuario.avatar %>" alt="Avatar" class="avatar-imagen-perfil">
                         <button class="btn-cambiar-avatar-perfil">Cambiar Avatar</button>
                     </div>
                 </div>
@@ -25,37 +25,36 @@
                         <h2>Datos Personales</h2>
                         <div class="campo-formulario-perfil">
                             <label for="apellido">Apellido:</label>
-                            <input type="text" id="apellido" name="apellido" required>
+                            <input type="text" id="apellido" name="apellido" required value="<%=infoUsuario.apellido %>">
                         </div>
                         <div class="campo-formulario-perfil">
                             <label for="nombre">Nombre:</label>
-                            <input type="text" id="nombre" name="nombre" required>
+                            <input type="text" id="nombre" name="nombre" required value="<%=infoUsuario.nombre %>">
                         </div>
                         <div class="campo-formulario-perfil">
                             <label for="direccion">Dirección:</label>
-                            <input type="text" id="direccion" name="direccion" required>
+                            <input type="text" id="direccion" name="direccion" required <%=infoUsuario.direccion %>>
                         </div>
                         <div class="campo-formulario-perfil">
                             <label for="telefono">Teléfono:</label>
-                            <input type="text" id="telefono" name="telefono" required>
+                            <input type="text" id="telefono" name="telefono" required <%=infoUsuario.telefono %>>
                         </div>
                         <div class="campo-formulario-perfil">
                             <label for="correo">Correo:</label>
-                            <input type="email" id="correo" name="correo" required>
+                            <input type="email" id="correo" name="email" required <%=infoUsuario.email %>>
                         </div>
                         
                         <hr class="separador-perfil">
         
                         <h2>Datos de Usuario</h2>
                         <div class="campo-formulario-perfil">
-                            <label for="usuario">Usuario:</label>
-                            <input type="text" id="usuario" name="usuario" required>
+                            <label for="usuario">Usuario:</label><b><%=infoUsuario.login %></b><span style="color:red">* Este dato no puede cambiarse</span>
                         </div>
                         <div class="campo-formulario-perfil">
                             <label for="clave">Clave:</label>
-                            <input type="password" id="clave" name="clave" required>
+                            <input type="password" id="clave" name="clave" required <%=infoUsuario.password %>>
                         </div>
-        
+         
                         <button type="submit" class="btn-guardar-perfil" id="btn-guardar-perfil">Guardar Cambios</button>
                     </form>
                 </div>
@@ -67,6 +66,24 @@
 
     <!-- script -->
     <%- include('../partials/scripts') %>
-
+    <script>
+        // Verifica si hay un aviso pasado desde el servidor y muestra la alerta
+        const aviso = <%- JSON.stringify(aviso) %>;
+        if (aviso === 'OK') {
+            document.querySelector(".no-login").style.display="block";
+            Swal.fire({
+                        title: 'Respuesta del Servidor!',
+                        text: 'Sus datos fueron Actualizados',
+                        icon: 'success'
+                    })
+            
+        } else if (aviso === 'Error') {
+            Swal.fire({
+                        title: 'Respuesta del Servidor!',
+                        text: 'No se pudo actualizar su información',
+                        icon: 'error'
+                    })
+        }
+    </script>
 </body>
 </html>

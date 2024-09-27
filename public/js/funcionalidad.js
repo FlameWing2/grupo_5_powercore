@@ -149,7 +149,8 @@ document.addEventListener('DOMContentLoaded', function () {
     /*perfil actualizar*/
     const actualizarPerfilButton = document.getElementById('btn-guardar-perfil');
     if(actualizarPerfilButton!=null){
-        actualizarPerfilButton.addEventListener('click', function() {
+        actualizarPerfilButton.addEventListener('click', function(e) {
+            e.preventDefault();
             Swal.fire({
                 title: 'Perfil de Usuario',
                 text: '¿Estás seguro que quieres Actualizar la información?',
@@ -161,13 +162,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 cancelButtonText: 'Cancelar'
             }).then((result) => {
                 if (result.isConfirmed) {
-                    Swal.fire({
-                        title: 'Actualización del Usuario',
-                        text: 'Tu Perfil fue actualizado',
-                        icon: 'success'
-                    }).then(() => {
-                        document.getElementById('formulario-perfil').submit();
-                    });
+                    document.getElementById('formulario-perfil').submit();
                 }
             });
         });
