@@ -6,10 +6,15 @@ const os = require('os');
 
 const mainController = {
     index:(req,res)=>{
-        db.Ofertas
-        res.render('index',{
-            infoUsuario: req.session.usuario ? req.session.usuario : null,
-        });
+        db.Ofertas.findAll({
+            include:[{association:"weapon"}]
+        }).then(Ofertas=>{
+            res.render('index',{
+                Ofertas,
+                infoUsuario: req.session.usuario ? req.session.usuario : null,
+            });
+        })
+        
     },
     nosotros:(req,res)=>{
         res.render('quienes_somos',{

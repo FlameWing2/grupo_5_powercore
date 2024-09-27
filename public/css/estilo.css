@@ -371,6 +371,7 @@ video{
     font-weight: bold;
     color: var(--color-Saffron);
     border-radius: 50%;
+    font-size: 1.5rem;
 }
 
 .producto-precio-dinero {
@@ -379,6 +380,7 @@ video{
     display: inline-flex;
     align-items: center;
     margin-top: 8px;
+    font-size: 1.5rem;
 }
 
 .producto-precio-dinero img {
@@ -474,6 +476,7 @@ video{
 
 .tipo-pago img{
     border-radius: 50%;
+    margin-left: 5px;
 }
 
 .btn-tipo-pago{
