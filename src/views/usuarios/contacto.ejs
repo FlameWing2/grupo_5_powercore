@@ -11,10 +11,14 @@
         
         <main class="main">
             <section id="contacto" class="contacto">
+                <div id="alert" class="alert hidden">
+                    <span id="alert-message"></span>
+                    <button onclick="closeAlert()">×</button>
+                </div>
                 <div class="separador"></div>
                 <h2>Contacto</h2>
                 <p>¿Tienes alguna consulta o reclamo? Llena el formulario y nos pondremos en contacto contigo a la brevedad.</p>
-                <form action="/usuarios/contacto" method="post" class="form-contacto">
+                <form action="/usuarios/contacto" method="post" class="form-contacto" id="form-contacto">
                     <div class="form-group">
                         <label for="nombre">Nombre Completo</label>
                         <input type="text" id="nombre" name="nombre" required>
@@ -26,11 +30,9 @@
                     <div class="form-group">
                         <label for="area">Área de Contacto</label>
                         <select id="area" name="area" required>
-                            <option value="reclamo">Reclamo</option>
-                            <option value="venta">Venta</option>
-                            <option value="cobro">Cobro</option>
-                            <option value="soporte">Soporte Técnico</option>
-                            <option value="consulta_general">Consulta General</option>
+                            <% Areas.forEach(area => { %>
+                                <option value=<%=  area.id_area %>><%= area.nombre_area  %></option>
+                            <% }) %>
                         </select>
                     </div>
                     <div class="form-group">
@@ -47,6 +49,27 @@
     </section>
     
     <!-- script -->
+
+   
     <%- include('../partials/scripts') %>
+    <script>
+        // Verifica si hay un aviso pasado desde el servidor y muestra la alerta
+        const aviso = <%- JSON.stringify(aviso) %>; // Renderizar la variable en el script
+    
+        if (aviso === 'OK') {
+            Swal.fire({
+                        title: 'Enviado!',
+                        text: 'Tu mensaje ha sido enviado correctamente, pronto se comunicaran con usted a su correo',
+                        icon: 'success'
+                    })
+        } else if (aviso === 'Error') {
+            Swal.fire({
+                        title: 'Enviado!',
+                        text: 'Tu mensaje no pudo ser recibido, pruebe de enviarlo de nuevo mas tarde',
+                        icon: 'danger'
+                    })
+        }
+    </script>
+
 </body>
 </html>

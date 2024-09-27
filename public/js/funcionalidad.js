@@ -72,7 +72,8 @@ document.addEventListener('DOMContentLoaded', function () {
     //pantalla contacto
     const contactoButton =document.getElementById('enviar-btn');
     if(contactoButton!=null){
-        contactoButton.addEventListener('click', function() {
+        contactoButton.addEventListener('click', function(e) {
+            e.preventDefault();
             Swal.fire({
                 title: '¿Estás seguro?',
                 text: 'Vas a enviar la información de contacto.',
@@ -84,13 +85,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 cancelButtonText: 'Cancelar'
             }).then((result) => {
                 if (result.isConfirmed) {
-                    Swal.fire({
-                        title: 'Enviado!',
-                        text: 'Tu mensaje ha sido enviado correctamente.',
-                        icon: 'success'
-                    }).then(() => {
-                        document.getElementById('form-contacto').submit();
-                    });
+                    document.getElementById('form-contacto').submit();
                 }
             });
         });

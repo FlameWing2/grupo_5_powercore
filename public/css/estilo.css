@@ -1278,3 +1278,26 @@ thead{
     color: white;
     
 }
+
+.alert {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    color: #fff;
+    z-index: 1000;
+    transition: opacity 0.5s ease;
+}
+
+.alert.success {
+    background-color: #4caf50; /* Color de fondo para éxito */
+}
+
+.alert.error {
+    background-color: #f44336; /* Color de fondo para error */
+}
+
+.hidden {
+    display: none; /* Oculta la alerta */
+}
