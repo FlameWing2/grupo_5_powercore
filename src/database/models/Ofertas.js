@@ -17,7 +17,7 @@ module.exports = (Sequelize, DataTypes) => {
             defaultValue: null
         },
         cantidad_adena: {
-            type: DataTypes.DECIMAL(10, 2),
+            type: DataTypes.INTEGER,
             allowNull: true,
             defaultValue: null
         },
@@ -40,13 +40,25 @@ module.exports = (Sequelize, DataTypes) => {
             type: DataTypes.INTEGER,
             allowNull: true,
             defaultValue: null
+        },
+        created_at: {
+            type: DataTypes.DATE,
+            allowNull: true,
+            defaultValue: null
+        },
+        updated_at: {
+            type: DataTypes.DATE,
+            allowNull: true,
+            defaultValue: null
         }
     }, {
         tableName: 'ofertas',
-        timestamps: false // No se incluyen campos `created_at` ni `updated_at`
+        timestamps: true, // Sequelize gestionará createdAt y updatedAt
+        createdAt: 'created_at',
+        updatedAt: 'updated_at'
     });
 
-    // Aquí puedes definir las asociaciones si es necesario
+    // Definición de asociaciones, si aplica
     Ofertas.associate = models => {
         Ofertas.belongsTo(models.Accounts, {
             as: 'account',

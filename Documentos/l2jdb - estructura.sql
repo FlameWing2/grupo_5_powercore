@@ -11,7 +11,7 @@
  Target Server Version : 110502
  File Encoding         : 65001
 
- Date: 26/09/2024 19:22:22
+ Date: 27/09/2024 00:37:42
 */
 
 SET NAMES utf8mb4;
@@ -89,6 +89,18 @@ CREATE TABLE `admin_command_access_rights`  (
   `accessLevels` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_uca1400_ai_ci NOT NULL,
   PRIMARY KEY (`adminCommand`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb3 COLLATE = utf8mb3_uca1400_ai_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Table structure for areas
+-- ----------------------------
+DROP TABLE IF EXISTS `areas`;
+CREATE TABLE `areas`  (
+  `idarea` int NOT NULL AUTO_INCREMENT,
+  `nombre_area` varchar(75) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `created_at` datetime NULL DEFAULT NULL,
+  `updated_at` datetime NULL DEFAULT NULL,
+  PRIMARY KEY (`idarea`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for armor
@@ -269,6 +281,20 @@ CREATE TABLE `buff_templates`  (
   `price_adena` decimal(10, 0) NOT NULL DEFAULT -1,
   PRIMARY KEY (`id`, `name`, `skill_order`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb3 COLLATE = utf8mb3_uca1400_ai_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Table structure for carritos
+-- ----------------------------
+DROP TABLE IF EXISTS `carritos`;
+CREATE TABLE `carritos`  (
+  `id_carrito` int NOT NULL AUTO_INCREMENT,
+  `login` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `total_adena` int NULL DEFAULT NULL,
+  `total_dinero` decimal(10, 2) NULL DEFAULT NULL,
+  `created_at` datetime NULL DEFAULT NULL,
+  `updated_at` datetime NULL DEFAULT NULL,
+  PRIMARY KEY (`id_carrito`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for castle
@@ -833,6 +859,21 @@ DROP TABLE IF EXISTS `connection_test_table`;
 CREATE TABLE `connection_test_table`  (
   `a` char(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Table structure for contactos
+-- ----------------------------
+DROP TABLE IF EXISTS `contactos`;
+CREATE TABLE `contactos`  (
+  `id_contacto` int NOT NULL AUTO_INCREMENT,
+  `apenom` varchar(75) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `email` varchar(75) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `mensaje` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL,
+  `created_at` datetime NULL DEFAULT NULL,
+  `updated_at` datetime NULL DEFAULT NULL,
+  `id_area` int NULL DEFAULT NULL,
+  PRIMARY KEY (`id_contacto`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for ctf
@@ -1845,11 +1886,13 @@ CREATE TABLE `ofertas`  (
   `id_oferta` int NOT NULL AUTO_INCREMENT,
   `login` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `item_id` int NULL DEFAULT NULL,
-  `cantidad_adena` decimal(10, 2) NULL DEFAULT NULL,
+  `cantidad_adena` int NULL DEFAULT NULL,
   `cantidad_dinero` decimal(10, 2) NULL DEFAULT NULL,
   `fecha_inicio` datetime NULL DEFAULT NULL,
   `fecha_hasta` datetime NULL DEFAULT NULL,
   `estado` int NULL DEFAULT NULL,
+  `created_at` datetime NULL DEFAULT NULL,
+  `updated_at` datetime NULL DEFAULT NULL,
   PRIMARY KEY (`id_oferta`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
@@ -2056,6 +2099,22 @@ CREATE TABLE `rebirth_manager`  (
   `rebirthCount` int NOT NULL,
   PRIMARY KEY (`playerId`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Table structure for rel_accounts_carritos
+-- ----------------------------
+DROP TABLE IF EXISTS `rel_accounts_carritos`;
+CREATE TABLE `rel_accounts_carritos`  (
+  `id_account_carrito` int NOT NULL AUTO_INCREMENT,
+  `id_carrito` int NULL DEFAULT NULL,
+  `item_id` int NULL DEFAULT NULL,
+  `cantidad` int NULL DEFAULT NULL,
+  `total_adena` int NULL DEFAULT NULL,
+  `total_dinero` decimal(10, 2) NULL DEFAULT NULL,
+  `created_at` datetime NULL DEFAULT NULL,
+  `updated_at` datetime NULL DEFAULT NULL,
+  PRIMARY KEY (`id_account_carrito`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for seven_signs
