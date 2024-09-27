@@ -12,18 +12,22 @@
             </div>
         </div>
         <div class="header-top-right">
-            <a href="/usuarios/perfil">
-                <div class="header-info-avatar">
-                    <% if(infoUsuario!=null){ %>
+            <% if(infoUsuario!=null){ %>
+                <a href="/usuarios/perfil">
+                    <div class="header-info-avatar">
+                        
                         <span class="header-info-avatar-usuario"><%=infoUsuario.apellido %> <%=infoUsuario.nombre %></span>
                         <img class="header-avatar" src="/images/autores/<%=infoUsuario.avatar  %>">
-                    <% }else{ %>
+                    </div>
+                </a>
+            <% }else{ %>
+                <a href="#">
+                    <div class="header-info-avatar">
                         <span class="header-info-avatar-usuario">Invitado</span>
                         <img class="header-avatar" src="/images/autores/avatar-male.jpg">
-                    <% } %>
-                    
-                </div>
-            </a>
+                    </div>
+                </a>
+            <% } %>
         </div>
     </div>
     <div class="header-bottom">
