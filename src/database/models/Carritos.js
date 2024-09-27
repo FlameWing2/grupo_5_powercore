@@ -33,7 +33,7 @@ module.exports = (Sequelize, DataTypes) => {
         }
     }, {
         tableName: 'carritos',
-        timestamps: true, // Sequelize manejará createdAt y updatedAt
+        timestamps: true, 
         createdAt: 'created_at',
         updatedAt: 'updated_at'
     });

@@ -83,7 +83,7 @@ module.exports = (Sequelize, DataTypes) => {
         }
     }, {
         tableName: 'etcitem',
-        timestamps: false, // No se incluye `created_at` ni `updated_at`
+        timestamps: false,
     });
 
     return Etcitem;
