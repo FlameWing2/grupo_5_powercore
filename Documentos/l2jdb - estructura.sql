@@ -11,7 +11,7 @@
  Target Server Version : 110502
  File Encoding         : 65001
 
- Date: 27/09/2024 01:01:25
+ Date: 27/09/2024 01:08:30
 */
 
 SET NAMES utf8mb4;
@@ -134,6 +134,7 @@ CREATE TABLE `armor`  (
   `tradeable` varchar(5) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `item_skill_id` decimal(11, 0) NOT NULL DEFAULT 0,
   `item_skill_lvl` decimal(11, 0) NOT NULL DEFAULT 0,
+  `image` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   PRIMARY KEY (`item_id`) USING BTREE
 ) ENGINE = MyISAM CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
 
@@ -2407,6 +2408,7 @@ CREATE TABLE `weapon`  (
   `onCrit_skill_id` decimal(11, 0) NOT NULL DEFAULT 0,
   `onCrit_skill_lvl` decimal(11, 0) NOT NULL DEFAULT 0,
   `onCrit_skill_chance` decimal(11, 0) NOT NULL DEFAULT 0,
+  `image` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   PRIMARY KEY (`item_id`) USING BTREE
 ) ENGINE = MyISAM CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
 
