@@ -21,75 +21,134 @@
         
                     <!-- Columna Izquierda: Imagen del Producto -->
                     <div class="producto-editar-imagen">
-                        <img src="/images/productos/weapon_samurai_longsword_i00.png" alt="Imagen del Producto">
-                        <button class="btn-cambiar-imagen">Cambiar Imagen</button>
+                        <img src="/images/productos/noimage.png" alt="Imagen del Producto">
+                        <!-- <button class="btn-cambiar-imagen">Seleccionar Imagen</button> -->
+                         <span style="color:red"> *La imagen se agrega editando el producto</span>
                     </div>
         
                     <!-- Columna Derecha: Formulario de edición -->
                     <div class="producto-editar-formulario">
-                        <form action="#" method="POST">
+                        <form action="/admin/crear_objeto" method="POST" id="form-crear-objeto">
+                            <!-- Campo para el nombre del objeto -->
                             <div class="campo-formulario">
-                                <label for="nombre">Nombre del Producto:</label>
-                                <input type="text" id="nombre" name="nombre" value="Archangel Sword">
+                                <label for="nombre">Nombre del Objeto:</label>
+                                <input type="text" id="nombre" name="nombre" value="">
                             </div>
-                            
+                    
+                            <!-- Tipo del Arma -->
                             <div class="campo-formulario">
-                                <label for="tipo-arma">Tipo de Arma:</label>
-                                <input type="text" id="tipo-arma" name="tipo-arma" value="One Handed">
+                                <label for="tipo">Tipo del Arma:</label>
+                                <input type="text" id="tipo" name="tipo" value="">
                             </div>
-                            
+                    
+                            <!-- Consumo de Mana -->
                             <div class="campo-formulario">
-                                <label for="p-atk">P. Atk:</label>
-                                <input type="number" id="p-atk" name="p-atk" value="194">
+                                <label for="mp_consume">Consumo de Mana:</label>
+                                <input type="number" id="mp_consume" name="mp_consume" value="">
                             </div>
-                            
+                    
+                            <!-- Brazo en el que se usa -->
                             <div class="campo-formulario">
-                                <label for="m-atk">M. Atk:</label>
-                                <input type="number" id="m-atk" name="m-atk" value="99">
+                                <label for="bodypart">Lugar en e que se Usa:</label>
+                                <select name="bodyparts" id="bodyparts">
+                                    <% Bodyparts.forEach(bodypart => { %>
+                                        <option value="<%=bodypart.name%>"><%=bodypart.name%></option>
+                                    <% }) %>
+                                </select>
                             </div>
-                            
+                    
+                            <!-- Cristal otorgado al romperse -->
                             <div class="campo-formulario">
-                                <label for="atk-spd">Atk Spd:</label>
-                                <input type="number" id="atk-spd" name="atk-spd" value="379">
+                                <label for="crystal_type">Cristal otorgado al romperse:</label>
+                                <input type="text" id="crystal_type" name="crystal_type" value="">
                             </div>
-                            
+                    
+                            <!-- Cantidad de Cristales otorgados al romperse -->
                             <div class="campo-formulario">
-                                <label for="soulshots">SoulShots:</label>
-                                <input type="number" id="soulshots" name="soulshots" value="1">
+                                <label for="crystal_count">Cantidad de Cristales otorgados al romperse:</label>
+                                <input type="number" id="crystal_count" name="crystal_count" value="">
                             </div>
-                            
+                    
+                            <!-- Peso -->
                             <div class="campo-formulario">
-                                <label for="spiritshots">SpiritShots:</label>
-                                <input type="number" id="spiritshots" name="spiritshots" value="1">
+                                <label for="weight">Peso:</label>
+                                <input type="number" id="weight" name="weight" value="">
                             </div>
-                            
+                    
+                            <!-- Uso de Soulshots -->
                             <div class="campo-formulario">
-                                <label for="peso">Peso:</label>
-                                <input type="number" id="peso" name="peso" value="1350">
+                                <label for="soulshots">Uso de Soulshots:</label>
+                                <input type="text" id="soulshots" name="soulshots" value="">
                             </div>
-        
+                    
+                            <!-- Uso de Spiritshots -->
                             <div class="campo-formulario">
-                                <label for="funciones">Funciones:</label>
-                                <textarea id="funciones" name="funciones">Focus, Critical Damage or Haste</textarea>
+                                <label for="spiritshots">Uso de Spiritshots:</label>
+                                <input type="text" id="spiritshots" name="spiritshots" value="">
                             </div>
-                            
-                            <!-- Precios -->
+                    
+                            <!-- Poder de daño -->
                             <div class="campo-formulario">
-                                <label for="precio-adena">Precio Adenas:</label>
-                                <input type="number" id="precio-adena" name="precio-adena" value="5000">
+                                <label for="p_dam">Poder de daño:</label>
+                                <input type="number" id="p_dam" name="p_dam" value="">
                             </div>
-        
+                    
+                            <!-- Poder de daño aleatorio -->
                             <div class="campo-formulario">
-                                <label for="precio-dolar">Precio Pesos/Dólar:</label>
-                                <input type="text" id="precio-dolar" name="precio-dolar" value="$2.20">
+                                <label for="rnd_dam">Poder de daño aleatorio:</label>
+                                <input type="number" id="rnd_dam" name="rnd_dam" value="">
                             </div>
-        
+                    
+                            <!-- Poder de daño crítico -->
+                            <div class="campo-formulario">
+                                <label for="critical">Poder de daño crítico:</label>
+                                <input type="number" id="critical" name="critical" value="">
+                            </div>
+                    
+                            <!-- Puntería -->
+                            <div class="campo-formulario">
+                                <label for="hit_modify">Puntería:</label>
+                                <input type="number" id="hit_modify" name="hit_modify" value="">
+                            </div>
+                    
+                            <!-- Esquive -->
+                            <div class="campo-formulario">
+                                <label for="avoid_modify">Esquive:</label>
+                                <input type="number" id="avoid_modify" name="avoid_modify" value="">
+                            </div>
+                    
+                            <!-- Defensa -->
+                            <div class="campo-formulario">
+                                <label for="shield_def">Defensa:</label>
+                                <input type="number" id="shield_def" name="shield_def" value="">
+                            </div>
+                    
+                            <!-- Tasa de defensa -->
+                            <div class="campo-formulario">
+                                <label for="shield_def_rate">Tasa de Defensa:</label>
+                                <input type="number" id="shield_def_rate" name="shield_def_rate" value="">
+                            </div>
+                    
+                            <!-- Velocidad de Ataque -->
+                            <div class="campo-formulario">
+                                <label for="atk_speed">Velocidad de Ataque:</label>
+                                <input type="number" id="atk_speed" name="atk_speed" value="">
+                            </div>
+                    
+                            <!-- Precio en tiendas del juego -->
+                            <div class="campo-formulario">
+                                <label for="price">Precio en tiendas del juego (Adena):</label>
+                                <input type="number" id="price" name="price" value="">
+                            </div>
+                    
+                            <!-- Botón de envío -->
                             <div class="botones-formulario">
-                                <button type="submit" class="btn-guardar">Guardar Cambios</button>
+                                <button type="submit" class="btn-guardar-objeto">Guardar Cambios</button>
                                 <button type="reset" class="btn-cancelar">Cancelar</button>
                             </div>
                         </form>
                     </div>
+                    
                 </article>
             </section>
         </main>
@@ -99,5 +158,23 @@
 
     <!-- script -->
     <%- include('../partials/scripts') %>
+    <script>
+        // Verifica si hay un aviso pasado desde el servidor y muestra la alerta
+        const aviso = <%- JSON.stringify(aviso) %>;
+        if (aviso === 'OK') {
+            Swal.fire({
+                        title: 'Respuesta del Servidor!',
+                        text: 'Objeto Creado de forma correcta',
+                        icon: 'success'
+                    })
+            
+        } else if (aviso === 'Error') {
+            Swal.fire({
+                        title: 'Respuesta del Servidor!',
+                        text: 'El Objeto no pudo ser creado',
+                        icon: 'error'
+                    })
+        } 
+    </script>
 </body>
 </html>

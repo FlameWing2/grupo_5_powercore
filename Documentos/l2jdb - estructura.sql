@@ -11,7 +11,7 @@
  Target Server Version : 110502
  File Encoding         : 65001
 
- Date: 27/09/2024 01:08:30
+ Date: 27/09/2024 21:40:30
 */
 
 SET NAMES utf8mb4;
@@ -84,6 +84,7 @@ CREATE TABLE `accounts`  (
   `telefono` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `created_at` datetime NULL DEFAULT NULL,
   `updated_at` datetime NULL DEFAULT NULL,
+  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   PRIMARY KEY (`login`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
@@ -102,11 +103,11 @@ CREATE TABLE `admin_command_access_rights`  (
 -- ----------------------------
 DROP TABLE IF EXISTS `areas`;
 CREATE TABLE `areas`  (
-  `idarea` int NOT NULL AUTO_INCREMENT,
+  `id_area` int NOT NULL AUTO_INCREMENT,
   `nombre_area` varchar(75) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `created_at` datetime NULL DEFAULT NULL,
   `updated_at` datetime NULL DEFAULT NULL,
-  PRIMARY KEY (`idarea`) USING BTREE
+  PRIMARY KEY (`id_area`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
@@ -246,6 +247,16 @@ CREATE TABLE `auto_chat_text`  (
   `chatText` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   PRIMARY KEY (`groupId`, `chatText`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Table structure for bodyparts
+-- ----------------------------
+DROP TABLE IF EXISTS `bodyparts`;
+CREATE TABLE `bodyparts`  (
+  `id_bodypart` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`id_bodypart`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for boxaccess
@@ -881,7 +892,7 @@ CREATE TABLE `contactos`  (
   `updated_at` datetime NULL DEFAULT NULL,
   `id_area` int NULL DEFAULT NULL,
   PRIMARY KEY (`id_contacto`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 15 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for ctf
@@ -1903,7 +1914,7 @@ CREATE TABLE `ofertas`  (
   `created_at` datetime NULL DEFAULT NULL,
   `updated_at` datetime NULL DEFAULT NULL,
   PRIMARY KEY (`id_oferta`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 26 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for olympiad_nobles

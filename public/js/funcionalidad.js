@@ -50,20 +50,45 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     const editButton = document.querySelector('.edit');
-    if(editButton!=null){
+    if (editButton != null) {
         editButton.addEventListener('click', function(event) {
-            event.preventDefault(); // Evita que el enlace redirija
+            event.preventDefault();
+            
+            const href = this.getAttribute('href');
+
             Swal.fire({
-                title: "Esta seguro de editar el Objeto",
+                title: "¿Está seguro de editar el Objeto?",
                 text: "Este proceso no tiene retorno!!!",
                 icon: "warning",
                 showCancelButton: true,
                 confirmButtonColor: "#3085d6",
                 cancelButtonColor: "#d33",
-                confirmButtonText: "Si, confirmo poder Editarlo"
+                confirmButtonText: "Sí, confirmo poder editarlo"
             }).then((result) => {
                 if (result.isConfirmed) {
-                    window.location.href = 'editar_producto.html';
+                    window.location.href = href;
+                }
+            });
+        });
+    }
+
+    //boton para guardar en crear objetos
+    const btnGuardarButton = document.querySelector('.btn-guardar-objeto');
+    if(btnGuardarButton!=null){
+        btnGuardarButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            Swal.fire({
+                title: '¿Estás seguro?',
+                text: 'Vas a guardar el objeto en Weapons?',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Sí, enviar',
+                cancelButtonText: 'Cancelar'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    document.getElementById('form-crear-objeto').submit();
                 }
             });
         });

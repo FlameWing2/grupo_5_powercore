@@ -202,11 +202,16 @@ module.exports = (Sequelize, DataTypes) => {
         charset: 'latin1',
         collate: 'latin1_swedish_ci'
     });
+
     Weapons.associate = models => {
         Weapons.hasMany(models.Ofertas, {
              as: 'ofertas',
             foreignKey: 'item_id',
         });
+        Weapons.belongsTo(models.Bodyparts, {
+            as: 'parteDelCuerpo',
+           foreignKey: 'bodypart',
+       });
      };
 
     return Weapons;

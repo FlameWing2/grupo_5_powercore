@@ -5,8 +5,9 @@ const adminController = require('../controller/adminController');
 
 
 //generamos las distintas rutas
-Router.get('/crear_producto',adminController.formCrear);
-Router.get('/editar_producto',adminController.formEditar);
-Router.get('/eliminar_producto',adminController.eliminar);
+Router.get('/crear_objeto',adminController.formCrear);
+Router.post('/crear_objeto',adminController.crearObjeto);
+Router.get('/editar_objeto/:id',adminController.formEditar);
+Router.get('/eliminar_objeto',adminController.eliminar);
 
 module.exports = Router;

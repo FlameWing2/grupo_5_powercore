@@ -1190,6 +1190,12 @@ thead{
     border-radius: 4px;
 }
 
+.campo-formulario-perfil select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
 .btn-guardar-perfil {
     padding: 0.75rem 1.5rem;
     background-color: #28a745;
@@ -1279,7 +1285,7 @@ thead{
 }
 
 .campo-formulario input,
-.campo-formulario textarea {
+.campo-formulario textarea, select {
     width: 100%;
     padding: 0.5rem;
     border: 1px solid #ccc;
