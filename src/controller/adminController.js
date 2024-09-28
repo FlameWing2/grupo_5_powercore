@@ -8,11 +8,13 @@ const os = require('os');
 const adminController = {
     formCrear:async (req,res)=>{
         const Bodyparts = await db.Bodyparts.findAll();
+        const CrystalsTypes = await db.CrystalsTypes.findAll();
         console.log(Bodyparts)
         res.render('admin/crear_producto',{
             infoUsuario: req.session.usuario ? req.session.usuario : null,
             aviso:"",
-            Bodyparts
+            Bodyparts,
+            CrystalsTypes
         });
     },
     crearObjeto:(req,res)=>{

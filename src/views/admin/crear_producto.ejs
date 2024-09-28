@@ -60,7 +60,11 @@
                             <!-- Cristal otorgado al romperse -->
                             <div class="campo-formulario">
                                 <label for="crystal_type">Cristal otorgado al romperse:</label>
-                                <input type="text" id="crystal_type" name="crystal_type" value="">
+                                <select name="crystal_type" id="crystal_type">
+                                    <% CrystalsTypes.forEach(crystal => { %>
+                                        <option value="<%=crystal.name%>"><%=crystal.name%></option>
+                                    <% }) %>
+                                </select>
                             </div>
                     
                             <!-- Cantidad de Cristales otorgados al romperse -->
