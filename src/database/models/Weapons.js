@@ -216,6 +216,10 @@ module.exports = (Sequelize, DataTypes) => {
             as: 'Cristales',
            foreignKey: 'crystal_type',
        });
+       Weapons.belongsTo(models.WeaponsTypes, {
+        as: 'weapon_type',
+       foreignKey: 'weaponType',
+   });
      };
 
     return Weapons;
