@@ -9,39 +9,47 @@ const adminController = {
     formCrear:async (req,res)=>{
         const Bodyparts = await db.Bodyparts.findAll();
         const CrystalsTypes = await db.CrystalsTypes.findAll();
+        const WeaponsTypes = await db.WeaponsTypes.findAll();
         console.log(Bodyparts)
         res.render('admin/crear_producto',{
             infoUsuario: req.session.usuario ? req.session.usuario : null,
             aviso:"",
             Bodyparts,
-            CrystalsTypes
+            CrystalsTypes,
+            WeaponsTypes
         });
     },
-    crearObjeto:(req,res)=>{
-        //res.json(req.body)
-        db.Weapons.create(req.body)
-        .then(weapon => {
+    crearObjeto: async (req, res) => {
+        try {
+            const weapon = await db.Weapons.create(req.body);
+            
             if (weapon) {
-                res.render('admin/crear_objeto', {
-                    weapon,
+                // Esperar la resolución de las promesas usando async/await
+                const Bodyparts = await db.Bodyparts.findAll();
+                const CrystalsTypes = await db.CrystalsTypes.findAll();
+                const WeaponsTypes = await db.WeaponsTypes.findAll();
+    
+                res.render('admin/crear_producto', {
                     infoUsuario: req.session.usuario ? req.session.usuario : null,
-                    aviso:"OK"
+                    aviso: "OK",
+                    Bodyparts,
+                    CrystalsTypes,
+                    WeaponsTypes
                 });
             } else {
-                res.render('admin/crear_objeto', {
-                    weapon,
+                res.render('admin/crear_producto', {
                     infoUsuario: req.session.usuario ? req.session.usuario : null,
-                    aviso:"Error"
+                    aviso: "Error"
                 });
             }
-        }).catch(error => {
-            res.render('admin/crear_objeto', {
-                weapon,
+        } catch (error) {
+            console.error("Error al crear el arma o al obtener datos relacionados: ", error);
+            res.render('admin/crear_producto', {
                 infoUsuario: req.session.usuario ? req.session.usuario : null,
-                aviso:"Error"
+                aviso: "Error"
             });
-        });
-    },
+        }
+    },    
     formEditar:(req,res)=>{
         const item_id = req.params.id;
     

@@ -31,14 +31,23 @@
                         <form action="/admin/crear_objeto" method="POST" id="form-crear-objeto">
                             <!-- Campo para el nombre del objeto -->
                             <div class="campo-formulario">
+                                <label for="nombre">Id del Objeto Nuevo:</label>
+                                <input type="text" id="item_id" name="item_id" value="">
+                            </div>
+
+                            <div class="campo-formulario">
                                 <label for="nombre">Nombre del Objeto:</label>
-                                <input type="text" id="nombre" name="nombre" value="">
+                                <input type="text" id="name" name="name" value="">
                             </div>
                     
                             <!-- Tipo del Arma -->
                             <div class="campo-formulario">
                                 <label for="tipo">Tipo del Arma:</label>
-                                <input type="text" id="tipo" name="tipo" value="">
+                                <select name="weaponType" id="weaponType">
+                                    <% WeaponsTypes.forEach(weaponType => { %>
+                                        <option value="<%=weaponType.name%>"><%=weaponType.name%></option>
+                                    <% }) %>
+                                </select>
                             </div>
                     
                             <!-- Consumo de Mana -->
@@ -50,7 +59,7 @@
                             <!-- Brazo en el que se usa -->
                             <div class="campo-formulario">
                                 <label for="bodypart">Lugar en e que se Usa:</label>
-                                <select name="bodyparts" id="bodyparts">
+                                <select name="bodypart" id="bodypart">
                                     <% Bodyparts.forEach(bodypart => { %>
                                         <option value="<%=bodypart.name%>"><%=bodypart.name%></option>
                                     <% }) %>
